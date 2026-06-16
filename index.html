@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>推しミテ！- ファンサうちわ文字作成 | 白瀬ラボ</title>
+<meta name="description" content="推しに見つけてもらう応援うちわを、スマホひとつで。文字をデザインしてコンビニで実寸プリント。全機能無料・サブスクなし。">
+<meta property="og:title" content="推しミテ！- ファンサうちわ文字作成">
+<meta property="og:description" content="推しに見つけてもらう応援うちわを、スマホひとつで。コンビニで実寸プリント。全機能無料・サブスクなし。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="oshimite-icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="oshimite-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink:#FF5C8A;
+    --pink-deep:#FF2E6E;
+    --lav:#B9A3FF;
+    --bg:#FFF0F6;
+    --bg2:#FFE3EF;
+    --ink:#4A2E3D;
+    --ink-soft:#9A7886;
+    --gold:#FFD84D;
+    --white:#fff;
+    --display:'Mochiy Pop One',system-ui,sans-serif;
+    --body:'M PLUS Rounded 1c',system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--body);
+    color:var(--ink);
+    background:
+      radial-gradient(1200px 600px at 80% -10%, #FFD6E8 0%, transparent 55%),
+      radial-gradient(900px 500px at -10% 20%, #E6DBFF 0%, transparent 50%),
+      var(--bg);
+    line-height:1.75;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+  /* sparkles */
+  .sky{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+  .sky b{position:absolute;opacity:0;font-size:14px;animation:twinkle 4s ease-in-out infinite;
+         text-shadow:0 0 6px currentColor}
+  @keyframes twinkle{0%,100%{opacity:.2;transform:scale(.6) rotate(0)}50%{opacity:1;transform:scale(1) rotate(18deg)}}
+
+  /* nav */
+  nav{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+  .brand{display:flex;align-items:center;gap:9px;font-family:var(--display);font-size:18px;color:var(--pink-deep);letter-spacing:.02em}
+  .brand img{width:32px;height:32px;border-radius:9px;box-shadow:0 3px 8px rgba(255,46,110,.28)}
+  .brand span{color:var(--lav)}
+  .nav-cta{font-weight:700;font-size:14px;background:var(--ink);color:#fff;padding:9px 16px;border-radius:999px;transition:transform .15s ease}
+  .nav-cta:hover{transform:translateY(-2px)}
+
+  /* hero */
+  .hero{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:36px 0 56px}
+  .eyebrow{display:inline-block;font-weight:700;font-size:13px;color:var(--pink-deep);background:#fff;border:2px solid #FFC9DD;padding:6px 14px;border-radius:999px;margin-bottom:18px}
+  h1{font-family:var(--display);font-size:clamp(38px,6.4vw,68px);line-height:1.12;color:var(--pink);
+     -webkit-text-stroke:2px #fff;
+     text-shadow:0 3px 0 #FFB9D2, 0 7px 14px rgba(255,46,110,.28);
+     margin-bottom:18px}
+  .lede{font-size:clamp(15px,2.1vw,18px);font-weight:500;color:var(--ink);max-width:30ch;margin-bottom:26px}
+  .lede b{color:var(--pink-deep)}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  .appstore{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;font-weight:700;
+            padding:14px 22px;border-radius:16px;font-size:16px;transition:transform .15s ease,box-shadow .15s ease;
+            box-shadow:0 8px 0 #2c1a24}
+  .appstore:hover{transform:translateY(-3px);box-shadow:0 11px 0 #2c1a24}
+  .appstore:active{transform:translateY(2px);box-shadow:0 4px 0 #2c1a24}
+  .appstore svg{width:22px;height:22px;fill:#fff}
+  .freenote{font-size:13px;font-weight:700;color:var(--ink-soft)}
+
+  /* uchiwa */
+  .stage{display:flex;justify-content:center;align-items:center}
+  .uchiwa{position:relative;animation:bob 5s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-14px) rotate(3deg)}}
+  .fan{width:clamp(240px,34vw,340px);aspect-ratio:1/1;
+       background:url('oshimite-fan.png') center/contain no-repeat;
+       filter:drop-shadow(0 16px 24px rgba(60,20,50,.32));
+       position:relative;z-index:2}
+  .handle{width:14px;height:80px;margin:-48px auto 0;border-radius:0 0 8px 8px;
+          background:linear-gradient(#d8a566,#b07d44);position:relative;z-index:1}
+
+  /* band */
+  .band{position:relative;z-index:2;margin:8px 0 56px;background:linear-gradient(100deg,var(--pink),var(--pink-deep));
+        border-radius:26px;padding:34px 26px;text-align:center;color:#fff;
+        box-shadow:0 16px 34px rgba(255,46,110,.3)}
+  .band p{font-family:var(--display);font-size:clamp(22px,3.6vw,34px);text-shadow:0 2px 0 rgba(0,0,0,.12)}
+  .band small{display:block;margin-top:8px;font-weight:500;font-size:14px;opacity:.92;font-family:var(--body)}
+
+  /* sections */
+  section{position:relative;z-index:2}
+  .sec-head{text-align:center;margin-bottom:34px}
+  .sec-head .tag{display:inline-block;font-weight:700;font-size:12px;color:var(--pink-deep);background:#fff;border:2px solid #FFC9DD;padding:4px 13px;border-radius:999px;margin-bottom:12px}
+  .sec-head h2{font-family:var(--display);font-size:clamp(24px,3.8vw,34px);color:var(--ink);margin-bottom:8px}
+  .sec-head h2 em{font-style:normal;color:var(--pink-deep)}
+  .sec-head p{color:var(--ink-soft);font-weight:500}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:64px}
+  .card{background:#fff;border:2px solid #FFD9E6;border-radius:20px;padding:24px 22px;transition:transform .18s ease,box-shadow .18s ease}
+  .card:hover{transform:translateY(-5px);box-shadow:0 14px 26px rgba(255,92,138,.18)}
+  .card .ico{font-size:30px;display:block;margin-bottom:10px}
+  .card h3{font-size:17px;font-weight:800;margin-bottom:6px;color:var(--ink)}
+  .card p{font-size:14px;color:var(--ink-soft);font-weight:500;line-height:1.7}
+
+  /* movie */
+  .movie{margin-bottom:64px}
+  .phone{max-width:300px;margin:0 auto;border:9px solid #2c1a24;border-radius:44px;overflow:hidden;
+         background:#000;box-shadow:0 24px 44px rgba(60,20,50,.32)}
+  .phone video{display:block;width:100%}
+  .movie-note{text-align:center;color:var(--ink-soft);font-weight:500;font-size:13px;margin-top:16px}
+
+  /* how-to steps */
+  .steps{max-width:760px;margin:0 auto 64px;counter-reset:step;list-style:none}
+  .steps li{position:relative;background:#fff;border:2px solid #FFD9E6;border-radius:20px;padding:20px 22px 20px 80px;margin-bottom:16px}
+  .steps li::before{counter-increment:step;content:counter(step);position:absolute;left:20px;top:20px;
+    width:42px;height:42px;border-radius:50%;background:linear-gradient(140deg,var(--pink),var(--pink-deep));color:#fff;
+    font-family:var(--display);font-size:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 0 #ffb9d2}
+  .steps h3{font-size:16px;font-weight:800;margin-bottom:4px;color:var(--ink)}
+  .steps p{font-size:14px;color:var(--ink-soft);font-weight:500;line-height:1.7}
+
+  /* print */
+  .print{background:#fff;border-radius:26px;padding:40px 30px;margin-bottom:64px;border:2px solid #EADBFF;
+         display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+  .print h2{font-family:var(--display);font-size:clamp(22px,3.4vw,30px);color:var(--ink);margin-bottom:14px;line-height:1.25}
+  .print h2 em{font-style:normal;color:var(--lav)}
+  .print ul{list-style:none}
+  .print li{font-size:15px;font-weight:500;padding:7px 0 7px 28px;position:relative;color:var(--ink)}
+  .print li::before{content:"♡";position:absolute;left:0;color:var(--pink);font-size:15px}
+  .store-pair{display:flex;flex-direction:column;gap:14px}
+  .store-pair .chip{display:flex;align-items:center;gap:12px;background:var(--bg2);border-radius:16px;padding:16px 18px;font-weight:700}
+  .store-pair .chip span{font-size:26px}
+  .store-pair .chip small{display:block;font-weight:500;font-size:12px;color:var(--ink-soft)}
+
+  /* notice */
+  .notice{max-width:760px;margin:0 auto 60px;background:#fff;border:2px dashed #EADBFF;border-radius:22px;padding:26px 28px}
+  .notice h3{font-family:var(--display);font-size:18px;color:var(--ink);margin-bottom:10px}
+  .notice ul{list-style:none}
+  .notice li{font-size:14px;font-weight:500;color:var(--ink-soft);padding:5px 0 5px 22px;position:relative;line-height:1.7}
+  .notice li::before{content:"·";position:absolute;left:6px;color:var(--lav);font-weight:800}
+
+  /* footer */
+  footer{position:relative;z-index:2;background:var(--ink);color:#fff;border-radius:30px 30px 0 0;padding:46px 0 34px;margin-top:20px}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+  .foot .lab{font-family:var(--display);font-size:20px;color:#fff}
+  .foot .lab small{display:block;font-family:var(--body);font-weight:500;font-size:13px;opacity:.7;margin-top:6px}
+  .foot nav{padding:0;display:flex;flex-direction:column;gap:10px}
+  .foot a{font-weight:500;font-size:14px;opacity:.85;transition:opacity .15s}
+  .foot a:hover{opacity:1;text-decoration:underline}
+  .copy{margin-top:30px;font-size:12px;opacity:.6;font-weight:500}
+
+  /* focus + motion */
+  a:focus-visible,.appstore:focus-visible{outline:3px solid var(--lav);outline-offset:3px}
+  @media (prefers-reduced-motion:reduce){
+    .sky b,.uchiwa{animation:none}
+    html{scroll-behavior:auto}
+  }
+  @media (max-width:760px){
+    .hero{grid-template-columns:1fr;text-align:center;padding-top:18px}
+    .lede{margin-left:auto;margin-right:auto}
+    .btns{justify-content:center}
+    .stage{order:-1;margin-bottom:6px}
+    .grid{grid-template-columns:1fr;gap:14px;margin-bottom:48px}
+    .steps li{padding-left:76px}
+    .print{grid-template-columns:1fr;text-align:center}
+    .print li{text-align:left}
+    .foot{flex-direction:column}
+  }
+</style>
+</head>
+<body>
+<div class="sky" aria-hidden="true">
+  <b style="left:6%;top:10%;font-size:16px;color:var(--gold);animation-delay:0s">✦</b>
+  <b style="left:18%;top:26%;font-size:11px;color:var(--pink);animation-delay:1.3s;animation-duration:3.4s">✧</b>
+  <b style="left:30%;top:7%;font-size:13px;color:#fff;animation-delay:.6s">⋆</b>
+  <b style="left:42%;top:19%;font-size:18px;color:var(--lav);animation-delay:2.1s;animation-duration:4.6s">✶</b>
+  <b style="left:55%;top:6%;font-size:10px;color:var(--gold);animation-delay:1.7s">✦</b>
+  <b style="left:68%;top:15%;font-size:14px;color:var(--pink);animation-delay:.9s;animation-duration:3.8s">✧</b>
+  <b style="left:80%;top:9%;font-size:12px;color:#fff;animation-delay:2.6s">⋆</b>
+  <b style="left:91%;top:22%;font-size:17px;color:var(--lav);animation-delay:1.1s;animation-duration:4.4s">✶</b>
+  <b style="left:9%;top:40%;font-size:13px;color:var(--pink);animation-delay:3s">✦</b>
+  <b style="left:23%;top:52%;font-size:11px;color:#fff;animation-delay:.4s;animation-duration:3.2s">✧</b>
+  <b style="left:38%;top:44%;font-size:15px;color:var(--gold);animation-delay:1.9s">⋆</b>
+  <b style="left:50%;top:58%;font-size:10px;color:var(--lav);animation-delay:2.8s">✶</b>
+  <b style="left:63%;top:47%;font-size:16px;color:#fff;animation-delay:.8s;animation-duration:4.2s">✦</b>
+  <b style="left:77%;top:55%;font-size:12px;color:var(--gold);animation-delay:2.3s">✧</b>
+  <b style="left:88%;top:45%;font-size:14px;color:var(--pink);animation-delay:1.5s;animation-duration:3.6s">⋆</b>
+  <b style="left:5%;top:72%;font-size:12px;color:var(--lav);animation-delay:.7s">✶</b>
+  <b style="left:20%;top:84%;font-size:15px;color:var(--gold);animation-delay:2.5s;animation-duration:4.8s">✦</b>
+  <b style="left:34%;top:74%;font-size:10px;color:#fff;animation-delay:1.2s">✧</b>
+  <b style="left:48%;top:88%;font-size:13px;color:var(--pink);animation-delay:.3s">⋆</b>
+  <b style="left:62%;top:78%;font-size:17px;color:var(--lav);animation-delay:2s;animation-duration:4.4s">✶</b>
+  <b style="left:78%;top:90%;font-size:11px;color:#fff;animation-delay:1.6s">✦</b>
+  <b style="left:92%;top:80%;font-size:14px;color:var(--gold);animation-delay:2.9s;animation-duration:3.4s">✧</b>
+</div>
+
+<div class="wrap">
+  <nav>
+    <div class="brand"><img src="oshimite-icon.png" alt="推しミテ！">推しミテ！<span>by 白瀬ラボ</span></div>
+    <a class="nav-cta" href="https://apps.apple.com/app/id6778378550">App Storeで見る</a>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <span class="eyebrow">ファンサうちわ文字作成アプリ</span>
+      <h1>推しミテ！</h1>
+      <p class="lede">推しに見つけてもらう応援うちわを、スマホひとつで。文字をデザインして、<b>コンビニで実寸プリント</b>。</p>
+      <div class="btns">
+        <a class="appstore" href="https://apps.apple.com/app/id6778378550">
+          <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-37 16.6-65 50.5-85.7-19-27.2-47.6-42.1-85.5-45-36-2.8-75.4 21-89.7 21-15.2 0-50-20-77.4-20C61.5 139.5 7 184.3 7 275.6c0 27 4.9 54.9 14.8 83.6 13.2 37.9 60.7 131 110.2 129.5 25.9-.6 44.2-18.4 78-18.4 32.8 0 49.7 18.4 78.6 18.4 49.9-.7 92.9-85.3 105.4-123.3-67-31.6-63.5-92.6-63.3-96.7zM263.3 21c-26.5 31.4-23.1 60-22 70.3 22.7 1.7 49.3-12.5 64.6-30.5C322.6 43.7 332.3 17.8 330 1c-25.9 1.9-50.4 14.6-66.7 20z"/></svg>
+          App Storeでダウンロード
+        </a>
+      </div>
+      <p class="freenote" style="margin-top:14px">全機能無料 ・ サブスクなし</p>
+    </div>
+    <div class="stage">
+      <div class="uchiwa">
+        <div class="fan" role="img" aria-label="推しミテ！で作った応援うちわ"></div>
+        <div class="handle"></div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div class="wrap">
+  <div class="band">
+    <p>サブスクのお金を、推しに。</p>
+    <small>うちわ作りに必要な機能は、ぜんぶ無料。サブスクも機能ロックもありません。</small>
+  </div>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="sec-head">
+      <h2>つくれるのは、<em>自分だけの一枚</em></h2>
+      <p>盛れる文字と装飾を、ぜんぶ無料で。</p>
+    </div>
+    <div class="grid">
+      <div class="card"><span class="ico">🫧</span><h3>ぷくぷく文字</h3><p>グリッター・ネオン・グラデーション。縁取りは何重でも、思いのまま。立体「ぷくぷく」と「きらきら」も同時に。</p></div>
+      <div class="card"><span class="ico">🎨</span><h3>推しカラーをドラッグ配色</h3><p>担当カラーを文字や装飾へドラッグ＆ドロップ、またはタップで配色。色ごとの一括変更も思いのまま。</p></div>
+      <div class="card"><span class="ico">🌏</span><h3>多言語フォント</h3><p>日本語・韓国語・中国語に対応。推しの言語で応援できる。</p></div>
+      <div class="card"><span class="ico">🖼️</span><h3>画像＆スタンプ</h3><p>手持ち画像の取り込みも無料。取り込んだSVGは最大4色で着せ替え。ハートや手描きペンで自由にデコ。</p></div>
+      <div class="card"><span class="ico">📐</span><h3>フォント追加</h3><p>お手持ちの TTF / OTF を読み込んで、好きな書体で作れる。</p></div>
+      <div class="card"><span class="ico">👀</span><h3>3Dプレビュー</h3><p>刷る前に、できあがりを立体で確認。連結うちわにも対応。</p></div>
+    </div>
+  </section>
+
+  <section class="movie">
+    <div class="sec-head">
+      <span class="tag">1.0.0</span>
+      <h2>動いているところを、<em>ちょっとだけ</em></h2>
+      <p>うちわが仕上がるまでの制作タイムライン</p>
+    </div>
+    <div class="phone">
+      <video src="1.0.0_timeline.mp4" controls playsinline muted loop preload="metadata" poster="oshimite-icon.png"></video>
+    </div>
+    <p class="movie-note">※ iPhone での操作イメージ（1.0.0）</p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>かんたん、<em>5ステップ</em></h2>
+      <p>はじめてでも、うちわが完成します</p>
+    </div>
+    <ol class="steps">
+      <li><h3>パーツを置く</h3><p>ツールバーから「文字」「スタンプ」「画像」を追加。テンプレから定番デザインを選んでもOK。</p></li>
+      <li><h3>推しカラーで彩る</h3><p>「色」ツールでメンカラやプリセットを選び、文字や装飾へドラッグ＆ドロップ、またはタップで配色。</p></li>
+      <li><h3>盛って、仕上げる</h3><p>要素をタップ →「プロパティ」で大きさ・フォント・縁取り・効果（ぷくぷく／きらきら／ネオン）を調整。</p></li>
+      <li><h3>うちわサイズに合わせる</h3><p>ジャンボうちわの実測ガイドに収まるようレイアウト。3Dプレビューで仕上がりを確認。</p></li>
+      <li><h3>実寸で印刷</h3><p>「印刷データ」でA3・高解像度PDFを書き出し、セブン-イレブンのネットプリントでそのまま印刷。</p></li>
+    </ol>
+  </section>
+
+  <section class="print">
+    <div>
+      <h2>「ちゃんと<em>実寸</em>で刷れる」に<br>こだわりました</h2>
+      <ul>
+        <li>A3コンビニ印刷用データをそのまま出力</li>
+        <li>100均のジャンボうちわに合わせた実測ガイド表示</li>
+        <li>仕上がり線と安全エリアが見えるから、貼ってから後悔しない</li>
+        <li>編集は自動保存。作りかけが消えません</li>
+      </ul>
+    </div>
+    <div class="store-pair">
+      <div class="chip"><span>🏪</span><div>セブン-イレブン<small>ネットプリントで A3 を実寸プリント</small></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="notice">
+      <h3>ご利用上の注意</h3>
+      <ul>
+        <li>公式画像・ロゴの無断使用は著作権・肖像権の侵害になり得ます。文字＋フリー素材中心の制作をおすすめします。</li>
+        <li>会場によっては写真付き・うちわ以外の連結文字パネルの持ち込みが禁止されています。各会場のルールをご確認ください。</li>
+        <li>ジャンボうちわのサイズ（約28.5×29.5cm）が会場持ち込み上限の目安です。</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="lab">推しミテ！<small>白瀬ラボ / ShiraseLab</small></div>
+      <nav>
+        <a href="https://apps.apple.com/app/id6778378550">App Storeでダウンロード</a>
+        <a href="https://github.com/shirase-lab/PrivacyPolicies/blob/main/UchiwaTuKool/PRIVACY_POLICY.md">プライバシーポリシー</a>
+        <a href="https://github.com/shirase-lab/PrivacyPolicies/blob/main/UchiwaTuKool/TERMS_OF_USE.md">利用規約</a>
+        <a href="https://x.com/oshimite_app" target="_blank" rel="noopener">お問い合わせ（X / @oshimite_app）</a>
+      </nav>
+    </div>
+    <div class="copy">© 2026 ShiraseLab. 『推し見て』を、かなえるうちわを。</div>
+  </div>
+</footer>
+</body>
+</html>
