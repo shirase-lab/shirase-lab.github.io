@@ -88,11 +88,15 @@
           background:linear-gradient(#d8a566,#b07d44);position:relative;z-index:1}
 
   /* band */
-  .band{position:relative;z-index:2;margin:8px 0 56px;background:linear-gradient(100deg,var(--pink),var(--pink-deep));
+  .band{position:relative;z-index:2;margin:8px 0 0;background:linear-gradient(100deg,var(--pink),var(--pink-deep));
         border-radius:26px;padding:34px 26px;text-align:center;color:#fff;
         box-shadow:0 16px 34px rgba(255,46,110,.3)}
   .band p{font-family:var(--display);font-size:clamp(22px,3.6vw,34px);text-shadow:0 2px 0 rgba(0,0,0,.12)}
   .band small{display:block;margin-top:8px;font-weight:500;font-size:14px;opacity:.92;font-family:var(--body)}
+  .buyout{max-width:580px;margin:16px auto 56px;text-align:center;font-weight:700;font-size:14px;color:var(--ink);
+          background:#fff;border:2px solid #FFD9E6;border-radius:16px;padding:13px 20px;line-height:1.7;
+          box-shadow:0 8px 20px rgba(255,92,138,.12)}
+  .buyout b{color:var(--pink-deep)}
 
   /* sections */
   section{position:relative;z-index:2}
@@ -111,10 +115,18 @@
 
   /* movie */
   .movie{margin-bottom:64px}
-  .phone{max-width:300px;margin:0 auto;border:9px solid #2c1a24;border-radius:44px;overflow:hidden;
-         background:#000;box-shadow:0 24px 44px rgba(60,20,50,.32)}
-  .phone video{display:block;width:100%}
   .movie-note{text-align:center;color:var(--ink-soft);font-weight:500;font-size:13px;margin-top:16px}
+
+  /* iPad device frame */
+  .ipad{max-width:560px;margin:0 auto;border:12px solid #2c1a24;border-radius:30px;overflow:hidden;
+        background:#000;box-shadow:0 24px 44px rgba(60,20,50,.32);aspect-ratio:4/3}
+  .ipad video{display:block;width:100%;height:100%;object-fit:cover;background:#111}
+
+  /* feature demo clip */
+  .card .demo{position:relative;margin-top:14px;border-radius:14px;overflow:hidden;aspect-ratio:9/16;
+              background:linear-gradient(135deg,var(--bg2),#fff);border:1px solid #FFE3EF}
+  .card .demo.landscape{aspect-ratio:4/3}
+  .card .demo video{display:block;width:100%;height:100%;object-fit:contain;background:transparent}
 
   /* how-to steps */
   .steps{max-width:760px;margin:0 auto 64px;counter-reset:step;list-style:none}
@@ -230,9 +242,10 @@
 
 <div class="wrap">
   <div class="band">
-    <p>サブスクのお金を、推しに。</p>
-    <small>うちわ作りに必要な機能は、ぜんぶ無料。サブスクも機能ロックもありません。</small>
+    <p>サブスクのお金を、推しに！</p>
+    <small>うちわ作りに必要な機能は、ぜんぶ無料。サブスクも機能ロックもありません。<br>他アプリが月額でロックする機能も、サブスクなし・機能ロックなしで開放しています。</small>
   </div>
+  <p class="buyout">広告が気になる人は、<b>買い切り¥1,980</b>で完全オフ。月額じゃない、一度きり。</p>
 </div>
 
 <div class="wrap">
@@ -242,25 +255,33 @@
       <p>盛れる文字と装飾を、ぜんぶ無料で。</p>
     </div>
     <div class="grid">
-      <div class="card"><span class="ico">🫧</span><h3>ぷくぷく文字</h3><p>グリッター・ネオン・グラデーション。縁取りは何重でも、思いのまま。立体「ぷくぷく」と「きらきら」も同時に。</p></div>
-      <div class="card"><span class="ico">🎨</span><h3>推しカラーをドラッグ配色</h3><p>担当カラーを文字や装飾へドラッグ＆ドロップ、またはタップで配色。色ごとの一括変更も思いのまま。</p></div>
-      <div class="card"><span class="ico">🌏</span><h3>多言語フォント</h3><p>日本語・韓国語・中国語に対応。推しの言語で応援できる。</p></div>
-      <div class="card"><span class="ico">🖼️</span><h3>画像＆スタンプ</h3><p>手持ち画像の取り込みも無料。取り込んだSVGは最大4色で着せ替え。ハートや手描きペンで自由にデコ。</p></div>
-      <div class="card"><span class="ico">📐</span><h3>フォント追加</h3><p>お手持ちの TTF / OTF を読み込んで、好きな書体で作れる。</p></div>
-      <div class="card"><span class="ico">👀</span><h3>3Dプレビュー</h3><p>刷る前に、できあがりを立体で確認。連結うちわにも対応。</p></div>
+      <div class="card"><span class="ico">🫧</span><h3>ぷくぷく文字</h3><p>グリッター・ネオン・グラデーション。縁取りは何重でも、思いのまま。立体「ぷくぷく」と「きらきら」も同時に。</p>
+        <div class="demo"><video src="feature_puffy.mp4" controls muted playsinline loop preload="none" poster="feature_puffy.jpg"></video></div></div>
+      <div class="card"><span class="ico">🎨</span><h3>推しカラーをドラッグ配色</h3><p>担当カラーを文字や装飾へドラッグ＆ドロップ、またはタップで配色。色ごとの一括変更も思いのまま。</p>
+        <div class="demo"><video src="feature_color.mp4" controls muted playsinline loop preload="none" poster="feature_color.jpg"></video></div></div>
+      <div class="card"><span class="ico">🌏</span><h3>多言語フォント</h3><p>日本語・韓国語・中国語・英語に対応。推しの言語で応援できる。</p>
+        <div class="demo"><video src="feature_lang.mp4" controls muted playsinline loop preload="none" poster="feature_lang.jpg"></video></div></div>
+      <div class="card"><span class="ico">🖼️</span><h3>画像＆スタンプ</h3><p>手持ち画像の取り込みも無料。取り込んだSVGは最大4色で着せ替え。ハートや手描きペンで自由にデコ。</p>
+        <div class="demo"><video src="feature_image.mp4" controls muted playsinline loop preload="none" poster="feature_image.jpg"></video></div></div>
+      <div class="card"><span class="ico">📐</span><h3>フォント追加</h3><p>お手持ちの TTF / OTF を読み込んで、好きな書体で作れる。</p>
+        <div class="demo"><video src="feature_font.mp4" controls muted playsinline loop preload="none" poster="feature_font.jpg"></video></div></div>
+      <div class="card"><span class="ico">👀</span><h3>3Dプレビュー</h3><p>刷る前に、持ち手付きの立体で仕上がりを確認。</p>
+        <div class="demo"><video src="feature_3d.mp4" controls muted playsinline loop preload="none" poster="feature_3d.jpg"></video></div></div>
+      <div class="card"><span class="ico">📱</span><h3>タブレットでも広々</h3><p>スマホもタブレットも一級対応。大画面なら細かい調整までラク。</p>
+        <div class="demo landscape"><video src="feature_tablet.mp4" controls muted playsinline loop preload="none" poster="feature_tablet.jpg"></video></div></div>
     </div>
   </section>
 
   <section class="movie">
     <div class="sec-head">
-      <span class="tag">1.1.0</span>
-      <h2>動いているところを、<em>ちょっとだけ</em></h2>
-      <p>うちわが仕上がるまでの制作タイムライン</p>
+      <span class="tag">次の予定</span>
+      <h2>画像にも、<em>ぷくぷく</em></h2>
+      <p>取り込んだ画像にも立体「ぷくぷく」効果を。次のアップデートで対応予定です。</p>
     </div>
-    <div class="phone">
-      <video src="1.1.0_timeline.mp4" controls playsinline muted loop preload="metadata" poster="oshimite-icon.png"></video>
+    <div class="ipad">
+      <video data-inview src="next_puffy_image.mp4" controls muted playsinline loop preload="none" poster="next_puffy_image.jpg"></video>
     </div>
-    <p class="movie-note">※ iPhone での操作イメージ（1.1.0）</p>
+    <p class="movie-note">※ タブレットでの編集イメージ</p>
   </section>
 
   <section>
@@ -297,7 +318,7 @@
       <h3>ご利用上の注意</h3>
       <ul>
         <li>公式画像・ロゴの無断使用は著作権・肖像権の侵害になり得ます。文字＋フリー素材中心の制作をおすすめします。</li>
-        <li>会場によっては写真付き・うちわ以外の連結文字パネルの持ち込みが禁止されています。各会場のルールをご確認ください。</li>
+        <li>会場によっては写真付き・大型ボードの持ち込みが禁止されています。各会場のルールをご確認ください。</li>
         <li>ジャンボうちわのサイズ（約28.5×29.5cm）が会場持ち込み上限の目安です。</li>
       </ul>
     </div>
@@ -318,5 +339,37 @@
     <div class="copy">© 2026 ShiraseLab. 『推し見て』を、かなえるうちわを。</div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var hasIO = 'IntersectionObserver' in window;
+
+  /* iPad デモ：画面に入ったら再生／外れたら停止（1本だけ・muted） */
+  var inview = document.querySelectorAll('video[data-inview]');
+  if(hasIO){
+    var ioPlay = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.play().catch(function(){}); }
+        else { e.target.pause(); }
+      });
+    }, {threshold:0.4});
+    inview.forEach(function(v){ ioPlay.observe(v); });
+  }
+
+  /* 機能タイル：再生バー(controls)で操作。1本再生したら他は停止／画面外で停止 */
+  var demos = Array.prototype.slice.call(document.querySelectorAll('.demo video'));
+  demos.forEach(function(v){
+    v.addEventListener('play', function(){
+      demos.forEach(function(o){ if(o !== v){ o.pause(); } });
+    });
+  });
+  if(hasIO){
+    var ioStop = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(!e.isIntersecting){ e.target.pause(); } });
+    }, {threshold:0});
+    demos.forEach(function(v){ ioStop.observe(v); });
+  }
+})();
+</script>
 </body>
 </html>
