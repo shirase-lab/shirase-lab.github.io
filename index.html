@@ -120,7 +120,7 @@
   /* iPad device frame */
   .ipad{max-width:560px;margin:0 auto;border:12px solid #2c1a24;border-radius:30px;overflow:hidden;
         background:#000;box-shadow:0 24px 44px rgba(60,20,50,.32);aspect-ratio:4/3}
-  .ipad video{display:block;width:100%;height:100%;object-fit:cover;background:#111}
+  .ipad video{display:block;width:100%;height:100%;object-fit:contain;background:#111}
 
   /* feature demo clip */
   .card .demo{position:relative;margin-top:14px;border-radius:14px;overflow:hidden;aspect-ratio:9/16;
@@ -256,19 +256,19 @@
     </div>
     <div class="grid">
       <div class="card"><span class="ico">🫧</span><h3>ぷくぷく文字</h3><p>グリッター・ネオン・グラデーション。縁取りは何重でも、思いのまま。立体「ぷくぷく」と「きらきら」も同時に。</p>
-        <div class="demo"><video src="feature_puffy.mp4" controls muted playsinline loop preload="none" poster="feature_puffy.jpg"></video></div></div>
+        <div class="demo"><video src="feature_puffy.mp4" controls muted playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
       <div class="card"><span class="ico">🎨</span><h3>推しカラーをドラッグ配色</h3><p>担当カラーを文字や装飾へドラッグ＆ドロップ、またはタップで配色。色ごとの一括変更も思いのまま。</p>
-        <div class="demo"><video src="feature_color.mp4" controls muted playsinline loop preload="none" poster="feature_color.jpg"></video></div></div>
+        <div class="demo"><video src="feature_color.mp4" controls muted playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
       <div class="card"><span class="ico">🌏</span><h3>多言語フォント</h3><p>日本語・韓国語・中国語・英語に対応。推しの言語で応援できる。</p>
-        <div class="demo"><video src="feature_lang.mp4" controls muted playsinline loop preload="none" poster="feature_lang.jpg"></video></div></div>
+        <div class="demo"><video src="feature_lang.mp4" controls muted playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
       <div class="card"><span class="ico">🖼️</span><h3>画像＆スタンプ</h3><p>手持ち画像の取り込みも無料。取り込んだSVGは最大4色で着せ替え。ハートや手描きペンで自由にデコ。</p>
-        <div class="demo"><video src="feature_image.mp4" controls muted playsinline loop preload="none" poster="feature_image.jpg"></video></div></div>
+        <div class="demo"><video src="feature_image.mp4" controls muted playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
       <div class="card"><span class="ico">📐</span><h3>フォント追加</h3><p>お手持ちの TTF / OTF を読み込んで、好きな書体で作れる。</p>
-        <div class="demo"><video src="feature_font.mp4" controls muted playsinline loop preload="none" poster="feature_font.jpg"></video></div></div>
+        <div class="demo"><video src="feature_font.mp4" controls muted playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
       <div class="card"><span class="ico">👀</span><h3>3Dプレビュー</h3><p>刷る前に、持ち手付きの立体で仕上がりを確認。</p>
-        <div class="demo"><video src="feature_3d.mp4" controls muted playsinline loop preload="none" poster="feature_3d.jpg"></video></div></div>
+        <div class="demo"><video src="feature_3d.mp4" controls muted playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
       <div class="card"><span class="ico">📱</span><h3>タブレットでも広々</h3><p>スマホもタブレットも一級対応。大画面なら細かい調整までラク。</p>
-        <div class="demo landscape"><video src="feature_tablet.mp4" controls muted playsinline loop preload="none" poster="feature_tablet.jpg"></video></div></div>
+        <div class="demo landscape"><video src="feature_tablet.mp4" controls muted playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
     </div>
   </section>
 
@@ -279,7 +279,7 @@
       <p>取り込んだ画像にも立体「ぷくぷく」効果を。次のアップデートで対応予定です。</p>
     </div>
     <div class="ipad">
-      <video data-inview src="next_puffy_image.mp4" controls muted playsinline loop preload="none" poster="next_puffy_image.jpg"></video>
+      <video src="next_puffy_image.mp4" controls muted playsinline preload="none" poster="oshimite-icon.png"></video>
     </div>
     <p class="movie-note">※ タブレットでの編集イメージ</p>
   </section>
@@ -344,19 +344,7 @@
 (function(){
   var hasIO = 'IntersectionObserver' in window;
 
-  /* iPad デモ：画面に入ったら再生／外れたら停止（1本だけ・muted） */
-  var inview = document.querySelectorAll('video[data-inview]');
-  if(hasIO){
-    var ioPlay = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){ e.target.play().catch(function(){}); }
-        else { e.target.pause(); }
-      });
-    }, {threshold:0.4});
-    inview.forEach(function(v){ ioPlay.observe(v); });
-  }
-
-  /* 機能タイル：再生バー(controls)で操作。1本再生したら他は停止／画面外で停止 */
+  /* 動画：再生バー(controls)で手動再生。自動再生はしない。1本再生したら他は停止／画面外で停止 */
   var demos = Array.prototype.slice.call(document.querySelectorAll('.demo video'));
   demos.forEach(function(v){
     v.addEventListener('play', function(){
