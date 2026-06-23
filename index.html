@@ -117,6 +117,12 @@
   .movie{margin-bottom:64px}
   .movie-note{text-align:center;color:var(--ink-soft);font-weight:500;font-size:13px;margin-top:16px}
 
+  /* showcase video (orientation-agnostic) */
+  .showcase{margin-bottom:64px}
+  .showcase-frame{max-width:420px;margin:0 auto;border:8px solid #2c1a24;border-radius:26px;overflow:hidden;
+        background:#000;box-shadow:0 24px 44px rgba(60,20,50,.30)}
+  .showcase-frame video{display:block;width:100%;height:auto;background:#111}
+
   /* iPad device frame */
   .ipad{max-width:560px;margin:0 auto;border:12px solid #2c1a24;border-radius:30px;overflow:hidden;
         background:#000;box-shadow:0 24px 44px rgba(60,20,50,.32);aspect-ratio:4/3}
@@ -249,6 +255,19 @@
     <small>うちわ作りに必要な機能は、ぜんぶ無料。サブスクも機能ロックもありません。<br>他アプリが月額でロックする機能も、サブスクなし・機能ロックなしで開放しています。</small>
   </div>
   <p class="buyout">広告が気になる人は、<b>買い切り¥1,980</b>で完全オフ。月額じゃない、一度きり。</p>
+</div>
+
+<div class="wrap">
+  <section class="showcase">
+    <div class="sec-head">
+      <span class="tag">ver:1.2.0</span>
+      <h2>動画で見る、<em>推しミテ！</em></h2>
+      <p>置いて、彩って、刷るまで。制作の様子は、そのままタイムラプス録画もできます。</p>
+    </div>
+    <div class="showcase-frame">
+      <video src="1.2.0features.mp4" controls muted playsinline preload="none" poster="oshimite-icon.png"></video>
+    </div>
+  </section>
 </div>
 
 <div class="wrap">
