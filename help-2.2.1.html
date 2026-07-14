@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>使い方ガイド（ver 2.2.1） - 推しミテ！| 白瀬ラボ</title>
+<meta name="description" content="推しミテ！ver 2.2.1 の使い方。文字を置いて、推しカラーで彩って、コンビニで実寸プリントするまでの流れと、よくある「〇〇したい」をまとめました。">
+<meta property="og:title" content="使い方ガイド（ver 2.2.1） - 推しミテ！">
+<meta property="og:description" content="うちわ作りから実寸プリントまでの流れと、よくある「〇〇したい」をまとめました。">
+<meta property="og:type" content="article">
+<meta property="og:image" content="oshimite-icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="oshimite-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink:#FF5C8A;
+    --pink-deep:#FF2E6E;
+    --lav:#B9A3FF;
+    --bg:#FFF0F6;
+    --bg2:#FFE3EF;
+    --ink:#4A2E3D;
+    --ink-soft:#9A7886;
+    --gold:#FFD84D;
+    --white:#fff;
+    --display:'Mochiy Pop One',system-ui,sans-serif;
+    --body:'M PLUS Rounded 1c',system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--body);
+    color:var(--ink);
+    background:
+      radial-gradient(1200px 600px at 80% -10%, #FFD6E8 0%, transparent 55%),
+      radial-gradient(900px 500px at -10% 20%, #E6DBFF 0%, transparent 50%),
+      var(--bg);
+    line-height:1.75;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+  /* sparkles */
+  .sky{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+  .sky b{position:absolute;opacity:0;font-size:14px;animation:twinkle 4s ease-in-out infinite;
+         text-shadow:0 0 6px currentColor}
+  @keyframes twinkle{0%,100%{opacity:.2;transform:scale(.6) rotate(0)}50%{opacity:1;transform:scale(1) rotate(18deg)}}
+
+  /* nav */
+  nav{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:20px 0;gap:12px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:9px;font-family:var(--display);font-size:18px;color:var(--pink-deep);letter-spacing:.02em}
+  .brand img{width:32px;height:32px;border-radius:9px;box-shadow:0 3px 8px rgba(255,46,110,.28)}
+  .brand span{color:var(--lav)}
+  .nav-links{display:flex;align-items:center;gap:14px}
+  .nav-back{font-weight:700;font-size:14px;color:var(--ink-soft)}
+  .nav-back:hover{color:var(--pink-deep)}
+  .nav-cta{font-weight:700;font-size:14px;background:var(--ink);color:#fff;padding:9px 16px;border-radius:999px;transition:transform .15s ease}
+  .nav-cta:hover{transform:translateY(-2px)}
+
+  /* page head */
+  .page-head{position:relative;z-index:2;text-align:center;padding:30px 0 40px}
+  .eyebrow{display:inline-block;font-weight:700;font-size:13px;color:var(--pink-deep);background:#fff;border:2px solid #FFC9DD;padding:6px 14px;border-radius:999px;margin-bottom:18px}
+  .page-head h1{font-family:var(--display);font-size:clamp(30px,5.4vw,52px);line-height:1.14;color:var(--pink);
+     -webkit-text-stroke:2px #fff;
+     text-shadow:0 3px 0 #FFB9D2, 0 7px 14px rgba(255,46,110,.28)}
+  .page-head p{margin-top:16px;font-weight:500;color:var(--ink)}
+
+  /* sections */
+  section{position:relative;z-index:2}
+  .sec-head{text-align:center;margin-bottom:34px}
+  .sec-head .tag{display:inline-block;font-weight:700;font-size:12px;color:var(--pink-deep);background:#fff;border:2px solid #FFC9DD;padding:4px 13px;border-radius:999px;margin-bottom:12px}
+  .sec-head h2{font-family:var(--display);font-size:clamp(24px,3.8vw,34px);color:var(--ink);margin-bottom:8px}
+  .sec-head h2 em{font-style:normal;color:var(--pink-deep)}
+  .sec-head p{color:var(--ink-soft);font-weight:500}
+
+  /* how-to steps */
+  .steps{max-width:760px;margin:0 auto 64px;counter-reset:step;list-style:none}
+  .steps li{position:relative;background:#fff;border:2px solid #FFD9E6;border-radius:20px;padding:20px 22px 20px 80px;margin-bottom:16px}
+  .steps li::before{counter-increment:step;content:counter(step);position:absolute;left:20px;top:20px;
+    width:42px;height:42px;border-radius:50%;background:linear-gradient(140deg,var(--pink),var(--pink-deep));color:#fff;
+    font-family:var(--display);font-size:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 0 #ffb9d2}
+  .steps h3{font-size:16px;font-weight:800;margin-bottom:4px;color:var(--ink)}
+  .steps p{font-size:14px;color:var(--ink-soft);font-weight:500;line-height:1.7}
+
+  /* FAQ accordion (no JS, <details>) */
+  .faq{max-width:760px;margin:0 auto 64px}
+  .faq details{background:#fff;border:2px solid #FFD9E6;border-radius:18px;margin-bottom:12px;overflow:hidden;transition:box-shadow .18s ease}
+  .faq details[open]{box-shadow:0 12px 24px rgba(255,92,138,.14)}
+  .faq summary{cursor:pointer;list-style:none;padding:16px 20px;font-weight:800;color:var(--ink);display:flex;align-items:center;gap:12px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary .q{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:linear-gradient(140deg,var(--lav),#9a7dff);color:#fff;
+    font-family:var(--display);font-size:14px;display:flex;align-items:center;justify-content:center}
+  .faq summary .plus{margin-left:auto;font-size:22px;font-weight:700;color:var(--pink);transition:transform .2s ease}
+  .faq details[open] summary .plus{transform:rotate(45deg)}
+  .faq .a{padding:0 20px 18px 58px;color:var(--ink-soft);font-weight:500;line-height:1.8;font-size:14px}
+
+  /* notice */
+  .notice{max-width:760px;margin:0 auto 60px;background:#fff;border:2px dashed #EADBFF;border-radius:22px;padding:26px 28px}
+  .notice h3{font-family:var(--display);font-size:18px;color:var(--ink);margin-bottom:10px}
+  .notice ul{list-style:none}
+  .notice li{font-size:14px;font-weight:500;color:var(--ink-soft);padding:5px 0 5px 22px;position:relative;line-height:1.7}
+  .notice li::before{content:"·";position:absolute;left:6px;color:var(--lav);font-weight:800}
+
+  /* footer */
+  footer{position:relative;z-index:2;background:var(--ink);color:#fff;border-radius:30px 30px 0 0;padding:46px 0 34px;margin-top:20px}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+  .foot .lab{font-family:var(--display);font-size:20px;color:#fff}
+  .foot .lab small{display:block;font-family:var(--body);font-weight:500;font-size:13px;opacity:.7;margin-top:6px}
+  .foot nav{padding:0;display:flex;flex-direction:column;gap:10px}
+  .foot a{font-weight:500;font-size:14px;opacity:.85;transition:opacity .15s}
+  .foot a:hover{opacity:1;text-decoration:underline}
+  .copy{margin-top:30px;font-size:12px;opacity:.6;font-weight:500}
+
+  /* focus + motion */
+  a:focus-visible,summary:focus-visible{outline:3px solid var(--lav);outline-offset:3px}
+  @media (prefers-reduced-motion:reduce){
+    .sky b{animation:none}
+    html{scroll-behavior:auto}
+  }
+  @media (max-width:760px){
+    .steps li{padding-left:76px}
+    .faq .a{padding-left:20px}
+    .foot{flex-direction:column}
+  }
+</style>
+</head>
+<body>
+<div class="sky" aria-hidden="true">
+  <b style="left:8%;top:12%;font-size:16px;color:var(--gold);animation-delay:0s">✦</b>
+  <b style="left:26%;top:8%;font-size:11px;color:var(--pink);animation-delay:1.3s;animation-duration:3.4s">✧</b>
+  <b style="left:48%;top:14%;font-size:13px;color:#fff;animation-delay:.6s">⋆</b>
+  <b style="left:70%;top:9%;font-size:18px;color:var(--lav);animation-delay:2.1s;animation-duration:4.6s">✶</b>
+  <b style="left:88%;top:16%;font-size:12px;color:var(--gold);animation-delay:1.7s">✦</b>
+  <b style="left:14%;top:46%;font-size:13px;color:var(--pink);animation-delay:3s">✦</b>
+  <b style="left:84%;top:52%;font-size:14px;color:var(--gold);animation-delay:2.3s">✧</b>
+</div>
+
+<div class="wrap">
+  <nav>
+    <div class="brand"><img src="oshimite-icon.png" alt="推しミテ！">推しミテ！<span>by 白瀬ラボ</span></div>
+    <div class="nav-links">
+      <a class="nav-back" href="index.html">← トップへ</a>
+      <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.shiraselab.uchiwa_tukool">Google Playで見る</a>
+      <a class="nav-cta" href="https://apps.apple.com/app/id6778378550">App Storeで見る</a>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <span class="eyebrow">使い方ガイド ver 2.2.1</span>
+    <h1>使い方ガイド</h1>
+    <p>うちわ作りから<b>コンビニで実寸プリント</b>するまでの流れと、よくある「〇〇したい」をまとめました。</p>
+  </header>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="sec-head">
+      <h2>印刷までの<em>流れ</em></h2>
+      <p>はじめてでも、うちわが完成します</p>
+    </div>
+    <ol class="steps">
+      <li><h3>パーツを置く</h3><p>ツールバーの「スタンプ」「画像」「ペン」などでうちわに要素を配置。文字はキャンバスの空いた所をタップで追加できます。「テンプレ」パネルから定番デザインを選んでもOK。</p></li>
+      <li><h3>色・装飾を整える</h3><p>要素をタップして選び、下の編集パネル（「サイズ」／「フォント」または「色」／「加工」）で色・大きさ・フォント・縁取り・効果（ぷくぷく／きらきら／ネオン）を調整。「色」ツールの推しカラーは、ドラッグ＆ドロップやタップで配色できます。</p></li>
+      <li><h3>仕上がりを確認</h3><p>ツールバーの「3D」で、持ち手付きの立体イメージで仕上がりを確認できます。</p></li>
+      <li><h3>コンビニ印刷データを作る</h3><p>ツールバーの「印刷」→「コンビニ印刷データ作成」で、A3 高解像度の PDF を書き出します。</p></li>
+      <li><h3>印刷する</h3><p>共有メニューからコンビニのプリントアプリ（セブン-イレブンの netprint など）へ送るか、保存して持ち込み。家庭用プリンタは「印刷」ボタンから直接印刷できます（大きいうちわは A4×2 枚の分割プリセットも）。</p></li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="tag">Q&amp;A</span>
+      <h2>こんなときは（<em>〇〇したい</em>）</h2>
+      <p>タップでひらく、よくある質問</p>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary><span class="q">Q</span>文字を入れたい<span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a">キャンバスの何もない所をタップすると入力欄が開き、文字を追加できます（要素を選んでいるときは、いったん空いた所をタップして選択を外すと追加できます）。置いた文字をタップ → 下の編集パネルで文言・フォント・サイズ・色を変更できます（文字をダブルタップでも編集できます）。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span>色を変えたい／推しカラーにしたい<span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a">要素を選んで出る編集パネルの色から変更できます。ツールバーの「色」では推しカラー（おすすめ配色）を選べ、色を要素へドラッグ＆ドロップ、またはタップで配色できます。同じ色をまとめて変えることもできます。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span>画像を入れたい<span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a">ツールバーの「画像」→「取込」で、端末の画像を取り込めます（一度取り込んだ画像はサムネイル履歴から再利用できます）。取り込むと背景削除の画面が自動で開きます。※公式画像・ロゴの無断使用は著作権・肖像権の侵害になり得ます。文字＋フリー素材中心の制作をおすすめします。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span>画像の背景を消したい<span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a">画像を取り込むと背景削除の画面が自動で開きます（あとから直すときは画像を選び「加工」の「背景を編集／背景削除を編集」から）。モードは3つ＝「自動」（被写体をAIで自動抽出）／「色キー」（背景の色を画像でタップし、「しきい値」で消える範囲を調整）／「領域」（消したい場所をタップし、そこからつながった部分だけを消す。複数か所OK）。やり直すときは「リセット」、決めて取り込むときは「取込」。グラデーションや影のある背景はきれいに抜けないことがあります。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span>SVG・スタンプに縁取り（フチ）を付けたい<span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a">SVG／スタンプを選んで出る編集パネルの「加工」の「縁取り」で、各パスにフチを付けられます（「フチを追加」で外→内に多重も可。ぷくぷく・きらきら・ネオンと併用できます）。※文字そのものへのフチ付けは、現在は提供していません。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span>ぷくぷく／きらきら／ネオンにしたい<span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a">文字や要素を選んで、編集パネルの「加工」から選択します。きらきら・ぷくぷくは背景にも追加できます（ツールバーの「うちわ」パネルの「背景キラキラ」「背景ぷくぷく」から）。ネオンは文字・要素向けの効果です。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span>連うちわ（複数ページ）について<span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a">複数ページ（連うちわ）機能は終了し、いまは1枚のうちわ作りに専念しています。複数のうちわは、それぞれ別ファイルとして作成・印刷してください。以前の複数ページファイルを開いた場合は1枚目だけが読み込まれます（必要なら、開いたときに各ページを別ファイルへ分割して保存できます）。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span>うちわの形（シルエット）を変えたい<span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a">ツールバーの「うちわ」を開き、「うちわテンプレート」のサムネから形を選べます。「うちわ」パネルの「新規作成」時にも選べます。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span>保存・読み込みしたい<span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a">ツールバーの「うちわ」を開き、「保存」（プロジェクト .uchiwa か 画像 PNG を選択）・「開く」（.uchiwa を読み込み）・「共有」ができます。編集内容は自動保存され、次回は前回の続きから復元されます。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span>テンプレ・定番フレーズを使いたい<span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a">「テンプレ」パネルから定番デザインや、多言語のファンサ定番フレーズを挿入できます。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span>制作の過程を動画にしたい<span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a">ツールバーの「録画」で制作過程をタイムラプス録画し、MP4 として保存・共有できます。</div>
+      </details>
+    </div>
+  </section>
+
+  <section>
+    <div class="notice">
+      <h3>ご利用上の注意</h3>
+      <ul>
+        <li>公式画像・ロゴの無断使用は著作権・肖像権の侵害になり得ます。文字＋フリー素材中心の制作をおすすめします。</li>
+        <li>会場によっては写真付き・大型ボードの持ち込みが禁止されています。各会場のルールをご確認ください。</li>
+        <li>ジャンボうちわのサイズ（約28.5×29.5cm）が会場持ち込み上限の目安です。</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="lab">推しミテ！<small>白瀬ラボ / ShiraseLab</small></div>
+      <nav>
+        <a href="index.html">推しミテ！トップ</a>
+        <a href="https://play.google.com/store/apps/details?id=com.shiraselab.uchiwa_tukool">Google Playでダウンロード</a>
+        <a href="https://apps.apple.com/app/id6778378550">App Storeでダウンロード</a>
+        <a href="https://github.com/shirase-lab/PrivacyPolicies/blob/main/UchiwaTuKool/PRIVACY_POLICY.md">プライバシーポリシー</a>
+        <a href="https://github.com/shirase-lab/PrivacyPolicies/blob/main/UchiwaTuKool/TERMS_OF_USE.md">利用規約</a>
+        <a href="https://x.com/oshimite_app" target="_blank" rel="noopener">お問い合わせ（X / @oshimite_app）</a>
+      </nav>
+    </div>
+    <div class="copy">© 2026 ShiraseLab. 『推し見て』を、かなえるうちわを。</div>
+  </div>
+</footer>
+</body>
+</html>
