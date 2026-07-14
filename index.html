@@ -67,7 +67,8 @@
      margin-bottom:18px}
   .lede{font-size:clamp(15px,2.1vw,18px);font-weight:500;color:var(--ink);max-width:30ch;margin-bottom:26px}
   .lede b{color:var(--pink-deep)}
-  .btns{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+  /* 縦に積んだ DL ボタンを、最も文字数が多いボタンの幅に揃える（grid 1列＝max-content に stretch）。 */
+  .btns{display:grid;grid-template-columns:max-content;gap:12px;align-items:center}
   .appstore{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;font-weight:700;
             padding:14px 22px;border-radius:16px;font-size:16px;transition:transform .15s ease,box-shadow .15s ease;
             box-shadow:0 8px 0 #2c1a24}
