@@ -1,0 +1,6 @@
+# Shell scripts must stay LF or bash on Windows chokes on CR ($'\r').
+*.sh text eol=lf
+
+# PowerShell scripts: CRLF. They also carry a UTF-8 BOM so Windows PowerShell 5.1
+# (Shift-JIS ANSI fallback) does not mangle 日本語 comments and misparse the file.
+*.ps1 text eol=crlf

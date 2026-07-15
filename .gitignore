@@ -1,2 +1,9 @@
 # 変換前の大容量ソース動画（サイトには変換済み feature_*.mp4 / 1.2.0features.mp4 を使用）
 movies/
+
+# schedules/: 平文・パスフレーズ・ログは公開しない（暗号化済み *.json だけ追跡）
+schedules/*.plain.json
+schedules/live.source.json
+schedules/logs/
+*.passwd
+
