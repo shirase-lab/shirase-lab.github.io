@@ -70,4 +70,8 @@
 - 平文 JSON・パスフレーズを**リポジトリ内に置かない/コミットしない**。
 - 断定の前に一次情報で裏取り（AGENTS.md §15.1）。取れなければ `verified:false`。
 - 既存スキーマ・ラベル体系を勝手に増やさない（`meta.label_schema` に無い値を作らない）。
+- **事務所（genre）を取り違えない。TOBE移籍組を STARTO に入れない（炎上の元）。**
+  - TOBE 勢（Number_i / IMP. / 三宅健 / 北山宏光 / ISSEI / CLASS SEVEN 等・`seed_list.json` の `tobe` カテゴリ）は必ず `genre:"tobe"`。
+  - `genre:"starto_jr"` は STARTO 在籍組（SixTONES / なにわ男子 / NEWS / Kis-My-Ft2 / timelesz / DOMOTO / ACEes 等）**だけ**。旧ジャニーズだからと TOBE 勢を `starto_jr` に混ぜない。
+  - `tobe` は正規ジャンル。`meta.label_schema.genre` に `tobe`（例: 「TOBE（滝沢秀明の事務所・旧ジャニーズ移籍組／Number_i・IMP.等）」）が無ければ**追加する**（上の「スキーマを勝手に増やさない」の明示的な例外）。
 - `meta` の日付は自分で書かない（merge_live.py が更新する）。
