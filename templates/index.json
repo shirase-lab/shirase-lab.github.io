@@ -4,20 +4,6 @@
   "note": "うちわつくーる 配信テンプレのマニフェスト。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。作者制作のみ・投稿機能なし。",
   "templates": [
     {
-      "id": "mitekudasai",
-      "title": "推しさん見てください",
-      "description": "おねだり定番デザイン",
-      "thumbUrl": "thumb/mitekudasai.webp",
-      "fileUrl": "mitekudasai.uchiwa",
-      "updatedAt": "2026-07-30",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "おねだり",
-        "定番"
-      ]
-    },
-    {
       "id": "uchiwa-tsukuto",
       "title": "一緒にうちわつくろっ",
       "description": "お誘い・仲良しデザイン",
