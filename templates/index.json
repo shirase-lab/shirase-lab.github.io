@@ -44,15 +44,6 @@
         "おねだり",
         "指ハート"
       ]
-    },
-    {
-      "id": "tpl-0ff75b9d1a",
-      "title": "うちわ 7-1 1234",
-      "thumbUrl": "thumb/tpl-0ff75b9d1a.png",
-      "fileUrl": "tpl-0ff75b9d1a.uchiwa",
-      "updatedAt": "2026-07-30",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
     }
   ]
 }
