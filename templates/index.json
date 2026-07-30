@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "updatedAt": "2026-07-30",
+  "note": "うちわつくーる 配信テンプレのマニフェスト。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。作者制作のみ・投稿機能なし。",
+  "templates": [
+    {
+      "id": "mitekudasai",
+      "title": "推しさん見てください",
+      "description": "おねだり定番デザイン",
+      "thumbUrl": "thumb/mitekudasai.webp",
+      "fileUrl": "mitekudasai.uchiwa",
+      "updatedAt": "2026-07-30",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
+    },
+    {
+      "id": "uchiwa-tsukuto",
+      "title": "一緒にうちわつくろっ",
+      "description": "お誘い・仲良しデザイン",
+      "thumbUrl": "thumb/uchiwa-tsukuto.webp",
+      "fileUrl": "uchiwa-tsukuto.uchiwa",
+      "updatedAt": "2026-07-30",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
+    },
+    {
+      "id": "yubiheart",
+      "title": "指ハートして",
+      "description": "指ハートおねだりデザイン",
+      "thumbUrl": "thumb/yubiheart.webp",
+      "fileUrl": "yubiheart.uchiwa",
+      "updatedAt": "2026-07-30",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
+    }
+  ]
+}
