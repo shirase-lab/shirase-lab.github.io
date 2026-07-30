@@ -11,7 +11,8 @@
       "fileUrl": "mitekudasai.uchiwa",
       "updatedAt": "2026-07-30",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": ["おねだり", "定番"]
     },
     {
       "id": "uchiwa-tsukuto",
@@ -21,7 +22,8 @@
       "fileUrl": "uchiwa-tsukuto.uchiwa",
       "updatedAt": "2026-07-30",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": ["お誘い", "定番"]
     },
     {
       "id": "yubiheart",
@@ -31,7 +33,8 @@
       "fileUrl": "yubiheart.uchiwa",
       "updatedAt": "2026-07-30",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": ["おねだり", "指ハート"]
     }
   ]
 }
