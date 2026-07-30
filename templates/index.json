@@ -18,20 +18,6 @@
       ]
     },
     {
-      "id": "uchiwa-tsukuto",
-      "title": "一緒にうちわつくろっ",
-      "description": "お誘い・仲良しデザイン",
-      "thumbUrl": "thumb/uchiwa-tsukuto.webp",
-      "fileUrl": "uchiwa-tsukuto.uchiwa",
-      "updatedAt": "2026-07-30",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "お誘い",
-        "定番"
-      ]
-    },
-    {
       "id": "yubiheart",
       "title": "指ハートして",
       "description": "指ハートおねだりデザイン",
