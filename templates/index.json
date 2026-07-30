@@ -12,7 +12,10 @@
       "updatedAt": "2026-07-30",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru",
-      "tags": ["おねだり", "定番"]
+      "tags": [
+        "おねだり",
+        "定番"
+      ]
     },
     {
       "id": "uchiwa-tsukuto",
@@ -23,7 +26,10 @@
       "updatedAt": "2026-07-30",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru",
-      "tags": ["お誘い", "定番"]
+      "tags": [
+        "お誘い",
+        "定番"
+      ]
     },
     {
       "id": "yubiheart",
@@ -34,7 +40,19 @@
       "updatedAt": "2026-07-30",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru",
-      "tags": ["おねだり", "指ハート"]
+      "tags": [
+        "おねだり",
+        "指ハート"
+      ]
+    },
+    {
+      "id": "tpl-0ff75b9d1a",
+      "title": "うちわ 7-1 1234",
+      "thumbUrl": "thumb/tpl-0ff75b9d1a.png",
+      "fileUrl": "tpl-0ff75b9d1a.uchiwa",
+      "updatedAt": "2026-07-30",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
