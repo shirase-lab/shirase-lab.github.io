@@ -53,6 +53,15 @@
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
       "fallbackFont": "YuseiMagic"
+    },
+    {
+      "id": "tpl-b690d04e3c",
+      "title": "うちわdd5b0435",
+      "thumbUrl": "thumb/tpl-b690d04e3c.png",
+      "fileUrl": "tpl-b690d04e3c.uchiwa",
+      "updatedAt": "2026-07-31",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
