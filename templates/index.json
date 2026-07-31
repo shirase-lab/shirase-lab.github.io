@@ -47,129 +47,222 @@
     },
     {
       "id": "tpl-3548b3d7df",
-      "title": "うちわ0981da8d",
+      "title": "慶ちゃん 名前うちわ",
       "thumbUrl": "thumb/tpl-3548b3d7df.png",
       "fileUrl": "tpl-3548b3d7df.uchiwa",
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "YuseiMagic"
+      "fallbackFont": "YuseiMagic",
+      "description": "「慶ちゃん」の名前をスタンプで華やかに飾った、応援に使いやすい名前入りうちわです。",
+      "tags": [
+        "名前入り",
+        "定番",
+        "キラキラ",
+        "ハート"
+      ]
     },
     {
       "id": "tpl-b690d04e3c",
-      "title": "うちわdd5b0435",
+      "title": "まっすーNEWS名前うちわ",
       "thumbUrl": "thumb/tpl-b690d04e3c.png",
       "fileUrl": "tpl-b690d04e3c.uchiwa",
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "description": "NEWSのまっすー担向けに、名前を大きく見せてスタンプで華やかに飾った定番の応援うちわです。",
+      "tags": [
+        "名前入り",
+        "定番",
+        "キラキラ"
+      ]
     },
     {
       "id": "tpl-4baa8abd02",
-      "title": "うちわe3174b0f",
+      "title": "「シゲ」名前入りうちわ",
       "thumbUrl": "thumb/tpl-4baa8abd02.png",
       "fileUrl": "tpl-4baa8abd02.uchiwa",
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "description": "「シゲ」の名前を大きく入れ、スタンプで飾った名前入りの定番うちわです。",
+      "tags": [
+        "名前入り",
+        "定番",
+        "キラキラ"
+      ]
     },
     {
       "id": "tpl-569bbebcc6",
-      "title": "うちわc3ecf5b5",
+      "title": "シゲちゃん健康第一うちわ",
       "thumbUrl": "thumb/tpl-569bbebcc6.png",
       "fileUrl": "tpl-569bbebcc6.uchiwa",
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "description": "「シゲちゃん」の名前に「健康第一」を添えた、体調を気づかうシンプルな名前入り応援うちわ。",
+      "tags": [
+        "名前入り",
+        "シンプル",
+        "定番"
+      ]
     },
     {
       "id": "tpl-596356e25c",
-      "title": "うちわa1599ed4",
+      "title": "シゲちゃんへ3部作お誘い",
       "thumbUrl": "thumb/tpl-596356e25c.png",
       "fileUrl": "tpl-596356e25c.uchiwa",
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "description": "3部作の公演すべてに一緒に行こうと誘う、名前入りでシンプルな応援うちわです。",
+      "tags": [
+        "お誘い",
+        "名前入り",
+        "シンプル",
+        "定番"
+      ]
     },
     {
       "id": "tpl-5fa236a50b",
-      "title": "うちわ4d0119d5",
+      "title": "けいちゃんに指ハートおねだり",
       "thumbUrl": "thumb/tpl-5fa236a50b.png",
       "fileUrl": "tpl-5fa236a50b.uchiwa",
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "DelaGothicOne"
+      "fallbackFont": "DelaGothicOne",
+      "description": "推しの「けいちゃん」に指ハートをおねだりする名前入りうちわです。",
+      "tags": [
+        "指ハート",
+        "おねだり",
+        "名前入り",
+        "ハート"
+      ]
     },
     {
       "id": "tpl-4afb2c35f0",
-      "title": "うちわf8588a5f",
+      "title": "初参戦けいちゃん応援うちわ",
       "thumbUrl": "thumb/tpl-4afb2c35f0.png",
       "fileUrl": "tpl-4afb2c35f0.uchiwa",
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "DelaGothicOne"
+      "fallbackFont": "DelaGothicOne",
+      "description": "初めての参戦を「けいちゃん」の名前と一緒に伝えるシンプルな名前入りうちわ。",
+      "tags": [
+        "初参戦",
+        "名前入り",
+        "シンプル",
+        "定番"
+      ]
     },
     {
       "id": "tpl-801582c0b4",
-      "title": "うちわ17ee7587",
+      "title": "まっすーに手振っておねだり",
       "thumbUrl": "thumb/tpl-801582c0b4.png",
       "fileUrl": "tpl-801582c0b4.uchiwa",
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "CherryBombOne"
+      "fallbackFont": "CherryBombOne",
+      "description": "推しの名前を大きく載せて「手振って」とお願いする、おねだり定番の応援うちわです。",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "お誘い",
+        "定番"
+      ]
     },
     {
       "id": "tpl-7972d45877",
-      "title": "うちわ638ff2e8",
+      "title": "なまら好きだべ！まっすー",
       "thumbUrl": "thumb/tpl-7972d45877.png",
       "fileUrl": "tpl-7972d45877.uchiwa",
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "description": "北海道弁「なまら好きだべ！」で推し・まっすーへの熱い想いをストレートに伝える、名前入りの応援うちわです。",
+      "tags": [
+        "名前入り",
+        "定番",
+        "方言"
+      ]
     },
     {
       "id": "tpl-e2b61f20c6",
-      "title": "うちわb91fd693",
+      "title": "みっちー指さしておねだり",
       "thumbUrl": "thumb/tpl-e2b61f20c6.png",
       "fileUrl": "tpl-e2b61f20c6.uchiwa",
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "description": "推しに「指さして」とおねだりする、みっちーの名前入りうちわ。",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "指さして",
+        "定番"
+      ]
     },
     {
       "id": "tpl-35ae883eb5",
-      "title": "うちわ2",
+      "title": "写真入りファンサおねだりうちわ",
       "thumbUrl": "thumb/tpl-35ae883eb5.png",
       "fileUrl": "tpl-35ae883eb5.uchiwa",
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "description": "推しへのファンサをおねだりする、写真とスタンプ入りの定番デザインうちわです。",
+      "tags": [
+        "定番",
+        "おねだり",
+        "写真入り",
+        "ハート"
+      ]
     },
     {
       "id": "tpl-35ddf49773",
-      "title": "うちわ10460146",
+      "title": "やまだ涼介の名前＆写真うちわ",
       "thumbUrl": "thumb/tpl-35ddf49773.png",
       "fileUrl": "tpl-35ddf49773.uchiwa",
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "description": "「やまだ涼介」の名前に写真とスタンプを添えた、名前入りで目立つ応援うちわです。",
+      "tags": [
+        "名前入り",
+        "写真入り",
+        "定番"
+      ]
     },
     {
       "id": "tpl-74d7ee2486",
-      "title": "うちわ9a8d63db",
+      "title": "一緒にハート作ろ♡お誘い",
       "thumbUrl": "thumb/tpl-74d7ee2486.png",
       "fileUrl": "tpl-74d7ee2486.uchiwa",
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "description": "推しに指ハートを一緒に作ろうとおねだりする、手描き装飾たっぷりのお誘いうちわです。",
+      "tags": [
+        "指ハート",
+        "ハート",
+        "お誘い",
+        "おねだり"
+      ]
     },
     {
       "id": "tpl-6d488f3a2e",
-      "title": "uchiwa-project",
+      "title": "ファンサおねだり定番うちわ",
       "thumbUrl": "thumb/tpl-6d488f3a2e.png",
       "fileUrl": "tpl-6d488f3a2e.uchiwa",
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "description": "「ファンサ」「カンペ」など定番フレーズと写真・スタンプで、推しにおねだりを届ける王道デザインです。",
+      "tags": [
+        "定番",
+        "おねだり",
+        "写真入り",
+        "ハート"
+      ]
     }
   ]
 }
