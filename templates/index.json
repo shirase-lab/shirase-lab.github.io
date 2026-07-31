@@ -98,6 +98,15 @@
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
       "fallbackFont": "DelaGothicOne"
+    },
+    {
+      "id": "tpl-4afb2c35f0",
+      "title": "うちわf8588a5f",
+      "thumbUrl": "thumb/tpl-4afb2c35f0.png",
+      "fileUrl": "tpl-4afb2c35f0.uchiwa",
+      "updatedAt": "2026-07-31",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "DelaGothicOne"
     }
   ]
 }
