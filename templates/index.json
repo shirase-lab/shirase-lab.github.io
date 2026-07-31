@@ -161,6 +161,15 @@
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru"
+    },
+    {
+      "id": "tpl-6d488f3a2e",
+      "title": "uchiwa-project",
+      "thumbUrl": "thumb/tpl-6d488f3a2e.png",
+      "fileUrl": "tpl-6d488f3a2e.uchiwa",
+      "updatedAt": "2026-07-31",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
