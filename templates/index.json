@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-07-30",
+  "updatedAt": "2026-07-31",
   "note": "うちわつくーる 配信テンプレのマニフェスト。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。作者制作のみ・投稿機能なし。",
   "templates": [
     {
@@ -12,7 +12,10 @@
       "updatedAt": "2026-07-30",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru",
-      "tags": ["おねだり", "定番"]
+      "tags": [
+        "おねだり",
+        "定番"
+      ]
     },
     {
       "id": "uchiwa-tsukuto",
@@ -23,7 +26,10 @@
       "updatedAt": "2026-07-30",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru",
-      "tags": ["お誘い", "定番"]
+      "tags": [
+        "お誘い",
+        "定番"
+      ]
     },
     {
       "id": "yubiheart",
@@ -34,7 +40,19 @@
       "updatedAt": "2026-07-30",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru",
-      "tags": ["おねだり", "指ハート"]
+      "tags": [
+        "おねだり",
+        "指ハート"
+      ]
+    },
+    {
+      "id": "tpl-3548b3d7df",
+      "title": "うちわ0981da8d",
+      "thumbUrl": "thumb/tpl-3548b3d7df.png",
+      "fileUrl": "tpl-3548b3d7df.uchiwa",
+      "updatedAt": "2026-07-31",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "YuseiMagic"
     }
   ]
 }
