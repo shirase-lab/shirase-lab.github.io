@@ -7,6 +7,10 @@
 - `*.uchiwa` … テンプレ実体（zip）。`fileUrl` から DL → 端末に `id@updatedAt` でキャッシュ。
 - `thumb/*.webp` … 一覧サムネ。`thumbUrl` から `Image.network` で表示。
 - `index.html` … 人間向けギャラリー（SEO・テンプレ名で検索面を増やす副産物）。
+- `admin.html` … **タグ編集用の管理ページ**（`noindex`・公開ギャラリーからは非リンク）。GitHub の
+  fine-grained PAT（`shirase-lab.github.io` の Contents: Read and write）をペースト→接続すると、
+  各テンプレのタグをブラウザから編集して `index.json` に保存できる（GitHub Contents API を直接叩く・
+  サーバ不要）。トークンは sessionStorage に一時保持（ログアウトで消去）。URL: `/templates/admin.html`。
 
 ## マニフェスト仕様（`index.json`）
 
