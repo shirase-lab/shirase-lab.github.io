@@ -147,7 +147,7 @@ function drawCand(i){
   });
 }
 function addTag(i,raw){
-  (raw||"").split(/[,、\s]+/).map(s=>s.trim()).filter(Boolean).forEach(tag=>{
+  (raw||"").split(/[,、]+/).map(s=>s.trim()).filter(Boolean).forEach(tag=>{
     if(!data.templates[i].tags.includes(tag)) data.templates[i].tags.push(tag);
   });
   drawTags(i);drawCand(i);setDirty(true);
