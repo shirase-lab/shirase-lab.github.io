@@ -249,6 +249,50 @@
         "ハート",
         "写真入り"
       ]
+    },
+    {
+      "id": "daisuki",
+      "title": "豊 大好き",
+      "thumbUrl": "thumb/daisuki.png",
+      "fileUrl": "daisuki.uchiwa",
+      "updatedAt": "2026-07-31",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "ハート",
+        "シンプル",
+        "定番"
+      ]
+    },
+    {
+      "id": "kakoii",
+      "title": "世界一かっこいい 豊",
+      "thumbUrl": "thumb/kakoii.png",
+      "fileUrl": "kakoii.uchiwa",
+      "updatedAt": "2026-07-31",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "キラキラ",
+        "定番"
+      ]
+    },
+    {
+      "id": "yubiheart-kun",
+      "title": "豊 指ハートして",
+      "thumbUrl": "thumb/yubiheart-kun.png",
+      "fileUrl": "yubiheart-kun.uchiwa",
+      "updatedAt": "2026-07-31",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "指ハート",
+        "おねだり",
+        "ハート"
+      ]
     }
   ]
 }
