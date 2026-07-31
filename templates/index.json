@@ -107,6 +107,15 @@
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
       "fallbackFont": "DelaGothicOne"
+    },
+    {
+      "id": "tpl-801582c0b4",
+      "title": "うちわ17ee7587",
+      "thumbUrl": "thumb/tpl-801582c0b4.png",
+      "fileUrl": "tpl-801582c0b4.uchiwa",
+      "updatedAt": "2026-07-31",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "CherryBombOne"
     }
   ]
 }
