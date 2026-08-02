@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-03",
+  "updatedAt": "2026-08-02",
   "note": "うちわつくーる 配信テンプレのマニフェスト。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。作者制作のみ・投稿機能なし。",
   "templates": [
     {
@@ -323,7 +323,12 @@
       "fileUrl": "tpl-9cfa4bd42c.uchiwa",
       "updatedAt": "2026-08-03",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "日向坂46",
+        "上村ひなの",
+        "メンカラ"
+      ]
     }
   ]
 }
