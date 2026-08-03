@@ -275,7 +275,7 @@
       <p data-i18n="and.p">Google Play で「推しミテ！」がダウンロードできるようになりました。iPhone / iPad はこれまでどおり App Store で。</p>
     </div>
     <div class="showcase-frame">
-      <video src="AndroidRelease.mp4" controls muted playsinline preload="none" poster="oshimite-icon.png"></video>
+      <video src="AndroidRelease.mp4" controls playsinline preload="none" poster="oshimite-icon.png"></video>
     </div>
   </section>
 </div>
@@ -296,7 +296,7 @@
       <p data-i18n="movie.p">置いて、彩って、刷るまで。制作の様子は、そのままタイムラプス録画もできます。</p>
     </div>
     <div class="showcase-frame">
-      <video src="2.2.1.mp4" controls muted playsinline preload="none" poster="oshimite-icon.png"></video>
+      <video src="2.2.1.mp4" controls playsinline preload="none" poster="oshimite-icon.png"></video>
     </div>
   </section>
 </div>
@@ -309,19 +309,19 @@
     </div>
     <div class="grid">
       <div class="card"><span class="ico">🫧</span><h3 data-i18n="card1.h3">ぷくぷく文字</h3><p data-i18n="card1.p">グリッター・ネオン・グラデーション。縁取りは何重でも、思いのまま。立体「ぷくぷく」と「きらきら」も同時に。</p>
-        <div class="demo"><video src="feature_puffy.mp4" controls muted playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
+        <div class="demo"><video src="feature_puffy.mp4" controls playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
       <div class="card"><span class="ico">🎨</span><h3 data-i18n="card2.h3">推しカラーをドラッグ配色</h3><p data-i18n="card2.p">担当カラーを文字や装飾へドラッグ＆ドロップ、またはタップで配色。色ごとの一括変更も思いのまま。</p>
-        <div class="demo"><video src="feature_color.mp4" controls muted playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
+        <div class="demo"><video src="feature_color.mp4" controls playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
       <div class="card"><span class="ico">🌏</span><h3 data-i18n="card3.h3">多言語フォント</h3><p data-i18n="card3.p">日本語・韓国語・中国語・英語に対応。推しの言語で応援できる。</p>
-        <div class="demo"><video src="feature_lang.mp4" controls muted playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
+        <div class="demo"><video src="feature_lang.mp4" controls playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
       <div class="card"><span class="ico">🖼️</span><h3 data-i18n="card4.h3">画像＆スタンプ</h3><p data-i18n="card4.p">手持ち画像の取り込みも無料。取り込んだSVGは最大4色で着せ替え。ハートや手描きペンで自由にデコ。</p>
-        <div class="demo"><video src="feature_image.mp4" controls muted playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
+        <div class="demo"><video src="feature_image.mp4" controls playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
       <div class="card"><span class="ico">📐</span><h3 data-i18n="card5.h3">フォント追加</h3><p data-i18n="card5.p">お手持ちの TTF / OTF を読み込んで、好きな書体で作れる。</p>
-        <div class="demo"><video src="feature_font.mp4" controls muted playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
+        <div class="demo"><video src="feature_font.mp4" controls playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
       <div class="card"><span class="ico">👀</span><h3 data-i18n="card6.h3">3Dプレビュー</h3><p data-i18n="card6.p">刷る前に、持ち手付きの立体で仕上がりを確認。</p>
-        <div class="demo"><video src="feature_3d.mp4" controls muted playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
+        <div class="demo"><video src="feature_3d.mp4" controls playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
       <div class="card"><span class="ico">📱</span><h3 data-i18n="card7.h3">タブレットでも広々</h3><p data-i18n="card7.p">スマホもタブレットも一級対応。大画面なら細かい調整までラク。</p>
-        <div class="demo landscape"><video src="feature_tablet.mp4" controls muted playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
+        <div class="demo landscape"><video src="feature_tablet.mp4" controls playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
     </div>
   </section>
 
@@ -659,18 +659,23 @@
 (function(){
   var hasIO = 'IntersectionObserver' in window;
 
-  /* 動画：再生バー(controls)で手動再生。自動再生はしない。1本再生したら他は停止／画面外で停止 */
-  var demos = Array.prototype.slice.call(document.querySelectorAll('.demo video'));
-  demos.forEach(function(v){
+  /* 動画：自動再生はしない。枠内をクリック／タップしたら再生（もう一度で停止）。
+     1本再生したら他は停止／画面外で停止。音声はそのまま（ミュートしない）。 */
+  var vids = Array.prototype.slice.call(document.querySelectorAll('.showcase-frame video, .demo video'));
+  vids.forEach(function(v){
+    /* 枠内クリックで再生/停止。再生ボタンを押さなくても始められる */
+    v.addEventListener('click', function(){
+      if(v.paused){ v.play(); } else { v.pause(); }
+    });
     v.addEventListener('play', function(){
-      demos.forEach(function(o){ if(o !== v){ o.pause(); } });
+      vids.forEach(function(o){ if(o !== v){ o.pause(); } });
     });
   });
   if(hasIO){
     var ioStop = new IntersectionObserver(function(entries){
       entries.forEach(function(e){ if(!e.isIntersecting){ e.target.pause(); } });
     }, {threshold:0});
-    demos.forEach(function(v){ ioStop.observe(v); });
+    vids.forEach(function(v){ ioStop.observe(v); });
   }
 })();
 </script>
