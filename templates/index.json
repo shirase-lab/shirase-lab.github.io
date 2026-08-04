@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-03",
+  "updatedAt": "2026-08-04",
   "note": "うちわつくーる 配信テンプレのマニフェスト。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。作者制作のみ・投稿機能なし。",
   "templates": [
     {
@@ -330,6 +330,15 @@
         "メンカラ",
         "名前入り"
       ]
+    },
+    {
+      "id": "tpl-f2aa58f56f",
+      "title": "うちわa493a29d",
+      "thumbUrl": "thumb/tpl-f2aa58f56f.png",
+      "fileUrl": "tpl-f2aa58f56f.uchiwa",
+      "updatedAt": "2026-08-04",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
