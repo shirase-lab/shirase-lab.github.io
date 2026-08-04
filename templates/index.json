@@ -406,6 +406,15 @@
       "updatedAt": "2026-08-04",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru"
+    },
+    {
+      "id": "tpl-e6c2ae6e92",
+      "title": "うちわ57cab733",
+      "thumbUrl": "thumb/tpl-e6c2ae6e92.png",
+      "fileUrl": "tpl-e6c2ae6e92.uchiwa",
+      "updatedAt": "2026-08-04",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
