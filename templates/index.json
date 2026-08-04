@@ -455,7 +455,11 @@
       "fileUrl": "tpl-a04adb9650.uchiwa",
       "updatedAt": "2026-08-04",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "関西弁",
+        "カンペ"
+      ]
     }
   ]
 }
