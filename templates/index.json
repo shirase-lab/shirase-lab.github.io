@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-04",
+  "updatedAt": "2026-08-05",
   "note": "うちわつくーる 配信テンプレのマニフェスト。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。作者制作のみ・投稿機能なし。",
   "templates": [
     {
@@ -318,7 +318,7 @@
     },
     {
       "id": "tpl-9cfa4bd42c",
-      "title": "うちわ5052a4be",
+      "title": "上村ひなの 名前うちわ",
       "thumbUrl": "thumb/tpl-9cfa4bd42c.png",
       "fileUrl": "tpl-9cfa4bd42c.uchiwa",
       "updatedAt": "2026-08-03",
