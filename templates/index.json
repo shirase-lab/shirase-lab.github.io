@@ -343,6 +343,15 @@
         "関西弁",
         "カンペ"
       ]
+    },
+    {
+      "id": "tpl-d2721fa448",
+      "title": "うちわb133b9fd",
+      "thumbUrl": "thumb/tpl-d2721fa448.png",
+      "fileUrl": "tpl-d2721fa448.uchiwa",
+      "updatedAt": "2026-08-04",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
