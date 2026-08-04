@@ -56,12 +56,15 @@ bash schedules/crypt.sh enc /path/to/live.plain.json
 
 1. `crypt.sh dec seed_list.json` / `crypt.sh dec live.json` で seed と前回データを復号。
 2. `monitor_priority=high` から巡回し、新規ツアー/チケット発売/初日・千秋楽・卒業/大型フェスを検知。
-   収集期間に上限なし（先のツアーも全日程を拾う）。
+   収集期間に上限なし（先のツアーも全日程を拾う）。**多都市ツアーはレグ後追い禁止＝発表済みの
+   全都市・全レグを最初に全部登録する**（1レグ＝1レコード）。
 3. 今回**追加/更新するイベントだけ**を `found.json` に完全な形で出す（再検査で `verified` true/false、
    当日休演・欠席は `absent`）。
 4. `merge_live.py --base <前回> --incoming found.json --out <merged>` で **`id` upsert**＋
    `meta.generated_at`/`report_week` を更新（被りは丸ごと差し替え・新規は追加・過去分は残す）。
-5. `crypt.sh enc <merged> schedules/live.json` で暗号化 → commit → push（ランナーが実行）。
+5. **`check_tour_gaps.py <merged>`（gate・必須）** でツアーのレグ取りこぼしを機械チェック。
+   `⚠`（終了コード1）が出たら公式日程で欠けたレグを補って 3→4 をやり直す（`OK`＝0 になるまで）。
+6. `crypt.sh enc <merged> schedules/live.json` で暗号化 → commit → push（ランナーが実行）。
 
 実体は `Run-LiveSchedule.ps1`（runner）＋ `daily_update.md`（ジョブ仕様）＋ `merge_live.py`（マージ）。
 登録は `Register-LiveScheduleTask.ps1`。詳細は「## 自動化」参照。
@@ -76,8 +79,9 @@ bash schedules/crypt.sh enc /path/to/live.plain.json
 
 | ファイル | 役割 |
 | --- | --- |
-| `daily_update.md` | headless Claude に渡すジョブ仕様（seed/前回復号→調査→検査→`merge_live.py`→`crypt.sh enc`）。 |
+| `daily_update.md` | headless Claude に渡すジョブ仕様（seed/前回復号→調査→検査→`merge_live.py`→`check_tour_gaps.py`→`crypt.sh enc`）。 |
 | `merge_live.py` | 決定的マージャ。`id` で upsert＋`meta` 日付（generated_at/report_week）更新。 |
+| `check_tour_gaps.py` | **ツアー欠落リンタ（gate）**。多都市ツアーの「レグ取りこぼし」（最近まで開催中なのに this_week/upcoming レグが無い＝継続レグ未登録の疑い）を検出。暗号化前に必ず通す。 |
 | `Run-LiveSchedule.ps1` | ランナー。`claude -p` 実行後、`schedules/` に差分があれば commit/push。 |
 | `Register-LiveScheduleTask.ps1` | タスク `ShiraseLab-LiveSchedule` を毎週 月・木 09:00 で登録。 |
 | `logs/` | 実行ログ（gitignore）。 |

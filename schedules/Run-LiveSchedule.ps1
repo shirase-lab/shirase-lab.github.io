@@ -80,6 +80,31 @@ try {
   $claudeExit = $LASTEXITCODE
   Log ("claude exit=$claudeExit")
 
+  # --- ツアー欠落チェック（決定的バックストップ）---
+  # headless Claude が daily_update.md §6.5 の gate を飛ばしても、ここで live.json を
+  # 復号して check_tour_gaps.py にかけ、「レグ取りこぼし」を機械検出してログに残す。
+  # （2026-08-03 実例: なにわ男子 ND⁵ の当週横浜レグ未登録＝当週なにわ0件。二度と見逃さない。）
+  # 誤検知（本当に千秋楽済みのツアー）で週次 push 全体を止めたくないので、push は続行し警告のみ。
+  try {
+    if (Test-Path (Join-Path $repo 'schedules/live.json')) {
+      $tmpPlain = Join-Path ([System.IO.Path]::GetTempPath()) ("live.audit.{0}.json" -f ([guid]::NewGuid().ToString('N')))
+      & bash 'schedules/crypt.sh' dec 'schedules/live.json' $tmpPlain 2>&1 | Tee-Object -FilePath $log -Append
+      if (Test-Path $tmpPlain) {
+        $gate = (& python 'schedules/check_tour_gaps.py' $tmpPlain 2>&1)
+        $gateExit = $LASTEXITCODE
+        $gate | Tee-Object -FilePath $log -Append
+        if ($gateExit -ne 0) {
+          Log '⚠⚠ TOUR-GAP GATE: 継続レグ未登録の疑いあり。上の一覧の公式日程を確認しレグを補完のこと（push は続行）。'
+        } else {
+          Log 'tour-gap gate: OK（レグ取りこぼしの疑いなし）。'
+        }
+        Remove-Item -Force $tmpPlain -ErrorAction SilentlyContinue
+      } else {
+        Log 'tour-gap gate: 復号できず（スキップ）。'
+      }
+    }
+  } catch { Log ("tour-gap gate 実行エラー（無視して継続）: {0}" -f $_.Exception.Message) }
+
   # --- 差分があれば git で確定（決定的処理はここ）---
   $changed = (git -C $repo status --porcelain -- schedules/) 2>$null
   if (-not $changed) {
