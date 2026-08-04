@@ -351,7 +351,11 @@
       "fileUrl": "tpl-d2721fa448.uchiwa",
       "updatedAt": "2026-08-04",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "関西弁",
+        "カンペ"
+      ]
     },
     {
       "id": "tpl-346dcf4cb3",
@@ -360,7 +364,11 @@
       "fileUrl": "tpl-346dcf4cb3.uchiwa",
       "updatedAt": "2026-08-04",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "関西弁",
+        "カンペ"
+      ]
     },
     {
       "id": "tpl-b0e852b914",
@@ -369,7 +377,11 @@
       "fileUrl": "tpl-b0e852b914.uchiwa",
       "updatedAt": "2026-08-04",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "関西弁",
+        "カンペ"
+      ]
     },
     {
       "id": "tpl-2470b14d76",
@@ -378,7 +390,11 @@
       "fileUrl": "tpl-2470b14d76.uchiwa",
       "updatedAt": "2026-08-04",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "関西弁",
+        "カンペ"
+      ]
     },
     {
       "id": "tpl-d1f644ccd8",
@@ -387,7 +403,11 @@
       "fileUrl": "tpl-d1f644ccd8.uchiwa",
       "updatedAt": "2026-08-04",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "関西弁",
+        "カンペ"
+      ]
     },
     {
       "id": "tpl-39e160f391",
@@ -396,7 +416,11 @@
       "fileUrl": "tpl-39e160f391.uchiwa",
       "updatedAt": "2026-08-04",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "関西弁",
+        "カンペ"
+      ]
     },
     {
       "id": "tpl-628097d1dc",
@@ -405,7 +429,11 @@
       "fileUrl": "tpl-628097d1dc.uchiwa",
       "updatedAt": "2026-08-04",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "関西弁",
+        "カンペ"
+      ]
     },
     {
       "id": "tpl-e6c2ae6e92",
@@ -414,7 +442,11 @@
       "fileUrl": "tpl-e6c2ae6e92.uchiwa",
       "updatedAt": "2026-08-04",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "関西弁",
+        "カンペ"
+      ]
     }
   ]
 }
