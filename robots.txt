@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shirase-lab.github.io/sitemap.xml
