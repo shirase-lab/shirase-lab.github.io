@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>配信ステッカー 管理（タグ編集）</title>
+<style>
+  :root{
+    --pink:#FF5C8A; --pink-deep:#FF2E6E; --bg:#FFF0F6; --ink:#4A2E3D;
+    --ink-soft:#9A7886; --line:#ffd9e6; --white:#fff;
+    --body:system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--body);color:var(--ink);background:var(--bg);line-height:1.6}
+  header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);
+    padding:12px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  header h1{font-size:1.05rem;color:var(--pink-deep);margin-right:auto}
+  input[type=password],input[type=text]{padding:8px 10px;border:1px solid var(--line);
+    border-radius:8px;font-size:.9rem;font-family:var(--body);background:#fff;min-width:220px}
+  button{padding:8px 14px;border:0;border-radius:999px;background:var(--pink-deep);color:#fff;
+    font-weight:700;cursor:pointer;font-family:var(--body);font-size:.9rem}
+  button:hover{background:var(--pink)}
+  button.ghost{background:#fff;color:var(--pink-deep);border:1px solid var(--line)}
+  button.tiny{padding:4px 10px;font-size:.8rem;font-weight:600}
+  button:disabled{opacity:.5;cursor:default}
+  #status{font-size:.85rem;color:var(--ink-soft);width:100%}
+  main{max-width:900px;margin:0 auto;padding:16px}
+  .save-bar{position:sticky;top:56px;z-index:4;background:var(--bg);padding:8px 0;margin-bottom:8px;
+    display:flex;gap:10px;align-items:center}
+  .save-bar .hint{font-size:.82rem;color:var(--ink-soft)}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px;
+    display:grid;grid-template-columns:88px 1fr;gap:14px;align-items:start}
+  .card .thumb{width:88px;height:88px;background:#fff;border:1px solid var(--line);border-radius:10px;
+    overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .card .thumb img{width:100%;height:100%;object-fit:contain}
+  .card h2{font-size:1rem}
+  .card .id{font-size:.75rem;color:var(--ink-soft);margin-bottom:6px;word-break:break-all}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+  .chip{display:inline-flex;align-items:center;gap:6px;background:#ffe3ef;color:var(--ink);
+    border-radius:999px;padding:4px 6px 4px 12px;font-size:.85rem}
+  .chip button{background:transparent;color:var(--pink-deep);padding:0 4px;font-size:1rem;line-height:1}
+  .cand{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+  .cand button{background:#fff;color:var(--ink);border:1px solid var(--line);font-weight:500}
+  .cand button.on{background:#ffe3ef;border-color:var(--pink);color:var(--pink-deep)}
+  .addrow{display:flex;gap:6px;margin-top:8px}
+  .addrow input{min-width:0;flex:0 1 160px}
+  .muted{color:var(--ink-soft);font-size:.85rem}
+  .dot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:6px}
+  .ok{background:#3ac07a}.bad{background:#e0555b}.idle{background:#cbb}
+  a.back{color:var(--ink-soft);text-decoration:none;font-size:.85rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>配信ステッカー 管理 — タグ編集</h1>
+  <a class="back" href="/">← サイトトップ</a>
+  <input id="token" type="password" placeholder="GitHub PAT（contents:write）" autocomplete="off">
+  <button id="connect">接続</button>
+  <button id="logout" class="ghost" hidden>ログアウト</button>
+  <div id="status"><span class="dot idle"></span>未接続。fine-grained PAT（<code>shirase-lab.github.io</code> の Contents: Read and write）を入れて「接続」。</div>
+</header>
+
+<main>
+  <div class="save-bar" hidden id="savebar">
+    <button id="save" disabled>保存（index.json を書き戻す）</button>
+    <button id="reload" class="ghost">再読込</button>
+    <span class="hint" id="dirty"></span>
+  </div>
+  <div id="list"><p class="muted">接続すると一覧が出ます。</p></div>
+</main>
+
+<script>
+// 配信ステッカーの index.json をブラウザからタグ編集する管理画面（stamps/admin.html と同型）。
+// タグ区切りはカンマ/読点のみ（スペースで割らない＝§14.1）。
+const OWNER="shirase-lab", REPO="shirase-lab.github.io", LISTKEY="stickers", PATH=`${LISTKEY}/index.json`;
+const API=`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`;
+// アプリ（asset_upload_dialog.dart）と同じ候補タグ。
+const CANDIDATES=["定番","ハート","キラキラ","リボン","王冠","ティアラ","花","どうぶつ","音符","フレーム","ゴージャス","かわいい","シンプル","モノクロ"];
+
+let sha=null, data=null, dirty=false;
+const $=(id)=>document.getElementById(id);
+const items=()=>{ if(!Array.isArray(data[LISTKEY])) data[LISTKEY]=[]; return data[LISTKEY]; };
+
+function utf8ToB64(s){return btoa(String.fromCharCode.apply(null,new TextEncoder().encode(s)));}
+function b64ToUtf8(b){return new TextDecoder().decode(Uint8Array.from(atob(b.replace(/\n/g,'')),c=>c.charCodeAt(0)));}
+// 配信ギャラリー全体で同じ PAT を使う（テンプレ／スタンプ管理と共有）。
+function token(){return sessionStorage.getItem("gh_tpl_token")||"";}
+function headers(){return{Authorization:`Bearer ${token()}`,Accept:"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"};}
+function setStatus(cls,html){$("status").innerHTML=`<span class="dot ${cls}"></span>${html}`;}
+function setDirty(v){dirty=v;$("save").disabled=!v;$("dirty").textContent=v?"未保存の変更があります":"";}
+
+async function load(){
+  setStatus("idle","読み込み中…");
+  const r=await fetch(API+`?ref=main&_=${Date.now()}`,{headers:headers(),cache:"no-store"});
+  if(r.status===401){setStatus("bad","トークンが無効か権限不足（401）。fine-grained PAT の Contents:write を確認。");return false;}
+  if(!r.ok){setStatus("bad","index.json の取得に失敗（HTTP "+r.status+"）。");return false;}
+  const j=await r.json();
+  sha=j.sha;
+  data=JSON.parse(b64ToUtf8(j.content));
+  render();
+  setStatus("ok","接続中。タグを編集して「保存」。");
+  setDirty(false);
+  return true;
+}
+
+function render(){
+  const list=$("list"); list.innerHTML="";
+  items().forEach((t,idx)=>{
+    if(!Array.isArray(t.tags)) t.tags=[];
+    const card=document.createElement("div"); card.className="card";
+    const thumb=t.thumbUrl?`<div class="thumb"><img src="${t.thumbUrl}" alt=""></div>`:`<div class="thumb"></div>`;
+    card.innerHTML=`${thumb}<div>
+      <h2>${escapeHtml(t.title||t.id||"(no title)")}</h2>
+      <div class="id">${escapeHtml(t.id||"")}</div>
+      <div class="tags" data-i="${idx}"></div>
+      <div class="cand" data-i="${idx}"></div>
+      <div class="addrow"><input type="text" placeholder="タグを追加" data-i="${idx}">
+        <button class="tiny" data-add="${idx}">追加</button></div>
+    </div>`;
+    list.appendChild(card);
+    drawTags(idx); drawCand(idx);
+  });
+  list.querySelectorAll("[data-add]").forEach(b=>b.onclick=()=>{
+    const i=+b.dataset.add, inp=list.querySelector(`input[data-i="${i}"]`);
+    addTag(i,inp.value); inp.value="";
+  });
+  list.querySelectorAll('input[type=text][data-i]').forEach(inp=>inp.addEventListener("keydown",e=>{
+    if(e.key==="Enter"){e.preventDefault();addTag(+inp.dataset.i,inp.value);inp.value="";}
+  }));
+}
+function drawTags(i){
+  const box=$("list").querySelector(`.tags[data-i="${i}"]`); box.innerHTML="";
+  items()[i].tags.forEach((tag,ti)=>{
+    const c=document.createElement("span"); c.className="chip";
+    c.innerHTML=`${escapeHtml(tag)} <button title="削除">×</button>`;
+    c.querySelector("button").onclick=()=>{items()[i].tags.splice(ti,1);drawTags(i);drawCand(i);setDirty(true);};
+    box.appendChild(c);
+  });
+  if(!items()[i].tags.length){box.innerHTML='<span class="muted">タグなし</span>';}
+}
+function drawCand(i){
+  const box=$("list").querySelector(`.cand[data-i="${i}"]`); box.innerHTML="";
+  CANDIDATES.forEach(tag=>{
+    const on=items()[i].tags.includes(tag);
+    const b=document.createElement("button"); b.className="tiny"+(on?" on":""); b.textContent=tag;
+    b.onclick=()=>{ if(on){items()[i].tags=items()[i].tags.filter(x=>x!==tag);}
+      else{items()[i].tags.push(tag);} drawTags(i);drawCand(i);setDirty(true); };
+    box.appendChild(b);
+  });
+}
+function addTag(i,raw){
+  // カンマ/読点のみで分割（スペースは 1 タグに含める＝§14.1）。
+  (raw||"").split(/[,、]+/).map(s=>s.trim()).filter(Boolean).forEach(tag=>{
+    if(!items()[i].tags.includes(tag)) items()[i].tags.push(tag);
+  });
+  drawTags(i);drawCand(i);setDirty(true);
+}
+
+async function save(){
+  $("save").disabled=true; setStatus("idle","保存中…");
+  data.updatedAt=new Date().toISOString().slice(0,10);
+  const body={message:`chore(${LISTKEY}): edit tags via admin`,content:utf8ToB64(JSON.stringify(data,null,2)+"\n"),sha:sha,branch:"main"};
+  const r=await fetch(API,{method:"PUT",headers:{...headers(),"Content-Type":"application/json"},body:JSON.stringify(body)});
+  if(r.status===409){setStatus("bad","競合（他で更新あり）。『再読込』してからやり直してください。");return;}
+  if(!r.ok){const t=await r.text();setStatus("bad","保存失敗（HTTP "+r.status+"）。"+t.slice(0,120));$("save").disabled=false;return;}
+  const j=await r.json(); sha=j.content.sha;
+  setDirty(false); setStatus("ok","保存しました（GitHub Pages 反映まで ~1 分）。");
+}
+
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+
+function connected(v){
+  $("logout").hidden=!v; $("connect").hidden=v; $("token").hidden=v; $("savebar").hidden=!v;
+  if(!v){$("list").innerHTML='<p class="muted">接続すると一覧が出ます。</p>';}
+}
+
+$("connect").onclick=async()=>{
+  const t=$("token").value.trim(); if(!t){setStatus("bad","トークンを入れてください。");return;}
+  sessionStorage.setItem("gh_tpl_token",t); $("token").value="";
+  const ok=await load(); connected(ok); if(!ok) sessionStorage.removeItem("gh_tpl_token");
+};
+$("logout").onclick=()=>{sessionStorage.removeItem("gh_tpl_token");connected(false);setStatus("idle","ログアウトしました。");};
+$("reload").onclick=()=>{ if(dirty && !confirm("未保存の変更を破棄して再読込しますか？"))return; load(); };
+$("save").onclick=save;
+
+if(token()){ (async()=>{const ok=await load();connected(ok);})(); }
+</script>
+</body>
+</html>
