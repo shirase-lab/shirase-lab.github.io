@@ -468,7 +468,12 @@
       "fileUrl": "tpl-d143be86fa.uchiwa",
       "updatedAt": "2026-08-05",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "なにわ男子",
+        "がおー",
+        "おねだり"
+      ]
     },
     {
       "id": "tpl-8d7d796e93",
@@ -477,7 +482,11 @@
       "fileUrl": "tpl-8d7d796e93.uchiwa",
       "updatedAt": "2026-08-05",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "おねだり",
+        "定番"
+      ]
     }
   ]
 }
