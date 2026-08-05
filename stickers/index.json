@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "updatedAt": "2026-08-05",
+  "note": "うちわつくーる 配信ステッカーのマニフェスト。作者制作の透過PNGのみ・投稿機能なし。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。",
+  "stickers": [
+    {
+      "id": "tiger_face",
+      "title": "トラ",
+      "thumbUrl": "thumb/tiger_face.png",
+      "fileUrl": "tiger_face.png",
+      "updatedAt": "2026-08-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "トラ"
+      ]
+    }
+  ]
+}
