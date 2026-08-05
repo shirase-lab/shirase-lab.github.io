@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-05",
+  "updatedAt": "2026-08-06",
   "note": "うちわつくーる 配信スタンプ（色変更できるSVG）のマニフェスト。作者制作のみ・投稿機能なし。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。",
   "stamps": [
     {
@@ -8,7 +8,7 @@
       "title": "王冠",
       "thumbUrl": "thumb/oshimite_crown.png",
       "fileUrl": "oshimite_crown.svg",
-      "updatedAt": "2026-08-05",
+      "updatedAt": "2026-08-06",
       "minAppVersion": "2.4.0",
       "tags": [
         "王冠",
@@ -21,7 +21,7 @@
       "title": "ティアラ",
       "thumbUrl": "thumb/oshimite_tiara.png",
       "fileUrl": "oshimite_tiara.svg",
-      "updatedAt": "2026-08-05",
+      "updatedAt": "2026-08-06",
       "minAppVersion": "2.4.0",
       "tags": [
         "ティアラ",
