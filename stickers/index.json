@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-05",
+  "updatedAt": "2026-08-06",
   "note": "うちわつくーる 配信ステッカーのマニフェスト。作者制作の透過PNGのみ・投稿機能なし。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。",
   "stickers": [
     {
@@ -13,6 +13,1306 @@
       "tags": [
         "どうぶつ",
         "トラ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "rabbit_white",
+      "title": "白うさぎ",
+      "thumbUrl": "thumb/rabbit_white.png",
+      "fileUrl": "rabbit_white.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "うさぎ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "rabbit_brown",
+      "title": "茶うさぎ",
+      "thumbUrl": "thumb/rabbit_brown.png",
+      "fileUrl": "rabbit_brown.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "うさぎ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "cat_black",
+      "title": "黒猫",
+      "thumbUrl": "thumb/cat_black.png",
+      "fileUrl": "cat_black.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "ねこ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "cat_white",
+      "title": "白猫",
+      "thumbUrl": "thumb/cat_white.png",
+      "fileUrl": "cat_white.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "ねこ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "cat_calico",
+      "title": "三毛猫",
+      "thumbUrl": "thumb/cat_calico.png",
+      "fileUrl": "cat_calico.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "ねこ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "shiba_inu",
+      "title": "柴犬",
+      "thumbUrl": "thumb/shiba_inu.png",
+      "fileUrl": "shiba_inu.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "いぬ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "toy_poodle",
+      "title": "トイプードル",
+      "thumbUrl": "thumb/toy_poodle.png",
+      "fileUrl": "toy_poodle.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "いぬ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "panda",
+      "title": "パンダ",
+      "thumbUrl": "thumb/panda.png",
+      "fileUrl": "panda.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "パンダ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "bear",
+      "title": "くま",
+      "thumbUrl": "thumb/bear.png",
+      "fileUrl": "bear.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "くま",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "koala",
+      "title": "コアラ",
+      "thumbUrl": "thumb/koala.png",
+      "fileUrl": "koala.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "コアラ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "hamster",
+      "title": "ハムスター",
+      "thumbUrl": "thumb/hamster.png",
+      "fileUrl": "hamster.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "ハムスター",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "long_tailed_tit",
+      "title": "シマエナガ",
+      "thumbUrl": "thumb/long_tailed_tit.png",
+      "fileUrl": "long_tailed_tit.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "とり",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "penguin",
+      "title": "ペンギン",
+      "thumbUrl": "thumb/penguin.png",
+      "fileUrl": "penguin.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "ペンギン",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "chick",
+      "title": "ひよこ",
+      "thumbUrl": "thumb/chick.png",
+      "fileUrl": "chick.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "とり",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "duck",
+      "title": "アヒル",
+      "thumbUrl": "thumb/duck.png",
+      "fileUrl": "duck.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "とり",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "fox",
+      "title": "キツネ",
+      "thumbUrl": "thumb/fox.png",
+      "fileUrl": "fox.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "きつね",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "red_panda",
+      "title": "レッサーパンダ",
+      "thumbUrl": "thumb/red_panda.png",
+      "fileUrl": "red_panda.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "レッサーパンダ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "unicorn",
+      "title": "ユニコーン",
+      "thumbUrl": "thumb/unicorn.png",
+      "fileUrl": "unicorn.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "ユニコーン",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "alpaca",
+      "title": "アルパカ",
+      "thumbUrl": "thumb/alpaca.png",
+      "fileUrl": "alpaca.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "アルパカ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "capybara",
+      "title": "カピバラ",
+      "thumbUrl": "thumb/capybara.png",
+      "fileUrl": "capybara.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "カピバラ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "shortcake",
+      "title": "ショートケーキ",
+      "thumbUrl": "thumb/shortcake.png",
+      "fileUrl": "shortcake.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スイーツ",
+        "ケーキ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "cupcake",
+      "title": "カップケーキ",
+      "thumbUrl": "thumb/cupcake.png",
+      "fileUrl": "cupcake.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スイーツ",
+        "カップケーキ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "macaron",
+      "title": "マカロン",
+      "thumbUrl": "thumb/macaron.png",
+      "fileUrl": "macaron.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スイーツ",
+        "マカロン",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "donut",
+      "title": "ドーナツ",
+      "thumbUrl": "thumb/donut.png",
+      "fileUrl": "donut.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スイーツ",
+        "ドーナツ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "cookie",
+      "title": "クッキー",
+      "thumbUrl": "thumb/cookie.png",
+      "fileUrl": "cookie.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スイーツ",
+        "クッキー",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "pudding",
+      "title": "プリン",
+      "thumbUrl": "thumb/pudding.png",
+      "fileUrl": "pudding.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スイーツ",
+        "プリン",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "parfait",
+      "title": "パフェ",
+      "thumbUrl": "thumb/parfait.png",
+      "fileUrl": "parfait.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スイーツ",
+        "パフェ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "soft_serve",
+      "title": "ソフトクリーム",
+      "thumbUrl": "thumb/soft_serve.png",
+      "fileUrl": "soft_serve.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スイーツ",
+        "アイス",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "popsicle",
+      "title": "アイスバー",
+      "thumbUrl": "thumb/popsicle.png",
+      "fileUrl": "popsicle.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スイーツ",
+        "アイス",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "lollipop",
+      "title": "ロリポップ",
+      "thumbUrl": "thumb/lollipop.png",
+      "fileUrl": "lollipop.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スイーツ",
+        "キャンディ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "candy",
+      "title": "キャンディ",
+      "thumbUrl": "thumb/candy.png",
+      "fileUrl": "candy.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スイーツ",
+        "キャンディ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "chocolate",
+      "title": "チョコ",
+      "thumbUrl": "thumb/chocolate.png",
+      "fileUrl": "chocolate.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スイーツ",
+        "チョコ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "waffle",
+      "title": "ワッフル",
+      "thumbUrl": "thumb/waffle.png",
+      "fileUrl": "waffle.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スイーツ",
+        "ワッフル",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "pancake",
+      "title": "パンケーキ",
+      "thumbUrl": "thumb/pancake.png",
+      "fileUrl": "pancake.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スイーツ",
+        "パンケーキ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "croissant",
+      "title": "クロワッサン",
+      "thumbUrl": "thumb/croissant.png",
+      "fileUrl": "croissant.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スイーツ",
+        "パン",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "strawberry",
+      "title": "いちご",
+      "thumbUrl": "thumb/strawberry.png",
+      "fileUrl": "strawberry.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フルーツ",
+        "いちご",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "cherry",
+      "title": "さくらんぼ",
+      "thumbUrl": "thumb/cherry.png",
+      "fileUrl": "cherry.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フルーツ",
+        "さくらんぼ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "peach",
+      "title": "桃",
+      "thumbUrl": "thumb/peach.png",
+      "fileUrl": "peach.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フルーツ",
+        "もも",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "lemon",
+      "title": "レモン",
+      "thumbUrl": "thumb/lemon.png",
+      "fileUrl": "lemon.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フルーツ",
+        "レモン",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "orange",
+      "title": "オレンジ",
+      "thumbUrl": "thumb/orange.png",
+      "fileUrl": "orange.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フルーツ",
+        "オレンジ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "grape",
+      "title": "ぶどう",
+      "thumbUrl": "thumb/grape.png",
+      "fileUrl": "grape.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フルーツ",
+        "ぶどう",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "apple",
+      "title": "りんご",
+      "thumbUrl": "thumb/apple.png",
+      "fileUrl": "apple.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フルーツ",
+        "りんご",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "watermelon",
+      "title": "スイカ",
+      "thumbUrl": "thumb/watermelon.png",
+      "fileUrl": "watermelon.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フルーツ",
+        "スイカ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "melon",
+      "title": "メロン",
+      "thumbUrl": "thumb/melon.png",
+      "fileUrl": "melon.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フルーツ",
+        "メロン",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "kiwi",
+      "title": "キウイ",
+      "thumbUrl": "thumb/kiwi.png",
+      "fileUrl": "kiwi.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フルーツ",
+        "キウイ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "pineapple",
+      "title": "パイナップル",
+      "thumbUrl": "thumb/pineapple.png",
+      "fileUrl": "pineapple.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フルーツ",
+        "パイナップル",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "banana",
+      "title": "バナナ",
+      "thumbUrl": "thumb/banana.png",
+      "fileUrl": "banana.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フルーツ",
+        "バナナ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "blueberry",
+      "title": "ブルーベリー",
+      "thumbUrl": "thumb/blueberry.png",
+      "fileUrl": "blueberry.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フルーツ",
+        "ブルーベリー",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "raspberry",
+      "title": "ラズベリー",
+      "thumbUrl": "thumb/raspberry.png",
+      "fileUrl": "raspberry.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フルーツ",
+        "ラズベリー",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "mango",
+      "title": "マンゴー",
+      "thumbUrl": "thumb/mango.png",
+      "fileUrl": "mango.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フルーツ",
+        "マンゴー",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "boba",
+      "title": "タピオカ",
+      "thumbUrl": "thumb/boba.png",
+      "fileUrl": "boba.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ドリンク",
+        "タピオカ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "cream_soda",
+      "title": "クリームソーダ",
+      "thumbUrl": "thumb/cream_soda.png",
+      "fileUrl": "cream_soda.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ドリンク",
+        "ソーダ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "milk_tea",
+      "title": "ミルクティー",
+      "thumbUrl": "thumb/milk_tea.png",
+      "fileUrl": "milk_tea.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ドリンク",
+        "ティー",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "cafe_latte",
+      "title": "カフェラテ",
+      "thumbUrl": "thumb/cafe_latte.png",
+      "fileUrl": "cafe_latte.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ドリンク",
+        "コーヒー",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "cocoa",
+      "title": "ココア",
+      "thumbUrl": "thumb/cocoa.png",
+      "fileUrl": "cocoa.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ドリンク",
+        "ココア",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "frappe",
+      "title": "フラッペ",
+      "thumbUrl": "thumb/frappe.png",
+      "fileUrl": "frappe.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ドリンク",
+        "フラッペ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "juice",
+      "title": "ジュース",
+      "thumbUrl": "thumb/juice.png",
+      "fileUrl": "juice.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ドリンク",
+        "ジュース",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "soda",
+      "title": "ソーダ",
+      "thumbUrl": "thumb/soda.png",
+      "fileUrl": "soda.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ドリンク",
+        "ソーダ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "milkshake",
+      "title": "シェイク",
+      "thumbUrl": "thumb/milkshake.png",
+      "fileUrl": "milkshake.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ドリンク",
+        "シェイク",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "teacup",
+      "title": "ティーカップ",
+      "thumbUrl": "thumb/teacup.png",
+      "fileUrl": "teacup.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ドリンク",
+        "ティー",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sakura",
+      "title": "桜",
+      "thumbUrl": "thumb/sakura.png",
+      "fileUrl": "sakura.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "花",
+        "さくら",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "rose",
+      "title": "バラ",
+      "thumbUrl": "thumb/rose.png",
+      "fileUrl": "rose.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "花",
+        "バラ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "daisy",
+      "title": "デイジー",
+      "thumbUrl": "thumb/daisy.png",
+      "fileUrl": "daisy.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "花",
+        "デイジー",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "tulip",
+      "title": "チューリップ",
+      "thumbUrl": "thumb/tulip.png",
+      "fileUrl": "tulip.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "花",
+        "チューリップ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sunflower",
+      "title": "ひまわり",
+      "thumbUrl": "thumb/sunflower.png",
+      "fileUrl": "sunflower.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "花",
+        "ひまわり",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "hydrangea",
+      "title": "紫陽花",
+      "thumbUrl": "thumb/hydrangea.png",
+      "fileUrl": "hydrangea.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "花",
+        "あじさい",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "cosmos",
+      "title": "コスモス",
+      "thumbUrl": "thumb/cosmos.png",
+      "fileUrl": "cosmos.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "花",
+        "コスモス",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "lily_of_the_valley",
+      "title": "スズラン",
+      "thumbUrl": "thumb/lily_of_the_valley.png",
+      "fileUrl": "lily_of_the_valley.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "花",
+        "スズラン",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "lavender",
+      "title": "ラベンダー",
+      "thumbUrl": "thumb/lavender.png",
+      "fileUrl": "lavender.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "花",
+        "ラベンダー",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "clover",
+      "title": "クローバー",
+      "thumbUrl": "thumb/clover.png",
+      "fileUrl": "clover.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "植物",
+        "クローバー",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "leaf",
+      "title": "葉っぱ",
+      "thumbUrl": "thumb/leaf.png",
+      "fileUrl": "leaf.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "植物",
+        "葉っぱ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "bouquet",
+      "title": "花束",
+      "thumbUrl": "thumb/bouquet.png",
+      "fileUrl": "bouquet.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "花",
+        "花束",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "flower_crown",
+      "title": "花冠",
+      "thumbUrl": "thumb/flower_crown.png",
+      "fileUrl": "flower_crown.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "花",
+        "花冠",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "petals",
+      "title": "花びら",
+      "thumbUrl": "thumb/petals.png",
+      "fileUrl": "petals.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "花",
+        "花びら",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "cactus",
+      "title": "サボテン",
+      "thumbUrl": "thumb/cactus.png",
+      "fileUrl": "cactus.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "植物",
+        "サボテン",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "angel",
+      "title": "天使",
+      "thumbUrl": "thumb/angel.png",
+      "fileUrl": "angel.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ファンタジー",
+        "天使",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "devil",
+      "title": "悪魔",
+      "thumbUrl": "thumb/devil.png",
+      "fileUrl": "devil.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ファンタジー",
+        "悪魔",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "fairy",
+      "title": "妖精",
+      "thumbUrl": "thumb/fairy.png",
+      "fileUrl": "fairy.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ファンタジー",
+        "妖精",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "spellbook",
+      "title": "魔法の本",
+      "thumbUrl": "thumb/spellbook.png",
+      "fileUrl": "spellbook.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ファンタジー",
+        "魔法",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "magic_wand",
+      "title": "魔法のステッキ",
+      "thumbUrl": "thumb/magic_wand.png",
+      "fileUrl": "magic_wand.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ファンタジー",
+        "魔法",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "magic_circle",
+      "title": "魔法陣",
+      "thumbUrl": "thumb/magic_circle.png",
+      "fileUrl": "magic_circle.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ファンタジー",
+        "魔法",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "treasure_chest",
+      "title": "宝箱",
+      "thumbUrl": "thumb/treasure_chest.png",
+      "fileUrl": "treasure_chest.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ファンタジー",
+        "宝箱",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "gems",
+      "title": "宝石セット",
+      "thumbUrl": "thumb/gems.png",
+      "fileUrl": "gems.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ファンタジー",
+        "宝石",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "moon_spirit",
+      "title": "月の精霊",
+      "thumbUrl": "thumb/moon_spirit.png",
+      "fileUrl": "moon_spirit.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ファンタジー",
+        "精霊",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "star_spirit",
+      "title": "星の精霊",
+      "thumbUrl": "thumb/star_spirit.png",
+      "fileUrl": "star_spirit.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ファンタジー",
+        "精霊",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "snowman",
+      "title": "雪だるま",
+      "thumbUrl": "thumb/snowman.png",
+      "fileUrl": "snowman.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "季節",
+        "冬",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "snow_rabbit",
+      "title": "雪うさぎ",
+      "thumbUrl": "thumb/snow_rabbit.png",
+      "fileUrl": "snow_rabbit.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "季節",
+        "冬",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "ghost",
+      "title": "おばけ",
+      "thumbUrl": "thumb/ghost.png",
+      "fileUrl": "ghost.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "イベント",
+        "ハロウィン",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "jack_o_lantern",
+      "title": "ジャック・オー・ランタン",
+      "thumbUrl": "thumb/jack_o_lantern.png",
+      "fileUrl": "jack_o_lantern.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "イベント",
+        "ハロウィン",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "santa_hat",
+      "title": "サンタ帽",
+      "thumbUrl": "thumb/santa_hat.png",
+      "fileUrl": "santa_hat.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "イベント",
+        "クリスマス",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "gift",
+      "title": "プレゼント",
+      "thumbUrl": "thumb/gift.png",
+      "fileUrl": "gift.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "イベント",
+        "プレゼント",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "kadomatsu",
+      "title": "門松",
+      "thumbUrl": "thumb/kadomatsu.png",
+      "fileUrl": "kadomatsu.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "季節",
+        "お正月",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "daruma",
+      "title": "だるま",
+      "thumbUrl": "thumb/daruma.png",
+      "fileUrl": "daruma.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "季節",
+        "お正月",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "koinobori",
+      "title": "鯉のぼり",
+      "thumbUrl": "thumb/koinobori.png",
+      "fileUrl": "koinobori.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "季節",
+        "こどもの日",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "tanabata",
+      "title": "七夕飾り",
+      "thumbUrl": "thumb/tanabata.png",
+      "fileUrl": "tanabata.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "季節",
+        "七夕",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "fireworks",
+      "title": "花火",
+      "thumbUrl": "thumb/fireworks.png",
+      "fileUrl": "fireworks.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "季節",
+        "夏",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "goldfish",
+      "title": "金魚",
+      "thumbUrl": "thumb/goldfish.png",
+      "fileUrl": "goldfish.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "季節",
+        "夏",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sakura_mochi",
+      "title": "桜餅",
+      "thumbUrl": "thumb/sakura_mochi.png",
+      "fileUrl": "sakura_mochi.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "季節",
+        "春",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "autumn_leaves",
+      "title": "紅葉",
+      "thumbUrl": "thumb/autumn_leaves.png",
+      "fileUrl": "autumn_leaves.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "季節",
+        "秋",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "christmas_tree",
+      "title": "クリスマスツリー",
+      "thumbUrl": "thumb/christmas_tree.png",
+      "fileUrl": "christmas_tree.png",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "イベント",
+        "クリスマス",
         "かわいい"
       ]
     }
