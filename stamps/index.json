@@ -28,6 +28,71 @@
         "ゴージャス",
         "プリンセス"
       ]
+    },
+    {
+      "id": "oshimite_megaphone",
+      "title": "応援メガホン",
+      "thumbUrl": "thumb/oshimite_megaphone.png",
+      "fileUrl": "oshimite_megaphone.svg",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "応援",
+        "ライブ",
+        "メガホン"
+      ]
+    },
+    {
+      "id": "oshimite_crown_simple",
+      "title": "王冠",
+      "thumbUrl": "thumb/oshimite_crown_simple.png",
+      "fileUrl": "oshimite_crown_simple.svg",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "王冠",
+        "推し",
+        "記念"
+      ]
+    },
+    {
+      "id": "oshimite_camera",
+      "title": "カメラ",
+      "thumbUrl": "thumb/oshimite_camera.png",
+      "fileUrl": "oshimite_camera.svg",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "カメラ",
+        "撮影",
+        "記念"
+      ]
+    },
+    {
+      "id": "oshimite_bolt",
+      "title": "稲妻",
+      "thumbUrl": "thumb/oshimite_bolt.png",
+      "fileUrl": "oshimite_bolt.svg",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "稲妻",
+        "ライブ",
+        "エモ"
+      ]
+    },
+    {
+      "id": "oshimite_uchiwa",
+      "title": "うちわ",
+      "thumbUrl": "thumb/oshimite_uchiwa.png",
+      "fileUrl": "oshimite_uchiwa.svg",
+      "updatedAt": "2026-08-06",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "うちわ",
+        "推し活",
+        "応援"
+      ]
     }
   ]
 }
