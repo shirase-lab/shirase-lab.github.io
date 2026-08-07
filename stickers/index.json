@@ -1,27 +1,14 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-06",
-  "note": "うちわつくーる 配信ステッカーのマニフェスト。作者制作の透過PNGのみ・投稿機能なし。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。",
+  "updatedAt": "2026-08-07",
+  "note": "うちわつくーる 配信ステッカーのマニフェスト。作者制作のみ・投稿機能なし。thumbUrl / fileUrl は index.json からの相対 URL。",
   "stickers": [
     {
-      "id": "tiger_face",
-      "title": "トラ",
-      "thumbUrl": "thumb/tiger_face.png",
-      "fileUrl": "tiger_face.png",
-      "updatedAt": "2026-08-05",
-      "minAppVersion": "2.4.0",
-      "tags": [
-        "どうぶつ",
-        "トラ",
-        "かわいい"
-      ]
-    },
-    {
-      "id": "rabbit_white",
+      "id": "sticker_001",
       "title": "白うさぎ",
-      "thumbUrl": "thumb/rabbit_white.png",
-      "fileUrl": "rabbit_white.png",
-      "updatedAt": "2026-08-06",
+      "thumbUrl": "thumb/sticker_001.png",
+      "fileUrl": "sticker_001.png",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
         "どうぶつ",
@@ -30,11 +17,11 @@
       ]
     },
     {
-      "id": "rabbit_brown",
+      "id": "sticker_002",
       "title": "茶うさぎ",
-      "thumbUrl": "thumb/rabbit_brown.png",
-      "fileUrl": "rabbit_brown.png",
-      "updatedAt": "2026-08-06",
+      "thumbUrl": "thumb/sticker_002.png",
+      "fileUrl": "sticker_002.png",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
         "どうぶつ",
@@ -43,11 +30,11 @@
       ]
     },
     {
-      "id": "cat_black",
+      "id": "sticker_003",
       "title": "黒猫",
-      "thumbUrl": "thumb/cat_black.png",
-      "fileUrl": "cat_black.png",
-      "updatedAt": "2026-08-06",
+      "thumbUrl": "thumb/sticker_003.png",
+      "fileUrl": "sticker_003.png",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
         "どうぶつ",
@@ -56,11 +43,11 @@
       ]
     },
     {
-      "id": "cat_white",
+      "id": "sticker_004",
       "title": "白猫",
-      "thumbUrl": "thumb/cat_white.png",
-      "fileUrl": "cat_white.png",
-      "updatedAt": "2026-08-06",
+      "thumbUrl": "thumb/sticker_004.png",
+      "fileUrl": "sticker_004.png",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
         "どうぶつ",
@@ -69,11 +56,11 @@
       ]
     },
     {
-      "id": "cat_calico",
+      "id": "sticker_005",
       "title": "三毛猫",
-      "thumbUrl": "thumb/cat_calico.png",
-      "fileUrl": "cat_calico.png",
-      "updatedAt": "2026-08-06",
+      "thumbUrl": "thumb/sticker_005.png",
+      "fileUrl": "sticker_005.png",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
         "どうぶつ",
@@ -82,11 +69,11 @@
       ]
     },
     {
-      "id": "shiba_inu",
+      "id": "sticker_006",
       "title": "柴犬",
-      "thumbUrl": "thumb/shiba_inu.png",
-      "fileUrl": "shiba_inu.png",
-      "updatedAt": "2026-08-06",
+      "thumbUrl": "thumb/sticker_006.png",
+      "fileUrl": "sticker_006.png",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
         "どうぶつ",
@@ -95,11 +82,11 @@
       ]
     },
     {
-      "id": "toy_poodle",
+      "id": "sticker_007",
       "title": "トイプードル",
-      "thumbUrl": "thumb/toy_poodle.png",
-      "fileUrl": "toy_poodle.png",
-      "updatedAt": "2026-08-06",
+      "thumbUrl": "thumb/sticker_007.png",
+      "fileUrl": "sticker_007.png",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
         "どうぶつ",
@@ -108,11 +95,11 @@
       ]
     },
     {
-      "id": "panda",
+      "id": "sticker_008",
       "title": "パンダ",
-      "thumbUrl": "thumb/panda.png",
-      "fileUrl": "panda.png",
-      "updatedAt": "2026-08-06",
+      "thumbUrl": "thumb/sticker_008.png",
+      "fileUrl": "sticker_008.png",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
         "どうぶつ",
@@ -121,11 +108,11 @@
       ]
     },
     {
-      "id": "bear",
+      "id": "sticker_009",
       "title": "くま",
-      "thumbUrl": "thumb/bear.png",
-      "fileUrl": "bear.png",
-      "updatedAt": "2026-08-06",
+      "thumbUrl": "thumb/sticker_009.png",
+      "fileUrl": "sticker_009.png",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
         "どうぶつ",
@@ -134,11 +121,11 @@
       ]
     },
     {
-      "id": "koala",
+      "id": "sticker_010",
       "title": "コアラ",
-      "thumbUrl": "thumb/koala.png",
-      "fileUrl": "koala.png",
-      "updatedAt": "2026-08-06",
+      "thumbUrl": "thumb/sticker_010.png",
+      "fileUrl": "sticker_010.png",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
         "どうぶつ",
@@ -147,11 +134,11 @@
       ]
     },
     {
-      "id": "hamster",
+      "id": "sticker_011",
       "title": "ハムスター",
-      "thumbUrl": "thumb/hamster.png",
-      "fileUrl": "hamster.png",
-      "updatedAt": "2026-08-06",
+      "thumbUrl": "thumb/sticker_011.png",
+      "fileUrl": "sticker_011.png",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
         "どうぶつ",
@@ -160,11 +147,11 @@
       ]
     },
     {
-      "id": "long_tailed_tit",
+      "id": "sticker_012",
       "title": "シマエナガ",
-      "thumbUrl": "thumb/long_tailed_tit.png",
-      "fileUrl": "long_tailed_tit.png",
-      "updatedAt": "2026-08-06",
+      "thumbUrl": "thumb/sticker_012.png",
+      "fileUrl": "sticker_012.png",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
         "どうぶつ",
@@ -173,11 +160,11 @@
       ]
     },
     {
-      "id": "penguin",
+      "id": "sticker_013",
       "title": "ペンギン",
-      "thumbUrl": "thumb/penguin.png",
-      "fileUrl": "penguin.png",
-      "updatedAt": "2026-08-06",
+      "thumbUrl": "thumb/sticker_013.png",
+      "fileUrl": "sticker_013.png",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
         "どうぶつ",
@@ -186,11 +173,11 @@
       ]
     },
     {
-      "id": "chick",
+      "id": "sticker_014",
       "title": "ひよこ",
-      "thumbUrl": "thumb/chick.png",
-      "fileUrl": "chick.png",
-      "updatedAt": "2026-08-06",
+      "thumbUrl": "thumb/sticker_014.png",
+      "fileUrl": "sticker_014.png",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
         "どうぶつ",
@@ -199,80 +186,15 @@
       ]
     },
     {
-      "id": "duck",
+      "id": "sticker_015",
       "title": "アヒル",
-      "thumbUrl": "thumb/duck.png",
-      "fileUrl": "duck.png",
-      "updatedAt": "2026-08-06",
+      "thumbUrl": "thumb/sticker_015.png",
+      "fileUrl": "sticker_015.png",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
         "どうぶつ",
         "とり",
-        "かわいい"
-      ]
-    },
-    {
-      "id": "fox",
-      "title": "キツネ",
-      "thumbUrl": "thumb/fox.png",
-      "fileUrl": "fox.png",
-      "updatedAt": "2026-08-06",
-      "minAppVersion": "2.4.0",
-      "tags": [
-        "どうぶつ",
-        "きつね",
-        "かわいい"
-      ]
-    },
-    {
-      "id": "red_panda",
-      "title": "レッサーパンダ",
-      "thumbUrl": "thumb/red_panda.png",
-      "fileUrl": "red_panda.png",
-      "updatedAt": "2026-08-06",
-      "minAppVersion": "2.4.0",
-      "tags": [
-        "どうぶつ",
-        "レッサーパンダ",
-        "かわいい"
-      ]
-    },
-    {
-      "id": "unicorn",
-      "title": "ユニコーン",
-      "thumbUrl": "thumb/unicorn.png",
-      "fileUrl": "unicorn.png",
-      "updatedAt": "2026-08-06",
-      "minAppVersion": "2.4.0",
-      "tags": [
-        "どうぶつ",
-        "ユニコーン",
-        "かわいい"
-      ]
-    },
-    {
-      "id": "alpaca",
-      "title": "アルパカ",
-      "thumbUrl": "thumb/alpaca.png",
-      "fileUrl": "alpaca.png",
-      "updatedAt": "2026-08-06",
-      "minAppVersion": "2.4.0",
-      "tags": [
-        "どうぶつ",
-        "アルパカ",
-        "かわいい"
-      ]
-    },
-    {
-      "id": "capybara",
-      "title": "カピバラ",
-      "thumbUrl": "thumb/capybara.png",
-      "fileUrl": "capybara.png",
-      "updatedAt": "2026-08-06",
-      "minAppVersion": "2.4.0",
-      "tags": [
-        "どうぶつ",
-        "カピバラ",
         "かわいい"
       ]
     }
