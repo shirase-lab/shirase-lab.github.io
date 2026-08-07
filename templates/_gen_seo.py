@@ -285,6 +285,28 @@ for t in templates:
     urls.append((f"{SITE}/templates/t/{t['id']}.html", "0.6", "monthly"))
 for tag in all_tags:
     urls.append((f"{SITE}/templates/tag/{tag_slug[tag]}.html", "0.5", "weekly"))
+# 配信スタンプ／ステッカーのギャラリーも sitemap に温存する（実体の生成は ../_gen_galleries.py。
+# ここで URL を足さないと、このスクリプトを回すたびに sitemap から stamps/stickers が消える）。
+for gdir, gkey in (("stamps", "stamps"), ("stickers", "stickers")):
+    gp = ROOT / gdir / "index.json"
+    if not gp.exists():
+        continue
+    gitems = json.loads(gp.read_text(encoding="utf-8"))[gkey]
+    gtags, gseen, gslug = [], {}, {}
+    for it in gitems:
+        for tg in it.get("tags", []):
+            if tg not in gtags:
+                gtags.append(tg)
+    for tg in gtags:
+        base, s2, j = slugify(tg), slugify(tg), 2
+        while s2 in gseen and gseen[s2] != tg:
+            s2, j = f"{base}-{j}", j + 1
+        gseen[s2] = tg; gslug[tg] = s2
+    urls.append((f"{SITE}/{gdir}/", "0.8", "weekly"))
+    for it in gitems:
+        urls.append((f"{SITE}/{gdir}/t/{it['id']}.html", "0.6", "monthly"))
+    for tg in gtags:
+        urls.append((f"{SITE}/{gdir}/tag/{gslug[tg]}.html", "0.5", "weekly"))
 sm = ['<?xml version="1.0" encoding="UTF-8"?>',
       '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 for loc, pri, cf in urls:
