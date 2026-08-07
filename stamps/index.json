@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-06",
+  "updatedAt": "2026-08-07",
   "note": "うちわつくーる 配信スタンプ（色変更できるSVG）のマニフェスト。作者制作のみ・投稿機能なし。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。",
   "stamps": [
     {
@@ -30,68 +30,603 @@
       ]
     },
     {
-      "id": "oshimite_megaphone",
-      "title": "応援メガホン",
-      "thumbUrl": "thumb/oshimite_megaphone.png",
-      "fileUrl": "oshimite_megaphone.svg",
-      "updatedAt": "2026-08-06",
+      "id": "oshimite_kirakira1",
+      "title": "キラキラ①",
+      "thumbUrl": "thumb/oshimite_kirakira1.png",
+      "fileUrl": "oshimite_kirakira1.svg",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
-        "応援",
-        "ライブ",
-        "メガホン"
+        "キラキラ",
+        "装飾"
       ]
     },
     {
-      "id": "oshimite_crown_simple",
-      "title": "王冠",
-      "thumbUrl": "thumb/oshimite_crown_simple.png",
-      "fileUrl": "oshimite_crown_simple.svg",
-      "updatedAt": "2026-08-06",
+      "id": "oshimite_kirakira2",
+      "title": "キラキラ②",
+      "thumbUrl": "thumb/oshimite_kirakira2.png",
+      "fileUrl": "oshimite_kirakira2.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "キラキラ",
+        "装飾"
+      ]
+    },
+    {
+      "id": "oshimite_kirakira3",
+      "title": "キラキラ③",
+      "thumbUrl": "thumb/oshimite_kirakira3.png",
+      "fileUrl": "oshimite_kirakira3.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "キラキラ",
+        "装飾"
+      ]
+    },
+    {
+      "id": "oshimite_houshasen",
+      "title": "放射線",
+      "thumbUrl": "thumb/oshimite_houshasen.png",
+      "fileUrl": "oshimite_houshasen.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "エフェクト",
+        "集中"
+      ]
+    },
+    {
+      "id": "oshimite_shuchusen",
+      "title": "集中線",
+      "thumbUrl": "thumb/oshimite_shuchusen.png",
+      "fileUrl": "oshimite_shuchusen.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "エフェクト",
+        "集中"
+      ]
+    },
+    {
+      "id": "oshimite_crown1",
+      "title": "王冠①",
+      "thumbUrl": "thumb/oshimite_crown1.png",
+      "fileUrl": "oshimite_crown1.svg",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
         "王冠",
-        "推し",
-        "記念"
+        "ゴージャス"
       ]
     },
     {
-      "id": "oshimite_camera",
-      "title": "カメラ",
-      "thumbUrl": "thumb/oshimite_camera.png",
-      "fileUrl": "oshimite_camera.svg",
-      "updatedAt": "2026-08-06",
+      "id": "oshimite_crown2",
+      "title": "王冠②",
+      "thumbUrl": "thumb/oshimite_crown2.png",
+      "fileUrl": "oshimite_crown2.svg",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
-        "カメラ",
-        "撮影",
-        "記念"
+        "王冠",
+        "ゴージャス"
       ]
     },
     {
-      "id": "oshimite_bolt",
+      "id": "oshimite_ribbon1",
+      "title": "リボン①",
+      "thumbUrl": "thumb/oshimite_ribbon1.png",
+      "fileUrl": "oshimite_ribbon1.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "リボン",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "oshimite_ribbon2",
+      "title": "リボン②",
+      "thumbUrl": "thumb/oshimite_ribbon2.png",
+      "fileUrl": "oshimite_ribbon2.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "リボン",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "oshimite_angel_wing",
+      "title": "天使の羽",
+      "thumbUrl": "thumb/oshimite_angel_wing.png",
+      "fileUrl": "oshimite_angel_wing.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "羽",
+        "天使"
+      ]
+    },
+    {
+      "id": "oshimite_devil_wing",
+      "title": "悪魔の羽",
+      "thumbUrl": "thumb/oshimite_devil_wing.png",
+      "fileUrl": "oshimite_devil_wing.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "羽",
+        "悪魔"
+      ]
+    },
+    {
+      "id": "oshimite_feather",
+      "title": "羽根",
+      "thumbUrl": "thumb/oshimite_feather.png",
+      "fileUrl": "oshimite_feather.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "羽",
+        "ナチュラル"
+      ]
+    },
+    {
+      "id": "oshimite_moon",
+      "title": "月",
+      "thumbUrl": "thumb/oshimite_moon.png",
+      "fileUrl": "oshimite_moon.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "月",
+        "夜"
+      ]
+    },
+    {
+      "id": "oshimite_star",
+      "title": "星",
+      "thumbUrl": "thumb/oshimite_star.png",
+      "fileUrl": "oshimite_star.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "星",
+        "キラキラ"
+      ]
+    },
+    {
+      "id": "oshimite_heart",
+      "title": "ハート",
+      "thumbUrl": "thumb/oshimite_heart.png",
+      "fileUrl": "oshimite_heart.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ハート",
+        "推し"
+      ]
+    },
+    {
+      "id": "oshimite_flame",
+      "title": "炎",
+      "thumbUrl": "thumb/oshimite_flame.png",
+      "fileUrl": "oshimite_flame.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "炎",
+        "情熱"
+      ]
+    },
+    {
+      "id": "oshimite_inazuma",
       "title": "稲妻",
-      "thumbUrl": "thumb/oshimite_bolt.png",
-      "fileUrl": "oshimite_bolt.svg",
-      "updatedAt": "2026-08-06",
+      "thumbUrl": "thumb/oshimite_inazuma.png",
+      "fileUrl": "oshimite_inazuma.svg",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
         "稲妻",
-        "ライブ",
-        "エモ"
+        "ライブ"
       ]
     },
     {
-      "id": "oshimite_uchiwa",
-      "title": "うちわ",
-      "thumbUrl": "thumb/oshimite_uchiwa.png",
-      "fileUrl": "oshimite_uchiwa.svg",
-      "updatedAt": "2026-08-06",
+      "id": "oshimite_cloud",
+      "title": "雲",
+      "thumbUrl": "thumb/oshimite_cloud.png",
+      "fileUrl": "oshimite_cloud.svg",
+      "updatedAt": "2026-08-07",
       "minAppVersion": "2.4.0",
       "tags": [
-        "うちわ",
-        "推し活",
-        "応援"
+        "雲",
+        "空"
+      ]
+    },
+    {
+      "id": "oshimite_petal",
+      "title": "花びら",
+      "thumbUrl": "thumb/oshimite_petal.png",
+      "fileUrl": "oshimite_petal.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "花",
+        "ナチュラル"
+      ]
+    },
+    {
+      "id": "oshimite_daisy",
+      "title": "デイジー",
+      "thumbUrl": "thumb/oshimite_daisy.png",
+      "fileUrl": "oshimite_daisy.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "花",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "oshimite_chain",
+      "title": "チェーン",
+      "thumbUrl": "thumb/oshimite_chain.png",
+      "fileUrl": "oshimite_chain.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "チェーン",
+        "クール"
+      ]
+    },
+    {
+      "id": "oshimite_gem",
+      "title": "宝石",
+      "thumbUrl": "thumb/oshimite_gem.png",
+      "fileUrl": "oshimite_gem.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "宝石",
+        "ゴージャス"
+      ]
+    },
+    {
+      "id": "oshimite_diamond",
+      "title": "ダイヤ",
+      "thumbUrl": "thumb/oshimite_diamond.png",
+      "fileUrl": "oshimite_diamond.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ダイヤ",
+        "ゴージャス"
+      ]
+    },
+    {
+      "id": "oshimite_pearl",
+      "title": "パール風",
+      "thumbUrl": "thumb/oshimite_pearl.png",
+      "fileUrl": "oshimite_pearl.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "パール",
+        "上品"
+      ]
+    },
+    {
+      "id": "oshimite_lace_circle",
+      "title": "レース円形",
+      "thumbUrl": "thumb/oshimite_lace_circle.png",
+      "fileUrl": "oshimite_lace_circle.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "レース",
+        "フレーム"
+      ]
+    },
+    {
+      "id": "oshimite_lace_half",
+      "title": "レース半円",
+      "thumbUrl": "thumb/oshimite_lace_half.png",
+      "fileUrl": "oshimite_lace_half.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "レース",
+        "フレーム"
+      ]
+    },
+    {
+      "id": "oshimite_frill",
+      "title": "フリル",
+      "thumbUrl": "thumb/oshimite_frill.png",
+      "fileUrl": "oshimite_frill.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フリル",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "oshimite_ribbon_frame",
+      "title": "リボンフレーム",
+      "thumbUrl": "thumb/oshimite_ribbon_frame.png",
+      "fileUrl": "oshimite_ribbon_frame.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フレーム",
+        "リボン"
+      ]
+    },
+    {
+      "id": "oshimite_oval_frame",
+      "title": "オーバルフレーム",
+      "thumbUrl": "thumb/oshimite_oval_frame.png",
+      "fileUrl": "oshimite_oval_frame.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フレーム",
+        "上品"
+      ]
+    },
+    {
+      "id": "oshimite_heart_frame",
+      "title": "ハートフレーム",
+      "thumbUrl": "thumb/oshimite_heart_frame.png",
+      "fileUrl": "oshimite_heart_frame.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フレーム",
+        "ハート"
+      ]
+    },
+    {
+      "id": "oshimite_bubble1",
+      "title": "吹き出し①",
+      "thumbUrl": "thumb/oshimite_bubble1.png",
+      "fileUrl": "oshimite_bubble1.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "吹き出し",
+        "メッセージ"
+      ]
+    },
+    {
+      "id": "oshimite_bubble2",
+      "title": "吹き出し②",
+      "thumbUrl": "thumb/oshimite_bubble2.png",
+      "fileUrl": "oshimite_bubble2.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "吹き出し",
+        "メッセージ"
+      ]
+    },
+    {
+      "id": "oshimite_bubble3",
+      "title": "吹き出し③",
+      "thumbUrl": "thumb/oshimite_bubble3.png",
+      "fileUrl": "oshimite_bubble3.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "吹き出し",
+        "メッセージ"
+      ]
+    },
+    {
+      "id": "oshimite_penlight",
+      "title": "ペンライト",
+      "thumbUrl": "thumb/oshimite_penlight.png",
+      "fileUrl": "oshimite_penlight.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ペンライト",
+        "ライブ"
+      ]
+    },
+    {
+      "id": "oshimite_mic",
+      "title": "マイク",
+      "thumbUrl": "thumb/oshimite_mic.png",
+      "fileUrl": "oshimite_mic.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "マイク",
+        "ライブ"
+      ]
+    },
+    {
+      "id": "oshimite_binoculars",
+      "title": "双眼鏡",
+      "thumbUrl": "thumb/oshimite_binoculars.png",
+      "fileUrl": "oshimite_binoculars.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "双眼鏡",
+        "遠征"
+      ]
+    },
+    {
+      "id": "oshimite_present",
+      "title": "プレゼント",
+      "thumbUrl": "thumb/oshimite_present.png",
+      "fileUrl": "oshimite_present.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "プレゼント",
+        "お祝い"
+      ]
+    },
+    {
+      "id": "oshimite_cracker",
+      "title": "クラッカー",
+      "thumbUrl": "thumb/oshimite_cracker.png",
+      "fileUrl": "oshimite_cracker.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "クラッカー",
+        "お祝い"
+      ]
+    },
+    {
+      "id": "oshimite_confetti",
+      "title": "コンフェッティ",
+      "thumbUrl": "thumb/oshimite_confetti.png",
+      "fileUrl": "oshimite_confetti.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "紙吹雪",
+        "お祝い"
+      ]
+    },
+    {
+      "id": "oshimite_ribbon_banner",
+      "title": "リボンバナー",
+      "thumbUrl": "thumb/oshimite_ribbon_banner.png",
+      "fileUrl": "oshimite_ribbon_banner.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "バナー",
+        "リボン"
+      ]
+    },
+    {
+      "id": "oshimite_rosette",
+      "title": "ロゼット",
+      "thumbUrl": "thumb/oshimite_rosette.png",
+      "fileUrl": "oshimite_rosette.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ロゼット",
+        "記念"
+      ]
+    },
+    {
+      "id": "oshimite_medal",
+      "title": "メダル",
+      "thumbUrl": "thumb/oshimite_medal.png",
+      "fileUrl": "oshimite_medal.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "メダル",
+        "記念"
+      ]
+    },
+    {
+      "id": "oshimite_butterfly",
+      "title": "バタフライ",
+      "thumbUrl": "thumb/oshimite_butterfly.png",
+      "fileUrl": "oshimite_butterfly.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "蝶",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "oshimite_clover",
+      "title": "四つ葉",
+      "thumbUrl": "thumb/oshimite_clover.png",
+      "fileUrl": "oshimite_clover.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "四つ葉",
+        "幸運"
+      ]
+    },
+    {
+      "id": "oshimite_laurel",
+      "title": "月桂樹",
+      "thumbUrl": "thumb/oshimite_laurel.png",
+      "fileUrl": "oshimite_laurel.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "月桂樹",
+        "記念"
+      ]
+    },
+    {
+      "id": "oshimite_spark",
+      "title": "スパーク",
+      "thumbUrl": "thumb/oshimite_spark.png",
+      "fileUrl": "oshimite_spark.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "キラキラ",
+        "エフェクト"
+      ]
+    },
+    {
+      "id": "oshimite_halo",
+      "title": "光輪",
+      "thumbUrl": "thumb/oshimite_halo.png",
+      "fileUrl": "oshimite_halo.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "光",
+        "エフェクト"
+      ]
+    },
+    {
+      "id": "oshimite_aurora_line",
+      "title": "オーロラ風ライン",
+      "thumbUrl": "thumb/oshimite_aurora_line.png",
+      "fileUrl": "oshimite_aurora_line.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ライン",
+        "エフェクト"
+      ]
+    },
+    {
+      "id": "oshimite_rhinestone_circle",
+      "title": "ラインストーン円",
+      "thumbUrl": "thumb/oshimite_rhinestone_circle.png",
+      "fileUrl": "oshimite_rhinestone_circle.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "フレーム",
+        "キラキラ"
+      ]
+    },
+    {
+      "id": "oshimite_bijou_drop",
+      "title": "ビジュー風しずく",
+      "thumbUrl": "thumb/oshimite_bijou_drop.png",
+      "fileUrl": "oshimite_bijou_drop.svg",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ビジュー",
+        "上品"
       ]
     }
   ]
