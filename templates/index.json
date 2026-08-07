@@ -571,12 +571,23 @@
     },
     {
       "id": "tpl-ed306d4775",
-      "title": "うちわbf72f839",
+      "title": "せんちゃん(キスマイ) 手振って",
       "thumbUrl": "thumb/tpl-ed306d4775.png",
       "fileUrl": "tpl-ed306d4775.uchiwa",
       "updatedAt": "2026-08-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "カンペ",
+        "手振って",
+        "定番",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "せんちゃん",
+        "千賀健永",
+        "15周年"
+      ]
     }
   ]
 }
