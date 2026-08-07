@@ -490,84 +490,175 @@
     },
     {
       "id": "tpl-d548061d14",
-      "title": "うちわ80cc64a7",
+      "title": "キスマイ15周年 おめでとう",
       "thumbUrl": "thumb/tpl-d548061d14.png",
       "fileUrl": "tpl-d548061d14.uchiwa",
       "updatedAt": "2026-08-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "お祝い",
+        "周年",
+        "15周年",
+        "おめでとう",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "定番"
+      ]
     },
     {
       "id": "tpl-e3b0953d01",
-      "title": "うちわb57b4a38",
+      "title": "Kis-My-Ft2 15周年おめでとう",
       "thumbUrl": "thumb/tpl-e3b0953d01.png",
       "fileUrl": "tpl-e3b0953d01.uchiwa",
       "updatedAt": "2026-08-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "お祝い",
+        "周年",
+        "15周年",
+        "おめでとう",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "定番"
+      ]
     },
     {
       "id": "tpl-305e52e46e",
-      "title": "うちわ74e00324",
+      "title": "Kis-My-Ft2 15th ありがとう",
       "thumbUrl": "thumb/tpl-305e52e46e.png",
       "fileUrl": "tpl-305e52e46e.uchiwa",
       "updatedAt": "2026-08-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "CherryBombOne"
+      "fallbackFont": "CherryBombOne",
+      "tags": [
+        "お祝い",
+        "周年",
+        "15周年",
+        "ありがとう",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "定番"
+      ]
     },
     {
       "id": "tpl-e7b5055531",
-      "title": "うちわa4e3e0a9",
+      "title": "Kis-My-Ft2 15周年 Thank youじゃん",
       "thumbUrl": "thumb/tpl-e7b5055531.png",
       "fileUrl": "tpl-e7b5055531.uchiwa",
       "updatedAt": "2026-08-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "CherryBombOne"
+      "fallbackFont": "CherryBombOne",
+      "tags": [
+        "お祝い",
+        "周年",
+        "15周年",
+        "ありがとう",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "定番"
+      ]
     },
     {
       "id": "tpl-5aaccdd170",
-      "title": "うちわ91298e66",
+      "title": "たいぴー(キスマイ) 指さして",
       "thumbUrl": "thumb/tpl-5aaccdd170.png",
       "fileUrl": "tpl-5aaccdd170.uchiwa",
       "updatedAt": "2026-08-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "指さして",
+        "定番",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "たいぴー",
+        "藤ヶ谷太輔",
+        "15周年"
+      ]
     },
     {
       "id": "tpl-908a324db1",
-      "title": "うちわ94311788",
+      "title": "玉ちゃん(キスマイ) ギャルピして",
       "thumbUrl": "thumb/tpl-908a324db1.png",
       "fileUrl": "tpl-908a324db1.uchiwa",
       "updatedAt": "2026-08-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "ギャルピ",
+        "定番",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "玉ちゃん",
+        "玉森裕太",
+        "15周年"
+      ]
     },
     {
       "id": "tpl-0dffe99a1a",
-      "title": "うちわ7a9870df",
+      "title": "ニカくん(キスマイ) バーンして",
       "thumbUrl": "thumb/tpl-0dffe99a1a.png",
       "fileUrl": "tpl-0dffe99a1a.uchiwa",
       "updatedAt": "2026-08-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "バーン",
+        "定番",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "ニカくん",
+        "二階堂高嗣",
+        "15周年"
+      ]
     },
     {
       "id": "tpl-afb2d7b85d",
-      "title": "うちわ78cb39eb",
+      "title": "みやっち(キスマイ) ウインクして",
       "thumbUrl": "thumb/tpl-afb2d7b85d.png",
       "fileUrl": "tpl-afb2d7b85d.uchiwa",
       "updatedAt": "2026-08-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "ウインク",
+        "定番",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "みやっち",
+        "宮田俊哉",
+        "15周年"
+      ]
     },
     {
       "id": "tpl-a9aa1e8960",
-      "title": "うちわb87143f6",
+      "title": "横尾さん(キスマイ) こっち見て",
       "thumbUrl": "thumb/tpl-a9aa1e8960.png",
       "fileUrl": "tpl-a9aa1e8960.uchiwa",
       "updatedAt": "2026-08-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "DelaGothicOne"
+      "fallbackFont": "DelaGothicOne",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "こっち見て",
+        "定番",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "横尾さん",
+        "横尾渉",
+        "15周年"
+      ]
     },
     {
       "id": "tpl-ed306d4775",
