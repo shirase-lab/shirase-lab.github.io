@@ -11,6 +11,7 @@ sitemap.xml は root/help/templates(+t/tag)/stamps(+t/tag)/stickers(+t/tag) を�
 """
 import html, json, re
 from pathlib import Path
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent
 SITE = "https://shirase-lab.github.io"
@@ -247,7 +248,7 @@ def main():
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for loc, pri, cf in urls:
-        sm.append(f"  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n"
+        sm.append(f"  <url>\n    <loc>{quote(loc, safe=':/')}</loc>\n    <lastmod>{lastmod}</lastmod>\n"
                   f"    <changefreq>{cf}</changefreq>\n    <priority>{pri}</priority>\n  </url>")
     sm.append("</urlset>\n")
     write(ROOT / "sitemap.xml", "\n".join(sm))
