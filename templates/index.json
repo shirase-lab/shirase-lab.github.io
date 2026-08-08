@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-07",
+  "updatedAt": "2026-08-08",
   "note": "うちわつくーる 配信テンプレのマニフェスト。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。作者制作のみ・投稿機能なし。",
   "templates": [
     {
@@ -679,6 +679,15 @@
         "千賀健永",
         "15周年"
       ]
+    },
+    {
+      "id": "tpl-f2d4a37284",
+      "title": "うちわ5808dac7",
+      "thumbUrl": "thumb/tpl-f2d4a37284.png",
+      "fileUrl": "tpl-f2d4a37284.uchiwa",
+      "updatedAt": "2026-08-08",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "DelaGothicOne"
     }
   ]
 }
