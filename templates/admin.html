@@ -23,6 +23,8 @@
   button:hover{background:var(--pink)}
   button.ghost{background:#fff;color:var(--pink-deep);border:1px solid var(--line)}
   button.tiny{padding:4px 10px;font-size:.8rem;font-weight:600}
+  button.danger{background:#e0555b}
+  button.danger:hover{background:#c8474d}
   button:disabled{opacity:.5;cursor:default}
   #status{font-size:.85rem;color:var(--ink-soft);width:100%}
   main{max-width:900px;margin:0 auto;padding:16px}
@@ -34,6 +36,8 @@
   .card .thumb{width:88px;height:88px;background:#111;border-radius:10px;overflow:hidden;
     display:flex;align-items:center;justify-content:center}
   .card .thumb img{width:100%;height:100%;object-fit:contain}
+  .cardhead{display:flex;align-items:flex-start;gap:8px}
+  .cardhead h2{flex:1;min-width:0}
   .card h2{font-size:1rem}
   .card .id{font-size:.75rem;color:var(--ink-soft);margin-bottom:6px;word-break:break-all}
   .tags{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
@@ -107,7 +111,10 @@ function render(){
     const card=document.createElement("div"); card.className="card";
     const thumb=t.thumbUrl?`<div class="thumb"><img src="${t.thumbUrl}" alt=""></div>`:`<div class="thumb"></div>`;
     card.innerHTML=`${thumb}<div>
-      <h2>${escapeHtml(t.title||t.id||"(no title)")}</h2>
+      <div class="cardhead">
+        <h2>${escapeHtml(t.title||t.id||"(no title)")}</h2>
+        <button class="tiny danger" data-del="${idx}" title="配信から削除">削除</button>
+      </div>
       <div class="id">${escapeHtml(t.id||"")}</div>
       <div class="tags" data-i="${idx}"></div>
       <div class="cand" data-i="${idx}"></div>
@@ -122,6 +129,7 @@ function render(){
     const i=+b.dataset.add, inp=list.querySelector(`input[data-i="${i}"]`);
     addTag(i,inp.value); inp.value="";
   });
+  list.querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>deleteTemplate(+b.dataset.del));
   list.querySelectorAll('input[type=text][data-i]').forEach(inp=>inp.addEventListener("keydown",e=>{
     if(e.key==="Enter"){e.preventDefault();addTag(+inp.dataset.i,inp.value);inp.value="";}
   }));
@@ -153,15 +161,91 @@ function addTag(i,raw){
   drawTags(i);drawCand(i);setDirty(true);
 }
 
+// index.json（in-memory data）を PUT で書き戻し、sha を更新する共通処理。
+async function putIndexJson(message){
+  data.updatedAt=new Date().toISOString().slice(0,10);
+  const body={message,content:utf8ToB64(JSON.stringify(data,null,2)+"\n"),sha:sha,branch:"main"};
+  const r=await fetch(API,{method:"PUT",headers:{...headers(),"Content-Type":"application/json"},body:JSON.stringify(body)});
+  if(r.status===409) throw new Error("競合（他で更新あり）。『再読込』してからやり直してください。");
+  if(!r.ok){const t=await r.text(); throw new Error("HTTP "+r.status+" "+t.slice(0,120));}
+  const j=await r.json(); sha=j.content.sha;
+}
+
 async function save(){
   $("save").disabled=true; setStatus("idle","保存中…");
-  data.updatedAt=new Date().toISOString().slice(0,10);
-  const body={message:"chore(templates): edit tags via admin",content:utf8ToB64(JSON.stringify(data,null,2)+"\n"),sha:sha,branch:"main"};
-  const r=await fetch(API,{method:"PUT",headers:{...headers(),"Content-Type":"application/json"},body:JSON.stringify(body)});
-  if(r.status===409){setStatus("bad","競合（他で更新あり）。『再読込』してからやり直してください。");return;}
-  if(!r.ok){const t=await r.text();setStatus("bad","保存失敗（HTTP "+r.status+"）。"+t.slice(0,120));$("save").disabled=false;return;}
-  const j=await r.json(); sha=j.content.sha;
-  setDirty(false); setStatus("ok","保存しました（GitHub Pages 反映まで ~1 分）。");
+  try{
+    await putIndexJson("chore(templates): edit tags via admin");
+    setDirty(false); setStatus("ok","保存しました（GitHub Pages 反映まで ~1 分）。");
+  }catch(e){
+    setStatus("bad","保存失敗。"+(e.message||e)); $("save").disabled=false;
+  }
+}
+
+// ---- 削除（本体 .uchiwa・サムネ・個別ページ・index.json・一覧HTML）----
+// 任意リポジトリパスの Contents API URL（各セグメントを URL エンコード）。
+function contentsUrl(path){
+  return `https://api.github.com/repos/${OWNER}/${REPO}/contents/${path.split('/').map(encodeURIComponent).join('/')}`;
+}
+// ファイルの現在の sha を取得（無ければ null）。DELETE / 上書き PUT に必要。
+async function fileSha(path){
+  const r=await fetch(contentsUrl(path)+`?ref=main&_=${Date.now()}`,{headers:headers(),cache:"no-store"});
+  if(r.status===404) return null;
+  if(!r.ok) throw new Error("取得失敗 "+path+"（HTTP "+r.status+"）");
+  const j=await r.json(); return j.sha;
+}
+// リポジトリのファイルを 1 件削除（ignoreMissing=true なら 404 は無視）。
+async function deleteRepoFile(path,message,ignoreMissing){
+  const sh=await fileSha(path);
+  if(!sh){ if(ignoreMissing) return; throw new Error(path+" が見つかりません"); }
+  const body={message,sha:sh,branch:"main"};
+  const r=await fetch(contentsUrl(path),{method:"DELETE",headers:{...headers(),"Content-Type":"application/json"},body:JSON.stringify(body)});
+  if(!r.ok){const t=await r.text(); throw new Error("削除失敗 "+path+"（HTTP "+r.status+"）"+t.slice(0,120));}
+}
+// 1 テンプレのギャラリーカード HTML（_gen_seo.py の card_html と同じ・個別ページへリンク）。
+function cardHtml(t){
+  const title=escapeHtml(t.title||t.id||"");
+  const thumb="/templates/"+(t.thumbUrl||"");
+  return `    <a class="card" href="/templates/t/${escapeHtml(t.id||"")}.html">\n`+
+         `      <div class="thumb"><img src="${thumb}" alt="「${title}」うちわテンプレート" width="640" height="640" loading="lazy"></div>\n`+
+         `      <div class="body">\n        <h2>${title}</h2>\n      </div>\n`+
+         `    </a>`;
+}
+// 公開ギャラリー index.html の CARDS ブロックを index.json（in-memory data）から再生成。
+// best-effort（失敗しても削除自体は成功扱い＝index.json は更新済み）。
+async function regenIndexHtml(){
+  const path="templates/index.html";
+  const r=await fetch(contentsUrl(path)+`?ref=main&_=${Date.now()}`,{headers:headers(),cache:"no-store"});
+  if(!r.ok) return;
+  const j=await r.json();
+  const html=b64ToUtf8(j.content);
+  const si=html.indexOf("<!-- CARDS:START"), ei=html.indexOf("<!-- CARDS:END -->");
+  if(si<0||ei<0||ei<si) return;
+  const sc=html.indexOf("-->",si); if(sc<0||sc>ei) return;
+  const cards=(data.templates||[]).map(cardHtml).join("\n");
+  const nh=html.slice(0,sc+3)+"\n"+cards+"\n    "+html.slice(ei);
+  if(nh===html) return;
+  const body={message:"chore(templates): 一覧HTMLを index.json から再生成",content:utf8ToB64(nh),sha:j.sha,branch:"main"};
+  await fetch(contentsUrl(path),{method:"PUT",headers:{...headers(),"Content-Type":"application/json"},body:JSON.stringify(body)});
+}
+
+async function deleteTemplate(idx){
+  const t=data.templates[idx]; if(!t) return;
+  if(dirty){ alert("未保存のタグ編集があります。先に「保存」か「再読込」してから削除してください。"); return; }
+  if(!confirm(`「${t.title||t.id}」を配信から削除します。\n本体(.uchiwa)・サムネ・一覧から消え、元に戻せません。`)) return;
+  setStatus("idle","削除中…");
+  try{
+    if(t.fileUrl)  await deleteRepoFile(`templates/${t.fileUrl}`,`chore(templates): delete ${t.id}`);
+    if(t.thumbUrl) await deleteRepoFile(`templates/${t.thumbUrl}`,`chore(templates): delete ${t.id} thumb`);
+    // 個別 SEO ページ（_gen_seo.py 生成物）。無ければ無視。
+    await deleteRepoFile(`templates/t/${t.id}.html`,`chore(templates): delete ${t.id} page`,true);
+    data.templates.splice(idx,1);
+    await putIndexJson(`chore(templates): remove ${t.id} from index.json`);
+    await regenIndexHtml();
+    render();
+    setStatus("ok","削除しました（GitHub Pages 反映まで ~1 分）。※タグページの完全整理は _gen_seo.py 再実行時。");
+  }catch(e){
+    setStatus("bad","削除失敗: "+(e.message||e));
+  }
 }
 
 function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
