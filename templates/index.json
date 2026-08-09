@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-09",
+  "updatedAt": "2026-08-10",
   "note": "うちわつくーる 配信テンプレのマニフェスト。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。作者制作のみ・投稿機能なし。",
   "templates": [
     {
@@ -507,24 +507,6 @@
       ]
     },
     {
-      "id": "tpl-e3b0953d01",
-      "title": "Kis-My-Ft2 15周年おめでとう",
-      "thumbUrl": "thumb/tpl-e3b0953d01.png",
-      "fileUrl": "tpl-e3b0953d01.uchiwa",
-      "updatedAt": "2026-08-07",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "お祝い",
-        "周年",
-        "15周年",
-        "おめでとう",
-        "キスマイ",
-        "Kis-My-Ft2",
-        "定番"
-      ]
-    },
-    {
       "id": "tpl-305e52e46e",
       "title": "Kis-My-Ft2 15th ありがとう",
       "thumbUrl": "thumb/tpl-305e52e46e.png",
@@ -698,6 +680,24 @@
         "たいぴー",
         "藤ヶ谷太輔",
         "15周年"
+      ]
+    },
+    {
+      "id": "tpl-e3b0953d01",
+      "title": "Kis-My-Ft2 15周年おめでとう(4)",
+      "thumbUrl": "thumb/tpl-e3b0953d01.png",
+      "fileUrl": "tpl-e3b0953d01.uchiwa",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "お祝い",
+        "周年",
+        "15周年",
+        "おめでとう",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "定番"
       ]
     }
   ]
