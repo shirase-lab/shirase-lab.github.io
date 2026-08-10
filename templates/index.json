@@ -8,19 +8,57 @@
       "label": "グループ",
       "none": "汎用",
       "values": [
-        { "name": "NEWS", "tags": ["NEWS"] },
-        { "name": "Kis-My-Ft2", "tags": ["Kis-My-Ft2", "キスマイ"] },
-        { "name": "なにわ男子", "tags": ["なにわ男子"] },
-        { "name": "Hey! Say! JUMP", "tags": ["Hey! Say! JUMP"] },
-        { "name": "日向坂46", "tags": ["日向坂46"] }
+        {
+          "name": "NEWS",
+          "tags": [
+            "NEWS"
+          ]
+        },
+        {
+          "name": "Kis-My-Ft2",
+          "tags": [
+            "Kis-My-Ft2",
+            "キスマイ"
+          ]
+        },
+        {
+          "name": "なにわ男子",
+          "tags": [
+            "なにわ男子"
+          ]
+        },
+        {
+          "name": "Hey! Say! JUMP",
+          "tags": [
+            "Hey! Say! JUMP"
+          ]
+        },
+        {
+          "name": "日向坂46",
+          "tags": [
+            "日向坂46"
+          ]
+        }
       ]
     },
     {
       "key": "region",
       "label": "地域",
       "values": [
-        { "name": "関西", "tags": ["関西", "関西弁"] },
-        { "name": "福岡", "tags": ["福岡", "博多"] }
+        {
+          "name": "関西",
+          "tags": [
+            "関西",
+            "関西弁"
+          ]
+        },
+        {
+          "name": "福岡",
+          "tags": [
+            "福岡",
+            "博多"
+          ]
+        }
       ]
     }
   ],
@@ -861,6 +899,15 @@
         "博多",
         "九州"
       ]
+    },
+    {
+      "id": "tpl-0459667d82",
+      "title": "うちわe2da30dd",
+      "thumbUrl": "thumb/tpl-0459667d82.png",
+      "fileUrl": "tpl-0459667d82.uchiwa",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
