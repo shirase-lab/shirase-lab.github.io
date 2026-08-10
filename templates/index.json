@@ -762,6 +762,15 @@
       "updatedAt": "2026-08-10",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru"
+    },
+    {
+      "id": "tpl-975019d173",
+      "title": "うちわ1cdad94f",
+      "thumbUrl": "thumb/tpl-975019d173.png",
+      "fileUrl": "tpl-975019d173.uchiwa",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
