@@ -213,6 +213,37 @@
         "ご当地キャラ",
         "かわいい"
       ]
+    },
+    {
+      "id": "sticker_017",
+      "title": "屋台",
+      "thumbUrl": "thumb/sticker_017.png",
+      "fileUrl": "sticker_017.png",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "屋台",
+        "福岡",
+        "博多",
+        "ご当地",
+        "たべもの"
+      ]
+    },
+    {
+      "id": "sticker_018",
+      "title": "とんこつラーメン",
+      "thumbUrl": "thumb/sticker_018.png",
+      "fileUrl": "sticker_018.png",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "ラーメン",
+        "とんこつ",
+        "福岡",
+        "博多",
+        "ご当地"
+      ]
     }
   ]
 }

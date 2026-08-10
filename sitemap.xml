@@ -223,12 +223,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://shirase-lab.github.io/templates/t/tpl-e3b0953d01.html</loc>
-    <lastmod>2026-08-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://shirase-lab.github.io/templates/t/tpl-305e52e46e.html</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
@@ -278,6 +272,42 @@
   </url>
   <url>
     <loc>https://shirase-lab.github.io/templates/t/tpl-f2d4a37284.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://shirase-lab.github.io/templates/t/tpl-e3b0953d01.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://shirase-lab.github.io/templates/t/tpl-9dc58dc999.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://shirase-lab.github.io/templates/t/tpl-2342f9b65a.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://shirase-lab.github.io/templates/t/tpl-d70a8fc5b9.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://shirase-lab.github.io/templates/t/tpl-c13fcf4bd7.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://shirase-lab.github.io/templates/t/tpl-6cdefa3abb.html</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1339,6 +1369,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://shirase-lab.github.io/stickers/t/sticker_017.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://shirase-lab.github.io/stickers/t/sticker_018.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://shirase-lab.github.io/stickers/tag/%E3%81%A9%E3%81%86%E3%81%B6%E3%81%A4.html</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -1430,6 +1472,30 @@
   </url>
   <url>
     <loc>https://shirase-lab.github.io/stickers/tag/%E3%81%94%E5%BD%93%E5%9C%B0%E3%82%AD%E3%83%A3%E3%83%A9.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shirase-lab.github.io/stickers/tag/%E5%B1%8B%E5%8F%B0.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shirase-lab.github.io/stickers/tag/%E3%81%94%E5%BD%93%E5%9C%B0.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shirase-lab.github.io/stickers/tag/%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shirase-lab.github.io/stickers/tag/%E3%81%A8%E3%82%93%E3%81%93%E3%81%A4.html</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
