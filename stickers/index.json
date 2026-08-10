@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-07",
+  "updatedAt": "2026-08-10",
   "note": "うちわつくーる 配信ステッカーのマニフェスト。作者制作のみ・投稿機能なし。thumbUrl / fileUrl は index.json からの相対 URL。",
   "stickers": [
     {
@@ -195,6 +195,22 @@
       "tags": [
         "どうぶつ",
         "とり",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_016",
+      "title": "めんたいこ",
+      "thumbUrl": "thumb/sticker_016.png",
+      "fileUrl": "sticker_016.png",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "めんたいこ",
+        "福岡",
+        "博多",
+        "ご当地キャラ",
         "かわいい"
       ]
     }
