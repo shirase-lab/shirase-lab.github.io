@@ -902,57 +902,97 @@
     },
     {
       "id": "tpl-0459667d82",
-      "title": "うちわe2da30dd",
+      "title": "今日も好きやで",
       "thumbUrl": "thumb/tpl-0459667d82.png",
       "fileUrl": "tpl-0459667d82.uchiwa",
       "updatedAt": "2026-08-10",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "関西弁",
+        "好き",
+        "カンペ"
+      ]
     },
     {
       "id": "tpl-1cc5ce9c17",
-      "title": "うちわc8eac41e",
+      "title": "なにわ大好きや",
       "thumbUrl": "thumb/tpl-1cc5ce9c17.png",
       "fileUrl": "tpl-1cc5ce9c17.uchiwa",
       "updatedAt": "2026-08-10",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "関西弁",
+        "好き",
+        "なにわ",
+        "カンペ"
+      ]
     },
     {
       "id": "tpl-21285f0e2c",
-      "title": "うちわ99ee5728",
+      "title": "ちゅきちゅきポーズして",
       "thumbUrl": "thumb/tpl-21285f0e2c.png",
       "fileUrl": "tpl-21285f0e2c.uchiwa",
       "updatedAt": "2026-08-10",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "おねだり",
+        "ポーズ",
+        "好き",
+        "カンペ"
+      ]
     },
     {
       "id": "tpl-41829c523e",
-      "title": "うちわ572d2c02",
+      "title": "おもちポーズして",
       "thumbUrl": "thumb/tpl-41829c523e.png",
       "fileUrl": "tpl-41829c523e.uchiwa",
       "updatedAt": "2026-08-10",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "おねだり",
+        "ポーズ",
+        "餅",
+        "カンペ"
+      ]
     },
     {
       "id": "tpl-749e07d963",
-      "title": "うちわb926b474",
+      "title": "ずんだ餅食べよ",
       "thumbUrl": "thumb/tpl-749e07d963.png",
       "fileUrl": "tpl-749e07d963.uchiwa",
       "updatedAt": "2026-08-10",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "お誘い",
+        "ずんだ",
+        "餅",
+        "仙台",
+        "宮城",
+        "東北",
+        "カンペ"
+      ]
     },
     {
       "id": "tpl-5fba71b593",
-      "title": "うちわd66514af",
+      "title": "一緒に牛タン食べよ",
       "thumbUrl": "thumb/tpl-5fba71b593.png",
       "fileUrl": "tpl-5fba71b593.uchiwa",
       "updatedAt": "2026-08-10",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "お誘い",
+        "牛タン",
+        "仙台",
+        "宮城",
+        "東北",
+        "カンペ"
+      ]
     }
   ]
 }
