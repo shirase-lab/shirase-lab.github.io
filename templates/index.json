@@ -1,7 +1,29 @@
 {
   "schema": 1,
   "updatedAt": "2026-08-10",
-  "note": "うちわつくーる 配信テンプレのマニフェスト。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。作者制作のみ・投稿機能なし。",
+  "note": "うちわつくーる 配信テンプレのマニフェスト。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。作者制作のみ・投稿機能なし。filters はアプリの絞り込みドロップダウン用（タグのレイヤー分け＝グループ/地域）＝各値の tags のいずれかを持つ item が該当。Web の SEO には影響しない。",
+  "filters": [
+    {
+      "key": "group",
+      "label": "グループ",
+      "none": "汎用",
+      "values": [
+        { "name": "NEWS", "tags": ["NEWS"] },
+        { "name": "Kis-My-Ft2", "tags": ["Kis-My-Ft2", "キスマイ"] },
+        { "name": "なにわ男子", "tags": ["なにわ男子"] },
+        { "name": "Hey! Say! JUMP", "tags": ["Hey! Say! JUMP"] },
+        { "name": "日向坂46", "tags": ["日向坂46"] }
+      ]
+    },
+    {
+      "key": "region",
+      "label": "地域",
+      "values": [
+        { "name": "関西", "tags": ["関西", "関西弁"] },
+        { "name": "福岡", "tags": ["福岡", "博多"] }
+      ]
+    }
+  ],
   "templates": [
     {
       "id": "mitekudasai",
@@ -702,75 +724,143 @@
     },
     {
       "id": "tpl-9dc58dc999",
-      "title": "うちわ72281725",
+      "title": "会いに来たとー",
       "thumbUrl": "thumb/tpl-9dc58dc999.png",
       "fileUrl": "tpl-9dc58dc999.uchiwa",
       "updatedAt": "2026-08-10",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "博多弁",
+        "カンペ",
+        "福岡",
+        "博多",
+        "九州"
+      ]
     },
     {
       "id": "tpl-2342f9b65a",
-      "title": "うちわf76bc9f3",
+      "title": "好いとーよ",
       "thumbUrl": "thumb/tpl-2342f9b65a.png",
       "fileUrl": "tpl-2342f9b65a.uchiwa",
       "updatedAt": "2026-08-10",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "博多弁",
+        "好き",
+        "カンペ",
+        "福岡",
+        "博多",
+        "九州"
+      ]
     },
     {
       "id": "tpl-d70a8fc5b9",
-      "title": "うちわe306e04a",
+      "title": "かっこよかー",
       "thumbUrl": "thumb/tpl-d70a8fc5b9.png",
       "fileUrl": "tpl-d70a8fc5b9.uchiwa",
       "updatedAt": "2026-08-10",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "博多弁",
+        "カンペ",
+        "福岡",
+        "博多",
+        "九州"
+      ]
     },
     {
       "id": "tpl-c13fcf4bd7",
-      "title": "うちわba16fe3c",
+      "title": "ずっと好いとー",
       "thumbUrl": "thumb/tpl-c13fcf4bd7.png",
       "fileUrl": "tpl-c13fcf4bd7.uchiwa",
       "updatedAt": "2026-08-10",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "博多弁",
+        "好き",
+        "カンペ",
+        "福岡",
+        "博多",
+        "九州"
+      ]
     },
     {
       "id": "tpl-6cdefa3abb",
-      "title": "うちわ3c5f9d00",
+      "title": "福岡来てくれてありがとー",
       "thumbUrl": "thumb/tpl-6cdefa3abb.png",
       "fileUrl": "tpl-6cdefa3abb.uchiwa",
       "updatedAt": "2026-08-10",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "博多弁",
+        "ありがとう",
+        "カンペ",
+        "福岡",
+        "博多",
+        "九州"
+      ]
     },
     {
       "id": "tpl-d8ef355d55",
-      "title": "うちわf2ea28e1",
+      "title": "めんたいこポーズして",
       "thumbUrl": "thumb/tpl-d8ef355d55.png",
       "fileUrl": "tpl-d8ef355d55.uchiwa",
       "updatedAt": "2026-08-10",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "博多弁",
+        "おねだり",
+        "ポーズ",
+        "めんたいこ",
+        "カンペ",
+        "福岡",
+        "博多",
+        "九州"
+      ]
     },
     {
       "id": "tpl-415d8f38a7",
-      "title": "うちわ1ae53b69",
+      "title": "屋台デートしよ？",
       "thumbUrl": "thumb/tpl-415d8f38a7.png",
       "fileUrl": "tpl-415d8f38a7.uchiwa",
       "updatedAt": "2026-08-10",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "博多弁",
+        "お誘い",
+        "デート",
+        "屋台",
+        "カンペ",
+        "福岡",
+        "博多",
+        "九州"
+      ]
     },
     {
       "id": "tpl-975019d173",
-      "title": "うちわ1cdad94f",
+      "title": "とんこつラーメン食べよ？",
       "thumbUrl": "thumb/tpl-975019d173.png",
       "fileUrl": "tpl-975019d173.uchiwa",
       "updatedAt": "2026-08-10",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "博多弁",
+        "お誘い",
+        "ラーメン",
+        "とんこつ",
+        "カンペ",
+        "福岡",
+        "博多",
+        "九州"
+      ]
     }
   ]
 }
