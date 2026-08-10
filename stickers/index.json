@@ -244,6 +244,81 @@
         "博多",
         "ご当地"
       ]
+    },
+    {
+      "id": "sticker_019",
+      "title": "ずんだ餅",
+      "thumbUrl": "thumb/sticker_019.png",
+      "fileUrl": "sticker_019.png",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "餅",
+        "ずんだ",
+        "仙台",
+        "宮城",
+        "東北"
+      ]
+    },
+    {
+      "id": "sticker_020",
+      "title": "牛タン",
+      "thumbUrl": "thumb/sticker_020.png",
+      "fileUrl": "sticker_020.png",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "牛タン",
+        "仙台",
+        "宮城",
+        "東北"
+      ]
+    },
+    {
+      "id": "sticker_021",
+      "title": "焼きずんだ餅",
+      "thumbUrl": "thumb/sticker_021.png",
+      "fileUrl": "sticker_021.png",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "餅",
+        "ずんだ",
+        "仙台",
+        "宮城",
+        "東北"
+      ]
+    },
+    {
+      "id": "sticker_022",
+      "title": "お餅",
+      "thumbUrl": "thumb/sticker_022.png",
+      "fileUrl": "sticker_022.png",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "餅",
+        "焼き餅"
+      ]
+    },
+    {
+      "id": "sticker_023",
+      "title": "鏡餅",
+      "thumbUrl": "thumb/sticker_023.png",
+      "fileUrl": "sticker_023.png",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "餅",
+        "鏡餅",
+        "お正月",
+        "正月"
+      ]
     }
   ]
 }
