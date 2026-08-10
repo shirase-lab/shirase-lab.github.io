@@ -699,6 +699,15 @@
         "Kis-My-Ft2",
         "定番"
       ]
+    },
+    {
+      "id": "tpl-9dc58dc999",
+      "title": "うちわ72281725",
+      "thumbUrl": "thumb/tpl-9dc58dc999.png",
+      "fileUrl": "tpl-9dc58dc999.uchiwa",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
