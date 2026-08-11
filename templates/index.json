@@ -1050,22 +1050,6 @@
       ]
     },
     {
-      "id": "tpl-e9ee8321ea",
-      "title": "原嘉孝 名前うちわ",
-      "thumbUrl": "thumb/tpl-e9ee8321ea.png",
-      "fileUrl": "tpl-e9ee8321ea.uchiwa",
-      "updatedAt": "2026-08-11",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "定番",
-        "タイムレス",
-        "timelesz",
-        "原嘉孝"
-      ]
-    },
-    {
       "id": "tpl-645a425cbd",
       "title": "橋本将生 名前うちわ",
       "thumbUrl": "thumb/tpl-645a425cbd.png",
@@ -1141,6 +1125,22 @@
         "タイムレス",
         "timelesz",
         "菊池風磨"
+      ]
+    },
+    {
+      "id": "tpl-e9ee8321ea",
+      "title": "原嘉孝 名前うちわ",
+      "thumbUrl": "thumb/tpl-e9ee8321ea.png",
+      "fileUrl": "tpl-e9ee8321ea.uchiwa",
+      "updatedAt": "2026-08-11",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "定番",
+        "タイムレス",
+        "timelesz",
+        "原嘉孝"
       ]
     }
   ]
