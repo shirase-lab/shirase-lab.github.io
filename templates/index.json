@@ -1038,6 +1038,15 @@
       "updatedAt": "2026-08-11",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru"
+    },
+    {
+      "id": "tpl-645a425cbd",
+      "title": "うちわ02c7dbc4",
+      "thumbUrl": "thumb/tpl-645a425cbd.png",
+      "fileUrl": "tpl-645a425cbd.uchiwa",
+      "updatedAt": "2026-08-11",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
