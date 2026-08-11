@@ -1018,22 +1018,6 @@
       ]
     },
     {
-      "id": "tpl-98619584ee",
-      "title": "菊池風磨 名前うちわ",
-      "thumbUrl": "thumb/tpl-98619584ee.png",
-      "fileUrl": "tpl-98619584ee.uchiwa",
-      "updatedAt": "2026-08-11",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "定番",
-        "タイムレス",
-        "timelesz",
-        "菊池風磨"
-      ]
-    },
-    {
       "id": "tpl-a93b7c4819",
       "title": "松島聡 名前うちわ",
       "thumbUrl": "thumb/tpl-a93b7c4819.png",
@@ -1141,6 +1125,22 @@
         "定番",
         "タイムレス",
         "timelesz"
+      ]
+    },
+    {
+      "id": "tpl-98619584ee",
+      "title": "菊池風磨 名前うちわ",
+      "thumbUrl": "thumb/tpl-98619584ee.png",
+      "fileUrl": "tpl-98619584ee.uchiwa",
+      "updatedAt": "2026-08-11",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "定番",
+        "タイムレス",
+        "timelesz",
+        "菊池風磨"
       ]
     }
   ]
