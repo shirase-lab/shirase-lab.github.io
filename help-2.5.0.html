@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N5SNNFWXR4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N5SNNFWXR4');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>使い方ガイド（ver 2.5.0） - 推しミテ！| 白瀬ラボ</title>
+<meta name="description" content="推しミテ！ver 2.5.0 の使い方。文字を置いて、推しカラーで彩って、コンビニで実寸プリントするまでの流れと、よくある「〇〇したい」をまとめました。">
+<meta property="og:title" content="使い方ガイド（ver 2.5.0） - 推しミテ！">
+<meta property="og:description" content="うちわ作りから実寸プリントまでの流れと、よくある「〇〇したい」をまとめました。">
+<meta property="og:type" content="article">
+<meta property="og:image" content="oshimite-icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="oshimite-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink:#FF5C8A;
+    --pink-deep:#FF2E6E;
+    --lav:#B9A3FF;
+    --bg:#FFF0F6;
+    --bg2:#FFE3EF;
+    --ink:#4A2E3D;
+    --ink-soft:#9A7886;
+    --gold:#FFD84D;
+    --white:#fff;
+    --display:'Mochiy Pop One',system-ui,sans-serif;
+    --body:'M PLUS Rounded 1c',system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--body);
+    color:var(--ink);
+    background:
+      radial-gradient(1200px 600px at 80% -10%, #FFD6E8 0%, transparent 55%),
+      radial-gradient(900px 500px at -10% 20%, #E6DBFF 0%, transparent 50%),
+      var(--bg);
+    line-height:1.75;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+  /* sparkles */
+  .sky{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+  .sky b{position:absolute;opacity:0;font-size:14px;animation:twinkle 4s ease-in-out infinite;
+         text-shadow:0 0 6px currentColor}
+  @keyframes twinkle{0%,100%{opacity:.2;transform:scale(.6) rotate(0)}50%{opacity:1;transform:scale(1) rotate(18deg)}}
+
+  /* nav */
+  nav{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:20px 0;gap:12px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:9px;font-family:var(--display);font-size:18px;color:var(--pink-deep);letter-spacing:.02em}
+  .brand img{width:32px;height:32px;border-radius:9px;box-shadow:0 3px 8px rgba(255,46,110,.28)}
+  .brand span{color:var(--lav)}
+  .nav-links{display:flex;align-items:center;gap:14px}
+  .nav-back{font-weight:700;font-size:14px;color:var(--ink-soft)}
+  .nav-back:hover{color:var(--pink-deep)}
+  .nav-cta{font-weight:700;font-size:14px;background:var(--ink);color:#fff;padding:9px 16px;border-radius:999px;transition:transform .15s ease}
+  .nav-cta:hover{transform:translateY(-2px)}
+
+  /* page head */
+  .page-head{position:relative;z-index:2;text-align:center;padding:30px 0 40px}
+  .eyebrow{display:inline-block;font-weight:700;font-size:13px;color:var(--pink-deep);background:#fff;border:2px solid #FFC9DD;padding:6px 14px;border-radius:999px;margin-bottom:18px}
+  .page-head h1{font-family:var(--display);font-size:clamp(30px,5.4vw,52px);line-height:1.14;color:var(--pink);
+     -webkit-text-stroke:2px #fff;
+     text-shadow:0 3px 0 #FFB9D2, 0 7px 14px rgba(255,46,110,.28)}
+  .page-head p{margin-top:16px;font-weight:500;color:var(--ink)}
+
+  /* sections */
+  section{position:relative;z-index:2}
+  .sec-head{text-align:center;margin-bottom:34px}
+  .sec-head .tag{display:inline-block;font-weight:700;font-size:12px;color:var(--pink-deep);background:#fff;border:2px solid #FFC9DD;padding:4px 13px;border-radius:999px;margin-bottom:12px}
+  .sec-head h2{font-family:var(--display);font-size:clamp(24px,3.8vw,34px);color:var(--ink);margin-bottom:8px}
+  .sec-head h2 em{font-style:normal;color:var(--pink-deep)}
+  .sec-head p{color:var(--ink-soft);font-weight:500}
+
+  /* how-to steps */
+  .steps{max-width:760px;margin:0 auto 64px;counter-reset:step;list-style:none}
+  .steps li{position:relative;background:#fff;border:2px solid #FFD9E6;border-radius:20px;padding:20px 22px 20px 80px;margin-bottom:16px}
+  .steps li::before{counter-increment:step;content:counter(step);position:absolute;left:20px;top:20px;
+    width:42px;height:42px;border-radius:50%;background:linear-gradient(140deg,var(--pink),var(--pink-deep));color:#fff;
+    font-family:var(--display);font-size:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 0 #ffb9d2}
+  .steps h3{font-size:16px;font-weight:800;margin-bottom:4px;color:var(--ink)}
+  .steps p{font-size:14px;color:var(--ink-soft);font-weight:500;line-height:1.7}
+
+  /* FAQ accordion (no JS, <details>) */
+  .faq{max-width:760px;margin:0 auto 64px}
+  .faq details{background:#fff;border:2px solid #FFD9E6;border-radius:18px;margin-bottom:12px;overflow:hidden;transition:box-shadow .18s ease}
+  .faq details[open]{box-shadow:0 12px 24px rgba(255,92,138,.14)}
+  .faq summary{cursor:pointer;list-style:none;padding:16px 20px;font-weight:800;color:var(--ink);display:flex;align-items:center;gap:12px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary .q{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:linear-gradient(140deg,var(--lav),#9a7dff);color:#fff;
+    font-family:var(--display);font-size:14px;display:flex;align-items:center;justify-content:center}
+  .faq summary .plus{margin-left:auto;font-size:22px;font-weight:700;color:var(--pink);transition:transform .2s ease}
+  .faq details[open] summary .plus{transform:rotate(45deg)}
+  .faq .a{padding:0 20px 18px 58px;color:var(--ink-soft);font-weight:500;line-height:1.8;font-size:14px}
+
+  /* notice */
+  .notice{max-width:760px;margin:0 auto 60px;background:#fff;border:2px dashed #EADBFF;border-radius:22px;padding:26px 28px}
+  .notice h3{font-family:var(--display);font-size:18px;color:var(--ink);margin-bottom:10px}
+  .notice ul{list-style:none}
+  .notice li{font-size:14px;font-weight:500;color:var(--ink-soft);padding:5px 0 5px 22px;position:relative;line-height:1.7}
+  .notice li::before{content:"·";position:absolute;left:6px;color:var(--lav);font-weight:800}
+
+  /* footer */
+  footer{position:relative;z-index:2;background:var(--ink);color:#fff;border-radius:30px 30px 0 0;padding:46px 0 34px;margin-top:20px}
+  .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+  .foot .lab{font-family:var(--display);font-size:20px;color:#fff}
+  .foot .lab small{display:block;font-family:var(--body);font-weight:500;font-size:13px;opacity:.7;margin-top:6px}
+  .foot nav{padding:0;display:flex;flex-direction:column;gap:10px}
+  .foot a{font-weight:500;font-size:14px;opacity:.85;transition:opacity .15s}
+  .foot a:hover{opacity:1;text-decoration:underline}
+  .copy{margin-top:30px;font-size:12px;opacity:.6;font-weight:500}
+
+  /* focus + motion */
+  a:focus-visible,summary:focus-visible{outline:3px solid var(--lav);outline-offset:3px}
+  @media (prefers-reduced-motion:reduce){
+    .sky b{animation:none}
+    html{scroll-behavior:auto}
+  }
+  @media (max-width:760px){
+    .steps li{padding-left:76px}
+    .faq .a{padding-left:20px}
+    .foot{flex-direction:column}
+  }
+</style>
+</head>
+<body>
+<div class="sky" aria-hidden="true">
+  <b style="left:8%;top:12%;font-size:16px;color:var(--gold);animation-delay:0s">✦</b>
+  <b style="left:26%;top:8%;font-size:11px;color:var(--pink);animation-delay:1.3s;animation-duration:3.4s">✧</b>
+  <b style="left:48%;top:14%;font-size:13px;color:#fff;animation-delay:.6s">⋆</b>
+  <b style="left:70%;top:9%;font-size:18px;color:var(--lav);animation-delay:2.1s;animation-duration:4.6s">✶</b>
+  <b style="left:88%;top:16%;font-size:12px;color:var(--gold);animation-delay:1.7s">✦</b>
+  <b style="left:14%;top:46%;font-size:13px;color:var(--pink);animation-delay:3s">✦</b>
+  <b style="left:84%;top:52%;font-size:14px;color:var(--gold);animation-delay:2.3s">✧</b>
+</div>
+
+<div class="wrap">
+  <nav>
+    <div class="brand"><img src="oshimite-icon.png" alt="推しミテ！">推しミテ！<span data-i18n="nav.brandBy">by 白瀬ラボ</span></div>
+    <div class="nav-links">
+      <a class="nav-back" href="index.html" data-i18n="nav.back">← トップへ</a>
+      <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.shiraselab.uchiwa_tukool" data-i18n="cta.viewGP">Google Playで見る</a>
+      <a class="nav-cta" href="https://apps.apple.com/app/id6778378550" data-i18n="cta.viewAS">App Storeで見る</a>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <span class="eyebrow" data-i18n="head.eyebrow">使い方ガイド ver 2.5.0</span>
+    <h1 data-i18n="head.h1">使い方ガイド</h1>
+    <p data-i18n="head.p">うちわ作りから<b>コンビニで実寸プリント</b>するまでの流れと、よくある「〇〇したい」をまとめました。</p>
+  </header>
+</div>
+
+<div class="wrap">
+  <section>
+    <div class="sec-head">
+      <h2 data-i18n="flow.h2">印刷までの<em>流れ</em></h2>
+      <p data-i18n="flow.p">はじめてでも、うちわが完成します</p>
+    </div>
+    <ol class="steps">
+      <li><h3 data-i18n="s1.h3">パーツを置く</h3><p data-i18n="s1.p">ツールバーの「スタンプ」「画像」「ペン」などでうちわに要素を配置。文字はキャンバスの空いた所をタップで追加できます。「テンプレ」パネルから定番デザインを選んでもOK。</p></li>
+      <li><h3 data-i18n="s2.h3">色・装飾を整える</h3><p data-i18n="s2.p">要素をタップして選び、下の編集パネル（「サイズ」／「フォント」または「色」／「加工」）で色・大きさ・フォント・縁取り・効果（ぷくぷく／きらきら／ネオン）を調整。「色」ツールの推しカラーは、ドラッグ＆ドロップやタップで配色できます。</p></li>
+      <li><h3 data-i18n="s3.h3">仕上がりを確認</h3><p data-i18n="s3.p">ツールバーの「3D」で、持ち手付きの立体イメージで仕上がりを確認できます。再生ボタンで左右にふって見られます。設定から会場の背景（白／黒／サイリウム／うちわ）と、うちわまでの距離を切り替えて、客席で自分のうちわが埋もれないかも確かめられます。</p></li>
+      <li><h3 data-i18n="s4.h3">印刷する</h3><p data-i18n="s4.p">「印刷」→「コンビニ印刷データ作成」でA3のPDFを書き出し、コンビニのプリントアプリ（セブン→かんたんnetprint／ローソン・ファミマ→PrintSmash）へ渡します。書き出し前の「印刷設定」で<b>印刷場所</b>と<b>うちわ台紙</b>を選ぶと実寸に自動補正。コピー機は<b>A3・縮小なし</b>で印刷、家庭用プリンタは「印刷」から直接（大きいうちわはA4×2分割も）。</p></li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="tag">Q&amp;A</span>
+      <h2 data-i18n="faq.h2">こんなときは（<em>〇〇したい</em>）</h2>
+      <p data-i18n="faq.p">タップでひらく、よくある質問</p>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary><span class="q">Q</span><span data-i18n="q1.s">文字を入れたい</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a" data-i18n="q1.a">キャンバスの何もない所をタップすると入力欄が開き、文字を追加できます（要素を選んでいるときは、いったん空いた所をタップして選択を外すと追加できます）。置いた文字をタップ → 下の編集パネルで文言・フォント・サイズ・色を変更できます（文字をダブルタップでも編集できます）。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span><span data-i18n="q2.s">色を変えたい／推しカラーにしたい</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a" data-i18n="q2.a">要素を選んで出る編集パネルの色から変更できます。ツールバーの「色」では推しカラー（おすすめ配色）を選べ、色を要素へドラッグ＆ドロップ、またはタップで配色できます。同じ色をまとめて変えることもできます。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span><span data-i18n="q3.s">画像を入れたい</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a" data-i18n="q3.a">ツールバーの「画像」→「取込」で、端末の画像を取り込めます（一度取り込んだ画像はサムネイル履歴から再利用できます）。取り込むと背景削除の画面が自動で開きます。※公式画像・ロゴの無断使用は著作権・肖像権の侵害になり得ます。文字＋フリー素材中心の制作をおすすめします。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span><span data-i18n="q4.s">画像の背景を消したい</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a" data-i18n="q4.a">画像を取り込むと背景削除の画面が自動で開きます（あとから直すときは画像を選び「加工」の「背景を編集／背景削除を編集」から）。モードは3つ＝「自動」（被写体をAIで自動抽出）／「色キー」（背景の色を画像でタップし、「しきい値」で消える範囲を調整）／「領域」（消したい場所をタップし、そこからつながった部分だけを消す。複数か所OK）。やり直すときは「リセット」、決めて取り込むときは「取込」。グラデーションや影のある背景はきれいに抜けないことがあります。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span><span data-i18n="q5.s">画像を丸く（ハート型に）切り抜きたい</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a" data-i18n="q5.a">画像を選び「加工」の「背景を編集」→ 下の「クロップ」タブへ。「形」で 四角／円／ハート を選べます。残す範囲をドラッグで囲むとその中の形で切り抜き、囲まなければ画像全体をその形で切り抜きます（枠の角で大きさ、内側で位置を調整）。枠は画像の外（市松模様の部分）へも広げられ、足りないところは透過になります（横長の写真をハートで切り抜くときに上下へ広げる、など。広げられるのは画像の2倍までです）。そのまま「加工」の「ぷっくりシール風」を付けると、丸いシール（フチも丸く回ります）になります。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span><span data-i18n="q6.s">縁取り（フチ）を付けたい</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a" data-i18n="q6.a">文字やスタンプ／SVG を選ぶと出る編集パネルの「加工」→「縁取り（外→内）」でフチを付けられます。「＋」で足すたびに一回り外へ大きくなり（8→16→24→32mm）、多重のフチが作れます。色は各行のスウォッチや推しカラーから選べます。ぷくぷく・きらきら・ネオンとも併用できます（ぷくぷくは「縁取りを含める」でフチも立体化するか平らに残すか選べます）。うちわ全体をまとめて囲む縁取りは「うちわ」パネルの「まとめて縁取る」です。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span><span data-i18n="q7.s">ぷくぷく／きらきら／ネオンにしたい</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a" data-i18n="q7.a">文字や要素を選んで、編集パネルの「加工」から選択します。きらきら・ぷくぷくは背景にも追加できます（ツールバーの「うちわ」パネルの「背景キラキラ」「背景ぷくぷく」から）。ネオンは文字・要素向けの効果です。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span><span data-i18n="q8.s">連うちわ（複数ページ）について</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a" data-i18n="q8.a">複数ページ（連うちわ）機能は終了し、いまは1枚のうちわ作りに専念しています。複数のうちわは、それぞれ別ファイルとして作成・印刷してください。以前の複数ページファイルを開いた場合は1枚目だけが読み込まれます（必要なら、開いたときに各ページを別ファイルへ分割して保存できます）。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span><span data-i18n="q9.s">うちわの形（シルエット）を変えたい</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a" data-i18n="q9.a">ツールバーの「うちわ」を開き、「うちわテンプレート」のサムネから形を選べます。「うちわ」パネルの「新規作成」時にも選べます。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span><span data-i18n="q10.s">保存・読み込みしたい</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a" data-i18n="q10.a">ツールバーの「うちわ」を開き、「保存」（上書き保存／新規保存〔.uchiwa〕か 画像 PNG を選択。上書き保存はいま開いているうちわに上書き、新規保存は別のうちわとしてギャラリーに増やします。まだ保存していないうちわには上書き保存は出ません）・「開く」（.uchiwa を読み込み）・「共有」ができます。保存したうちわは「うちわ」パネルの「保存したうちわ」（ギャラリー）に並び、タップで開けます。「開く」で選んだファイルや、ほかのアプリ・ファイルアプリから受け取ったうちわも、自動でこのギャラリーに追加されます（名前は自動で付きます）。編集内容は自動保存され、次回は前回の続きから復元されます。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span><span data-i18n="q11.s">配信ギャラリー・定番フレーズを使いたい</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a" data-i18n="q11.a">ツールバーの「フレーズ」から多言語のファンサ定番フレーズを挿入できます。作者が配信しているうちわは「うちわ」パネルの「配信ギャラリー」から、スタンプ・ステッカーは「スタンプ」パネルのギャラリーボタンからダウンロードして使えます。1 枚ずつ大きく表示され、左右スワイプでめくれます。グループ名や地域で絞り込んだり、キーワードで検索したりできます。</div>
+      </details>
+      <details>
+        <summary><span class="q">Q</span><span data-i18n="q12.s">制作の過程を動画にしたい</span><span class="plus" aria-hidden="true">+</span></summary>
+        <div class="a" data-i18n="q12.a">ツールバーの「録画」で制作過程をタイムラプス録画し、MP4 として保存・共有できます。</div>
+      </details>
+    </div>
+  </section>
+
+  <section>
+    <div class="notice">
+      <h3 data-i18n="notice.h3">ご利用上の注意</h3>
+      <ul>
+        <li data-i18n="notice.li1">公式画像・ロゴの無断使用は著作権・肖像権の侵害になり得ます。文字＋フリー素材中心の制作をおすすめします。</li>
+        <li data-i18n="notice.li2">会場によっては写真付き・大型ボードの持ち込みが禁止されています。各会場のルールをご確認ください。</li>
+        <li data-i18n="notice.li3">ジャンボうちわのサイズ（約28.5×29.5cm）が会場持ち込み上限の目安です。</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="lab">推しミテ！<small>白瀬ラボ / ShiraseLab</small></div>
+      <nav>
+        <a href="index.html" data-i18n="foot.top">推しミテ！トップ</a>
+        <a href="https://play.google.com/store/apps/details?id=com.shiraselab.uchiwa_tukool" data-i18n="cta.dlGP">Google Playでダウンロード</a>
+        <a href="https://apps.apple.com/app/id6778378550" data-i18n="cta.dlAS">App Storeでダウンロード</a>
+        <a href="https://github.com/shirase-lab/PrivacyPolicies/blob/main/UchiwaTuKool/PRIVACY_POLICY.md" data-i18n="foot.privacy">プライバシーポリシー</a>
+        <a href="https://github.com/shirase-lab/PrivacyPolicies/blob/main/UchiwaTuKool/TERMS_OF_USE.md" data-i18n="foot.terms">利用規約</a>
+        <a href="https://x.com/oshimite_app" target="_blank" rel="noopener" data-i18n="foot.contact">お問い合わせ（X / @oshimite_app）</a>
+      </nav>
+    </div>
+    <div class="copy" data-i18n="foot.copy">© 2026 ShiraseLab. 『推し見て』を、かなえるうちわを。</div>
+  </div>
+</footer>
+
+<script>
+/* 多言語：ブラウザ言語（navigator.languages）で ja / en / zh / ko を自動判定して差し替える。
+   既定 HTML は日本語（no-JS・SEO 用の正本）。ja はそのまま、他言語だけ辞書で置換。
+   ?lang=en|zh|ko|ja の URL 上書きに対応。UI 用語は index.html と揃える。 */
+(function(){
+  var I18N = {
+    en: {
+      "__title":"User Guide (v2.5.0) - 推しミテ！ | ShiraseLab",
+      "__desc":"How to use 推しミテ！ v2.5.0. The flow from placing text and coloring with oshi colors to printing at true size at a convenience store, plus common “I want to…” questions.",
+      "nav.brandBy":"by ShiraseLab",
+      "nav.back":"← Home",
+      "cta.viewGP":"View on Google Play",
+      "cta.viewAS":"View on the App Store",
+      "cta.dlGP":"Download on Google Play",
+      "cta.dlAS":"Download on the App Store",
+      "head.eyebrow":"User Guide v2.5.0",
+      "head.h1":"User Guide",
+      "head.p":"The flow from making your uchiwa to <b>printing it at true size at a convenience store</b>, plus answers to common “I want to…” questions.",
+      "flow.h2":"The <em>flow</em> to printing",
+      "flow.p":"Finish your uchiwa even if it’s your first time",
+      "s1.h3":"Place your parts",
+      "s1.p":"Place elements on your uchiwa with the toolbar’s “Stamp,” “Image,” “Pen,” and more. To add text, tap an empty area of the canvas. You can also pick a ready-made design from the “Template” panel.",
+      "s2.h3":"Adjust colors & decorations",
+      "s2.p":"Tap an element to select it, then use the edit panel below (“Size” / “Font” or “Color” / “Effects”) to adjust color, size, font, outlines, and effects (puffy / sparkle / neon). Oshi colors in the “Color” tool can be applied by drag-and-drop or a tap.",
+      "s3.h3":"Check the finished look",
+      "s3.p":"Use “3D” in the toolbar to check the finished look as a 3D image with a handle. The play button waves it side to side. In its settings you can switch the venue background (white / black / glow sticks / fans) and the distance to your fan, to see whether yours stands out in the crowd.",
+      "s4.h3":"Print it",
+      "s4.p":"Use “Print” → “Create convenience-store print data” to export an A3 PDF for a convenience-store print app (Seven-Eleven → Kantan netprint / Lawson · FamilyMart → PrintSmash). In “Print settings” beforehand, pick your <b>store</b> and <b>fan mount</b> to auto-fit the true size. At the copier use <b>A3 with no shrink-to-fit</b>; home printers print straight from “Print” (large uchiwa have a two-A4 split).",
+      "faq.h2":"When you want to… (<em>how do I…</em>)",
+      "faq.p":"Tap to open — frequently asked questions",
+      "q1.s":"I want to add text",
+      "q1.a":"Tap an empty area of the canvas to open the input field and add text (if an element is selected, tap an empty spot first to deselect, then add). Tap the placed text → change the wording, font, size, and color in the edit panel below (you can also double-tap the text to edit it).",
+      "q2.s":"I want to change colors / use oshi colors",
+      "q2.a":"Select an element and change it from the color section of the edit panel. The toolbar’s “Color” lets you pick oshi colors (recommended palettes) and apply them by dragging and dropping onto an element or tapping. You can also change everything of the same color at once.",
+      "q3.s":"I want to add an image",
+      "q3.a":"Use the toolbar’s “Image” → “Import” to bring in images from your device (imported images can be reused from the thumbnail history). After importing, the background-removal screen opens automatically. ※ Using official images or logos without permission may infringe copyright and portrait rights. We recommend creating mainly with text and royalty-free assets.",
+      "q4.s":"I want to remove an image’s background",
+      "q4.a":"When you import an image, the background-removal screen opens automatically (to fix it later, select the image and use “Effects” → “Edit background / Edit background removal”). There are three modes: “Auto” (AI auto-extracts the subject) / “Color key” (tap the background color on the image and adjust the removed range with the “Threshold”) / “Area” (tap where you want to erase; only the connected region from there is removed — multiple spots OK). Use “Reset” to start over, and “Import” once you’re happy. Backgrounds with gradients or shadows may not come out cleanly.",
+      "q5.s":"I want to crop an image into a circle (or heart)",
+      "q5.a":"Select the image, go to “Effects” → “Edit background” → the “Crop” tab below. Under “Shape,” choose square / circle / heart. Drag to enclose the area to keep and it’s cropped to that shape within; if you don’t enclose anything, the whole image is cropped to that shape (resize with the frame corners, reposition from inside). The frame can extend beyond the image (the checkered area), with missing parts becoming transparent (e.g., extend up and down when cropping a wide photo into a heart — up to twice the image size). Add “Puffy sticker” from “Effects” and it becomes a rounded sticker (the outline curves around, too).",
+      "q6.s":"I want to add an outline",
+      "q6.a":"Select text, a stamp, or an SVG and use “Decorate” → “Outline (outer→inner)” in the edit panel. Each tap of “+” adds an outline one step larger (8→16→24→32 mm), so you can build up multiple outlines. Pick colors from each row’s swatch or your oshi colors. Outlines combine with puffy, glitter, and neon (with puffy, “Include outline” chooses whether the outline is raised too or stays flat). To outline the whole fan at once, use “Outline everything” in the “Fan” panel.",
+      "q7.s":"I want puffy / sparkle / neon",
+      "q7.a":"Select text or an element and choose from “Effects” in the edit panel. Sparkle and puffy can also be added to the background (from the toolbar’s “Fan” panel → “Background sparkle” / “Background puffy”). Neon is an effect for text and elements.",
+      "q8.s":"About linked uchiwa (multiple pages)",
+      "q8.a":"The multi-page (linked uchiwa) feature has ended, and the app now focuses on making a single uchiwa. Please create and print multiple uchiwa as separate files. If you open an older multi-page file, only the first page is loaded (if needed, you can split each page into separate files when opening).",
+      "q9.s":"I want to change the uchiwa shape (silhouette)",
+      "q9.a":"Open “Fan” in the toolbar and choose a shape from the “Fan templates” thumbnails. You can also choose one when you tap “New” in the “Fan” panel.",
+      "q10.s":"I want to save / load",
+      "q10.a":"Open “Fan” in the toolbar to “Save” (choose Overwrite or Save as new for the .uchiwa project, or a PNG image — Overwrite replaces the uchiwa you have open, Save as new adds a separate one to the gallery; Overwrite is hidden for an uchiwa you haven’t saved yet), “Open” (load a .uchiwa), and “Share.” Saved uchiwa line up under “Saved uchiwa” (the gallery) in the “Fan” panel and open with a tap. Files you pick with “Open,” or uchiwa received from other apps or the Files app, are also added to this gallery automatically (named automatically). Your edits auto-save, and next time you resume where you left off.",
+      "q11.s":"I want to use the gallery and stock phrases",
+      "q11.a":"Use “Phrases” in the toolbar to insert popular fan-service phrases in several languages. Fans we publish are available from “Gallery” in the “Fan” panel, and stamps and stickers from the gallery button in the “Stamp” panel — download and use them right away. Items are shown one at a time, large, and you can swipe left and right to browse. You can filter by group or region, or search by keyword.",
+      "q12.s":"I want to make a video of the process",
+      "q12.a":"Use “Record” in the toolbar to time-lapse the making process and save/share it as an MP4.",
+      "notice.h3":"Please note",
+      "notice.li1":"Using official images or logos without permission may infringe copyright and portrait rights. We recommend creating mainly with text and royalty-free assets.",
+      "notice.li2":"Some venues prohibit bringing in photo boards or oversized boards. Please check each venue’s rules.",
+      "notice.li3":"Jumbo uchiwa size (about 28.5 × 29.5 cm) is the general upper limit for bringing into venues.",
+      "foot.top":"推しミテ！ Home",
+      "foot.privacy":"Privacy Policy",
+      "foot.terms":"Terms of Use",
+      "foot.contact":"Contact (X / @oshimite_app)",
+      "foot.copy":"© 2026 ShiraseLab. Uchiwa that make “Notice me, oshi!” come true."
+    },
+    zh: {
+      "__title":"使用指南（v2.5.0） - 推しミテ！ | ShiraseLab",
+      "__desc":"推しミテ！ v2.5.0 的使用方法。从放置文字、用应援色上色，到在便利店按实际尺寸打印的完整流程，以及常见的「我想○○」问答。",
+      "nav.brandBy":"by ShiraseLab",
+      "nav.back":"← 返回首页",
+      "cta.viewGP":"在 Google Play 查看",
+      "cta.viewAS":"在 App Store 查看",
+      "cta.dlGP":"在 Google Play 下载",
+      "cta.dlAS":"在 App Store 下载",
+      "head.eyebrow":"使用指南 v2.5.0",
+      "head.h1":"使用指南",
+      "head.p":"从制作应援扇到<b>在便利店按实际尺寸打印</b>的完整流程，以及常见的「我想○○」问答。",
+      "flow.h2":"到打印为止的<em>流程</em>",
+      "flow.p":"第一次做，也能完成一把应援扇",
+      "s1.h3":"摆放元件",
+      "s1.p":"用工具栏的「印章」「图片」「笔」等在应援扇上摆放元件。文字可点一下画布的空白处添加。也可以从「模板」面板选一个经典设计。",
+      "s2.h3":"调整颜色和装饰",
+      "s2.p":"点一下元素选中，用下方编辑面板（「尺寸」／「字体」或「颜色」／「加工」）调整颜色、大小、字体、描边和特效（软萌／闪亮／霓虹）。「颜色」工具里的应援色可用拖放或点击上色。",
+      "s3.h3":"确认成品效果",
+      "s3.p":"点工具栏的「3D」，可以用带握把的立体影像确认完成的样子。按播放键会左右摆动。在设置中可切换会场背景（白／黑／荧光棒／应援扇）与到应援扇的距离，确认自己的扇子在观众席中是否醒目。",
+      "s4.h3":"打印",
+      "s4.p":"用「打印」→「生成便利店打印数据」导出 A3 的 PDF，交给便利店打印 App（7-Eleven→かんたんnetprint／罗森·全家→PrintSmash）。导出前在「打印设置」选择<b>打印地点</b>和<b>底纸</b>即可自动校正到实际尺寸。复印机用 <b>A3、不要缩小</b>；家用打印机从「打印」直接输出（大尺寸应援扇还有 A4×2 拼版）。",
+      "faq.h2":"这种时候（<em>我想○○</em>）",
+      "faq.p":"点击展开的常见问题",
+      "q1.s":"我想加文字",
+      "q1.a":"点一下画布的空白处会打开输入框，即可添加文字（若已选中某元素，先点空白处取消选择再添加）。点一下已放置的文字 → 在下方编辑面板可修改文案、字体、大小和颜色（双击文字也能编辑）。",
+      "q2.s":"我想改颜色／用应援色",
+      "q2.a":"选中元素后，从编辑面板的颜色处修改。工具栏的「颜色」可选择应援色（推荐配色），把颜色拖放到元素上或点击即可上色。也能把相同颜色一起更改。",
+      "q3.s":"我想加图片",
+      "q3.a":"用工具栏的「图片」→「导入」，导入设备中的图片（导入过的图片可从缩略图历史再次使用）。导入后会自动打开背景删除界面。※未经许可使用官方图片或标志，可能侵犯著作权和肖像权。建议以文字加免费素材为主进行制作。",
+      "q4.s":"我想去掉图片背景",
+      "q4.a":"导入图片时会自动打开背景删除界面（之后想修改，选中图片，从「加工」的「编辑背景／编辑背景删除」）。共有 3 种模式＝「自动」（AI 自动抠出主体）／「色键」（在图片上点背景颜色，用「阈值」调整删除范围）／「区域」（点一下要删除的位置，只删除与之相连的部分，可多处）。想重来点「重置」，满意后点「导入」。带渐变或阴影的背景可能抠不干净。",
+      "q5.s":"我想把图片裁成圆形（爱心形）",
+      "q5.a":"选中图片，进入「加工」的「编辑背景」→ 下方「裁切」标签。在「形状」中可选 方形／圆形／爱心。拖动圈出要保留的范围，就按该形状裁切其中；不圈则把整张图片裁成该形状（用边框四角调大小，内侧调位置）。边框还能扩到图片之外（棋盘格区域），不足的部分会变透明（例如把横向照片裁成爱心时向上下扩展；最多可扩到图片的 2 倍）。再从「加工」加上「软萌贴纸风」，就变成圆润的贴纸（描边也会沿圆形环绕）。",
+      "q6.s":"我想加外框",
+      "q6.a":"选取文字或贴图／SVG 后，在编辑面板的「加工」→「外框（外→内）」即可加上外框。每按一次「＋」就会往外大一阶（8→16→24→32mm），可做出多层外框。颜色可从各列的色块或应援色中选择。可与立体贴纸感・闪亮・霓虹并用（立体贴纸感可用「包含外框」选择外框要一起立体化或维持平面）。要一次把整把应援扇围起来，请用「应援扇」面板的「整体加外框」。",
+      "q7.s":"我想做软萌／闪亮／霓虹",
+      "q7.a":"选中文字或元素，从编辑面板的「加工」选择。闪亮和软萌也能加到背景（从工具栏「应援扇」面板的「背景闪亮」「背景软萌」）。霓虹是面向文字·元素的特效。",
+      "q8.s":"关于连做应援扇（多页）",
+      "q8.a":"多页（连做应援扇）功能已结束，现在专注于单张应援扇的制作。多张应援扇请分别作为独立文件制作、打印。打开以前的多页文件时只会加载第一页（需要的话，打开时可把各页拆分保存为独立文件）。",
+      "q9.s":"我想改应援扇的形状（轮廓）",
+      "q9.a":"打开工具栏的「应援扇」，从「应援扇模板」的缩略图中选择形状。在「应援扇」面板的「新建」时也能选择。",
+      "q10.s":"我想保存・读取",
+      "q10.a":"打开工具栏的「应援扇」，可进行「保存」（选择覆盖保存／新建保存〔.uchiwa〕或图片 PNG。覆盖保存会覆盖目前打开的应援扇，新建保存则会作为另一把应援扇加入图库；尚未保存过的应援扇不会显示覆盖保存）、「打开」（读取 .uchiwa）和「分享」。保存的应援扇会排列在「应援扇」面板的「已保存的应援扇」（图库）中，点一下即可打开。用「打开」选择的文件，或从其他 App・文件 App 收到的应援扇，也会自动加入这个图库（自动命名）。编辑内容会自动保存，下次从上次的进度恢复。",
+      "q11.s":"我想用发布图库与常用短句",
+      "q11.a":"从工具栏的「短句」可插入多语言的人气应援短句。作者发布的应援扇可在「应援扇」面板的「发布图库」，贴图与贴纸则在「贴图」面板的图库按钮下载后直接使用。内容会一张张大图显示，可左右滑动翻看。也能依团体名称或地区筛选，或用关键字搜寻。",
+      "q12.s":"我想把制作过程做成视频",
+      "q12.a":"用工具栏的「录制」进行制作过程的延时录制，可保存・分享为 MP4。",
+      "notice.h3":"使用注意事项",
+      "notice.li1":"未经许可使用官方图片或标志，可能侵犯著作权和肖像权。建议以文字加免费素材为主进行制作。",
+      "notice.li2":"部分场馆禁止携带带照片或大型的应援板。请确认各场馆的规定。",
+      "notice.li3":"大号应援扇尺寸（约 28.5×29.5cm）是场馆携带上限的参考。",
+      "foot.top":"推しミテ！ 首页",
+      "foot.privacy":"隐私政策",
+      "foot.terms":"使用条款",
+      "foot.contact":"联系我们（X / @oshimite_app）",
+      "foot.copy":"© 2026 ShiraseLab. 让「推，看我！」成真的应援扇。"
+    },
+    zhHant: {
+      "__title":"使用指南（v2.5.0） - 推しミテ！ | ShiraseLab",
+      "__desc":"推しミテ！ v2.5.0 的使用方法。從放置文字、用應援色上色，到在便利店按實際尺寸列印的完整流程，以及常見的「我想○○」問答。",
+      "nav.brandBy":"by ShiraseLab",
+      "nav.back":"← 返回首頁",
+      "cta.viewGP":"在 Google Play 檢視",
+      "cta.viewAS":"在 App Store 檢視",
+      "cta.dlGP":"在 Google Play 下載",
+      "cta.dlAS":"在 App Store 下載",
+      "head.eyebrow":"使用指南 v2.5.0",
+      "head.h1":"使用指南",
+      "head.p":"從製作應援扇到<b>在便利店按實際尺寸列印</b>的完整流程，以及常見的「我想○○」問答。",
+      "flow.h2":"到列印為止的<em>流程</em>",
+      "flow.p":"第一次做，也能完成一把應援扇",
+      "s1.h3":"擺放元件",
+      "s1.p":"用工具欄的「印章」「圖片」「筆」等在應援扇上擺放元件。文字可點一下畫布的空白處新增。也可以從「模板」面板選一個經典設計。",
+      "s2.h3":"調整顏色和裝飾",
+      "s2.p":"點一下元素選中，用下方編輯面板（「尺寸」／「字型」或「顏色」／「加工」）調整顏色、大小、字型、描邊和特效（軟萌／閃亮／霓虹）。「顏色」工具裡的應援色可用拖放或點選上色。",
+      "s3.h3":"確認成品效果",
+      "s3.p":"點工具列的「3D」，可以用附握把的立體影像確認完成的樣子。按播放鍵會左右擺動。在設定中可切換會場背景（白／黑／螢光棒／應援扇）與到應援扇的距離，確認自己的扇子在觀眾席中是否醒目。",
+      "s4.h3":"列印",
+      "s4.p":"用「列印」→「生成便利店列印資料」匯出 A3 的 PDF，交給便利店列印 App（7-Eleven→かんたんnetprint／羅森·全家→PrintSmash）。匯出前在「列印設定」選擇<b>列印地點</b>和<b>底紙</b>即可自動校正成實際尺寸。影印機用 <b>A3、不要縮放</b>；家用印表機從「列印」直接輸出（大尺寸應援扇還有 A4×2 拼版）。",
+      "faq.h2":"這種時候（<em>我想○○</em>）",
+      "faq.p":"點選展開的常見問題",
+      "q1.s":"我想加文字",
+      "q1.a":"點一下畫布的空白處會開啟輸入框，即可新增文字（若已選中某元素，先點空白處取消選擇再新增）。點一下已放置的文字 → 在下方編輯面板可修改文案、字型、大小和顏色（雙擊文字也能編輯）。",
+      "q2.s":"我想改顏色／用應援色",
+      "q2.a":"選中元素後，從編輯面板的顏色處修改。工具欄的「顏色」可選擇應援色（推薦配色），把顏色拖放到元素上或點選即可上色。也能把相同顏色一起更改。",
+      "q3.s":"我想加圖片",
+      "q3.a":"用工具欄的「圖片」→「匯入」，匯入裝置中的圖片（匯入過的圖片可從縮圖歷史再次使用）。匯入後會自動開啟背景刪除介面。※未經許可使用官方圖片或標誌，可能侵犯著作權和肖像權。建議以文字加免費素材為主進行製作。",
+      "q4.s":"我想去掉圖片背景",
+      "q4.a":"匯入圖片時會自動開啟背景刪除介面（之後想修改，選中圖片，從「加工」的「編輯背景／編輯背景刪除」）。共有 3 種模式＝「自動」（AI 自動摳出主體）／「色鍵」（在圖片上點背景顏色，用「閾值」調整刪除範圍）／「區域」（點一下要刪除的位置，只刪除與之相連的部分，可多處）。想重來點「重置」，滿意後點「匯入」。帶漸變或陰影的背景可能摳不乾淨。",
+      "q5.s":"我想把圖片裁成圓形（愛心形）",
+      "q5.a":"選中圖片，進入「加工」的「編輯背景」→ 下方「裁切」標籤。在「形狀」中可選 方形／圓形／愛心。拖動圈出要保留的範圍，就按該形狀裁切其中；不圈則把整張圖片裁成該形狀（用邊框四角調大小，內側調位置）。邊框還能擴到圖片之外（棋盤格區域），不足的部分會變透明（例如把橫向照片裁成愛心時向上下擴充套件；最多可擴到圖片的 2 倍）。再從「加工」加上「軟萌貼紙風」，就變成圓潤的貼紙（描邊也會沿圓形環繞）。",
+      "q6.s":"我想加外框",
+      "q6.a":"選取文字或貼圖／SVG 後，在編輯面板的「加工」→「外框（外→內）」即可加上外框。每按一次「＋」就會往外大一階（8→16→24→32mm），可做出多層外框。顏色可從各列的色塊或推し色中選擇。可與立體貼紙感・閃亮・霓虹並用（立體貼紙感可用「包含外框」選擇外框要一起立體化或維持平面）。要一次把整把應援扇圍起來，請用「應援扇」面板的「整體加外框」。",
+      "q7.s":"我想做軟萌／閃亮／霓虹",
+      "q7.a":"選中文字或元素，從編輯面板的「加工」選擇。閃亮和軟萌也能加到背景（從工具欄「應援扇」面板的「背景閃亮」「背景軟萌」）。霓虹是面向文字·元素的特效。",
+      "q8.s":"關於連做應援扇（多頁）",
+      "q8.a":"多頁（連做應援扇）功能已結束，現在專注於單張應援扇的製作。多張應援扇請分別作為獨立檔案製作、列印。開啟以前的多頁檔案時只會載入第一頁（需要的話，開啟時可把各頁拆分儲存為獨立檔案）。",
+      "q9.s":"我想改應援扇的形狀（輪廓）",
+      "q9.a":"開啟工具欄的「應援扇」，從「應援扇模板」的縮圖中選擇形狀。在「應援扇」面板的「新建」時也能選擇。",
+      "q10.s":"我想儲存・讀取",
+      "q10.a":"開啟工具欄的「應援扇」，可進行「儲存」（選擇覆蓋儲存／另存新檔〔.uchiwa〕或圖片 PNG。覆蓋儲存會覆蓋目前開啟的應援扇，另存新檔會以另一把應援扇加入相簿；尚未儲存過的應援扇不會顯示覆蓋儲存）、「開啟」（讀取 .uchiwa）和「分享」。儲存的應援扇會排列在「應援扇」面板的「已儲存的應援扇」（相簿）中，點一下即可開啟。用「開啟」選擇的檔案，或從其他 App・檔案 App 收到的應援扇，也會自動加入這個相簿（自動命名）。編輯內容會自動儲存，下次從上次的進度恢復。",
+      "q11.s":"我想用發布圖庫與常用短句",
+      "q11.a":"從工具列的「短句」可插入多語言的人氣應援短句。作者發布的應援扇可在「應援扇」面板的「發布圖庫」，貼圖與貼紙則在「貼圖」面板的圖庫按鈕下載後直接使用。內容會一張張大圖顯示，可左右滑動翻看。也能依團體名稱或地區篩選，或用關鍵字搜尋。",
+      "q12.s":"我想把製作過程做成影片",
+      "q12.a":"用工具欄的「錄製」進行製作過程的延時錄製，可儲存・分享為 MP4。",
+      "notice.h3":"使用注意事項",
+      "notice.li1":"未經許可使用官方圖片或標誌，可能侵犯著作權和肖像權。建議以文字加免費素材為主進行製作。",
+      "notice.li2":"部分場館禁止攜帶帶照片或大型的應援板。請確認各場館的規定。",
+      "notice.li3":"大號應援扇尺寸（約 28.5×29.5cm）是場館攜帶上限的參考。",
+      "foot.top":"推しミテ！ 首頁",
+      "foot.privacy":"隱私政策",
+      "foot.terms":"使用條款",
+      "foot.contact":"聯絡我們（X / @oshimite_app）",
+      "foot.copy":"© 2026 ShiraseLab. 讓「推，看我！」成真的應援扇。"
+    },
+    ko: {
+      "__title":"사용 가이드(v2.5.0) - 推しミテ！ | ShiraseLab",
+      "__desc":"推しミテ！ v2.5.0 사용 방법. 문자를 놓고 최애 컬러로 칠해 편의점에서 실물 크기로 인쇄하기까지의 흐름과, 자주 묻는 「○○하고 싶어요」를 정리했습니다.",
+      "nav.brandBy":"by ShiraseLab",
+      "nav.back":"← 홈으로",
+      "cta.viewGP":"Google Play에서 보기",
+      "cta.viewAS":"App Store에서 보기",
+      "cta.dlGP":"Google Play에서 다운로드",
+      "cta.dlAS":"App Store에서 다운로드",
+      "head.eyebrow":"사용 가이드 v2.5.0",
+      "head.h1":"사용 가이드",
+      "head.p":"부채 제작부터 <b>편의점에서 실물 크기로 인쇄</b>하기까지의 흐름과, 자주 묻는 「○○하고 싶어요」를 정리했습니다.",
+      "flow.h2":"인쇄까지의 <em>흐름</em>",
+      "flow.p":"처음이어도, 부채가 완성됩니다",
+      "s1.h3":"요소 배치하기",
+      "s1.p":"툴바의 「스탬프」 「이미지」 「펜」 등으로 부채에 요소를 배치. 문자는 캔버스의 빈 곳을 탭하면 추가됩니다. 「템플릿」 패널에서 인기 디자인을 골라도 OK.",
+      "s2.h3":"색·장식 다듬기",
+      "s2.p":"요소를 탭해 선택한 뒤, 아래 편집 패널(「크기」／「폰트」 또는 「색상」／「가공」)에서 색·크기·폰트·테두리·효과(말랑말랑／반짝반짝／네온)를 조정. 「색상」 도구의 최애 컬러는 드래그 앤 드롭이나 탭으로 입힐 수 있습니다.",
+      "s3.h3":"완성 모습 확인",
+      "s3.p":"툴바의 “3D”에서 손잡이가 달린 입체 이미지로 완성 모습을 확인할 수 있어요. 재생 버튼으로 좌우로 흔들어 볼 수 있습니다. 설정에서 공연장 배경(흰색／검정／야광봉／부채)과 부채까지의 거리를 바꿔, 객석에서 내 부채가 묻히지 않는지도 확인할 수 있어요.",
+      "s4.h3":"인쇄하기",
+      "s4.p":"「인쇄」→「편의점 인쇄 데이터 만들기」로 A3 PDF를 내보내 편의점 인쇄 앱(세븐일레븐→かんたんnetprint／로손·패밀리마트→PrintSmash)으로 넘깁니다. 내보내기 전 「인쇄 설정」에서 <b>인쇄 장소</b>와 <b>받침</b>을 고르면 실물 크기로 자동 보정돼요. 복사기는 <b>A3·축소 없이</b>, 가정용 프린터는 「인쇄」에서 바로(큰 부채는 A4×2 분할도).",
+      "faq.h2":"이럴 때는 (<em>○○하고 싶어요</em>)",
+      "faq.p":"탭하면 열리는 자주 묻는 질문",
+      "q1.s":"문자를 넣고 싶어요",
+      "q1.a":"캔버스의 빈 곳을 탭하면 입력창이 열려 문자를 추가할 수 있습니다(요소를 선택한 상태라면, 빈 곳을 탭해 선택을 해제한 뒤 추가). 놓은 문자를 탭 → 아래 편집 패널에서 문구·폰트·크기·색을 변경할 수 있습니다(문자를 더블 탭해도 편집 가능).",
+      "q2.s":"색을 바꾸고 싶어요／최애 컬러로 하고 싶어요",
+      "q2.a":"요소를 선택하면 나오는 편집 패널의 색상에서 변경할 수 있습니다. 툴바의 「색상」에서는 최애 컬러(추천 배색)를 고를 수 있고, 색을 요소에 드래그 앤 드롭하거나 탭해서 입힐 수 있습니다. 같은 색을 한꺼번에 바꾸는 것도 가능합니다.",
+      "q3.s":"이미지를 넣고 싶어요",
+      "q3.a":"툴바의 「이미지」→「가져오기」로 기기의 이미지를 불러올 수 있습니다(한 번 불러온 이미지는 썸네일 기록에서 재사용 가능). 불러오면 배경 삭제 화면이 자동으로 열립니다. ※공식 이미지·로고의 무단 사용은 저작권·초상권 침해가 될 수 있습니다. 문자＋무료 소재 중심의 제작을 권장합니다.",
+      "q4.s":"이미지 배경을 지우고 싶어요",
+      "q4.a":"이미지를 불러오면 배경 삭제 화면이 자동으로 열립니다(나중에 고칠 때는 이미지를 선택해 「가공」의 「배경 편집／배경 삭제 편집」에서). 모드는 3가지＝「자동」(피사체를 AI로 자동 추출)／「색상 키」(이미지에서 배경 색을 탭하고 「임계값」으로 지워지는 범위 조정)／「영역」(지우고 싶은 곳을 탭하면 거기서 이어진 부분만 삭제, 여러 곳 OK). 다시 하려면 「초기화」, 정하고 가져올 때는 「가져오기」. 그라데이션이나 그림자가 있는 배경은 깔끔하게 빠지지 않을 수 있습니다.",
+      "q5.s":"이미지를 둥글게(하트 모양으로) 자르고 싶어요",
+      "q5.a":"이미지를 선택해 「가공」의 「배경 편집」→ 아래 「크롭」 탭으로. 「모양」에서 사각형／원／하트를 고를 수 있습니다. 남길 범위를 드래그로 감싸면 그 안에서 해당 모양으로 잘리고, 감싸지 않으면 이미지 전체를 그 모양으로 자릅니다(테두리 모서리로 크기, 안쪽으로 위치 조정). 테두리는 이미지 바깥(체크무늬 부분)으로도 넓힐 수 있고, 모자란 곳은 투명이 됩니다(가로로 긴 사진을 하트로 자를 때 위아래로 넓히기 등. 넓힐 수 있는 건 이미지의 2배까지). 그대로 「가공」의 「말랑 스티커풍」을 넣으면 둥근 스티커(테두리도 둥글게 돌아감)가 됩니다.",
+      "q6.s":"테두리를 넣고 싶어요",
+      "q6.a":"글자나 스탬프／SVG를 선택하면 나오는 편집 패널의 “가공” → “테두리(바깥→안)”에서 테두리를 넣을 수 있어요. “＋”를 누를 때마다 한 단계 바깥쪽으로 커지며(8→16→24→32mm) 여러 겹의 테두리를 만들 수 있습니다. 색은 각 줄의 스와치나 오시 컬러에서 고를 수 있어요. 말랑말랑・반짝반짝・네온과 함께 쓸 수 있습니다(말랑말랑은 “테두리 포함”으로 테두리도 입체로 할지 평평하게 남길지 선택). 부채 전체를 한 번에 두르는 테두리는 “응원 부채” 패널의 “한 번에 테두리”입니다.",
+      "q7.s":"말랑말랑／반짝반짝／네온으로 하고 싶어요",
+      "q7.a":"문자나 요소를 선택하고 편집 패널의 「가공」에서 선택합니다. 반짝반짝·말랑말랑은 배경에도 추가할 수 있습니다(툴바의 「응원 부채」 패널의 「배경 반짝반짝」 「배경 말랑말랑」에서). 네온은 문자·요소용 효과입니다.",
+      "q8.s":"연속 부채(여러 페이지)에 대해",
+      "q8.a":"여러 페이지(연속 부채) 기능은 종료되었고, 지금은 한 장의 부채 제작에 집중하고 있습니다. 여러 부채는 각각 별도 파일로 만들어 인쇄해 주세요. 이전의 여러 페이지 파일을 열면 첫 페이지만 로드됩니다(필요하면 열 때 각 페이지를 별도 파일로 분할해 저장할 수 있습니다).",
+      "q9.s":"부채 모양(실루엣)을 바꾸고 싶어요",
+      "q9.a":"툴바의 「응원 부채」를 열고, 「부채 템플릿」의 썸네일에서 모양을 고를 수 있습니다. 「응원 부채」 패널의 「새로 만들기」 때에도 고를 수 있습니다.",
+      "q10.s":"저장·불러오기하고 싶어요",
+      "q10.a":"툴바의 「응원 부채」를 열면 「저장」(덮어쓰기 저장/새로 저장〔.uchiwa〕 또는 이미지 PNG 선택. 덮어쓰기 저장은 지금 열려 있는 부채에 덮어쓰고, 새로 저장은 다른 부채로 갤러리에 추가됩니다. 아직 저장하지 않은 부채에는 덮어쓰기 저장이 나오지 않습니다)·「열기」(.uchiwa 불러오기)·「공유」를 할 수 있습니다. 저장한 부채는 「응원 부채」 패널의 「저장한 부채」(갤러리)에 나열되어 탭하면 열립니다. 「열기」로 고른 파일이나, 다른 앱·파일 앱에서 받은 부채도 자동으로 이 갤러리에 추가됩니다(이름은 자동 지정). 편집 내용은 자동 저장되며, 다음에 이전에 하던 곳부터 복원됩니다.",
+      "q11.s":"배포 갤러리・자주 쓰는 문구를 쓰고 싶어요",
+      "q11.a":"툴바의 “문구”에서 여러 언어의 인기 팬서비스 문구를 넣을 수 있어요. 제작자가 배포하는 부채는 “응원 부채” 패널의 “배포 갤러리”에서, 스탬프・스티커는 “스탬프” 패널의 갤러리 버튼에서 다운로드해 바로 쓸 수 있습니다. 한 장씩 크게 표시되며 좌우로 넘겨 볼 수 있어요. 그룹명이나 지역으로 좁히거나 키워드로 검색할 수 있습니다.",
+      "q12.s":"제작 과정을 영상으로 만들고 싶어요",
+      "q12.a":"툴바의 「녹화」로 제작 과정을 타임랩스로 녹화하여 MP4로 저장·공유할 수 있습니다.",
+      "notice.h3":"이용 시 주의사항",
+      "notice.li1":"공식 이미지·로고의 무단 사용은 저작권·초상권 침해가 될 수 있습니다. 문자＋무료 소재 중심의 제작을 권장합니다.",
+      "notice.li2":"공연장에 따라 사진이 들어간 것·대형 보드의 반입이 금지되어 있습니다. 각 공연장의 규칙을 확인해 주세요.",
+      "notice.li3":"점보 부채 크기(약 28.5×29.5cm)가 공연장 반입 상한의 기준입니다.",
+      "foot.top":"推しミテ！ 홈",
+      "foot.privacy":"개인정보 처리방침",
+      "foot.terms":"이용약관",
+      "foot.contact":"문의 (X / @oshimite_app)",
+      "foot.copy":"© 2026 ShiraseLab. 「최애야, 나 봐줘」를 이뤄 주는 부채를."
+    }
+  };
+
+  function pickLang(){
+    try{
+      var q = null;
+      var m = location.search.match(/[?&]lang=([^&]+)/);
+      if(m){ q = decodeURIComponent(m[1]).toLowerCase(); }
+      var cands = q ? [q] : (navigator.languages || [navigator.language || 'ja']);
+      for(var i=0;i<cands.length;i++){
+        var c = (cands[i] || '').toLowerCase();
+        if(c.indexOf('ja') === 0) return 'ja';
+        if(c.indexOf('ko') === 0) return 'ko';
+        if(c.indexOf('zh') === 0) return (c.indexOf('hant')>=0||c.indexOf('tw')>=0||c.indexOf('hk')>=0||c.indexOf('mo')>=0) ? 'zhHant' : 'zh';
+        if(c.indexOf('en') === 0) return 'en';
+      }
+      return q ? 'ja' : 'en';
+    }catch(e){ return 'ja'; }
+  }
+
+  var lang = pickLang();
+  document.documentElement.lang = ({ja:'ja',en:'en',zh:'zh-Hans',zhHant:'zh-Hant',ko:'ko'})[lang] || lang;
+  if(lang === 'ja') return;
+  var dict = I18N[lang];
+  if(!dict) return;
+
+  var nodes = document.querySelectorAll('[data-i18n]');
+  for(var i=0;i<nodes.length;i++){
+    var k = nodes[i].getAttribute('data-i18n');
+    if(dict[k] != null) nodes[i].innerHTML = dict[k];
+  }
+  if(dict['__title']) document.title = dict['__title'];
+  if(dict['__desc']){
+    var md = document.querySelector('meta[name="description"]');
+    if(md) md.setAttribute('content', dict['__desc']);
+  }
+})();
+</script>
+</body>
+</html>
