@@ -319,6 +319,55 @@
         "お正月",
         "正月"
       ]
+    },
+    {
+      "id": "sticker_024",
+      "title": "もつ鍋",
+      "thumbUrl": "thumb/sticker_024.png",
+      "fileUrl": "sticker_024.png",
+      "updatedAt": "2026-08-11",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "もつ鍋",
+        "鍋",
+        "福岡",
+        "博多",
+        "ご当地"
+      ]
+    },
+    {
+      "id": "sticker_025",
+      "title": "ごぼう天うどん",
+      "thumbUrl": "thumb/sticker_025.png",
+      "fileUrl": "sticker_025.png",
+      "updatedAt": "2026-08-11",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "うどん",
+        "ごぼう天",
+        "福岡",
+        "博多",
+        "ご当地"
+      ]
+    },
+    {
+      "id": "sticker_026",
+      "title": "あまおう",
+      "thumbUrl": "thumb/sticker_026.png",
+      "fileUrl": "sticker_026.png",
+      "updatedAt": "2026-08-11",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "いちご",
+        "あまおう",
+        "フルーツ",
+        "福岡",
+        "博多",
+        "ご当地"
+      ]
     }
   ]
 }
