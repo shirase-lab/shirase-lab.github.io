@@ -1145,30 +1145,55 @@
     },
     {
       "id": "tpl-44513a14e5",
-      "title": "うちわ4e3eec5c",
+      "title": "うどん派？ラーメン派？",
       "thumbUrl": "thumb/tpl-44513a14e5.png",
       "fileUrl": "tpl-44513a14e5.uchiwa",
       "updatedAt": "2026-08-12",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "カンペ",
+        "福岡",
+        "博多",
+        "九州",
+        "うどん",
+        "ラーメン"
+      ]
     },
     {
       "id": "tpl-acdbc5ec5e",
-      "title": "うちわaf92de72",
+      "title": "あまおうより甘いファンサして",
       "thumbUrl": "thumb/tpl-acdbc5ec5e.png",
       "fileUrl": "tpl-acdbc5ec5e.uchiwa",
       "updatedAt": "2026-08-12",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "おねだり",
+        "カンペ",
+        "福岡",
+        "博多",
+        "九州",
+        "あまおう"
+      ]
     },
     {
       "id": "tpl-0390a64741",
-      "title": "うちわ50bf9fd1",
+      "title": "もつ鍋食べよ♪",
       "thumbUrl": "thumb/tpl-0390a64741.png",
       "fileUrl": "tpl-0390a64741.uchiwa",
       "updatedAt": "2026-08-12",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "お誘い",
+        "カンペ",
+        "福岡",
+        "博多",
+        "九州",
+        "もつ鍋",
+        "鍋"
+      ]
     }
   ]
 }
