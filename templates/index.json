@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-12",
+  "updatedAt": "2026-08-13",
   "note": "うちわつくーる 配信テンプレのマニフェスト。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。作者制作のみ・投稿機能なし。filters はアプリの絞り込みドロップダウン用（タグのレイヤー分け＝グループ/地域）＝各値の tags のいずれかを持つ item が該当。Web の SEO には影響しない。",
   "filters": [
     {
@@ -110,6 +110,137 @@
       ]
     },
     {
+      "id": "tpl-8d7d796e93",
+      "title": "こっち見て！",
+      "thumbUrl": "thumb/tpl-8d7d796e93.png",
+      "fileUrl": "tpl-8d7d796e93.uchiwa",
+      "updatedAt": "2026-08-05",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "おねだり",
+        "定番"
+      ]
+    },
+    {
+      "id": "tpl-35ae883eb5",
+      "title": "推しミテ！ファンサおねだり",
+      "thumbUrl": "thumb/tpl-35ae883eb5.png",
+      "fileUrl": "tpl-35ae883eb5.uchiwa",
+      "updatedAt": "2026-07-31",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "おねだり",
+        "写真入り",
+        "ハート"
+      ]
+    },
+    {
+      "id": "tpl-74d7ee2486",
+      "title": "一緒にはーと作ろ",
+      "thumbUrl": "thumb/tpl-74d7ee2486.png",
+      "fileUrl": "tpl-74d7ee2486.uchiwa",
+      "updatedAt": "2026-07-31",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "カンペ",
+        "おねだり",
+        "ハート",
+        "お誘い"
+      ]
+    },
+    {
+      "id": "tpl-6d488f3a2e",
+      "title": "ファンサおねだりカンペ",
+      "thumbUrl": "thumb/tpl-6d488f3a2e.png",
+      "fileUrl": "tpl-6d488f3a2e.uchiwa",
+      "updatedAt": "2026-07-31",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "カンペ",
+        "おねだり",
+        "ハート",
+        "写真入り"
+      ]
+    },
+    {
+      "id": "tpl-21285f0e2c",
+      "title": "ちゅきちゅきポーズして",
+      "thumbUrl": "thumb/tpl-21285f0e2c.png",
+      "fileUrl": "tpl-21285f0e2c.uchiwa",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "おねだり",
+        "ポーズ",
+        "好き",
+        "カンペ"
+      ]
+    },
+    {
+      "id": "tpl-41829c523e",
+      "title": "おもちポーズして",
+      "thumbUrl": "thumb/tpl-41829c523e.png",
+      "fileUrl": "tpl-41829c523e.uchiwa",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "おねだり",
+        "ポーズ",
+        "餅",
+        "カンペ"
+      ]
+    },
+    {
+      "id": "daisuki",
+      "title": "豊 大好き",
+      "thumbUrl": "thumb/daisuki.png",
+      "fileUrl": "daisuki.uchiwa",
+      "updatedAt": "2026-07-31",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "ハート",
+        "シンプル",
+        "定番"
+      ]
+    },
+    {
+      "id": "kakoii",
+      "title": "世界一かっこいい 豊",
+      "thumbUrl": "thumb/kakoii.png",
+      "fileUrl": "kakoii.uchiwa",
+      "updatedAt": "2026-07-31",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "キラキラ",
+        "定番"
+      ]
+    },
+    {
+      "id": "yubiheart-kun",
+      "title": "豊 指ハートして",
+      "thumbUrl": "thumb/yubiheart-kun.png",
+      "fileUrl": "yubiheart-kun.uchiwa",
+      "updatedAt": "2026-07-31",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "指ハート",
+        "おねだり",
+        "ハート"
+      ]
+    },
+    {
       "id": "tpl-3548b3d7df",
       "title": "慶ちゃん ハート名前うちわ",
       "thumbUrl": "thumb/tpl-3548b3d7df.png",
@@ -127,6 +258,39 @@
       ]
     },
     {
+      "id": "tpl-5fa236a50b",
+      "title": "けいちゃん指ハートして",
+      "thumbUrl": "thumb/tpl-5fa236a50b.png",
+      "fileUrl": "tpl-5fa236a50b.uchiwa",
+      "updatedAt": "2026-07-31",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "DelaGothicOne",
+      "tags": [
+        "名前入り",
+        "指ハート",
+        "おねだり",
+        "カンペ",
+        "NEWS",
+        "小山慶一郎"
+      ]
+    },
+    {
+      "id": "tpl-4afb2c35f0",
+      "title": "けいちゃん初参戦",
+      "thumbUrl": "thumb/tpl-4afb2c35f0.png",
+      "fileUrl": "tpl-4afb2c35f0.uchiwa",
+      "updatedAt": "2026-07-31",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "DelaGothicOne",
+      "tags": [
+        "名前入り",
+        "初参戦",
+        "定番",
+        "NEWS",
+        "小山慶一郎"
+      ]
+    },
+    {
       "id": "tpl-b690d04e3c",
       "title": "まっすー(NEWS)",
       "thumbUrl": "thumb/tpl-b690d04e3c.png",
@@ -139,6 +303,40 @@
         "ハート",
         "キラキラ",
         "定番",
+        "NEWS",
+        "増田貴久"
+      ]
+    },
+    {
+      "id": "tpl-801582c0b4",
+      "title": "まっすー手振ってカンペ",
+      "thumbUrl": "thumb/tpl-801582c0b4.png",
+      "fileUrl": "tpl-801582c0b4.uchiwa",
+      "updatedAt": "2026-07-31",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "CherryBombOne",
+      "tags": [
+        "カンペ",
+        "おねだり",
+        "名前入り",
+        "メンカラ",
+        "NEWS",
+        "増田貴久"
+      ]
+    },
+    {
+      "id": "tpl-7972d45877",
+      "title": "まっすー なまら好きだべ！",
+      "thumbUrl": "thumb/tpl-7972d45877.png",
+      "fileUrl": "tpl-7972d45877.uchiwa",
+      "updatedAt": "2026-07-31",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "カンペ",
+        "定番",
+        "シンプル",
         "NEWS",
         "増田貴久"
       ]
@@ -195,70 +393,20 @@
       ]
     },
     {
-      "id": "tpl-5fa236a50b",
-      "title": "けいちゃん指ハートして",
-      "thumbUrl": "thumb/tpl-5fa236a50b.png",
-      "fileUrl": "tpl-5fa236a50b.uchiwa",
-      "updatedAt": "2026-07-31",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "DelaGothicOne",
-      "tags": [
-        "名前入り",
-        "指ハート",
-        "おねだり",
-        "カンペ",
-        "NEWS",
-        "小山慶一郎"
-      ]
-    },
-    {
-      "id": "tpl-4afb2c35f0",
-      "title": "けいちゃん初参戦",
-      "thumbUrl": "thumb/tpl-4afb2c35f0.png",
-      "fileUrl": "tpl-4afb2c35f0.uchiwa",
-      "updatedAt": "2026-07-31",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "DelaGothicOne",
-      "tags": [
-        "名前入り",
-        "初参戦",
-        "定番",
-        "NEWS",
-        "小山慶一郎"
-      ]
-    },
-    {
-      "id": "tpl-801582c0b4",
-      "title": "まっすー手振ってカンペ",
-      "thumbUrl": "thumb/tpl-801582c0b4.png",
-      "fileUrl": "tpl-801582c0b4.uchiwa",
-      "updatedAt": "2026-07-31",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "CherryBombOne",
-      "tags": [
-        "カンペ",
-        "おねだり",
-        "名前入り",
-        "メンカラ",
-        "NEWS",
-        "増田貴久"
-      ]
-    },
-    {
-      "id": "tpl-7972d45877",
-      "title": "まっすー なまら好きだべ！",
-      "thumbUrl": "thumb/tpl-7972d45877.png",
-      "fileUrl": "tpl-7972d45877.uchiwa",
+      "id": "tpl-35ddf49773",
+      "title": "やまだ涼介 名前うちわ",
+      "thumbUrl": "thumb/tpl-35ddf49773.png",
+      "fileUrl": "tpl-35ddf49773.uchiwa",
       "updatedAt": "2026-07-31",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru",
       "tags": [
         "名前入り",
-        "カンペ",
-        "定番",
-        "シンプル",
-        "NEWS",
-        "増田貴久"
+        "写真入り",
+        "ハート",
+        "メンカラ",
+        "Hey! Say! JUMP",
+        "山田涼介"
       ]
     },
     {
@@ -279,108 +427,17 @@
       ]
     },
     {
-      "id": "tpl-35ae883eb5",
-      "title": "推しミテ！ファンサおねだり",
-      "thumbUrl": "thumb/tpl-35ae883eb5.png",
-      "fileUrl": "tpl-35ae883eb5.uchiwa",
-      "updatedAt": "2026-07-31",
+      "id": "tpl-d143be86fa",
+      "title": "がおーして！",
+      "thumbUrl": "thumb/tpl-d143be86fa.png",
+      "fileUrl": "tpl-d143be86fa.uchiwa",
+      "updatedAt": "2026-08-05",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru",
       "tags": [
-        "おねだり",
-        "写真入り",
-        "ハート"
-      ]
-    },
-    {
-      "id": "tpl-35ddf49773",
-      "title": "やまだ涼介 名前うちわ",
-      "thumbUrl": "thumb/tpl-35ddf49773.png",
-      "fileUrl": "tpl-35ddf49773.uchiwa",
-      "updatedAt": "2026-07-31",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "写真入り",
-        "ハート",
-        "メンカラ",
-        "Hey! Say! JUMP",
-        "山田涼介"
-      ]
-    },
-    {
-      "id": "tpl-74d7ee2486",
-      "title": "一緒にはーと作ろ",
-      "thumbUrl": "thumb/tpl-74d7ee2486.png",
-      "fileUrl": "tpl-74d7ee2486.uchiwa",
-      "updatedAt": "2026-07-31",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "カンペ",
-        "おねだり",
-        "ハート",
-        "お誘い"
-      ]
-    },
-    {
-      "id": "tpl-6d488f3a2e",
-      "title": "ファンサおねだりカンペ",
-      "thumbUrl": "thumb/tpl-6d488f3a2e.png",
-      "fileUrl": "tpl-6d488f3a2e.uchiwa",
-      "updatedAt": "2026-07-31",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "カンペ",
-        "おねだり",
-        "ハート",
-        "写真入り"
-      ]
-    },
-    {
-      "id": "daisuki",
-      "title": "豊 大好き",
-      "thumbUrl": "thumb/daisuki.png",
-      "fileUrl": "daisuki.uchiwa",
-      "updatedAt": "2026-07-31",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "ハート",
-        "シンプル",
-        "定番"
-      ]
-    },
-    {
-      "id": "kakoii",
-      "title": "世界一かっこいい 豊",
-      "thumbUrl": "thumb/kakoii.png",
-      "fileUrl": "kakoii.uchiwa",
-      "updatedAt": "2026-07-31",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "キラキラ",
-        "定番"
-      ]
-    },
-    {
-      "id": "yubiheart-kun",
-      "title": "豊 指ハートして",
-      "thumbUrl": "thumb/yubiheart-kun.png",
-      "fileUrl": "yubiheart-kun.uchiwa",
-      "updatedAt": "2026-07-31",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "指ハート",
-        "おねだり",
-        "ハート"
+        "なにわ男子",
+        "がおー",
+        "おねだり"
       ]
     },
     {
@@ -396,6 +453,360 @@
         "上村ひなの",
         "メンカラ",
         "名前入り"
+      ]
+    },
+    {
+      "id": "tpl-d548061d14",
+      "title": "キスマイ15周年 おめでとう",
+      "thumbUrl": "thumb/tpl-d548061d14.png",
+      "fileUrl": "tpl-d548061d14.uchiwa",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "お祝い",
+        "周年",
+        "15周年",
+        "おめでとう",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "定番"
+      ]
+    },
+    {
+      "id": "tpl-305e52e46e",
+      "title": "Kis-My-Ft2 15th ありがとう",
+      "thumbUrl": "thumb/tpl-305e52e46e.png",
+      "fileUrl": "tpl-305e52e46e.uchiwa",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "CherryBombOne",
+      "tags": [
+        "お祝い",
+        "周年",
+        "15周年",
+        "ありがとう",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "定番"
+      ]
+    },
+    {
+      "id": "tpl-e7b5055531",
+      "title": "Kis-My-Ft2 15周年 Thank youじゃん",
+      "thumbUrl": "thumb/tpl-e7b5055531.png",
+      "fileUrl": "tpl-e7b5055531.uchiwa",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "CherryBombOne",
+      "tags": [
+        "お祝い",
+        "周年",
+        "15周年",
+        "ありがとう",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "定番"
+      ]
+    },
+    {
+      "id": "tpl-e3b0953d01",
+      "title": "Kis-My-Ft2 15周年おめでとう(4)",
+      "thumbUrl": "thumb/tpl-e3b0953d01.png",
+      "fileUrl": "tpl-e3b0953d01.uchiwa",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "お祝い",
+        "周年",
+        "15周年",
+        "おめでとう",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "定番"
+      ]
+    },
+    {
+      "id": "tpl-5aaccdd170",
+      "title": "たいぴー(キスマイ) 指さして",
+      "thumbUrl": "thumb/tpl-5aaccdd170.png",
+      "fileUrl": "tpl-5aaccdd170.uchiwa",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "指さして",
+        "定番",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "たいぴー",
+        "藤ヶ谷太輔",
+        "15周年"
+      ]
+    },
+    {
+      "id": "tpl-f2d4a37284",
+      "title": "たいぴー(キスマイ) お顔して",
+      "thumbUrl": "thumb/tpl-f2d4a37284.png",
+      "fileUrl": "tpl-f2d4a37284.uchiwa",
+      "updatedAt": "2026-08-09",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "DelaGothicOne",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "お顔して",
+        "定番",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "たいぴー",
+        "藤ヶ谷太輔",
+        "15周年"
+      ]
+    },
+    {
+      "id": "tpl-908a324db1",
+      "title": "玉ちゃん(キスマイ) ギャルピして",
+      "thumbUrl": "thumb/tpl-908a324db1.png",
+      "fileUrl": "tpl-908a324db1.uchiwa",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "ギャルピ",
+        "定番",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "玉ちゃん",
+        "玉森裕太",
+        "15周年"
+      ]
+    },
+    {
+      "id": "tpl-0dffe99a1a",
+      "title": "ニカくん(キスマイ) バーンして",
+      "thumbUrl": "thumb/tpl-0dffe99a1a.png",
+      "fileUrl": "tpl-0dffe99a1a.uchiwa",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "バーン",
+        "定番",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "ニカくん",
+        "二階堂高嗣",
+        "15周年"
+      ]
+    },
+    {
+      "id": "tpl-afb2d7b85d",
+      "title": "みやっち(キスマイ) ウインクして",
+      "thumbUrl": "thumb/tpl-afb2d7b85d.png",
+      "fileUrl": "tpl-afb2d7b85d.uchiwa",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "ウインク",
+        "定番",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "みやっち",
+        "宮田俊哉",
+        "15周年"
+      ]
+    },
+    {
+      "id": "tpl-a9aa1e8960",
+      "title": "横尾さん(キスマイ) こっち見て",
+      "thumbUrl": "thumb/tpl-a9aa1e8960.png",
+      "fileUrl": "tpl-a9aa1e8960.uchiwa",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "DelaGothicOne",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "こっち見て",
+        "定番",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "横尾さん",
+        "横尾渉",
+        "15周年"
+      ]
+    },
+    {
+      "id": "tpl-ed306d4775",
+      "title": "せんちゃん(キスマイ) 手振って",
+      "thumbUrl": "thumb/tpl-ed306d4775.png",
+      "fileUrl": "tpl-ed306d4775.uchiwa",
+      "updatedAt": "2026-08-07",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "カンペ",
+        "手振って",
+        "定番",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "せんちゃん",
+        "千賀健永",
+        "15周年"
+      ]
+    },
+    {
+      "id": "tpl-7cf22b4614",
+      "title": "佐藤勝利 名前うちわ",
+      "thumbUrl": "thumb/tpl-7cf22b4614.png",
+      "fileUrl": "tpl-7cf22b4614.uchiwa",
+      "updatedAt": "2026-08-11",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "定番",
+        "タイムレス",
+        "timelesz",
+        "佐藤勝利"
+      ]
+    },
+    {
+      "id": "tpl-a93b7c4819",
+      "title": "松島聡 名前うちわ",
+      "thumbUrl": "thumb/tpl-a93b7c4819.png",
+      "fileUrl": "tpl-a93b7c4819.uchiwa",
+      "updatedAt": "2026-08-11",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "定番",
+        "タイムレス",
+        "timelesz",
+        "松島聡"
+      ]
+    },
+    {
+      "id": "tpl-c9b443138e",
+      "title": "寺西拓人 名前うちわ",
+      "thumbUrl": "thumb/tpl-c9b443138e.png",
+      "fileUrl": "tpl-c9b443138e.uchiwa",
+      "updatedAt": "2026-08-11",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "定番",
+        "タイムレス",
+        "timelesz",
+        "寺西拓人"
+      ]
+    },
+    {
+      "id": "tpl-645a425cbd",
+      "title": "橋本将生 名前うちわ",
+      "thumbUrl": "thumb/tpl-645a425cbd.png",
+      "fileUrl": "tpl-645a425cbd.uchiwa",
+      "updatedAt": "2026-08-11",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "定番",
+        "タイムレス",
+        "timelesz",
+        "橋本将生"
+      ]
+    },
+    {
+      "id": "tpl-dde4fe428a",
+      "title": "猪俣周杜 名前うちわ",
+      "thumbUrl": "thumb/tpl-dde4fe428a.png",
+      "fileUrl": "tpl-dde4fe428a.uchiwa",
+      "updatedAt": "2026-08-11",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "定番",
+        "タイムレス",
+        "timelesz",
+        "猪俣周杜"
+      ]
+    },
+    {
+      "id": "tpl-a7678a3091",
+      "title": "篠塚大輝 名前うちわ",
+      "thumbUrl": "thumb/tpl-a7678a3091.png",
+      "fileUrl": "tpl-a7678a3091.uchiwa",
+      "updatedAt": "2026-08-11",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "定番",
+        "タイムレス",
+        "timelesz",
+        "篠塚大輝"
+      ]
+    },
+    {
+      "id": "tpl-98619584ee",
+      "title": "菊池風磨 名前うちわ",
+      "thumbUrl": "thumb/tpl-98619584ee.png",
+      "fileUrl": "tpl-98619584ee.uchiwa",
+      "updatedAt": "2026-08-11",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "定番",
+        "タイムレス",
+        "timelesz",
+        "菊池風磨"
+      ]
+    },
+    {
+      "id": "tpl-e9ee8321ea",
+      "title": "原嘉孝 名前うちわ",
+      "thumbUrl": "thumb/tpl-e9ee8321ea.png",
+      "fileUrl": "tpl-e9ee8321ea.uchiwa",
+      "updatedAt": "2026-08-11",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "定番",
+        "タイムレス",
+        "timelesz",
+        "原嘉孝"
+      ]
+    },
+    {
+      "id": "tpl-bf6630a6a8",
+      "title": "timelesz最高",
+      "thumbUrl": "thumb/tpl-bf6630a6a8.png",
+      "fileUrl": "tpl-bf6630a6a8.uchiwa",
+      "updatedAt": "2026-08-11",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "定番",
+        "タイムレス",
+        "timelesz"
       ]
     },
     {
@@ -529,242 +940,32 @@
       ]
     },
     {
-      "id": "tpl-d143be86fa",
-      "title": "がおーして！",
-      "thumbUrl": "thumb/tpl-d143be86fa.png",
-      "fileUrl": "tpl-d143be86fa.uchiwa",
-      "updatedAt": "2026-08-05",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "なにわ男子",
-        "がおー",
-        "おねだり"
-      ]
-    },
-    {
-      "id": "tpl-8d7d796e93",
-      "title": "こっち見て！",
-      "thumbUrl": "thumb/tpl-8d7d796e93.png",
-      "fileUrl": "tpl-8d7d796e93.uchiwa",
-      "updatedAt": "2026-08-05",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "おねだり",
-        "定番"
-      ]
-    },
-    {
-      "id": "tpl-d548061d14",
-      "title": "キスマイ15周年 おめでとう",
-      "thumbUrl": "thumb/tpl-d548061d14.png",
-      "fileUrl": "tpl-d548061d14.uchiwa",
-      "updatedAt": "2026-08-07",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "お祝い",
-        "周年",
-        "15周年",
-        "おめでとう",
-        "キスマイ",
-        "Kis-My-Ft2",
-        "定番"
-      ]
-    },
-    {
-      "id": "tpl-305e52e46e",
-      "title": "Kis-My-Ft2 15th ありがとう",
-      "thumbUrl": "thumb/tpl-305e52e46e.png",
-      "fileUrl": "tpl-305e52e46e.uchiwa",
-      "updatedAt": "2026-08-07",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "CherryBombOne",
-      "tags": [
-        "お祝い",
-        "周年",
-        "15周年",
-        "ありがとう",
-        "キスマイ",
-        "Kis-My-Ft2",
-        "定番"
-      ]
-    },
-    {
-      "id": "tpl-e7b5055531",
-      "title": "Kis-My-Ft2 15周年 Thank youじゃん",
-      "thumbUrl": "thumb/tpl-e7b5055531.png",
-      "fileUrl": "tpl-e7b5055531.uchiwa",
-      "updatedAt": "2026-08-07",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "CherryBombOne",
-      "tags": [
-        "お祝い",
-        "周年",
-        "15周年",
-        "ありがとう",
-        "キスマイ",
-        "Kis-My-Ft2",
-        "定番"
-      ]
-    },
-    {
-      "id": "tpl-5aaccdd170",
-      "title": "たいぴー(キスマイ) 指さして",
-      "thumbUrl": "thumb/tpl-5aaccdd170.png",
-      "fileUrl": "tpl-5aaccdd170.uchiwa",
-      "updatedAt": "2026-08-07",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "おねだり",
-        "指さして",
-        "定番",
-        "キスマイ",
-        "Kis-My-Ft2",
-        "たいぴー",
-        "藤ヶ谷太輔",
-        "15周年"
-      ]
-    },
-    {
-      "id": "tpl-908a324db1",
-      "title": "玉ちゃん(キスマイ) ギャルピして",
-      "thumbUrl": "thumb/tpl-908a324db1.png",
-      "fileUrl": "tpl-908a324db1.uchiwa",
-      "updatedAt": "2026-08-07",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "おねだり",
-        "ギャルピ",
-        "定番",
-        "キスマイ",
-        "Kis-My-Ft2",
-        "玉ちゃん",
-        "玉森裕太",
-        "15周年"
-      ]
-    },
-    {
-      "id": "tpl-0dffe99a1a",
-      "title": "ニカくん(キスマイ) バーンして",
-      "thumbUrl": "thumb/tpl-0dffe99a1a.png",
-      "fileUrl": "tpl-0dffe99a1a.uchiwa",
-      "updatedAt": "2026-08-07",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "おねだり",
-        "バーン",
-        "定番",
-        "キスマイ",
-        "Kis-My-Ft2",
-        "ニカくん",
-        "二階堂高嗣",
-        "15周年"
-      ]
-    },
-    {
-      "id": "tpl-afb2d7b85d",
-      "title": "みやっち(キスマイ) ウインクして",
-      "thumbUrl": "thumb/tpl-afb2d7b85d.png",
-      "fileUrl": "tpl-afb2d7b85d.uchiwa",
-      "updatedAt": "2026-08-07",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "おねだり",
-        "ウインク",
-        "定番",
-        "キスマイ",
-        "Kis-My-Ft2",
-        "みやっち",
-        "宮田俊哉",
-        "15周年"
-      ]
-    },
-    {
-      "id": "tpl-a9aa1e8960",
-      "title": "横尾さん(キスマイ) こっち見て",
-      "thumbUrl": "thumb/tpl-a9aa1e8960.png",
-      "fileUrl": "tpl-a9aa1e8960.uchiwa",
-      "updatedAt": "2026-08-07",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "DelaGothicOne",
-      "tags": [
-        "名前入り",
-        "おねだり",
-        "こっち見て",
-        "定番",
-        "キスマイ",
-        "Kis-My-Ft2",
-        "横尾さん",
-        "横尾渉",
-        "15周年"
-      ]
-    },
-    {
-      "id": "tpl-ed306d4775",
-      "title": "せんちゃん(キスマイ) 手振って",
-      "thumbUrl": "thumb/tpl-ed306d4775.png",
-      "fileUrl": "tpl-ed306d4775.uchiwa",
-      "updatedAt": "2026-08-07",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "カンペ",
-        "手振って",
-        "定番",
-        "キスマイ",
-        "Kis-My-Ft2",
-        "せんちゃん",
-        "千賀健永",
-        "15周年"
-      ]
-    },
-    {
-      "id": "tpl-f2d4a37284",
-      "title": "たいぴー(キスマイ) お顔して",
-      "thumbUrl": "thumb/tpl-f2d4a37284.png",
-      "fileUrl": "tpl-f2d4a37284.uchiwa",
-      "updatedAt": "2026-08-09",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "DelaGothicOne",
-      "tags": [
-        "名前入り",
-        "おねだり",
-        "お顔して",
-        "定番",
-        "キスマイ",
-        "Kis-My-Ft2",
-        "たいぴー",
-        "藤ヶ谷太輔",
-        "15周年"
-      ]
-    },
-    {
-      "id": "tpl-e3b0953d01",
-      "title": "Kis-My-Ft2 15周年おめでとう(4)",
-      "thumbUrl": "thumb/tpl-e3b0953d01.png",
-      "fileUrl": "tpl-e3b0953d01.uchiwa",
+      "id": "tpl-0459667d82",
+      "title": "今日も好きやで",
+      "thumbUrl": "thumb/tpl-0459667d82.png",
+      "fileUrl": "tpl-0459667d82.uchiwa",
       "updatedAt": "2026-08-10",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru",
       "tags": [
-        "お祝い",
-        "周年",
-        "15周年",
-        "おめでとう",
-        "キスマイ",
-        "Kis-My-Ft2",
-        "定番"
+        "関西弁",
+        "好き",
+        "カンペ"
+      ]
+    },
+    {
+      "id": "tpl-1cc5ce9c17",
+      "title": "なにわ大好きや",
+      "thumbUrl": "thumb/tpl-1cc5ce9c17.png",
+      "fileUrl": "tpl-1cc5ce9c17.uchiwa",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "関西弁",
+        "好き",
+        "なにわ",
+        "カンペ"
       ]
     },
     {
@@ -908,242 +1109,6 @@
       ]
     },
     {
-      "id": "tpl-0459667d82",
-      "title": "今日も好きやで",
-      "thumbUrl": "thumb/tpl-0459667d82.png",
-      "fileUrl": "tpl-0459667d82.uchiwa",
-      "updatedAt": "2026-08-10",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "関西弁",
-        "好き",
-        "カンペ"
-      ]
-    },
-    {
-      "id": "tpl-1cc5ce9c17",
-      "title": "なにわ大好きや",
-      "thumbUrl": "thumb/tpl-1cc5ce9c17.png",
-      "fileUrl": "tpl-1cc5ce9c17.uchiwa",
-      "updatedAt": "2026-08-10",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "関西弁",
-        "好き",
-        "なにわ",
-        "カンペ"
-      ]
-    },
-    {
-      "id": "tpl-21285f0e2c",
-      "title": "ちゅきちゅきポーズして",
-      "thumbUrl": "thumb/tpl-21285f0e2c.png",
-      "fileUrl": "tpl-21285f0e2c.uchiwa",
-      "updatedAt": "2026-08-10",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "おねだり",
-        "ポーズ",
-        "好き",
-        "カンペ"
-      ]
-    },
-    {
-      "id": "tpl-41829c523e",
-      "title": "おもちポーズして",
-      "thumbUrl": "thumb/tpl-41829c523e.png",
-      "fileUrl": "tpl-41829c523e.uchiwa",
-      "updatedAt": "2026-08-10",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "おねだり",
-        "ポーズ",
-        "餅",
-        "カンペ"
-      ]
-    },
-    {
-      "id": "tpl-749e07d963",
-      "title": "ずんだ餅食べよ",
-      "thumbUrl": "thumb/tpl-749e07d963.png",
-      "fileUrl": "tpl-749e07d963.uchiwa",
-      "updatedAt": "2026-08-10",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "お誘い",
-        "ずんだ",
-        "餅",
-        "仙台",
-        "宮城",
-        "東北",
-        "カンペ"
-      ]
-    },
-    {
-      "id": "tpl-5fba71b593",
-      "title": "一緒に牛タン食べよ",
-      "thumbUrl": "thumb/tpl-5fba71b593.png",
-      "fileUrl": "tpl-5fba71b593.uchiwa",
-      "updatedAt": "2026-08-10",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "お誘い",
-        "牛タン",
-        "仙台",
-        "宮城",
-        "東北",
-        "カンペ"
-      ]
-    },
-    {
-      "id": "tpl-7cf22b4614",
-      "title": "佐藤勝利 名前うちわ",
-      "thumbUrl": "thumb/tpl-7cf22b4614.png",
-      "fileUrl": "tpl-7cf22b4614.uchiwa",
-      "updatedAt": "2026-08-11",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "定番",
-        "タイムレス",
-        "timelesz",
-        "佐藤勝利"
-      ]
-    },
-    {
-      "id": "tpl-a93b7c4819",
-      "title": "松島聡 名前うちわ",
-      "thumbUrl": "thumb/tpl-a93b7c4819.png",
-      "fileUrl": "tpl-a93b7c4819.uchiwa",
-      "updatedAt": "2026-08-11",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "定番",
-        "タイムレス",
-        "timelesz",
-        "松島聡"
-      ]
-    },
-    {
-      "id": "tpl-c9b443138e",
-      "title": "寺西拓人 名前うちわ",
-      "thumbUrl": "thumb/tpl-c9b443138e.png",
-      "fileUrl": "tpl-c9b443138e.uchiwa",
-      "updatedAt": "2026-08-11",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "定番",
-        "タイムレス",
-        "timelesz",
-        "寺西拓人"
-      ]
-    },
-    {
-      "id": "tpl-645a425cbd",
-      "title": "橋本将生 名前うちわ",
-      "thumbUrl": "thumb/tpl-645a425cbd.png",
-      "fileUrl": "tpl-645a425cbd.uchiwa",
-      "updatedAt": "2026-08-11",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "定番",
-        "タイムレス",
-        "timelesz",
-        "橋本将生"
-      ]
-    },
-    {
-      "id": "tpl-dde4fe428a",
-      "title": "猪俣周杜 名前うちわ",
-      "thumbUrl": "thumb/tpl-dde4fe428a.png",
-      "fileUrl": "tpl-dde4fe428a.uchiwa",
-      "updatedAt": "2026-08-11",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "定番",
-        "タイムレス",
-        "timelesz",
-        "猪俣周杜"
-      ]
-    },
-    {
-      "id": "tpl-a7678a3091",
-      "title": "篠塚大輝 名前うちわ",
-      "thumbUrl": "thumb/tpl-a7678a3091.png",
-      "fileUrl": "tpl-a7678a3091.uchiwa",
-      "updatedAt": "2026-08-11",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "定番",
-        "タイムレス",
-        "timelesz",
-        "篠塚大輝"
-      ]
-    },
-    {
-      "id": "tpl-bf6630a6a8",
-      "title": "timelesz最高",
-      "thumbUrl": "thumb/tpl-bf6630a6a8.png",
-      "fileUrl": "tpl-bf6630a6a8.uchiwa",
-      "updatedAt": "2026-08-11",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "定番",
-        "タイムレス",
-        "timelesz"
-      ]
-    },
-    {
-      "id": "tpl-98619584ee",
-      "title": "菊池風磨 名前うちわ",
-      "thumbUrl": "thumb/tpl-98619584ee.png",
-      "fileUrl": "tpl-98619584ee.uchiwa",
-      "updatedAt": "2026-08-11",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "定番",
-        "タイムレス",
-        "timelesz",
-        "菊池風磨"
-      ]
-    },
-    {
-      "id": "tpl-e9ee8321ea",
-      "title": "原嘉孝 名前うちわ",
-      "thumbUrl": "thumb/tpl-e9ee8321ea.png",
-      "fileUrl": "tpl-e9ee8321ea.uchiwa",
-      "updatedAt": "2026-08-11",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "定番",
-        "タイムレス",
-        "timelesz",
-        "原嘉孝"
-      ]
-    },
-    {
       "id": "tpl-44513a14e5",
       "title": "うどん派？ラーメン派？",
       "thumbUrl": "thumb/tpl-44513a14e5.png",
@@ -1193,6 +1158,41 @@
         "九州",
         "もつ鍋",
         "鍋"
+      ]
+    },
+    {
+      "id": "tpl-749e07d963",
+      "title": "ずんだ餅食べよ",
+      "thumbUrl": "thumb/tpl-749e07d963.png",
+      "fileUrl": "tpl-749e07d963.uchiwa",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "お誘い",
+        "ずんだ",
+        "餅",
+        "仙台",
+        "宮城",
+        "東北",
+        "カンペ"
+      ]
+    },
+    {
+      "id": "tpl-5fba71b593",
+      "title": "一緒に牛タン食べよ",
+      "thumbUrl": "thumb/tpl-5fba71b593.png",
+      "fileUrl": "tpl-5fba71b593.uchiwa",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "お誘い",
+        "牛タン",
+        "仙台",
+        "宮城",
+        "東北",
+        "カンペ"
       ]
     }
   ]

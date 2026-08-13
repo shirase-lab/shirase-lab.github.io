@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-10",
+  "updatedAt": "2026-08-13",
   "note": "うちわつくーる 配信ステッカーのマニフェスト。作者制作のみ・投稿機能なし。thumbUrl / fileUrl は index.json からの相対 URL。",
   "filters": [
     {
@@ -305,6 +305,293 @@
       ]
     },
     {
+      "id": "sticker_027",
+      "title": "キツネ",
+      "thumbUrl": "thumb/sticker_027.png",
+      "fileUrl": "sticker_027.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "きつね",
+        "キツネ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_028",
+      "title": "レッサーパンダ",
+      "thumbUrl": "thumb/sticker_028.png",
+      "fileUrl": "sticker_028.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "レッサーパンダ",
+        "パンダ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_029",
+      "title": "ユニコーン",
+      "thumbUrl": "thumb/sticker_029.png",
+      "fileUrl": "sticker_029.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "ユニコーン",
+        "ゆめかわ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_030",
+      "title": "アルパカ",
+      "thumbUrl": "thumb/sticker_030.png",
+      "fileUrl": "sticker_030.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "アルパカ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_031",
+      "title": "カピバラ",
+      "thumbUrl": "thumb/sticker_031.png",
+      "fileUrl": "sticker_031.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "どうぶつ",
+        "カピバラ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_032",
+      "title": "ショートケーキ",
+      "thumbUrl": "thumb/sticker_032.png",
+      "fileUrl": "sticker_032.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "スイーツ",
+        "ケーキ",
+        "ショートケーキ",
+        "いちご",
+        "デザート",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_033",
+      "title": "カップケーキ",
+      "thumbUrl": "thumb/sticker_033.png",
+      "fileUrl": "sticker_033.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "スイーツ",
+        "カップケーキ",
+        "ケーキ",
+        "デザート",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_034",
+      "title": "ドーナツ",
+      "thumbUrl": "thumb/sticker_034.png",
+      "fileUrl": "sticker_034.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "スイーツ",
+        "ドーナツ",
+        "デザート",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_035",
+      "title": "クッキー",
+      "thumbUrl": "thumb/sticker_035.png",
+      "fileUrl": "sticker_035.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "スイーツ",
+        "クッキー",
+        "デザート",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_036",
+      "title": "プリン",
+      "thumbUrl": "thumb/sticker_036.png",
+      "fileUrl": "sticker_036.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "スイーツ",
+        "プリン",
+        "デザート",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_037",
+      "title": "パフェ",
+      "thumbUrl": "thumb/sticker_037.png",
+      "fileUrl": "sticker_037.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "スイーツ",
+        "パフェ",
+        "デザート",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_038",
+      "title": "ソフトクリーム",
+      "thumbUrl": "thumb/sticker_038.png",
+      "fileUrl": "sticker_038.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "スイーツ",
+        "ソフトクリーム",
+        "アイス",
+        "アイスクリーム",
+        "デザート",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_039",
+      "title": "アイスキャンディー",
+      "thumbUrl": "thumb/sticker_039.png",
+      "fileUrl": "sticker_039.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "スイーツ",
+        "アイス",
+        "アイスキャンディー",
+        "デザート",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_040",
+      "title": "ペロペロキャンディー",
+      "thumbUrl": "thumb/sticker_040.png",
+      "fileUrl": "sticker_040.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "スイーツ",
+        "キャンディー",
+        "ペロペロキャンディー",
+        "あめ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_041",
+      "title": "キャンディー",
+      "thumbUrl": "thumb/sticker_041.png",
+      "fileUrl": "sticker_041.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "スイーツ",
+        "キャンディー",
+        "あめ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_042",
+      "title": "チョコレート",
+      "thumbUrl": "thumb/sticker_042.png",
+      "fileUrl": "sticker_042.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "スイーツ",
+        "チョコレート",
+        "チョコ",
+        "デザート",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_043",
+      "title": "ワッフル",
+      "thumbUrl": "thumb/sticker_043.png",
+      "fileUrl": "sticker_043.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "スイーツ",
+        "ワッフル",
+        "デザート",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_044",
+      "title": "パンケーキ",
+      "thumbUrl": "thumb/sticker_044.png",
+      "fileUrl": "sticker_044.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "スイーツ",
+        "パンケーキ",
+        "ホットケーキ",
+        "デザート",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_045",
+      "title": "クロワッサン",
+      "thumbUrl": "thumb/sticker_045.png",
+      "fileUrl": "sticker_045.png",
+      "updatedAt": "2026-08-13",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "スイーツ",
+        "クロワッサン",
+        "パン",
+        "かわいい"
+      ]
+    },
+    {
       "id": "sticker_016",
       "title": "めんたいこ",
       "thumbUrl": "thumb/sticker_016.png",
@@ -321,21 +608,6 @@
       ]
     },
     {
-      "id": "sticker_017",
-      "title": "屋台",
-      "thumbUrl": "thumb/sticker_017.png",
-      "fileUrl": "sticker_017.png",
-      "updatedAt": "2026-08-10",
-      "minAppVersion": "2.4.0",
-      "tags": [
-        "屋台",
-        "福岡",
-        "博多",
-        "ご当地",
-        "たべもの"
-      ]
-    },
-    {
       "id": "sticker_018",
       "title": "とんこつラーメン",
       "thumbUrl": "thumb/sticker_018.png",
@@ -349,81 +621,6 @@
         "福岡",
         "博多",
         "ご当地"
-      ]
-    },
-    {
-      "id": "sticker_019",
-      "title": "ずんだ餅",
-      "thumbUrl": "thumb/sticker_019.png",
-      "fileUrl": "sticker_019.png",
-      "updatedAt": "2026-08-10",
-      "minAppVersion": "2.4.0",
-      "tags": [
-        "たべもの",
-        "餅",
-        "ずんだ",
-        "仙台",
-        "宮城",
-        "東北"
-      ]
-    },
-    {
-      "id": "sticker_020",
-      "title": "牛タン",
-      "thumbUrl": "thumb/sticker_020.png",
-      "fileUrl": "sticker_020.png",
-      "updatedAt": "2026-08-10",
-      "minAppVersion": "2.4.0",
-      "tags": [
-        "たべもの",
-        "牛タン",
-        "仙台",
-        "宮城",
-        "東北"
-      ]
-    },
-    {
-      "id": "sticker_021",
-      "title": "焼きずんだ餅",
-      "thumbUrl": "thumb/sticker_021.png",
-      "fileUrl": "sticker_021.png",
-      "updatedAt": "2026-08-10",
-      "minAppVersion": "2.4.0",
-      "tags": [
-        "たべもの",
-        "餅",
-        "ずんだ",
-        "仙台",
-        "宮城",
-        "東北"
-      ]
-    },
-    {
-      "id": "sticker_022",
-      "title": "お餅",
-      "thumbUrl": "thumb/sticker_022.png",
-      "fileUrl": "sticker_022.png",
-      "updatedAt": "2026-08-10",
-      "minAppVersion": "2.4.0",
-      "tags": [
-        "たべもの",
-        "餅",
-        "焼き餅"
-      ]
-    },
-    {
-      "id": "sticker_023",
-      "title": "鏡餅",
-      "thumbUrl": "thumb/sticker_023.png",
-      "fileUrl": "sticker_023.png",
-      "updatedAt": "2026-08-10",
-      "minAppVersion": "2.4.0",
-      "tags": [
-        "たべもの",
-        "餅",
-        "鏡餅",
-        "お正月",
-        "正月"
       ]
     },
     {
@@ -473,6 +670,96 @@
         "福岡",
         "博多",
         "ご当地"
+      ]
+    },
+    {
+      "id": "sticker_019",
+      "title": "ずんだ餅",
+      "thumbUrl": "thumb/sticker_019.png",
+      "fileUrl": "sticker_019.png",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "餅",
+        "ずんだ",
+        "仙台",
+        "宮城",
+        "東北"
+      ]
+    },
+    {
+      "id": "sticker_021",
+      "title": "焼きずんだ餅",
+      "thumbUrl": "thumb/sticker_021.png",
+      "fileUrl": "sticker_021.png",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "餅",
+        "ずんだ",
+        "仙台",
+        "宮城",
+        "東北"
+      ]
+    },
+    {
+      "id": "sticker_020",
+      "title": "牛タン",
+      "thumbUrl": "thumb/sticker_020.png",
+      "fileUrl": "sticker_020.png",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "牛タン",
+        "仙台",
+        "宮城",
+        "東北"
+      ]
+    },
+    {
+      "id": "sticker_022",
+      "title": "お餅",
+      "thumbUrl": "thumb/sticker_022.png",
+      "fileUrl": "sticker_022.png",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "餅",
+        "焼き餅"
+      ]
+    },
+    {
+      "id": "sticker_017",
+      "title": "屋台",
+      "thumbUrl": "thumb/sticker_017.png",
+      "fileUrl": "sticker_017.png",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "屋台",
+        "福岡",
+        "博多",
+        "ご当地",
+        "たべもの"
+      ]
+    },
+    {
+      "id": "sticker_023",
+      "title": "鏡餅",
+      "thumbUrl": "thumb/sticker_023.png",
+      "fileUrl": "sticker_023.png",
+      "updatedAt": "2026-08-10",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "餅",
+        "鏡餅",
+        "お正月",
+        "正月"
       ]
     }
   ]
