@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-07",
+  "updatedAt": "2026-08-14",
   "note": "うちわつくーる 配信スタンプ（色変更できるSVG）のマニフェスト。作者制作のみ・投稿機能なし。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。",
   "filters": [
     {
@@ -225,6 +225,70 @@
       "tags": [
         "王冠",
         "ゴージャス"
+      ]
+    },
+    {
+      "id": "oshimite_crown_heart",
+      "title": "ハートティアラ",
+      "thumbUrl": "thumb/oshimite_crown_heart.png",
+      "fileUrl": "oshimite_crown_heart.svg",
+      "updatedAt": "2026-08-14",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "王冠",
+        "ティアラ",
+        "ハート",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "oshimite_crown_puffy",
+      "title": "ぷっくり王冠",
+      "thumbUrl": "thumb/oshimite_crown_puffy.png",
+      "fileUrl": "oshimite_crown_puffy.svg",
+      "updatedAt": "2026-08-14",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "王冠",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "oshimite_crown_wink",
+      "title": "ウインク王冠",
+      "thumbUrl": "thumb/oshimite_crown_wink.png",
+      "fileUrl": "oshimite_crown_wink.svg",
+      "updatedAt": "2026-08-14",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "王冠",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "oshimite_crown_royal",
+      "title": "ロイヤル王冠",
+      "thumbUrl": "thumb/oshimite_crown_royal.png",
+      "fileUrl": "oshimite_crown_royal.svg",
+      "updatedAt": "2026-08-14",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "王冠",
+        "ゴージャス"
+      ]
+    },
+    {
+      "id": "oshimite_tiara_jewel",
+      "title": "ジュエルティアラ",
+      "thumbUrl": "thumb/oshimite_tiara_jewel.png",
+      "fileUrl": "oshimite_tiara_jewel.svg",
+      "updatedAt": "2026-08-14",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ティアラ",
+        "王冠",
+        "キラキラ",
+        "プリンセス"
       ]
     },
     {
