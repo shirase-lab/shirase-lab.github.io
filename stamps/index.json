@@ -316,6 +316,68 @@
       ]
     },
     {
+      "id": "oshimite_ribbon_bow",
+      "title": "シンプルリボン",
+      "thumbUrl": "thumb/oshimite_ribbon_bow.png",
+      "fileUrl": "oshimite_ribbon_bow.svg",
+      "updatedAt": "2026-08-14",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "リボン",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "oshimite_ribbon_long",
+      "title": "ロングリボン",
+      "thumbUrl": "thumb/oshimite_ribbon_long.png",
+      "fileUrl": "oshimite_ribbon_long.svg",
+      "updatedAt": "2026-08-14",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "リボン",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "oshimite_ribbon_lace",
+      "title": "フリルリボン",
+      "thumbUrl": "thumb/oshimite_ribbon_lace.png",
+      "fileUrl": "oshimite_ribbon_lace.svg",
+      "updatedAt": "2026-08-14",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "リボン",
+        "フリル",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "oshimite_ribbon_line",
+      "title": "細リボン",
+      "thumbUrl": "thumb/oshimite_ribbon_line.png",
+      "fileUrl": "oshimite_ribbon_line.svg",
+      "updatedAt": "2026-08-14",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "リボン",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "oshimite_ribbon_heart",
+      "title": "ハートリボン",
+      "thumbUrl": "thumb/oshimite_ribbon_heart.png",
+      "fileUrl": "oshimite_ribbon_heart.svg",
+      "updatedAt": "2026-08-14",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "リボン",
+        "ハート",
+        "かわいい"
+      ]
+    },
+    {
       "id": "oshimite_angel_wing",
       "title": "天使の羽",
       "thumbUrl": "thumb/oshimite_angel_wing.png",
