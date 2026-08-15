@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-14",
+  "updatedAt": "2026-08-15",
   "note": "うちわつくーる 配信スタンプ（色変更できるSVG）のマニフェスト。作者制作のみ・投稿機能なし。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。",
   "filters": [
     {
@@ -111,6 +111,17 @@
             "炎",
             "ナチュラル",
             "稲妻"
+          ]
+        },
+        {
+          "name": "ハンドサイン・ポーズ",
+          "tags": [
+            "ハンドサイン",
+            "ポーズ",
+            "指ハート",
+            "ピース",
+            "指さし",
+            "手振り"
           ]
         }
       ]
@@ -867,6 +878,77 @@
       "tags": [
         "ビジュー",
         "上品"
+      ]
+    },
+    {
+      "id": "oshimite_hand_cheekheart",
+      "title": "ほっぺハート",
+      "thumbUrl": "thumb/oshimite_hand_cheekheart.png",
+      "fileUrl": "oshimite_hand_cheekheart.svg",
+      "updatedAt": "2026-08-15",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ハンドサイン",
+        "ハート",
+        "ほっぺハート",
+        "おねだり",
+        "ファンサ"
+      ]
+    },
+    {
+      "id": "oshimite_hand_fingerheart",
+      "title": "指ハート",
+      "thumbUrl": "thumb/oshimite_hand_fingerheart.png",
+      "fileUrl": "oshimite_hand_fingerheart.svg",
+      "updatedAt": "2026-08-15",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ハンドサイン",
+        "指ハート",
+        "ハート",
+        "おねだり",
+        "ファンサ"
+      ]
+    },
+    {
+      "id": "oshimite_hand_peace",
+      "title": "ピース",
+      "thumbUrl": "thumb/oshimite_hand_peace.png",
+      "fileUrl": "oshimite_hand_peace.svg",
+      "updatedAt": "2026-08-15",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ハンドサイン",
+        "ピース",
+        "ポーズ"
+      ]
+    },
+    {
+      "id": "oshimite_hand_point",
+      "title": "指さし",
+      "thumbUrl": "thumb/oshimite_hand_point.png",
+      "fileUrl": "oshimite_hand_point.svg",
+      "updatedAt": "2026-08-15",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ハンドサイン",
+        "指さし",
+        "おねだり",
+        "ファンサ"
+      ]
+    },
+    {
+      "id": "oshimite_hand_wave",
+      "title": "手振り",
+      "thumbUrl": "thumb/oshimite_hand_wave.png",
+      "fileUrl": "oshimite_hand_wave.svg",
+      "updatedAt": "2026-08-15",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ハンドサイン",
+        "手振り",
+        "バイバイ",
+        "ファンサ"
       ]
     }
   ]
