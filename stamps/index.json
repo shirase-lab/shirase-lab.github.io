@@ -950,6 +950,34 @@
         "バイバイ",
         "ファンサ"
       ]
+    },
+    {
+      "id": "oshimite_hand_chop",
+      "title": "手刀",
+      "thumbUrl": "thumb/oshimite_hand_chop.png",
+      "fileUrl": "oshimite_hand_chop.svg",
+      "updatedAt": "2026-08-15",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ハンドサイン",
+        "手刀",
+        "チョップ",
+        "ポーズ"
+      ]
+    },
+    {
+      "id": "oshimite_hand_j",
+      "title": "Jサイン",
+      "thumbUrl": "thumb/oshimite_hand_j.png",
+      "fileUrl": "oshimite_hand_j.svg",
+      "updatedAt": "2026-08-15",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ハンドサイン",
+        "J",
+        "ポーズ",
+        "ファンサ"
+      ]
     }
   ]
 }

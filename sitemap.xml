@@ -1339,6 +1339,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://shirase-lab.github.io/stamps/t/oshimite_hand_chop.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://shirase-lab.github.io/stamps/t/oshimite_hand_j.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://shirase-lab.github.io/stamps/tag/%E7%8E%8B%E5%86%A0.html</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -1730,6 +1742,24 @@
   </url>
   <url>
     <loc>https://shirase-lab.github.io/stamps/tag/%E3%83%90%E3%82%A4%E3%83%90%E3%82%A4.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shirase-lab.github.io/stamps/tag/%E6%89%8B%E5%88%80.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shirase-lab.github.io/stamps/tag/%E3%83%81%E3%83%A7%E3%83%83%E3%83%97.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shirase-lab.github.io/stamps/tag/J.html</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
