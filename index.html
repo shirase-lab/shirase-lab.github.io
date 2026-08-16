@@ -113,14 +113,12 @@
      margin-bottom:18px}
   .lede{font-size:clamp(15px,2.1vw,18px);font-weight:500;color:var(--ink);margin-bottom:26px}
   .lede b{color:var(--pink-deep)}
-  /* DL ボタンは親（.hero-copy）の幅いっぱいに伸ばして、他の要素と左右端を揃える。 */
-  .btns{display:grid;grid-template-columns:1fr;gap:12px;align-items:center}
-  .appstore{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--ink);color:#fff;font-weight:700;
-            padding:14px 22px;border-radius:16px;font-size:16px;transition:transform .15s ease,box-shadow .15s ease;
-            box-shadow:0 8px 0 #2c1a24}
-  .appstore:hover{transform:translateY(-3px);box-shadow:0 11px 0 #2c1a24}
-  .appstore:active{transform:translateY(2px);box-shadow:0 4px 0 #2c1a24}
-  .appstore svg{width:22px;height:22px;fill:#fff}
+  /* DL は公式ストアバッジ（assets/badges/*.svg・言語別）。歪ませず同じ高さで中央に並べる。 */
+  .btns{display:grid;grid-template-columns:1fr;gap:12px;justify-items:center}
+  .badge-link{display:inline-flex;transition:transform .15s ease}
+  .badge-link:hover{transform:translateY(-3px)}
+  .badge-link:active{transform:translateY(2px)}
+  .badge{height:52px;width:auto;max-width:100%;display:block}
   .freenote{font-size:13px;font-weight:700;color:var(--ink-soft)}
 
   /* uchiwa */
@@ -163,12 +161,6 @@
   /* movie */
   .movie{margin-bottom:64px}
   .movie-note{text-align:center;color:var(--ink-soft);font-weight:500;font-size:13px;margin-top:16px}
-
-  /* showcase video (orientation-agnostic) */
-  .showcase{margin-bottom:64px}
-  .showcase-frame{max-width:420px;margin:0 auto;border:8px solid #2c1a24;border-radius:26px;overflow:hidden;
-        background:#000;box-shadow:0 24px 44px rgba(60,20,50,.30)}
-  .showcase-frame video{display:block;width:100%;height:auto;background:#111}
 
   /* iPad device frame */
   .ipad{max-width:560px;margin:0 auto;border:12px solid #2c1a24;border-radius:30px;overflow:hidden;
@@ -241,7 +233,7 @@
   .copy{margin-top:30px;font-size:12px;opacity:.6;font-weight:500}
 
   /* focus + motion */
-  a:focus-visible,.appstore:focus-visible{outline:3px solid var(--lav);outline-offset:3px}
+  a:focus-visible,.badge-link:focus-visible{outline:3px solid var(--lav);outline-offset:3px}
   @media (prefers-reduced-motion:reduce){
     .sky b,.uchiwa{animation:none}
     html{scroll-behavior:auto}
@@ -302,13 +294,11 @@
       </div>
       <p class="lede" data-i18n="hero.lede">推しに見つけてもらう応援うちわを、スマホひとつで。<br>文字をデザインして、<b>コンビニで実寸プリント</b>。</p>
       <div class="btns">
-        <a class="appstore" href="https://play.google.com/store/apps/details?id=com.shiraselab.uchiwa_tukool">
-          <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l220.7-221.3 60.1 60.1L104.6 499z"/></svg>
-          <span data-i18n="cta.dlGP">Google Playでダウンロード</span>
+        <a class="badge-link" href="https://play.google.com/store/apps/details?id=com.shiraselab.uchiwa_tukool">
+          <img class="badge" data-badge="googleplay" src="assets/badges/googleplay-ja.svg" alt="Google Playでダウンロード">
         </a>
-        <a class="appstore" href="https://apps.apple.com/app/id6778378550">
-          <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-37 16.6-65 50.5-85.7-19-27.2-47.6-42.1-85.5-45-36-2.8-75.4 21-89.7 21-15.2 0-50-20-77.4-20C61.5 139.5 7 184.3 7 275.6c0 27 4.9 54.9 14.8 83.6 13.2 37.9 60.7 131 110.2 129.5 25.9-.6 44.2-18.4 78-18.4 32.8 0 49.7 18.4 78.6 18.4 49.9-.7 92.9-85.3 105.4-123.3-67-31.6-63.5-92.6-63.3-96.7zM263.3 21c-26.5 31.4-23.1 60-22 70.3 22.7 1.7 49.3-12.5 64.6-30.5C322.6 43.7 332.3 17.8 330 1c-25.9 1.9-50.4 14.6-66.7 20z"/></svg>
-          <span data-i18n="cta.dlAS">App Storeでダウンロード</span>
+        <a class="badge-link" href="https://apps.apple.com/app/id6778378550">
+          <img class="badge" data-badge="appstore" src="assets/badges/appstore-ja.svg" alt="App Storeでダウンロード">
         </a>
       </div>
       <p class="freenote" style="margin-top:14px" data-i18n="hero.free">全機能無料 ・ サブスクなし</p>
@@ -320,19 +310,6 @@
       </div>
     </div>
   </header>
-</div>
-
-<div class="wrap">
-  <section class="showcase">
-    <div class="sec-head">
-      <span class="tag">NEW</span>
-      <h2 data-i18n="and.h2">Android版、<em>配信開始！</em></h2>
-      <p data-i18n="and.p">Google Play で「推しミテ！」がダウンロードできるようになりました。iPhone / iPad はこれまでどおり App Store で。</p>
-    </div>
-    <div class="showcase-frame">
-      <video src="AndroidRelease.mp4" controls playsinline preload="none" poster="oshimite-icon.png"></video>
-    </div>
-  </section>
 </div>
 
 <div class="wrap">
@@ -385,19 +362,6 @@
 </div>
 
 <div class="wrap">
-  <section class="showcase">
-    <div class="sec-head">
-      <span class="tag">ver:2.2.1</span>
-      <h2 data-i18n="movie.h2">動画で見る、<em>推しミテ！</em></h2>
-      <p data-i18n="movie.p">置いて、彩って、刷るまで。制作の様子は、そのままタイムラプス録画もできます。</p>
-    </div>
-    <div class="showcase-frame">
-      <video src="2.2.1.mp4" controls playsinline preload="none" poster="oshimite-icon.png"></video>
-    </div>
-  </section>
-</div>
-
-<div class="wrap">
   <section>
     <div class="sec-head">
       <h2 data-i18n="feat.h2">つくれるのは、<em>自分だけの一枚</em></h2>
@@ -423,7 +387,7 @@
 
   <section>
     <div class="sec-head">
-      <h2 data-i18n="steps.h2">かんたん、<em>4ステップ</em></h2>
+      <h2 data-i18n="steps.h2">動画で見る、かんたん４ステップ<em>推しミテ！</em></h2>
       <p data-i18n="steps.p">はじめてでも、うちわが完成します</p>
       <div class="howto-video">
         <iframe src="https://www.youtube-nocookie.com/embed/JVktsqm3Fwc" title="作り方を動画で見る（推しミテ！）"
@@ -551,7 +515,7 @@
       "card6.p":"Check the finished look in 3D — handle included — before you print.",
       "card7.h3":"Roomy on Tablets, Too",
       "card7.p":"First-class support for both phones and tablets. A big screen makes fine adjustments easy.",
-      "steps.h2":"Easy — <em>4 steps</em>",
+      "steps.h2":"Watch it in 4 easy steps — <em>推しミテ！</em>",
       "steps.p":"Finish your uchiwa even if it’s your first time",
       "steps.video":"▶ Watch the how-to video (YouTube)",
       "step1.h3":"Place your parts",
@@ -621,7 +585,7 @@
       "card6.p":"打印前，用带手柄的立体预览确认成品效果。",
       "card7.h3":"平板上也很宽敞",
       "card7.p":"手机和平板都完美支持。大屏幕连细节微调都轻松。",
-      "steps.h2":"简单 <em>4 步</em>",
+      "steps.h2":"看视频，<em>推しミテ！</em>四步搞定",
       "steps.p":"第一次做，也能完成一把应援扇",
       "steps.video":"▶ 观看制作教程视频（YouTube）",
       "step1.h3":"摆放元件",
@@ -700,7 +664,7 @@
       "card6.p":"列印前，用帶手柄的立體預覽確認成品效果。",
       "card7.h3":"平板上也很寬敞",
       "card7.p":"手機和平板都完美支援。大螢幕連細節微調都輕鬆。",
-      "steps.h2":"簡單 <em>4 步</em>",
+      "steps.h2":"看影片，<em>推しミテ！</em>四步搞定",
       "steps.p":"第一次做，也能完成一把應援扇",
       "steps.video":"▶ 觀看製作教程影片（YouTube）",
       "step1.h3":"擺放元件",
@@ -779,7 +743,7 @@
       "card6.p":"인쇄 전에, 손잡이가 달린 입체로 완성 모습을 확인.",
       "card7.h3":"태블릿에서도 넓게",
       "card7.p":"스마트폰도 태블릿도 완벽 지원. 큰 화면이면 세밀한 조정까지 편하게.",
-      "steps.h2":"간단 <em>4단계</em>",
+      "steps.h2":"영상으로 보는 <em>推しミテ！</em> 간단 4단계",
       "steps.p":"처음이어도, 부채가 완성됩니다",
       "steps.video":"▶ 만드는 법 영상 보기 (YouTube)",
       "step1.h3":"요소 배치하기",
@@ -847,6 +811,18 @@
   if(lang === 'ja') return;               /* HTML は既に日本語 */
   var dict = I18N[lang];
   if(!dict) return;
+
+  /* ストアバッジ（画像）を表示言語に合わせて差し替える。ja は HTML 既定のまま（上で return 済み）。 */
+  var badgeSuffix = ({en:'en',zh:'zh',zhHant:'zh-hant',ko:'ko'})[lang];
+  if(badgeSuffix){
+    var badgeImgs = document.querySelectorAll('img[data-badge]');
+    for(var b=0;b<badgeImgs.length;b++){
+      var btype = badgeImgs[b].getAttribute('data-badge');
+      badgeImgs[b].src = 'assets/badges/' + btype + '-' + badgeSuffix + '.svg';
+      var altKey = (btype === 'appstore') ? 'cta.dlAS' : 'cta.dlGP';
+      if(dict[altKey] != null) badgeImgs[b].alt = dict[altKey];
+    }
+  }
 
   var nodes = document.querySelectorAll('[data-i18n]');
   for(var i=0;i<nodes.length;i++){
