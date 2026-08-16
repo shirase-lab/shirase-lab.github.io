@@ -90,8 +90,6 @@
   .brand{display:flex;align-items:center;gap:9px;font-family:var(--display);font-size:18px;color:var(--pink-deep);letter-spacing:.02em}
   .brand img{width:32px;height:32px;border-radius:9px;box-shadow:0 3px 8px rgba(255,46,110,.28)}
   .brand span{color:var(--lav)}
-  .nav-cta{font-weight:700;font-size:14px;background:var(--ink);color:#fff;padding:9px 16px;border-radius:999px;transition:transform .15s ease}
-  .nav-cta:hover{transform:translateY(-2px)}
 
   /* hero */
   .hero{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:36px 0 56px}
@@ -113,12 +111,14 @@
      margin-bottom:18px}
   .lede{font-size:clamp(15px,2.1vw,18px);font-weight:500;color:var(--ink);margin-bottom:26px}
   .lede b{color:var(--pink-deep)}
-  /* DL は公式ストアバッジ（assets/badges/*.svg・言語別）。歪ませず同じ高さで中央に並べる。 */
-  .btns{display:grid;grid-template-columns:1fr;gap:12px;justify-items:center}
+  /* DL は公式ストアバッジ（assets/badges/*.svg・言語別）。App Store を先頭（左）に横並び。
+     Apple 規約: 他プラットフォームのバッジと並べる時は黒バッジ＋App Store を先頭・余白はバッジ高の1/4以上。
+     歪ませず同じ高さ（幅は各アスペクト比のまま）。狭い画面では折り返して縦積みになる。 */
+  .btns{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px}
   .badge-link{display:inline-flex;transition:transform .15s ease}
   .badge-link:hover{transform:translateY(-3px)}
   .badge-link:active{transform:translateY(2px)}
-  .badge{height:52px;width:auto;max-width:100%;display:block}
+  .badge{height:44px;width:auto;max-width:100%;display:block}
   .freenote{font-size:13px;font-weight:700;color:var(--ink-soft)}
 
   /* uchiwa */
@@ -281,8 +281,6 @@
     <div class="brand"><img src="oshimite-icon.png" alt="推しミテ！">推しミテ！<span data-i18n="nav.brandBy">by 白瀬ラボ</span></div>
     <div style="display:flex;align-items:center;gap:14px">
       <a href="help-2.5.0.html" style="font-weight:700;font-size:14px;color:var(--ink-soft)" data-i18n="nav.help">使い方 ver:2.5.0</a>
-      <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.shiraselab.uchiwa_tukool" data-i18n="cta.viewGP">Google Playで見る</a>
-      <a class="nav-cta" href="https://apps.apple.com/app/id6778378550" data-i18n="cta.viewAS">App Storeで見る</a>
     </div>
   </nav>
 
@@ -294,11 +292,11 @@
       </div>
       <p class="lede" data-i18n="hero.lede">推しに見つけてもらう応援うちわを、スマホひとつで。<br>文字をデザインして、<b>コンビニで実寸プリント</b>。</p>
       <div class="btns">
-        <a class="badge-link" href="https://play.google.com/store/apps/details?id=com.shiraselab.uchiwa_tukool">
-          <img class="badge" data-badge="googleplay" src="assets/badges/googleplay-ja.svg" alt="Google Playでダウンロード">
-        </a>
         <a class="badge-link" href="https://apps.apple.com/app/id6778378550">
           <img class="badge" data-badge="appstore" src="assets/badges/appstore-ja.svg" alt="App Storeでダウンロード">
+        </a>
+        <a class="badge-link" href="https://play.google.com/store/apps/details?id=com.shiraselab.uchiwa_tukool">
+          <img class="badge" data-badge="googleplay" src="assets/badges/googleplay-ja.svg" alt="Google Playでダウンロード">
         </a>
       </div>
       <p class="freenote" style="margin-top:14px" data-i18n="hero.free">全機能無料 ・ サブスクなし</p>
@@ -401,7 +399,7 @@
       <li><h3 data-i18n="step1.h3">パーツを置く</h3><p data-i18n="step1.p">ツールバーの「スタンプ」「画像」「ペン」などで配置。文字は、キャンバスの何もない所をタップすると追加できます。テンプレから定番デザインを選んでもOK。</p></li>
       <li><h3 data-i18n="step2.h3">色・装飾を整える</h3><p data-i18n="step2.p">要素をタップすると下に編集パネルが自動で開きます（「サイズ」／「フォント」または「色」／「加工」を左右スワイプで切替）。色・縁取り・効果（ぷくぷく／きらきら／ネオン）を調整。推しカラーはドラッグ＆ドロップやタップで配色。</p></li>
       <li><h3 data-i18n="step3.h3">仕上がりを確認</h3><p data-i18n="step3.p">ツールバーの「3D」で、持ち手付きの立体イメージで仕上がりを確認できます。</p></li>
-      <li><h3 data-i18n="step4.h3">印刷する</h3><p data-i18n="step4.p">「印刷」→「コンビニ印刷データ作成」でA3のPDFを書き出し、コンビニのプリントアプリ（セブン→かんたんnetprint／ローソン・ファミマ→PrintSmash）へ渡します。書き出し前の「印刷設定」で印刷場所と台紙を選ぶと実寸に自動補正。コピー機はA3・縮小なしで印刷、家庭用プリンタは「印刷」から直接（大きいうちわはA4×2分割も）。</p></li>
+      <li><h3 data-i18n="step4.h3">印刷する</h3><p data-i18n="step4.p">「共有」→「印刷データを共有」で、A3の印刷データをコンビニのプリントアプリ（セブン→かんたんnetprint／ローソン・ファミマ→PrintSmash）へ直接送れます。送る前に印刷場所と台紙を選ぶと実寸に自動補正。コピー機はA3・縮小なしで印刷、家庭用プリンタは「印刷」から直接（大きいうちわはA4×2分割も）。</p></li>
     </ol>
   </section>
 
@@ -453,8 +451,8 @@
         <a href="/templates/">うちわテンプレート集</a>
         <a href="/stamps/">配信スタンプ</a>
         <a href="/stickers/">配信ステッカー</a>
-        <a href="https://play.google.com/store/apps/details?id=com.shiraselab.uchiwa_tukool" data-i18n="cta.dlGP">Google Playでダウンロード</a>
         <a href="https://apps.apple.com/app/id6778378550" data-i18n="cta.dlAS">App Storeでダウンロード</a>
+        <a href="https://play.google.com/store/apps/details?id=com.shiraselab.uchiwa_tukool" data-i18n="cta.dlGP">Google Playでダウンロード</a>
         <a href="https://github.com/shirase-lab/PrivacyPolicies/blob/main/UchiwaTuKool/PRIVACY_POLICY.md" data-i18n="foot.privacy">プライバシーポリシー</a>
         <a href="https://github.com/shirase-lab/PrivacyPolicies/blob/main/UchiwaTuKool/TERMS_OF_USE.md" data-i18n="foot.terms">利用規約</a>
         <a href="https://x.com/oshimite_app" target="_blank" rel="noopener" data-i18n="foot.contact">お問い合わせ（X / @oshimite_app）</a>
@@ -475,8 +473,6 @@
       "__desc":"Make a cheering uchiwa to get noticed by your oshi, with just your phone. Design the lettering and print it at true size at a convenience store. All features free, no subscription.",
       "nav.brandBy":"by ShiraseLab",
       "nav.help":"How to use v2.5.0",
-      "cta.viewGP":"View on Google Play",
-      "cta.viewAS":"View on the App Store",
       "cta.dlGP":"Download on Google Play",
       "cta.dlAS":"Download on the App Store",
       "hero.eyebrow":"Oshi Uchiwa Lettering App",
@@ -525,7 +521,7 @@
       "step3.h3":"Check the finished look",
       "step3.p":"Tap “3D” in the toolbar to check the finished look as a 3D image, handle and all.",
       "step4.h3":"Print it",
-      "step4.p":"Use “Print” → “Create convenience-store print data” to export an A3 PDF for a convenience-store print app (Seven-Eleven → Kantan netprint / Lawson · FamilyMart → PrintSmash). In “Print settings” beforehand, pick your store and fan mount to auto-fit the true size. At the copier use A3 with no shrink-to-fit; home printers print straight from “Print” (large uchiwa have a two-A4 split).",
+      "step4.p":"Use “Share” → “Share print data” to send A3 print data straight to a convenience-store print app (Seven-Eleven → Kantan netprint / Lawson · FamilyMart → PrintSmash). Before sending, pick your store and fan mount to auto-fit the true size. At the copier use A3 with no shrink-to-fit; home printers print straight from “Print” (large uchiwa have a two-A4 split).",
       "print.h2":"We obsessed over printing<br>at <em>true, full size</em>",
       "print.li1":"Export A3 convenience-store print data as-is",
       "print.li2":"Real-measurement guides sized for 100-yen-shop jumbo uchiwa",
@@ -554,8 +550,6 @@
       "__desc":"只用一部手机，做出让你推注意到你的应援扇。设计文字，到便利店按实际尺寸打印。全部功能免费，无订阅。",
       "nav.brandBy":"by ShiraseLab",
       "nav.help":"使用方法 v2.5.0",
-      "cta.viewGP":"在 Google Play 查看",
-      "cta.viewAS":"在 App Store 查看",
       "cta.dlGP":"在 Google Play 下载",
       "cta.dlAS":"在 App Store 下载",
       "hero.eyebrow":"应援扇文字制作 App",
@@ -595,7 +589,7 @@
       "step3.h3":"确认成品效果",
       "step3.p":"点工具栏的「3D」，即可用带手柄的立体图确认成品效果。",
       "step4.h3":"打印",
-      "step4.p":"用「打印」→「生成便利店打印数据」导出 A3 的 PDF，交给便利店打印 App（7-Eleven→かんたんnetprint／罗森·全家→PrintSmash）。导出前在「打印设置」选择打印地点和底纸即可自动校正到实际尺寸。复印机用 A3、不要缩小；家用打印机从「打印」直接输出（大尺寸应援扇还有 A4×2 拼版）。",
+      "step4.p":"用「共享」→「共享打印数据」把 A3 打印数据直接发送到便利店打印 App（7-Eleven→かんたんnetprint／罗森·全家→PrintSmash）。发送前选择打印地点和底纸即可自动校正到实际尺寸。复印机用 A3、不要缩小；家用打印机从「打印」直接输出（大尺寸应援扇还有 A4×2 拼版）。",
       "print.h2":"我们只在意一件事：<br>能<em>按实际尺寸</em>打印",
       "print.li1":"直接输出 A3 便利店打印数据",
       "print.li2":"按百元店大号应援扇实测尺寸显示参考线",
@@ -633,8 +627,6 @@
       "__desc":"只用一部手機，做出讓你推注意到你的應援扇。設計文字，到便利店按實際尺寸列印。全部功能免費，無訂閱。",
       "nav.brandBy":"by ShiraseLab",
       "nav.help":"使用方法 v2.5.0",
-      "cta.viewGP":"在 Google Play 檢視",
-      "cta.viewAS":"在 App Store 檢視",
       "cta.dlGP":"在 Google Play 下載",
       "cta.dlAS":"在 App Store 下載",
       "hero.eyebrow":"應援扇文字製作 App",
@@ -674,7 +666,7 @@
       "step3.h3":"確認成品效果",
       "step3.p":"點工具欄的「3D」，即可用帶手柄的立體圖確認成品效果。",
       "step4.h3":"列印",
-      "step4.p":"用「列印」→「生成便利店列印資料」匯出 A3 的 PDF，交給便利店列印 App（7-Eleven→かんたんnetprint／羅森·全家→PrintSmash）。匯出前在「列印設定」選擇列印地點和底紙即可自動校正成實際尺寸。影印機用 A3、不要縮放；家用印表機從「列印」直接輸出（大尺寸應援扇還有 A4×2 拼版）。",
+      "step4.p":"用「分享」→「分享列印資料」把 A3 列印資料直接傳送到便利店列印 App（7-Eleven→かんたんnetprint／羅森·全家→PrintSmash）。傳送前選擇列印地點和底紙即可自動校正成實際尺寸。影印機用 A3、不要縮放；家用印表機從「列印」直接輸出（大尺寸應援扇還有 A4×2 拼版）。",
       "print.h2":"我們只在意一件事：<br>能<em>按實際尺寸</em>列印",
       "print.li1":"直接輸出 A3 便利店列印資料",
       "print.li2":"按百元店大號應援扇實測尺寸顯示參考線",
@@ -712,8 +704,6 @@
       "__desc":"스마트폰 하나로 최애가 알아봐 줄 응원 부채를. 문자를 디자인해 편의점에서 실물 크기로 인쇄. 모든 기능 무료, 구독 없음.",
       "nav.brandBy":"by ShiraseLab",
       "nav.help":"사용 방법 v2.5.0",
-      "cta.viewGP":"Google Play에서 보기",
-      "cta.viewAS":"App Store에서 보기",
       "cta.dlGP":"Google Play에서 다운로드",
       "cta.dlAS":"App Store에서 다운로드",
       "hero.eyebrow":"응원 부채 문자 제작 앱",
@@ -753,7 +743,7 @@
       "step3.h3":"완성 모습 확인",
       "step3.p":"툴바의 「3D」로, 손잡이가 달린 입체 이미지로 완성 모습을 확인할 수 있습니다.",
       "step4.h3":"인쇄하기",
-      "step4.p":"「인쇄」→「편의점 인쇄 데이터 만들기」로 A3 PDF를 내보내 편의점 인쇄 앱(세븐일레븐→かんたんnetprint／로손·패밀리마트→PrintSmash)으로 넘깁니다. 내보내기 전 「인쇄 설정」에서 인쇄 장소와 받침을 고르면 실물 크기로 자동 보정돼요. 복사기는 A3·축소 없이, 가정용 프린터는 「인쇄」에서 바로(큰 부채는 A4×2 분할도).",
+      "step4.p":"「공유」→「인쇄 데이터 공유」로 A3 인쇄 데이터를 편의점 인쇄 앱(세븐일레븐→かんたんnetprint／로손·패밀리마트→PrintSmash)으로 바로 보낼 수 있어요. 보내기 전에 인쇄 장소와 받침을 고르면 실물 크기로 자동 보정돼요. 복사기는 A3·축소 없이, 가정용 프린터는 「인쇄」에서 바로(큰 부채는 A4×2 분할도).",
       "print.h2":"「제대로 <em>실물 크기</em>로 인쇄」에<br>진심입니다",
       "print.li1":"A3 편의점 인쇄용 데이터를 그대로 출력",
       "print.li2":"100엔숍 점보 부채에 맞춘 실측 가이드 표시",
