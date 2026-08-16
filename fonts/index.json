@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "note": "うちわ向けおすすめフォント（遠くから見やすい高視認ベース＋変わり種）。全て無料・商用可。見本は「推しミテ！/OSHIMITE!/오시미테!/应援!」。",
+    "sample": {
+      "ja": "推しミテ！",
+      "en": "OSHIMITE!",
+      "ko": "오시미테!",
+      "zh": "应援!"
+    }
+  },
+  "groups": [
+    {
+      "lang": "ja",
+      "label": "日本語",
+      "fonts": [
+        {
+          "id": "genei_kiwami_go",
+          "name": "源暎きわみゴシック",
+          "category": "高視認",
+          "url": "https://okoneya.jp/font/",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/genei_kiwami_go.png"
+        },
+        {
+          "id": "genei_mgothic",
+          "name": "源暎エムゴ",
+          "category": "高視認",
+          "url": "https://okoneya.jp/font/",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/genei_mgothic.png"
+        },
+        {
+          "id": "genei_pople",
+          "name": "源暎ぽっぷる",
+          "category": "ポップ",
+          "url": "https://okoneya.jp/font/",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/genei_pople.png"
+        },
+        {
+          "id": "reggae_one",
+          "name": "Reggae One",
+          "category": "高視認",
+          "url": "https://fonts.google.com/specimen/Reggae+One",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/reggae_one.png"
+        },
+        {
+          "id": "rocknroll_one",
+          "name": "RocknRoll One",
+          "category": "高視認",
+          "url": "https://fonts.google.com/specimen/RocknRoll+One",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/rocknroll_one.png"
+        },
+        {
+          "id": "rampart_one",
+          "name": "Rampart One",
+          "category": "立体・変わり種",
+          "url": "https://fonts.google.com/specimen/Rampart+One",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/rampart_one.png"
+        },
+        {
+          "id": "nicomoji_plus",
+          "name": "ニコモジ＋",
+          "category": "高視認・丸文字",
+          "url": "https://nicofont.pupu.jp/nicomoji-plus.html",
+          "license": "SIL OFL 1.1"
+        },
+        {
+          "id": "corporate_logo_rounded",
+          "name": "コーポレート・ロゴ（ラウンド）",
+          "category": "高視認・丸ゴ",
+          "url": "https://logotype.jp/font-corpmaru-old-v2.html",
+          "license": "SIL OFL 1.1"
+        },
+        {
+          "id": "makipop_851",
+          "name": "851マカポップ",
+          "category": "手書きポップ",
+          "url": "https://pm85122.onamae.jp/851mkpop.html",
+          "license": "フリー（商用可・再配布可）"
+        },
+        {
+          "id": "lanobe_pop",
+          "name": "ラノベPOP V2",
+          "category": "ポップ",
+          "url": "https://booth.pm/ja/items/2328262",
+          "license": "フリー（商用・非商用可）"
+        }
+      ]
+    },
+    {
+      "lang": "en",
+      "label": "英語",
+      "fonts": [
+        {
+          "id": "bungee",
+          "name": "Bungee",
+          "category": "高視認",
+          "url": "https://fonts.google.com/specimen/Bungee",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/bungee.png"
+        },
+        {
+          "id": "titan_one",
+          "name": "Titan One",
+          "category": "高視認",
+          "url": "https://fonts.google.com/specimen/Titan+One",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/titan_one.png"
+        },
+        {
+          "id": "lilita_one",
+          "name": "Lilita One",
+          "category": "高視認",
+          "url": "https://fonts.google.com/specimen/Lilita+One",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/lilita_one.png"
+        },
+        {
+          "id": "bangers",
+          "name": "Bangers",
+          "category": "コミック",
+          "url": "https://fonts.google.com/specimen/Bangers",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/bangers.png"
+        },
+        {
+          "id": "creepster",
+          "name": "Creepster",
+          "category": "怖い系・変わり種",
+          "url": "https://fonts.google.com/specimen/Creepster",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/creepster.png"
+        },
+        {
+          "id": "nosifer",
+          "name": "Nosifer",
+          "category": "血だれ・変わり種",
+          "url": "https://fonts.google.com/specimen/Nosifer",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/nosifer.png"
+        }
+      ]
+    },
+    {
+      "lang": "ko",
+      "label": "韓国語",
+      "fonts": [
+        {
+          "id": "do_hyeon",
+          "name": "Do Hyeon",
+          "category": "高視認",
+          "url": "https://fonts.google.com/specimen/Do+Hyeon",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/do_hyeon.png"
+        },
+        {
+          "id": "bagel_fat_one",
+          "name": "Bagel Fat One",
+          "category": "高視認",
+          "url": "https://fonts.google.com/specimen/Bagel+Fat+One",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/bagel_fat_one.png"
+        },
+        {
+          "id": "gugi",
+          "name": "Gugi",
+          "category": "変わり種",
+          "url": "https://fonts.google.com/specimen/Gugi",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/gugi.png"
+        }
+      ]
+    },
+    {
+      "lang": "zh",
+      "label": "中国語",
+      "fonts": [
+        {
+          "id": "zcool_qingke_huangyou",
+          "name": "ZCOOL QingKe HuangYou",
+          "category": "高視認",
+          "url": "https://fonts.google.com/specimen/ZCOOL+QingKe+HuangYou",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/zcool_qingke_huangyou.png"
+        },
+        {
+          "id": "ma_shan_zheng",
+          "name": "Ma Shan Zheng",
+          "category": "毛筆・変わり種",
+          "url": "https://fonts.google.com/specimen/Ma+Shan+Zheng",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/ma_shan_zheng.png"
+        }
+      ]
+    }
+  ]
+}
