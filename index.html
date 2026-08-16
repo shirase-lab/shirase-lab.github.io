@@ -215,14 +215,17 @@
          transition:transform .18s ease,box-shadow .18s ease}
   .lcard:hover{transform:translateY(-5px);box-shadow:0 14px 26px rgba(255,92,138,.18)}
   .lcard .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
-  /* min-width/height:0 ＝ Safari でグリッドの子の min-size が中身(SVGの大きな実寸)になり
-     トラックを押し広げて崩れるのを防ぐ（スタンプ=SVG と ステッカー=PNG のズレの原因）。 */
-  .lcard .shots span{aspect-ratio:1/1;min-width:0;min-height:0;border-radius:12px;background:var(--bg2);display:block;overflow:hidden}
-  .lcard .shots img{display:block;width:100%;height:100%;object-fit:contain;padding:7px}
+  /* Safari 対策: min-width/height:0（グリッド子の min-size が中身の実寸になり崩れるのを防ぐ）＋
+     flex 中央寄せ＋画像は max-width/height で内側にフィット（width/height:100% は overflow して切れる）。 */
+  .lcard .shots span{aspect-ratio:1/1;min-width:0;min-height:0;border-radius:12px;background:var(--bg2);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:7px}
+  .lcard .shots img{max-width:100%;max-height:100%;width:auto;height:auto;display:block}
   .lcard h3{font-family:var(--display);font-size:16px;color:var(--ink);margin-bottom:6px;line-height:1.4}
   .lcard p{font-size:13px;color:var(--ink-soft);font-weight:500;line-height:1.7;margin-bottom:14px}
-  /* カード全体がリンクなので、ボタンではなく矢印つきテキスト CTA（ホバーで矢印が進む）。 */
-  .lcard .go{display:inline-flex;align-items:center;gap:5px;font-weight:800;font-size:13px;color:var(--pink-deep)}
+  /* カード内の主CTA。大きめ・全幅で「押せる」と一目で分かるボタン＋進む矢印。 */
+  .lcard .go{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
+             font-weight:800;font-size:15px;color:#fff;
+             background:linear-gradient(135deg,var(--pink),var(--pink-deep));
+             padding:13px 18px;border-radius:14px;box-shadow:0 6px 14px rgba(255,92,138,.28)}
   .lcard .go::after{content:"→";font-weight:900;transition:transform .18s ease}
   .lcard:hover .go::after{transform:translateX(4px)}
   @media (max-width:760px){ .linkcards{grid-template-columns:1fr;gap:14px;margin-bottom:48px} }
@@ -319,7 +322,7 @@
   <section>
     <div class="sec-head">
       <h2 data-i18n="deco.h2">スタンプ・ステッカー・テンプレートで、<em>うちわをデコる</em></h2>
-      <p data-i18n="deco.p">作者が制作した素材を、アプリからそのまま使えます。もちろん全部無料。</p>
+      <p data-i18n="deco.p">作者がつくったデコ素材を、選んで貼るだけ。ぜんぶ無料で使えます。</p>
     </div>
     <div class="linkcards">
       <a class="lcard" href="/stamps/">
@@ -485,7 +488,7 @@
       "hero.free":"All features free · No subscription",
       "hero.fanAlt":"A cheering uchiwa made with 推しミテ！",
       "deco.h2":"Decorate your uchiwa with <em>stamps, stickers & templates</em>",
-      "deco.p":"Original assets made by the developer, usable right inside the app. All free, of course.",
+      "deco.p":"Hand-made deco you just pick and place — all free to use.",
       "deco.c1t":"Stamps",
       "deco.c1p":"Recolor them to your oshi's member color — crowns, finger hearts, ribbons, sparkles and more.",
       "deco.c2t":"Stickers",
@@ -617,7 +620,7 @@
       "foot.terms":"使用条款",
       "foot.contact":"联系我们（X / @oshimite_app）",
       "deco.h2":"用贴纸、贴图和模板，<em>装饰你的应援扇</em>",
-      "deco.p":"作者原创素材，在 App 中直接使用。当然，全部免费。",
+      "deco.p":"作者亲手制作的装饰素材，选好贴上就行。全部免费使用。",
       "deco.c1t":"贴纸（Stamps）",
       "deco.c1p":"可以换成你推的应援色。皇冠、比心、丝带、闪光等。",
       "deco.c2t":"贴图（Stickers）",
@@ -694,7 +697,7 @@
       "foot.terms":"使用條款",
       "foot.contact":"聯絡我們（X / @oshimite_app）",
       "deco.h2":"用貼紙、貼圖和範本，<em>裝飾你的應援扇</em>",
-      "deco.p":"作者原創素材，在 App 中直接使用。當然，全部免費。",
+      "deco.p":"作者親手製作的裝飾素材，選好貼上就行。全部免費使用。",
       "deco.c1t":"貼紙（Stamps）",
       "deco.c1p":"可以換成你推的應援色。皇冠、比心、緞帶、閃光等。",
       "deco.c2t":"貼圖（Stickers）",
@@ -771,7 +774,7 @@
       "foot.terms":"이용약관",
       "foot.contact":"문의 (X / @oshimite_app)",
       "deco.h2":"스탬프·스티커·템플릿으로, <em>부채를 꾸미기</em>",
-      "deco.p":"제작자가 직접 만든 소재를 앱에서 그대로 쓸 수 있어요. 물론 전부 무료.",
+      "deco.p":"제작자가 직접 만든 데코 소재를 골라 붙이기만 하면 끝. 전부 무료로 쓸 수 있어요.",
       "deco.c1t":"스탬프",
       "deco.c1p":"최애의 멤버 컬러로 색을 바꿀 수 있어요. 왕관·손가락 하트·리본·반짝임 등.",
       "deco.c2t":"스티커",
