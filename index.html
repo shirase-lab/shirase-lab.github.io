@@ -215,12 +215,16 @@
          transition:transform .18s ease,box-shadow .18s ease}
   .lcard:hover{transform:translateY(-5px);box-shadow:0 14px 26px rgba(255,92,138,.18)}
   .lcard .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
-  .lcard .shots span{aspect-ratio:1/1;border-radius:12px;background:var(--bg2);display:block;overflow:hidden}
+  /* min-width/height:0 ＝ Safari でグリッドの子の min-size が中身(SVGの大きな実寸)になり
+     トラックを押し広げて崩れるのを防ぐ（スタンプ=SVG と ステッカー=PNG のズレの原因）。 */
+  .lcard .shots span{aspect-ratio:1/1;min-width:0;min-height:0;border-radius:12px;background:var(--bg2);display:block;overflow:hidden}
   .lcard .shots img{display:block;width:100%;height:100%;object-fit:contain;padding:7px}
   .lcard h3{font-family:var(--display);font-size:16px;color:var(--ink);margin-bottom:6px;line-height:1.4}
   .lcard p{font-size:13px;color:var(--ink-soft);font-weight:500;line-height:1.7;margin-bottom:14px}
-  .lcard .go{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:13px;color:#fff;
-             background:linear-gradient(140deg,var(--pink),var(--pink-deep));padding:8px 16px;border-radius:999px}
+  /* カード全体がリンクなので、ボタンではなく矢印つきテキスト CTA（ホバーで矢印が進む）。 */
+  .lcard .go{display:inline-flex;align-items:center;gap:5px;font-weight:800;font-size:13px;color:var(--pink-deep)}
+  .lcard .go::after{content:"→";font-weight:900;transition:transform .18s ease}
+  .lcard:hover .go::after{transform:translateX(4px)}
   @media (max-width:760px){ .linkcards{grid-template-columns:1fr;gap:14px;margin-bottom:48px} }
 
   /* footer */
@@ -325,7 +329,7 @@
           <span><img src="stamps/oshimite_ribbon_bow.svg" alt="" loading="lazy"></span>
         </div>
         <h3 data-i18n="deco.c1t">配信スタンプ</h3>
-        <p data-i18n="deco.c1p">色を推しのメンバーカラーに変えられるSVG。王冠・指ハート・リボン・きらきらなど。</p>
+        <p data-i18n="deco.c1p">推しのメンバーカラーに色を変えられる。王冠・指ハート・リボン・きらきらなど。</p>
         <span class="go" data-i18n="deco.go">一覧を見る</span>
       </a>
       <a class="lcard" href="/stickers/">
@@ -363,6 +367,26 @@
 <div class="wrap">
   <section>
     <div class="sec-head">
+      <h2 data-i18n="steps.h2">動画で見る、かんたん４ステップ<em>推しミテ！</em></h2>
+      <p data-i18n="steps.p">はじめてでも、うちわが完成します</p>
+      <div class="howto-video">
+        <iframe src="https://www.youtube-nocookie.com/embed/JVktsqm3Fwc" title="作り方を動画で見る（推しミテ！）"
+          loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <p class="howto-cap" data-i18n="steps.video">▶ 作り方を動画で見る（YouTube）</p>
+    </div>
+    <ol class="steps">
+      <li><h3 data-i18n="step1.h3">パーツを置く</h3><p data-i18n="step1.p">ツールバーの「スタンプ」「画像」「ペン」などで配置。文字は、キャンバスの何もない所をタップすると追加できます。テンプレから定番デザインを選んでもOK。</p></li>
+      <li><h3 data-i18n="step2.h3">色・装飾を整える</h3><p data-i18n="step2.p">要素をタップすると下に編集パネルが自動で開きます（「サイズ」／「フォント」または「色」／「加工」を左右スワイプで切替）。色・縁取り・効果（ぷくぷく／きらきら／ネオン）を調整。推しカラーはドラッグ＆ドロップやタップで配色。</p></li>
+      <li><h3 data-i18n="step3.h3">仕上がりを確認</h3><p data-i18n="step3.p">ツールバーの「3D」で、持ち手付きの立体イメージで仕上がりを確認できます。</p></li>
+      <li><h3 data-i18n="step4.h3">印刷する</h3><p data-i18n="step4.p">「共有」→「印刷データを共有」で、A3の印刷データをコンビニのプリントアプリ（セブン→かんたんnetprint／ローソン・ファミマ→PrintSmash）へ直接送れます。送る前に印刷場所と台紙を選ぶと実寸に自動補正。コピー機はA3・縮小なしで印刷、家庭用プリンタは「印刷」から直接（大きいうちわはA4×2分割も）。</p></li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="sec-head">
       <h2 data-i18n="feat.h2">つくれるのは、<em>自分だけの一枚</em></h2>
       <p data-i18n="feat.p">盛れる文字と装飾を、ぜんぶ無料で。</p>
     </div>
@@ -382,26 +406,6 @@
       <div class="card"><span class="ico">📱</span><h3 data-i18n="card7.h3">タブレットでも広々</h3><p data-i18n="card7.p">スマホもタブレットも一級対応。大画面なら細かい調整までラク。</p>
         <div class="demo landscape"><video src="feature_tablet.mp4" controls playsinline preload="none" poster="oshimite-icon.png"></video></div></div>
     </div>
-  </section>
-
-  <section>
-    <div class="sec-head">
-      <h2 data-i18n="steps.h2">動画で見る、かんたん４ステップ<em>推しミテ！</em></h2>
-      <p data-i18n="steps.p">はじめてでも、うちわが完成します</p>
-      <div class="howto-video">
-        <iframe src="https://www.youtube-nocookie.com/embed/JVktsqm3Fwc" title="作り方を動画で見る（推しミテ！）"
-          loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-      </div>
-      <p class="howto-cap" data-i18n="steps.video">▶ 作り方を動画で見る（YouTube）</p>
-    </div>
-    <ol class="steps">
-      <li><h3 data-i18n="step1.h3">パーツを置く</h3><p data-i18n="step1.p">ツールバーの「スタンプ」「画像」「ペン」などで配置。文字は、キャンバスの何もない所をタップすると追加できます。テンプレから定番デザインを選んでもOK。</p></li>
-      <li><h3 data-i18n="step2.h3">色・装飾を整える</h3><p data-i18n="step2.p">要素をタップすると下に編集パネルが自動で開きます（「サイズ」／「フォント」または「色」／「加工」を左右スワイプで切替）。色・縁取り・効果（ぷくぷく／きらきら／ネオン）を調整。推しカラーはドラッグ＆ドロップやタップで配色。</p></li>
-      <li><h3 data-i18n="step3.h3">仕上がりを確認</h3><p data-i18n="step3.p">ツールバーの「3D」で、持ち手付きの立体イメージで仕上がりを確認できます。</p></li>
-      <li><h3 data-i18n="step4.h3">印刷する</h3><p data-i18n="step4.p">「共有」→「印刷データを共有」で、A3の印刷データをコンビニのプリントアプリ（セブン→かんたんnetprint／ローソン・ファミマ→PrintSmash）へ直接送れます。送る前に印刷場所と台紙を選ぶと実寸に自動補正。コピー機はA3・縮小なしで印刷、家庭用プリンタは「印刷」から直接（大きいうちわはA4×2分割も）。</p></li>
-    </ol>
   </section>
 
   <section class="print">
@@ -483,7 +487,7 @@
       "deco.h2":"Decorate your uchiwa with <em>stamps, stickers & templates</em>",
       "deco.p":"Original assets made by the developer, usable right inside the app. All free, of course.",
       "deco.c1t":"Stamps",
-      "deco.c1p":"SVGs you can recolor to your oshi's member color — crowns, finger hearts, ribbons, sparkles and more.",
+      "deco.c1p":"Recolor them to your oshi's member color — crowns, finger hearts, ribbons, sparkles and more.",
       "deco.c2t":"Stickers",
       "deco.c2p":"Just place them and you're done — no coloring needed. 45 designs available.",
       "deco.c3t":"Uchiwa Templates",
@@ -615,7 +619,7 @@
       "deco.h2":"用贴纸、贴图和模板，<em>装饰你的应援扇</em>",
       "deco.p":"作者原创素材，在 App 中直接使用。当然，全部免费。",
       "deco.c1t":"贴纸（Stamps）",
-      "deco.c1p":"可换成你推应援色的 SVG。皇冠、比心、丝带、闪光等。",
+      "deco.c1p":"可以换成你推的应援色。皇冠、比心、丝带、闪光等。",
       "deco.c2t":"贴图（Stickers）",
       "deco.c2p":"贴上就好，无需上色的装饰素材。现有 45 种。",
       "deco.c3t":"应援扇模板集",
@@ -692,7 +696,7 @@
       "deco.h2":"用貼紙、貼圖和範本，<em>裝飾你的應援扇</em>",
       "deco.p":"作者原創素材，在 App 中直接使用。當然，全部免費。",
       "deco.c1t":"貼紙（Stamps）",
-      "deco.c1p":"可換成你推應援色的 SVG。皇冠、比心、緞帶、閃光等。",
+      "deco.c1p":"可以換成你推的應援色。皇冠、比心、緞帶、閃光等。",
       "deco.c2t":"貼圖（Stickers）",
       "deco.c2p":"貼上就好，無需上色的裝飾素材。現有 45 種。",
       "deco.c3t":"應援扇範本集",
@@ -769,7 +773,7 @@
       "deco.h2":"스탬프·스티커·템플릿으로, <em>부채를 꾸미기</em>",
       "deco.p":"제작자가 직접 만든 소재를 앱에서 그대로 쓸 수 있어요. 물론 전부 무료.",
       "deco.c1t":"스탬프",
-      "deco.c1p":"최애의 멤버 컬러로 색을 바꿀 수 있는 SVG. 왕관·손가락 하트·리본·반짝임 등.",
+      "deco.c1p":"최애의 멤버 컬러로 색을 바꿀 수 있어요. 왕관·손가락 하트·리본·반짝임 등.",
       "deco.c2t":"스티커",
       "deco.c2p":"붙이기만 하면 끝. 색칠이 필요 없는 데코 소재 45종.",
       "deco.c3t":"부채 템플릿집",
