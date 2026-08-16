@@ -25,8 +25,22 @@
 <link rel="icon" href="oshimite-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="assets/nikumaru-subset.woff2" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
+  /* 07にくまるフォント（M+ FONTS License / Copyright (C) 2002-2014 M+ FONTS PROJECT,
+     2014 Fontna.com, 2014 Kato Masashi）を見出し専用にサブセットして自家配信。
+     素の OTF は 2.93MB あるので、見出しで使う字種のみに限定している（約60KB）。
+     字種を増やす見出しを追加したときは tools/subset_nikumaru.py を再実行すること。
+     font-weight:100 900 と宣言しているのは、単一ウェイトのフォントに対して
+     ブラウザが合成太字をかけないようにするため。 */
+  @font-face{
+    font-family:'Nikumaru';
+    src:url('assets/nikumaru-subset.woff2') format('woff2');
+    font-weight:100 900;
+    font-style:normal;
+    font-display:swap;
+  }
   :root{
     --pink:#FF5C8A;
     --pink-deep:#FF2E6E;
@@ -34,11 +48,11 @@
     --bg:#FFF0F6;
     --bg2:#FFE3EF;
     --ink:#4A2E3D;
-    --ink-soft:#9A7886;
+    --ink-soft:#8A6274;
     --gold:#FFD84D;
     --white:#fff;
-    --display:'Mochiy Pop One',system-ui,sans-serif;
-    --body:'M PLUS Rounded 1c',system-ui,sans-serif;
+    --display:'Nikumaru','Zen Maru Gothic',system-ui,sans-serif;
+    --body:'Zen Maru Gothic',system-ui,sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -54,6 +68,15 @@
     -webkit-font-smoothing:antialiased;
   }
   a{color:inherit;text-decoration:none}
+  /* ディスプレイ系は合成太字を禁止する。
+     Nikumaru は単一ウェイト、Zen Maru Gothic は 900 が実在。
+     h1/h2/h3 の既定 bold(700) 任せにすると実在しない中間値を要求して
+     ブラウザがグリフをずらして重ね描きし、二重像になる。 */
+  h1,.sec-head h2,.band p,.print h2,.notice h3,.lcard h3,.brand,.foot .lab,.steps li::before{
+    font-weight:900;
+    font-synthesis-weight:none;
+    -webkit-font-synthesis:none;
+  }
   .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
 
   /* sparkles */
@@ -72,16 +95,27 @@
 
   /* hero */
   .hero{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:36px 0 56px}
+  /* ヒーロー左列の横幅を --measure 一本で揃える。
+     眉ラベル・h1・リード文・DLボタン・注記のすべてがこの幅に揃う。
+     h1 の上限サイズは 5 字×約 1.02em が --measure に収まる値、
+     --measure の下限は最長ボタン「Google Playでダウンロード」が折れない値。 */
+  .hero-copy{--measure:clamp(288px,30vw,330px);width:var(--measure);max-width:100%}
+  .hero-title{width:100%;text-align:center}
   .eyebrow{display:inline-block;font-weight:700;font-size:13px;color:var(--pink-deep);background:#fff;border:2px solid #FFC9DD;padding:6px 14px;border-radius:999px;margin-bottom:18px}
-  h1{font-family:var(--display);font-size:clamp(38px,6.4vw,68px);line-height:1.12;color:var(--pink);
-     -webkit-text-stroke:2px #fff;
-     text-shadow:0 3px 0 #FFB9D2, 0 7px 14px rgba(255,46,110,.28);
+  /* 白フチは -webkit-text-stroke ではなく多重 text-shadow で外側に出す。
+     text-stroke は字面の内側に食い込むため、太いディスプレイ書体では文字が痩せて視認性が落ちる。 */
+  h1{font-family:var(--display);font-size:clamp(34px,5vw,60px);line-height:1.22;color:var(--pink);
+     letter-spacing:.02em;
+     text-shadow:
+       2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff,
+       1.4px 1.4px 0 #fff, -1.4px 1.4px 0 #fff, 1.4px -1.4px 0 #fff, -1.4px -1.4px 0 #fff,
+       0 5px 0 #FFB9D2;
      margin-bottom:18px}
-  .lede{font-size:clamp(15px,2.1vw,18px);font-weight:500;color:var(--ink);max-width:30ch;margin-bottom:26px}
+  .lede{font-size:clamp(15px,2.1vw,18px);font-weight:500;color:var(--ink);margin-bottom:26px}
   .lede b{color:var(--pink-deep)}
-  /* 縦に積んだ DL ボタンを、最も文字数が多いボタンの幅に揃える（grid 1列＝max-content に stretch）。 */
-  .btns{display:grid;grid-template-columns:max-content;gap:12px;align-items:center}
-  .appstore{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#fff;font-weight:700;
+  /* DL ボタンは親（.hero-copy）の幅いっぱいに伸ばして、他の要素と左右端を揃える。 */
+  .btns{display:grid;grid-template-columns:1fr;gap:12px;align-items:center}
+  .appstore{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--ink);color:#fff;font-weight:700;
             padding:14px 22px;border-radius:16px;font-size:16px;transition:transform .15s ease,box-shadow .15s ease;
             box-shadow:0 8px 0 #2c1a24}
   .appstore:hover{transform:translateY(-3px);box-shadow:0 11px 0 #2c1a24}
@@ -123,7 +157,7 @@
   .card{background:#fff;border:2px solid #FFD9E6;border-radius:20px;padding:24px 22px;transition:transform .18s ease,box-shadow .18s ease}
   .card:hover{transform:translateY(-5px);box-shadow:0 14px 26px rgba(255,92,138,.18)}
   .card .ico{font-size:30px;display:block;margin-bottom:10px}
-  .card h3{font-size:17px;font-weight:800;margin-bottom:6px;color:var(--ink)}
+  .card h3{font-size:17px;font-weight:700;margin-bottom:6px;color:var(--ink)}
   .card p{font-size:14px;color:var(--ink-soft);font-weight:500;line-height:1.7}
 
   /* movie */
@@ -153,7 +187,7 @@
   .steps li::before{counter-increment:step;content:counter(step);position:absolute;left:20px;top:20px;
     width:42px;height:42px;border-radius:50%;background:linear-gradient(140deg,var(--pink),var(--pink-deep));color:#fff;
     font-family:var(--display);font-size:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 0 #ffb9d2}
-  .steps h3{font-size:16px;font-weight:800;margin-bottom:4px;color:var(--ink)}
+  .steps h3{font-size:16px;font-weight:700;margin-bottom:4px;color:var(--ink)}
   .steps p{font-size:14px;color:var(--ink-soft);font-weight:500;line-height:1.7}
 
   /* how-to video (embedded YouTube Short) */
@@ -180,7 +214,21 @@
   .notice h3{font-family:var(--display);font-size:18px;color:var(--ink);margin-bottom:10px}
   .notice ul{list-style:none}
   .notice li{font-size:14px;font-weight:500;color:var(--ink-soft);padding:5px 0 5px 22px;position:relative;line-height:1.7}
-  .notice li::before{content:"·";position:absolute;left:6px;color:var(--lav);font-weight:800}
+  .notice li::before{content:"·";position:absolute;left:6px;color:var(--lav);font-weight:700}
+
+  /* stamps / stickers / templates 導線カード */
+  .linkcards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:64px}
+  .lcard{display:block;background:#fff;border:2px solid #FFD9E6;border-radius:20px;padding:16px 16px 20px;
+         transition:transform .18s ease,box-shadow .18s ease}
+  .lcard:hover{transform:translateY(-5px);box-shadow:0 14px 26px rgba(255,92,138,.18)}
+  .lcard .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+  .lcard .shots span{aspect-ratio:1/1;border-radius:12px;background:var(--bg2);display:block;overflow:hidden}
+  .lcard .shots img{display:block;width:100%;height:100%;object-fit:contain;padding:7px}
+  .lcard h3{font-family:var(--display);font-size:16px;color:var(--ink);margin-bottom:6px;line-height:1.4}
+  .lcard p{font-size:13px;color:var(--ink-soft);font-weight:500;line-height:1.7;margin-bottom:14px}
+  .lcard .go{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:13px;color:#fff;
+             background:linear-gradient(140deg,var(--pink),var(--pink-deep));padding:8px 16px;border-radius:999px}
+  @media (max-width:760px){ .linkcards{grid-template-columns:1fr;gap:14px;margin-bottom:48px} }
 
   /* footer */
   footer{position:relative;z-index:2;background:var(--ink);color:#fff;border-radius:30px 30px 0 0;padding:46px 0 34px;margin-top:20px}
@@ -200,8 +248,7 @@
   }
   @media (max-width:760px){
     .hero{grid-template-columns:1fr;text-align:center;padding-top:18px}
-    .lede{margin-left:auto;margin-right:auto}
-    .btns{justify-content:center}
+    .hero-copy{margin-left:auto;margin-right:auto}
     .stage{order:-1;margin-bottom:6px}
     .grid{grid-template-columns:1fr;gap:14px;margin-bottom:48px}
     .steps li{padding-left:76px}
@@ -248,10 +295,12 @@
   </nav>
 
   <header class="hero">
-    <div>
-      <span class="eyebrow" data-i18n="hero.eyebrow">ファンサうちわ文字作成アプリ</span>
-      <h1>推しミテ！</h1>
-      <p class="lede" data-i18n="hero.lede">推しに見つけてもらう応援うちわを、スマホひとつで。文字をデザインして、<b>コンビニで実寸プリント</b>。</p>
+    <div class="hero-copy">
+      <div class="hero-title">
+        <span class="eyebrow" data-i18n="hero.eyebrow">ファンサうちわ文字作成アプリ</span>
+        <h1>推しミテ！</h1>
+      </div>
+      <p class="lede" data-i18n="hero.lede">推しに見つけてもらう応援うちわを、スマホひとつで。<br>文字をデザインして、<b>コンビニで実寸プリント</b>。</p>
       <div class="btns">
         <a class="appstore" href="https://play.google.com/store/apps/details?id=com.shiraselab.uchiwa_tukool">
           <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l220.7-221.3 60.1 60.1L104.6 499z"/></svg>
@@ -287,15 +336,42 @@
 </div>
 
 <div class="wrap">
-  <section class="showcase">
+  <section>
     <div class="sec-head">
-      <h2>スタンプ・ステッカー・テンプレートで、うちわをデコる</h2>
-      <p>作者制作の<b>配信スタンプ（色を推しのメンバーカラーに変えられるSVG）</b>・<b>配信ステッカー</b>・<b>うちわテンプレート</b>をアプリから使えます。一覧はこちら（全機能無料）。</p>
+      <h2 data-i18n="deco.h2">スタンプ・ステッカー・テンプレートで、<em>うちわをデコる</em></h2>
+      <p data-i18n="deco.p">作者が制作した素材を、アプリからそのまま使えます。もちろん全部無料。</p>
     </div>
-    <div class="btns" style="justify-content:center;flex-wrap:wrap">
-      <a class="nav-cta" href="/stamps/">配信スタンプ一覧</a>
-      <a class="nav-cta" href="/stickers/">配信ステッカー一覧</a>
-      <a class="nav-cta" href="/templates/">うちわテンプレート集</a>
+    <div class="linkcards">
+      <a class="lcard" href="/stamps/">
+        <div class="shots">
+          <span><img src="stamps/oshimite_crown_puffy.svg" alt="" loading="lazy"></span>
+          <span><img src="stamps/oshimite_hand_fingerheart.svg" alt="" loading="lazy"></span>
+          <span><img src="stamps/oshimite_ribbon_bow.svg" alt="" loading="lazy"></span>
+        </div>
+        <h3 data-i18n="deco.c1t">配信スタンプ</h3>
+        <p data-i18n="deco.c1p">色を推しのメンバーカラーに変えられるSVG。王冠・指ハート・リボン・きらきらなど。</p>
+        <span class="go" data-i18n="deco.go">一覧を見る</span>
+      </a>
+      <a class="lcard" href="/stickers/">
+        <div class="shots">
+          <span><img src="stickers/sticker_001.png" alt="" loading="lazy"></span>
+          <span><img src="stickers/sticker_012.png" alt="" loading="lazy"></span>
+          <span><img src="stickers/sticker_027.png" alt="" loading="lazy"></span>
+        </div>
+        <h3 data-i18n="deco.c2t">配信ステッカー</h3>
+        <p data-i18n="deco.c2p">貼るだけで決まる、色塗り不要のデコ素材。45種類を配信中。</p>
+        <span class="go" data-i18n="deco.go">一覧を見る</span>
+      </a>
+      <a class="lcard" href="/templates/">
+        <div class="shots">
+          <span><img src="templates/thumb/mitekudasai.webp" alt="" loading="lazy"></span>
+          <span><img src="templates/thumb/daisuki.png" alt="" loading="lazy"></span>
+          <span><img src="templates/thumb/yubiheart.webp" alt="" loading="lazy"></span>
+        </div>
+        <h3 data-i18n="deco.c3t">うちわテンプレート集</h3>
+        <p data-i18n="deco.c3p">定番の文字デザインをそのまま開いて編集。名前を変えるだけで完成します。</p>
+        <span class="go" data-i18n="deco.go">一覧を見る</span>
+      </a>
     </div>
   </section>
 </div>
@@ -443,6 +519,15 @@
       "hero.lede":"Make a cheering uchiwa to get noticed by your oshi — with just your phone. Design the lettering and <b>print it at full size at a convenience store</b>.",
       "hero.free":"All features free · No subscription",
       "hero.fanAlt":"A cheering uchiwa made with 推しミテ！",
+      "deco.h2":"Decorate your uchiwa with <em>stamps, stickers & templates</em>",
+      "deco.p":"Original assets made by the developer, usable right inside the app. All free, of course.",
+      "deco.c1t":"Stamps",
+      "deco.c1p":"SVGs you can recolor to your oshi's member color — crowns, finger hearts, ribbons, sparkles and more.",
+      "deco.c2t":"Stickers",
+      "deco.c2p":"Just place them and you're done — no coloring needed. 45 designs available.",
+      "deco.c3t":"Uchiwa Templates",
+      "deco.c3p":"Open a ready-made lettering design and edit it. Swap in a name and it's finished.",
+      "deco.go":"Browse all",
       "and.h2":"Android version <em>now available!</em>",
       "and.p":"“推しミテ！” is now downloadable on Google Play. iPhone / iPad users can still get it on the App Store as before.",
       "band.p":"Spend it on your oshi, not on subscriptions!",
@@ -568,6 +653,15 @@
       "foot.privacy":"隐私政策",
       "foot.terms":"使用条款",
       "foot.contact":"联系我们（X / @oshimite_app）",
+      "deco.h2":"用贴纸、贴图和模板，<em>装饰你的应援扇</em>",
+      "deco.p":"作者原创素材，在 App 中直接使用。当然，全部免费。",
+      "deco.c1t":"贴纸（Stamps）",
+      "deco.c1p":"可换成你推应援色的 SVG。皇冠、比心、丝带、闪光等。",
+      "deco.c2t":"贴图（Stickers）",
+      "deco.c2p":"贴上就好，无需上色的装饰素材。现有 45 种。",
+      "deco.c3t":"应援扇模板集",
+      "deco.c3p":"直接打开经典文字设计并编辑。只需换个名字就完成。",
+      "deco.go":"查看全部",
       "foot.copy":"© 2026 ShiraseLab. 让「推，看我！」成真的应援扇。"
     },
     zhHant: {
@@ -638,6 +732,15 @@
       "foot.privacy":"隱私政策",
       "foot.terms":"使用條款",
       "foot.contact":"聯絡我們（X / @oshimite_app）",
+      "deco.h2":"用貼紙、貼圖和範本，<em>裝飾你的應援扇</em>",
+      "deco.p":"作者原創素材，在 App 中直接使用。當然，全部免費。",
+      "deco.c1t":"貼紙（Stamps）",
+      "deco.c1p":"可換成你推應援色的 SVG。皇冠、比心、緞帶、閃光等。",
+      "deco.c2t":"貼圖（Stickers）",
+      "deco.c2p":"貼上就好，無需上色的裝飾素材。現有 45 種。",
+      "deco.c3t":"應援扇範本集",
+      "deco.c3p":"直接打開經典文字設計並編輯。只需換個名字就完成。",
+      "deco.go":"查看全部",
       "foot.copy":"© 2026 ShiraseLab. 讓「推，看我！」成真的應援扇。"
     },
     ko: {
@@ -708,6 +811,15 @@
       "foot.privacy":"개인정보 처리방침",
       "foot.terms":"이용약관",
       "foot.contact":"문의 (X / @oshimite_app)",
+      "deco.h2":"스탬프·스티커·템플릿으로, <em>부채를 꾸미기</em>",
+      "deco.p":"제작자가 직접 만든 소재를 앱에서 그대로 쓸 수 있어요. 물론 전부 무료.",
+      "deco.c1t":"스탬프",
+      "deco.c1p":"최애의 멤버 컬러로 색을 바꿀 수 있는 SVG. 왕관·손가락 하트·리본·반짝임 등.",
+      "deco.c2t":"스티커",
+      "deco.c2p":"붙이기만 하면 끝. 색칠이 필요 없는 데코 소재 45종.",
+      "deco.c3t":"부채 템플릿집",
+      "deco.c3p":"인기 문자 디자인을 바로 열어 편집. 이름만 바꾸면 완성돼요.",
+      "deco.go":"전체 보기",
       "foot.copy":"© 2026 ShiraseLab. 「최애야, 나 봐줘」를 이뤄 주는 부채를."
     }
   };
