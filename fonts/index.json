@@ -66,28 +66,32 @@
           "name": "ニコモジ＋",
           "category": "高視認・丸文字",
           "url": "https://nicofont.pupu.jp/nicomoji-plus.html",
-          "license": "SIL OFL 1.1"
+          "license": "SIL OFL 1.1",
+          "preview": "preview/nicomoji_plus.png"
         },
         {
           "id": "corporate_logo_rounded",
           "name": "コーポレート・ロゴ（ラウンド）",
           "category": "高視認・丸ゴ",
           "url": "https://logotype.jp/font-corpmaru-old-v2.html",
-          "license": "SIL OFL 1.1"
+          "license": "SIL OFL 1.1",
+          "preview": "preview/corporate_logo_rounded.png"
         },
         {
           "id": "makipop_851",
           "name": "851マカポップ",
           "category": "手書きポップ",
           "url": "https://pm85122.onamae.jp/851mkpop.html",
-          "license": "フリー（商用可・再配布可）"
+          "license": "フリー（商用可・再配布可）",
+          "preview": "preview/851_makapop.png"
         },
         {
           "id": "lanobe_pop",
           "name": "ラノベPOP V2",
           "category": "ポップ",
           "url": "https://booth.pm/ja/items/2328262",
-          "license": "フリー（商用・非商用可）"
+          "license": "フリー（商用・非商用可）",
+          "preview": "preview/lanobe_pop_v2.png"
         }
       ]
     },
