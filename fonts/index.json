@@ -19,7 +19,9 @@
           "category": "高視認",
           "url": "https://okoneya.jp/font/",
           "license": "SIL OFL 1.1",
-          "preview": "preview/genei_kiwami_go.png"
+          "preview": "preview/genei_kiwami_go.png",
+          "download": "files/genei_kiwami_go.ttf",
+          "licenseFile": "files/genei_kiwami_go.LICENSE.txt"
         },
         {
           "id": "genei_mgothic",
@@ -27,7 +29,9 @@
           "category": "高視認",
           "url": "https://okoneya.jp/font/",
           "license": "SIL OFL 1.1",
-          "preview": "preview/genei_mgothic.png"
+          "preview": "preview/genei_mgothic.png",
+          "download": "files/genei_mgothic.ttf",
+          "licenseFile": "files/genei_mgothic.LICENSE.txt"
         },
         {
           "id": "genei_pople",
@@ -35,7 +39,9 @@
           "category": "ポップ",
           "url": "https://okoneya.jp/font/",
           "license": "SIL OFL 1.1",
-          "preview": "preview/genei_pople.png"
+          "preview": "preview/genei_pople.png",
+          "download": "files/genei_pople.ttf",
+          "licenseFile": "files/genei_pople.LICENSE.txt"
         },
         {
           "id": "reggae_one",
@@ -43,7 +49,9 @@
           "category": "高視認",
           "url": "https://fonts.google.com/specimen/Reggae+One",
           "license": "SIL OFL 1.1",
-          "preview": "preview/reggae_one.png"
+          "preview": "preview/reggae_one.png",
+          "download": "files/reggae_one.ttf",
+          "licenseFile": "files/reggae_one.LICENSE.txt"
         },
         {
           "id": "rocknroll_one",
@@ -51,7 +59,9 @@
           "category": "高視認",
           "url": "https://fonts.google.com/specimen/RocknRoll+One",
           "license": "SIL OFL 1.1",
-          "preview": "preview/rocknroll_one.png"
+          "preview": "preview/rocknroll_one.png",
+          "download": "files/rocknroll_one.ttf",
+          "licenseFile": "files/rocknroll_one.LICENSE.txt"
         },
         {
           "id": "rampart_one",
@@ -59,7 +69,9 @@
           "category": "立体・変わり種",
           "url": "https://fonts.google.com/specimen/Rampart+One",
           "license": "SIL OFL 1.1",
-          "preview": "preview/rampart_one.png"
+          "preview": "preview/rampart_one.png",
+          "download": "files/rampart_one.ttf",
+          "licenseFile": "files/rampart_one.LICENSE.txt"
         },
         {
           "id": "nicomoji_plus",
@@ -67,7 +79,9 @@
           "category": "高視認・丸文字",
           "url": "https://nicofont.pupu.jp/nicomoji-plus.html",
           "license": "SIL OFL 1.1",
-          "preview": "preview/nicomoji_plus.png"
+          "preview": "preview/nicomoji_plus.png",
+          "download": "files/nicomoji_plus.ttf",
+          "licenseFile": "files/nicomoji_plus.LICENSE.txt"
         },
         {
           "id": "corporate_logo_rounded",
@@ -75,7 +89,9 @@
           "category": "高視認・丸ゴ",
           "url": "https://logotype.jp/font-corpmaru-old-v2.html",
           "license": "SIL OFL 1.1",
-          "preview": "preview/corporate_logo_rounded.png"
+          "preview": "preview/corporate_logo_rounded.png",
+          "download": "files/corporate_logo_rounded.otf",
+          "licenseFile": "files/corporate_logo_rounded.LICENSE.txt"
         },
         {
           "id": "makipop_851",
@@ -83,7 +99,9 @@
           "category": "手書きポップ",
           "url": "https://pm85122.onamae.jp/851mkpop.html",
           "license": "フリー（商用可・再配布可）",
-          "preview": "preview/851_makapop.png"
+          "preview": "preview/851_makapop.png",
+          "download": "files/851_makapop.ttf",
+          "licenseFile": "files/851_makapop.LICENSE.txt"
         },
         {
           "id": "lanobe_pop",
@@ -91,7 +109,9 @@
           "category": "ポップ",
           "url": "https://booth.pm/ja/items/2328262",
           "license": "フリー（商用・非商用可）",
-          "preview": "preview/lanobe_pop_v2.png"
+          "preview": "preview/lanobe_pop_v2.png",
+          "download": "files/lanobe_pop_v2.otf",
+          "licenseFile": "files/lanobe_pop_v2.LICENSE.txt"
         }
       ]
     },
@@ -105,7 +125,9 @@
           "category": "高視認",
           "url": "https://fonts.google.com/specimen/Bungee",
           "license": "SIL OFL 1.1",
-          "preview": "preview/bungee.png"
+          "preview": "preview/bungee.png",
+          "download": "files/bungee.ttf",
+          "licenseFile": "files/bungee.LICENSE.txt"
         },
         {
           "id": "titan_one",
@@ -113,7 +135,9 @@
           "category": "高視認",
           "url": "https://fonts.google.com/specimen/Titan+One",
           "license": "SIL OFL 1.1",
-          "preview": "preview/titan_one.png"
+          "preview": "preview/titan_one.png",
+          "download": "files/titan_one.ttf",
+          "licenseFile": "files/titan_one.LICENSE.txt"
         },
         {
           "id": "lilita_one",
@@ -121,7 +145,9 @@
           "category": "高視認",
           "url": "https://fonts.google.com/specimen/Lilita+One",
           "license": "SIL OFL 1.1",
-          "preview": "preview/lilita_one.png"
+          "preview": "preview/lilita_one.png",
+          "download": "files/lilita_one.ttf",
+          "licenseFile": "files/lilita_one.LICENSE.txt"
         },
         {
           "id": "bangers",
@@ -129,7 +155,9 @@
           "category": "コミック",
           "url": "https://fonts.google.com/specimen/Bangers",
           "license": "SIL OFL 1.1",
-          "preview": "preview/bangers.png"
+          "preview": "preview/bangers.png",
+          "download": "files/bangers.ttf",
+          "licenseFile": "files/bangers.LICENSE.txt"
         },
         {
           "id": "creepster",
@@ -137,7 +165,9 @@
           "category": "怖い系・変わり種",
           "url": "https://fonts.google.com/specimen/Creepster",
           "license": "SIL OFL 1.1",
-          "preview": "preview/creepster.png"
+          "preview": "preview/creepster.png",
+          "download": "files/creepster.ttf",
+          "licenseFile": "files/creepster.LICENSE.txt"
         },
         {
           "id": "nosifer",
@@ -145,7 +175,9 @@
           "category": "血だれ・変わり種",
           "url": "https://fonts.google.com/specimen/Nosifer",
           "license": "SIL OFL 1.1",
-          "preview": "preview/nosifer.png"
+          "preview": "preview/nosifer.png",
+          "download": "files/nosifer.ttf",
+          "licenseFile": "files/nosifer.LICENSE.txt"
         }
       ]
     },
@@ -159,7 +191,9 @@
           "category": "高視認",
           "url": "https://fonts.google.com/specimen/Do+Hyeon",
           "license": "SIL OFL 1.1",
-          "preview": "preview/do_hyeon.png"
+          "preview": "preview/do_hyeon.png",
+          "download": "files/do_hyeon.ttf",
+          "licenseFile": "files/do_hyeon.LICENSE.txt"
         },
         {
           "id": "bagel_fat_one",
@@ -167,7 +201,9 @@
           "category": "高視認",
           "url": "https://fonts.google.com/specimen/Bagel+Fat+One",
           "license": "SIL OFL 1.1",
-          "preview": "preview/bagel_fat_one.png"
+          "preview": "preview/bagel_fat_one.png",
+          "download": "files/bagel_fat_one.ttf",
+          "licenseFile": "files/bagel_fat_one.LICENSE.txt"
         },
         {
           "id": "gugi",
@@ -175,7 +211,9 @@
           "category": "変わり種",
           "url": "https://fonts.google.com/specimen/Gugi",
           "license": "SIL OFL 1.1",
-          "preview": "preview/gugi.png"
+          "preview": "preview/gugi.png",
+          "download": "files/gugi.ttf",
+          "licenseFile": "files/gugi.LICENSE.txt"
         }
       ]
     },
@@ -189,7 +227,9 @@
           "category": "高視認",
           "url": "https://fonts.google.com/specimen/ZCOOL+QingKe+HuangYou",
           "license": "SIL OFL 1.1",
-          "preview": "preview/zcool_qingke_huangyou.png"
+          "preview": "preview/zcool_qingke_huangyou.png",
+          "download": "files/zcool_qingke_huangyou.ttf",
+          "licenseFile": "files/zcool_qingke_huangyou.LICENSE.txt"
         },
         {
           "id": "ma_shan_zheng",
@@ -197,7 +237,9 @@
           "category": "毛筆・変わり種",
           "url": "https://fonts.google.com/specimen/Ma+Shan+Zheng",
           "license": "SIL OFL 1.1",
-          "preview": "preview/ma_shan_zheng.png"
+          "preview": "preview/ma_shan_zheng.png",
+          "download": "files/ma_shan_zheng.ttf",
+          "licenseFile": "files/ma_shan_zheng.LICENSE.txt"
         }
       ]
     }
