@@ -214,6 +214,50 @@
           "preview": "preview/gugi.png",
           "download": "files/gugi.ttf",
           "licenseFile": "files/gugi.LICENSE.txt"
+        },
+        {
+          "id": "kcc_ganpan",
+          "name": "KCC Ganpan",
+          "category": "高視認・看板",
+          "url": "https://gongu.copyright.or.kr/gongu/wrt/wrt/view.do?wrtSn=13333397&menuNo=200023",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/kcc_ganpan.png",
+          "download": "files/kcc_ganpan.ttf",
+          "licenseFile": "files/kcc_ganpan.LICENSE.txt"
+        },
+        {
+          "id": "bm_kiranghaerang",
+          "name": "BM Kiranghaerang",
+          "category": "手書きポップ",
+          "url": "https://www.woowahan.com/fonts",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/bm_kiranghaerang.png",
+          "download": "files/bm_kiranghaerang.ttf",
+          "licenseFile": "files/bm_kiranghaerang.LICENSE.txt"
+        },
+        {
+          "id": "single_day",
+          "name": "Single Day",
+          "category": "手書き",
+          "url": "https://fonts.google.com/specimen/Single+Day",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/single_day.png",
+          "download": "files/single_day.ttf",
+          "licenseFile": "files/single_day.LICENSE.txt"
+        },
+        {
+          "id": "nelna_lizzy",
+          "name": "Nelna Lizzy",
+          "category": "手書き",
+          "url": "https://nelna.shop/shop_view/?idx=835",
+          "license": "無料（商用可・再配布不可）"
+        },
+        {
+          "id": "andong_katuri",
+          "name": "Andong Katuri",
+          "category": "手書き・キャラ",
+          "url": "https://www.andong.go.kr/portal/contents.do?mId=0301030500",
+          "license": "KOGL Type1（公共ヌリ第1類型・出典表示）"
         }
       ]
     },
