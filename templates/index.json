@@ -1225,6 +1225,15 @@
         "おめでとう",
         "お祝い"
       ]
+    },
+    {
+      "id": "tpl-ab26135da6",
+      "title": "うちわ47c9c4f2",
+      "thumbUrl": "thumb/tpl-ab26135da6.png",
+      "fileUrl": "tpl-ab26135da6.uchiwa",
+      "updatedAt": "2026-08-20",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
