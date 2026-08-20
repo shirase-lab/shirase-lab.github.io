@@ -81,7 +81,7 @@ bash schedules/crypt.sh enc /path/to/live.plain.json
 | --- | --- |
 | `daily_update.md` | headless Claude に渡すジョブ仕様（seed/前回復号→調査→検査→`merge_live.py`→`check_tour_gaps.py`→`crypt.sh enc`）。 |
 | `merge_live.py` | 決定的マージャ。`id` で upsert＋`meta` 日付（generated_at/report_week）更新。 |
-| `check_tour_gaps.py` | **ツアー欠落リンタ（gate）**。多都市ツアーの「レグ取りこぼし」（最近まで開催中なのに this_week/upcoming レグが無い＝継続レグ未登録の疑い）を検出。暗号化前に必ず通す。 |
+| `check_tour_gaps.py` | **ツアー欠落リンタ（gate）**。多都市ツアーの「レグ取りこぼし」（最近まで開催中なのに this_week/upcoming レグが無い＝継続レグ未登録の疑い）を検出。暗号化前に必ず通す。**2026-08-21 強化**: 2レグ以上だけでなく、event_name が『ツアー/Tour』を含むのに live 上 1 レグしか無いツアーも検出（最初の1都市だけ登録して後続を後追いしなかった事故＝KEY TO LIT/ACEes を取りこぼしていた）。1レグのみは検知窓を広く（`--single-window-days` 既定90日）。各フラグは公式確認して埋める／千秋楽済みなら無視。 |
 | `Run-LiveSchedule.ps1` | ランナー。`claude -p` 実行後、`schedules/` に差分があれば commit/push。 |
 | `Register-LiveScheduleTask.ps1` | タスク `ShiraseLab-LiveSchedule` を毎週 月・木 09:00 で登録。 |
 | `logs/` | 実行ログ（gitignore）。 |

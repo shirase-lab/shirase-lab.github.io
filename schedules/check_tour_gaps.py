@@ -15,12 +15,22 @@
    this_week / ongoing / upcoming / announced_onsale の“先のレグ”が1つも無い」
 = 継続レグ未登録の疑い。→ 公式日程で確認し、欠けているレグを found.json に足して再マージ。
 
+【単レグ多都市ツアーの穴（2026-08-21 追加）】以前は「同一ツアーで2レグ以上登録」だけを
+  ツアー扱いにしていた（`len(legs) < 2` は単発扱いで除外）。しかし多都市ツアーの
+  “最初の1都市だけ登録して後続レグを後追いしなかった”ケースは、live 上は 1 レグ=単発に
+  見えてチェックから漏れる（実例: KEY TO LIT『NEO CLASSICS』/ ACEes『V』を有明/神戸 1 レグ
+  だけ登録し、次の有明8/20-23・大阪8/29-30 を取りこぼした=2026-08-21 発覚）。対策:
+  event_name が “ツアー / Tour” を含む（=ツアー名を持つ）イベントは、登録が 1 レグでも
+  ツアー扱いにして検査する。1 レグしか無い場合は最終レグが古くても拾えるよう検知窓を
+  広く取る（--single-window-days、既定90日。21日窓だと 39 日前終了の ACEes 有明が漏れた）。
+
 使い方:
-  python schedules/check_tour_gaps.py <live_plain_or_merged.json> [--today YYYY-MM-DD] [--window-days N]
+  python schedules/check_tour_gaps.py <live_plain_or_merged.json> \
+      [--today YYYY-MM-DD] [--window-days N] [--single-window-days N]
 
 終了コード: 0=警告なし / 1=要確認ツアーあり(標準出力に一覧)。
 ※これは“確定エラー”ではなく“公式で確認して埋めろ”の gate。ツアーが本当に千秋楽まで
-  終わっている場合は誤検知しうる(window-days=21 を過ぎれば自然に消える)。誤検知でも
+  終わっている場合は誤検知しうる(window を過ぎれば自然に消える)。誤検知でも
   「確認した上で足すものが無い」と判断できれば無視してよい。
 """
 import argparse
@@ -32,18 +42,55 @@ import sys
 # 「これから/開催中」を意味する status（これが1つでもあれば“先のレグあり”とみなす）
 FORWARD = {"this_week", "ongoing", "upcoming", "announced_onsale"}
 
+# event_name が「ツアー名」を持つ = 単発でなく多都市ツアーの1レグとみなすシグナル
+TOUR_NAME_RE = re.compile(r"ツアー|tour", re.IGNORECASE)
+
+
+def is_tourlike(ev):
+    """event_name が『ツアー / Tour / TOUR』を含めば、登録が1レグでもツアー扱いにする。
+    多都市ツアーの最初の1都市だけ登録して後続を取りこぼす事故を、単発誤検知抑制の
+    `len(legs) < 2` 除外で見逃さないため。"""
+    return bool(TOUR_NAME_RE.search(ev.get("event_name", "") or ""))
+
+
+# 都道府県＋レグ名に単独で現れがちな主要都市。末尾に素で付く「地名」を落として束ねる。
+PREF_CITY = set(
+    "北海道 青森 岩手 宮城 秋田 山形 福島 茨城 栃木 群馬 埼玉 千葉 東京 神奈川 "
+    "新潟 富山 石川 福井 山梨 長野 岐阜 静岡 愛知 三重 滋賀 京都 大阪 兵庫 奈良 "
+    "和歌山 鳥取 島根 岡山 広島 山口 徳島 香川 愛媛 高知 福岡 佐賀 長崎 熊本 大分 "
+    "宮崎 鹿児島 沖縄 横浜 神戸 名古屋 仙台 札幌 博多 幕張 さいたま".split()
+)
+# 末尾に付くレグ修飾語（都市名の前後に付く）。ツアー基幹名には含めない。
+_LEG_QUAL = re.compile(
+    r"[\s　]*(?:千秋楽|ファイナル|FINAL|Final|開幕|初日|追加公演|アンコール|ENCORE|Encore)$"
+)
+_KOEN = re.compile(r"[\s　]*[^\s　]*公演$")            # 「大阪公演」「公演」
+_PAREN = re.compile(r"[\s　]*[（(][^）)]*[）)]$")        # 末尾の（…）/(…)
+
 
 def tour_key(ev):
-    """(group, ツアー名) を返す。ツアー名は event_name の「…」内、無ければ末尾の
-    「<地名>公演」を落とした基幹名。単独公演どうしを同一ツアーに束ねるためのキー。"""
+    """(group, ツアー基幹名) を返す。レグ名の表記ゆれ（「横浜公演」／素の「大阪」／
+    「新潟 千秋楽」／「…（ファイナル）」等）を末尾から反復除去して同一ツアーに束ねる。
+
+    ※以前は末尾「<地名>公演」しか落とさず、素の地名（"…大阪"）や "公演" の後ろの括弧、
+      "千秋楽" 語で束ね損ねて同一ツアーが分裂し、実在する先レグを見落として大量に誤検知した
+      （2026-08-21 に Kis-My-Ft2/NEWS 等で発覚）。基幹名まで正規化して束ねる。"""
     name = ev.get("event_name", "") or ""
     m = re.search(r"「(.+?)」", name)
     if m:
-        title = m.group(1)
-    else:
-        # 例: "真夏の全国ツアー2026 大阪公演" -> "真夏の全国ツアー2026"
-        title = re.sub(r"[\s　]*\S+公演$", "", name).strip() or name
-    return (ev.get("group", ""), title)
+        return (ev.get("group", ""), m.group(1))
+    title = name
+    for _ in range(8):  # 末尾修飾を安定するまで剥ぐ（多重修飾: "…大阪公演（ファイナル）"）
+        prev = title
+        title = _PAREN.sub("", title).rstrip()          # 末尾（…）
+        title = _LEG_QUAL.sub("", title).rstrip()       # 千秋楽/ファイナル/アンコール等
+        title = _KOEN.sub("", title).rstrip()           # <地名>公演/公演
+        mm = re.search(r"[\s　]([^\s　]+)$", title)      # 素の末尾地名（都道府県/主要都市）
+        if mm and mm.group(1) in PREF_CITY:
+            title = title[: mm.start()].rstrip()
+        if title == prev:
+            break
+    return (ev.get("group", ""), title.strip() or name)
 
 
 def max_date(ev):
@@ -56,7 +103,9 @@ def main():
     ap.add_argument("src", help="live 平文 or merged {meta,events}")
     ap.add_argument("--today", help="YYYY-MM-DD（既定: meta.generated_at → 実行日）")
     ap.add_argument("--window-days", type=int, default=21,
-                    help="直近この日数以内に最終レグが終わっていれば“継続の疑い”とする（既定21）")
+                    help="複数レグ登録済みツアー: 直近この日数以内に最終レグが終わっていれば“継続の疑い”（既定21）")
+    ap.add_argument("--single-window-days", type=int, default=90,
+                    help="ツアー名を持つが1レグしか登録が無い場合の広い窓（既定90。後追い漏れは古くなりがち）")
     a = ap.parse_args()
 
     with open(a.src, encoding="utf-8") as f:
@@ -81,8 +130,11 @@ def main():
 
     flagged = []
     for (group, title), legs in tours.items():
-        if len(legs) < 2:
-            continue  # 単独の一発イベントはツアー扱いしない（誤検知抑制）
+        # ツアー扱いの条件: 2レグ以上登録済み、または（1レグでも）event_name がツアー名を持つ。
+        # 後者が「多都市ツアーの1都市だけ登録して後続を取りこぼした」穴を塞ぐ。
+        multi = len(legs) >= 2
+        if not multi and not any(is_tourlike(ev) for ev in legs):
+            continue  # ツアー名も持たない真の単発イベントは対象外（誤検知抑制）
         has_forward = any(
             (ev.get("status") in FORWARD) or ((max_date(ev) or "") >= today.isoformat())
             for ev in legs
@@ -93,7 +145,9 @@ def main():
         if not last:
             continue
         last_d = datetime.date.fromisoformat(last)
-        if today - datetime.timedelta(days=a.window_days) <= last_d < today:
+        # 1レグしか無いツアーは後追い漏れが古くなりがちなので広い窓で拾う
+        window = a.window_days if multi else a.single_window_days
+        if today - datetime.timedelta(days=window) <= last_d < today:
             flagged.append((group, title, last, legs))
 
     if not flagged:
