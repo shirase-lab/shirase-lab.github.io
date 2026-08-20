@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>ご要望・ご意見｜推しミテ！</title>
+<link rel="icon" href="../oshimite-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink:#FF5C8A; --pink-deep:#FF2E6E; --lav:#B9A3FF;
+    --bg:#FFF0F6; --ink:#4A2E3D; --ink-soft:#8A6274; --white:#fff;
+    --body:'Zen Maru Gothic',system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:var(--body); color:var(--ink); line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+    background:
+      radial-gradient(1200px 600px at 80% -10%, #FFD6E8 0%, transparent 55%),
+      radial-gradient(900px 500px at -10% 20%, #E6DBFF 0%, transparent 50%),
+      var(--bg);
+    min-height:100vh; padding:28px 18px 56px;
+  }
+  .wrap{max-width:680px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:9px;font-weight:900;font-size:17px;color:var(--pink-deep);margin-bottom:22px}
+  .brand img{width:30px;height:30px;border-radius:9px;box-shadow:0 3px 8px rgba(255,46,110,.28)}
+  h1{font-weight:900;font-size:clamp(24px,5vw,32px);color:var(--pink);
+     text-shadow:1px 0 0 #fff,-1px 0 0 #fff,0 1px 0 #fff,0 -1px 0 #fff;margin-bottom:12px}
+  .lead{font-size:15px;font-weight:500;margin-bottom:14px}
+  .note{font-size:13px;color:var(--ink-soft);background:#fff;border:2px solid #FFC9DD;
+        border-radius:14px;padding:12px 16px;margin-bottom:22px}
+  .note p+p{margin-top:4px}
+  .formcard{background:#fff;border-radius:18px;box-shadow:0 12px 26px rgba(255,92,138,.14);
+            padding:8px;overflow:hidden}
+  .formcard iframe{width:100%;border:0;display:block;border-radius:12px;min-height:560px}
+  .back{display:inline-block;margin-top:26px;font-weight:700;font-size:14px;color:var(--ink-soft)}
+  .jp-only{display:none;font-size:12px;color:var(--ink-soft);margin-top:8px}
+  html[lang]:not([lang="ja"]) .jp-only{display:block}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand"><img src="../oshimite-icon.png" alt="">推しミテ！</div>
+
+    <h1 data-i18n="fb.h1">ご要望・ご意見</h1>
+    <p class="lead" data-i18n="fb.lead">アプリへのご要望・お気づきの点をお聞かせください。いただいた声は今後の改善に活かします。</p>
+
+    <div class="note">
+      <p data-i18n="fb.note1">※ お名前・SNSのIDなど、個人が特定できる情報は書かないでください。</p>
+      <p data-i18n="fb.note2">※ 内容は改善のためだけに使います。個別のご返信はできません。</p>
+      <p class="jp-only" data-i18n="fb.jponly">The form is in Japanese only.</p>
+    </div>
+
+    <div class="formcard">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdeplhRhuHjRjIiuEw6-iBx8iOdZ1RVHEv41z5-vMxoVzn04A/viewform?embedded=true"
+        title="ご要望・ご意見フォーム" loading="lazy">
+        読み込んでいます…
+      </iframe>
+    </div>
+
+    <a class="back" href="../" data-i18n="fb.back">← トップにもどる</a>
+  </div>
+
+<script>
+/* トップページ(index.html)と同じ言語判定。?lang= 指定 → なければ navigator.languages。
+   フォーム本体は日本語のみなので、ページの見出し等だけ ja/en/zh/zhHant/ko で差し替える。 */
+(function(){
+  var I18N={
+    en:{ "__title":"Feedback | Oshimite","fb.h1":"Requests & Feedback",
+      "fb.lead":"Tell us what you'd like to see or anything you noticed. Your voice helps us improve.",
+      "fb.note1":"* Please do not enter personal info such as your name or social media IDs.",
+      "fb.note2":"* Your input is used only to improve the app. We can't reply individually.",
+      "fb.jponly":"The form is in Japanese only.","fb.back":"← Back to top" },
+    zh:{ "__title":"意见与建议 | 推我看","fb.h1":"意见与建议",
+      "fb.lead":"请告诉我们你的需求或发现的问题。你的声音将用于今后的改进。",
+      "fb.note1":"※ 请勿填写姓名、社交账号等可识别个人的信息。",
+      "fb.note2":"※ 内容仅用于改进，恕无法逐一回复。",
+      "fb.jponly":"表单仅提供日语。","fb.back":"← 返回首页" },
+    zhHant:{ "__title":"意見與建議 | 推我看","fb.h1":"意見與建議",
+      "fb.lead":"請告訴我們你的需求或發現的問題。你的意見將用於今後的改進。",
+      "fb.note1":"※ 請勿填寫姓名、社群帳號等可識別個人的資訊。",
+      "fb.note2":"※ 內容僅用於改進，恕無法逐一回覆。",
+      "fb.jponly":"表單僅提供日語。","fb.back":"← 返回首頁" },
+    ko:{ "__title":"의견·요청 | 오시미테","fb.h1":"의견·요청",
+      "fb.lead":"앱에 바라는 점이나 신경 쓰인 부분을 들려주세요. 앞으로의 개선에 반영합니다.",
+      "fb.note1":"※ 이름·SNS 아이디 등 개인을 특정할 수 있는 정보는 적지 말아 주세요.",
+      "fb.note2":"※ 내용은 개선에만 사용하며 개별 답변은 드리지 못합니다.",
+      "fb.jponly":"양식은 일본어로만 제공됩니다.","fb.back":"← 처음으로" }
+  };
+  function pickLang(){
+    try{
+      var q=null,m=location.search.match(/[?&]lang=([^&]+)/);
+      if(m){ q=decodeURIComponent(m[1]).toLowerCase(); }
+      var cands=q?[q]:(navigator.languages||[navigator.language||'ja']);
+      for(var i=0;i<cands.length;i++){
+        var c=(cands[i]||'').toLowerCase();
+        if(c.indexOf('ja')===0) return 'ja';
+        if(c.indexOf('ko')===0) return 'ko';
+        if(c.indexOf('zh')===0) return (c.indexOf('hant')>=0||c.indexOf('tw')>=0||c.indexOf('hk')>=0||c.indexOf('mo')>=0)?'zhHant':'zh';
+        if(c.indexOf('en')===0) return 'en';
+      }
+      return q?'ja':'en';
+    }catch(e){ return 'ja'; }
+  }
+  var lang=pickLang();
+  document.documentElement.lang=({ja:'ja',en:'en',zh:'zh-Hans',zhHant:'zh-Hant',ko:'ko'})[lang]||lang;
+  if(lang==='ja') return;              /* HTML は既に日本語 */
+  var dict=I18N[lang]; if(!dict) return;
+  var nodes=document.querySelectorAll('[data-i18n]');
+  for(var i=0;i<nodes.length;i++){ var k=nodes[i].getAttribute('data-i18n'); if(dict[k]!=null) nodes[i].innerHTML=dict[k]; }
+  if(dict['__title']) document.title=dict['__title'];
+})();
+</script>
+</body>
+</html>
