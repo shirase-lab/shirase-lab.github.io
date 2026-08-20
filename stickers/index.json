@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-13",
+  "updatedAt": "2026-08-20",
   "note": "うちわつくーる 配信ステッカーのマニフェスト。作者制作のみ・投稿機能なし。thumbUrl / fileUrl は index.json からの相対 URL。",
   "filters": [
     {
@@ -66,6 +66,12 @@
             "東京",
             "浅草",
             "渋谷"
+          ]
+        },
+        {
+          "name": "静岡",
+          "tags": [
+            "静岡"
           ]
         },
         {
@@ -760,6 +766,155 @@
         "鏡餅",
         "お正月",
         "正月"
+      ]
+    },
+    {
+      "id": "sticker_046",
+      "title": "お茶",
+      "thumbUrl": "thumb/sticker_046.png",
+      "fileUrl": "sticker_046.png",
+      "updatedAt": "2026-08-20",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "お茶",
+        "緑茶",
+        "静岡",
+        "ご当地",
+        "ドリンク"
+      ]
+    },
+    {
+      "id": "sticker_047",
+      "title": "うなぎパイ",
+      "thumbUrl": "thumb/sticker_047.png",
+      "fileUrl": "sticker_047.png",
+      "updatedAt": "2026-08-20",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "スイーツ",
+        "お菓子",
+        "うなぎパイ",
+        "静岡",
+        "ご当地"
+      ]
+    },
+    {
+      "id": "sticker_048",
+      "title": "わさび",
+      "thumbUrl": "thumb/sticker_048.png",
+      "fileUrl": "sticker_048.png",
+      "updatedAt": "2026-08-20",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "わさび",
+        "薬味",
+        "静岡",
+        "ご当地"
+      ]
+    },
+    {
+      "id": "sticker_049",
+      "title": "富士山",
+      "thumbUrl": "thumb/sticker_049.png",
+      "fileUrl": "sticker_049.png",
+      "updatedAt": "2026-08-20",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "富士山",
+        "山",
+        "名所",
+        "静岡",
+        "日本",
+        "ご当地"
+      ]
+    },
+    {
+      "id": "sticker_050",
+      "title": "スマイル",
+      "thumbUrl": "thumb/sticker_050.png",
+      "fileUrl": "sticker_050.png",
+      "updatedAt": "2026-08-20",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スマイル",
+        "笑顔",
+        "ニコちゃん",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_051",
+      "title": "ウインクスマイル",
+      "thumbUrl": "thumb/sticker_051.png",
+      "fileUrl": "sticker_051.png",
+      "updatedAt": "2026-08-20",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スマイル",
+        "ウインク",
+        "笑顔",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_052",
+      "title": "にっこりスマイル",
+      "thumbUrl": "thumb/sticker_052.png",
+      "fileUrl": "sticker_052.png",
+      "updatedAt": "2026-08-20",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スマイル",
+        "笑顔",
+        "ニコちゃん",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_053",
+      "title": "ハート目スマイル",
+      "thumbUrl": "thumb/sticker_053.png",
+      "fileUrl": "sticker_053.png",
+      "updatedAt": "2026-08-20",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スマイル",
+        "ハート",
+        "笑顔",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_054",
+      "title": "手書きスマイル",
+      "thumbUrl": "thumb/sticker_054.png",
+      "fileUrl": "sticker_054.png",
+      "updatedAt": "2026-08-20",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "スマイル",
+        "手書き",
+        "笑顔",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_055",
+      "title": "うるうる顔",
+      "thumbUrl": "thumb/sticker_055.png",
+      "fileUrl": "sticker_055.png",
+      "updatedAt": "2026-08-20",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "泣き顔",
+        "うるうる",
+        "ぴえん",
+        "キラキラ",
+        "涙",
+        "かわいい"
       ]
     }
   ]

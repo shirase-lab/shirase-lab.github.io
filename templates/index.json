@@ -45,6 +45,13 @@
             "タイムレス",
             "timelesz"
           ]
+        },
+        {
+          "name": "KEY TO LIT",
+          "tags": [
+            "KEY TO LIT",
+            "キテレツ"
+          ]
         }
       ]
     },
@@ -1205,14 +1212,18 @@
     },
     {
       "id": "tpl-51aa343707",
-      "title": "#Mooove!",
+      "title": "キテレツ デビューおめでとう",
       "thumbUrl": "thumb/tpl-51aa343707.png",
       "fileUrl": "tpl-51aa343707.uchiwa",
       "updatedAt": "2026-08-20",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru",
       "tags": [
-        "#Mooove!"
+        "KEY TO LIT",
+        "キテレツ",
+        "デビュー",
+        "おめでとう",
+        "お祝い"
       ]
     }
   ]
