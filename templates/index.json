@@ -68,6 +68,12 @@
           ]
         },
         {
+          "name": "静岡",
+          "tags": [
+            "静岡"
+          ]
+        },
+        {
           "name": "関西",
           "tags": [
             "関西",
@@ -1228,12 +1234,22 @@
     },
     {
       "id": "tpl-ab26135da6",
-      "title": "うちわ47c9c4f2",
+      "title": "たいぴー ばかかわいい",
       "thumbUrl": "thumb/tpl-ab26135da6.png",
       "fileUrl": "tpl-ab26135da6.uchiwa",
       "updatedAt": "2026-08-20",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "Kis-My-Ft2",
+        "キスマイ",
+        "藤ヶ谷太輔",
+        "たいぴー",
+        "静岡",
+        "名前入り",
+        "かわいい",
+        "ハート"
+      ]
     }
   ]
 }
