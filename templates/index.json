@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-13",
+  "updatedAt": "2026-08-20",
   "note": "うちわつくーる 配信テンプレのマニフェスト。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。作者制作のみ・投稿機能なし。filters はアプリの絞り込みドロップダウン用（タグのレイヤー分け＝グループ/地域）＝各値の tags のいずれかを持つ item が該当。Web の SEO には影響しない。",
   "filters": [
     {
@@ -1201,6 +1201,18 @@
         "宮城",
         "東北",
         "カンペ"
+      ]
+    },
+    {
+      "id": "tpl-51aa343707",
+      "title": "#Mooove!",
+      "thumbUrl": "thumb/tpl-51aa343707.png",
+      "fileUrl": "tpl-51aa343707.uchiwa",
+      "updatedAt": "2026-08-20",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "#Mooove!"
       ]
     }
   ]
