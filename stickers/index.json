@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-20",
+  "updatedAt": "2026-08-21",
   "note": "うちわつくーる 配信ステッカーのマニフェスト。作者制作のみ・投稿機能なし。thumbUrl / fileUrl は index.json からの相対 URL。",
   "filters": [
     {
@@ -915,6 +915,21 @@
         "キラキラ",
         "涙",
         "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_056",
+      "title": "うなぎ",
+      "thumbUrl": "thumb/sticker_056.png",
+      "fileUrl": "sticker_056.png",
+      "updatedAt": "2026-08-21",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "うなぎ",
+        "鰻",
+        "静岡",
+        "ご当地"
       ]
     }
   ]
