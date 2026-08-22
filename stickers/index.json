@@ -1009,6 +1009,22 @@
         "関西",
         "ご当地"
       ]
+    },
+    {
+      "id": "sticker_062",
+      "title": "通天閣",
+      "thumbUrl": "thumb/sticker_062.png",
+      "fileUrl": "sticker_062.png",
+      "updatedAt": "2026-08-23",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "通天閣",
+        "タワー",
+        "名所",
+        "大阪",
+        "関西",
+        "ご当地"
+      ]
     }
   ]
 }
