@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-21",
+  "updatedAt": "2026-08-22",
   "note": "うちわつくーる 配信ステッカーのマニフェスト。作者制作のみ・投稿機能なし。thumbUrl / fileUrl は index.json からの相対 URL。",
   "filters": [
     {
@@ -929,6 +929,23 @@
         "うなぎ",
         "鰻",
         "静岡",
+        "ご当地"
+      ]
+    },
+    {
+      "id": "sticker_057",
+      "title": "大阪城",
+      "thumbUrl": "thumb/sticker_057.png",
+      "fileUrl": "sticker_057.png",
+      "updatedAt": "2026-08-22",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "大阪城",
+        "城",
+        "お城",
+        "名所",
+        "大阪",
+        "関西",
         "ご当地"
       ]
     }
