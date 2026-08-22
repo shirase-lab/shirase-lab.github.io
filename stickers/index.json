@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-22",
+  "updatedAt": "2026-08-23",
   "note": "うちわつくーる 配信ステッカーのマニフェスト。作者制作のみ・投稿機能なし。thumbUrl / fileUrl は index.json からの相対 URL。",
   "filters": [
     {
@@ -944,6 +944,67 @@
         "城",
         "お城",
         "名所",
+        "大阪",
+        "関西",
+        "ご当地"
+      ]
+    },
+    {
+      "id": "sticker_058",
+      "title": "串カツ",
+      "thumbUrl": "thumb/sticker_058.png",
+      "fileUrl": "sticker_058.png",
+      "updatedAt": "2026-08-23",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "串カツ",
+        "大阪",
+        "関西",
+        "ご当地"
+      ]
+    },
+    {
+      "id": "sticker_059",
+      "title": "豚まん",
+      "thumbUrl": "thumb/sticker_059.png",
+      "fileUrl": "sticker_059.png",
+      "updatedAt": "2026-08-23",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "豚まん",
+        "肉まん",
+        "大阪",
+        "関西",
+        "ご当地"
+      ]
+    },
+    {
+      "id": "sticker_060",
+      "title": "たこ焼き",
+      "thumbUrl": "thumb/sticker_060.png",
+      "fileUrl": "sticker_060.png",
+      "updatedAt": "2026-08-23",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "たこ焼き",
+        "大阪",
+        "関西",
+        "ご当地"
+      ]
+    },
+    {
+      "id": "sticker_061",
+      "title": "お好み焼き",
+      "thumbUrl": "thumb/sticker_061.png",
+      "fileUrl": "sticker_061.png",
+      "updatedAt": "2026-08-23",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たべもの",
+        "お好み焼き",
         "大阪",
         "関西",
         "ご当地"
