@@ -1253,30 +1253,60 @@
     },
     {
       "id": "tpl-e652378dc7",
-      "title": "うちわbca29794",
+      "title": "エコパ 来てくれてありがとう",
       "thumbUrl": "thumb/tpl-e652378dc7.png",
       "fileUrl": "tpl-e652378dc7.uchiwa",
       "updatedAt": "2026-08-22",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "Kis-My-Ft2",
+        "キスマイ",
+        "静岡",
+        "エコパ",
+        "会場",
+        "ありがとう",
+        "感謝",
+        "ハート"
+      ]
     },
     {
       "id": "tpl-bfbd791f76",
-      "title": "うちわf13b46e1",
+      "title": "たいぴー 今日も日本一かっこいぃだら",
       "thumbUrl": "thumb/tpl-bfbd791f76.png",
       "fileUrl": "tpl-bfbd791f76.uchiwa",
       "updatedAt": "2026-08-22",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "Kis-My-Ft2",
+        "キスマイ",
+        "藤ヶ谷太輔",
+        "たいぴー",
+        "静岡",
+        "静岡弁",
+        "名前入り",
+        "かっこいい"
+      ]
     },
     {
       "id": "tpl-1b5f69b6a0",
-      "title": "うちわca113200",
+      "title": "たいぴー ばか大好き",
       "thumbUrl": "thumb/tpl-1b5f69b6a0.png",
       "fileUrl": "tpl-1b5f69b6a0.uchiwa",
       "updatedAt": "2026-08-22",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "Kis-My-Ft2",
+        "キスマイ",
+        "藤ヶ谷太輔",
+        "たいぴー",
+        "静岡",
+        "名前入り",
+        "大好き",
+        "ハート"
+      ]
     }
   ]
 }
