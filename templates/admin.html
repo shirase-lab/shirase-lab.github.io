@@ -53,6 +53,21 @@
   .dot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:6px}
   .ok{background:#3ac07a}.bad{background:#e0555b}.idle{background:#cbb}
   a.back{color:var(--ink-soft);text-decoration:none;font-size:.85rem}
+  .filterbar{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-bottom:12px}
+  .filterbar label{font-size:.85rem;color:var(--ink-soft);display:inline-flex;align-items:center;gap:5px}
+  .filterbar select{padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:#fff;
+    font-family:var(--body);font-size:.88rem;color:var(--ink);max-width:60vw}
+  .filterbar .fcount{margin-left:auto;font-size:.82rem;color:var(--ink-soft)}
+  .rank-box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px}
+  .rank-box h2{font-size:1rem;color:var(--pink-deep);margin-bottom:8px}
+  .rank-row{display:grid;grid-template-columns:28px 40px 1fr auto;gap:10px;align-items:center;
+    padding:6px 0;border-top:1px solid var(--line)}
+  .rank-row:first-of-type{border-top:0}
+  .rank-row .n{font-weight:800;color:var(--ink-soft);text-align:center}
+  .rank-row .th{width:40px;height:40px;border:1px solid var(--line);border-radius:8px;background:#fff;
+    display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .rank-row .th img{width:100%;height:100%;object-fit:contain}
+  .rank-row .dl{font-weight:800;color:var(--pink-deep)}
 </style>
 </head>
 <body>
@@ -66,22 +81,74 @@
 </header>
 
 <main>
+  <div id="ranking" class="rank-box" hidden></div>
   <div class="save-bar" hidden id="savebar">
     <button id="save" disabled>保存（index.json を書き戻す）</button>
     <button id="reload" class="ghost">再読込</button>
     <span class="hint" id="dirty"></span>
   </div>
+  <div class="filterbar" id="filterbar" hidden></div>
   <div id="list"><p class="muted">接続すると一覧が出ます。</p></div>
 </main>
 
 <script>
 const OWNER="shirase-lab", REPO="shirase-lab.github.io", PATH="templates/index.json";
 const API=`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`;
+// DL 数カウンタ（アプリが atomic increment する Firebase RTDB。stamps/stickers admin と同じ）。
+const RTDB="https://shiraselab-17a8b-default-rtdb.firebaseio.com";
 // アプリと同じ候補タグ。
 const CANDIDATES=["定番","おねだり","指ハート","ピース","投げキッス","誕生日","初参戦","ラスト公演","卒業","メンカラ","ハート","キラキラ","シンプル","名前入り","お誘い"];
 
 let sha=null, data=null, dirty=false;
 const $=(id)=>document.getElementById(id);
+const LIST=()=>(Array.isArray(data&&data.templates)?data.templates:[]);
+
+// ---- グループ/地域フィルタ（index.json の filters レジストリから動的生成。アプリ §14.5 と同じ挙動）----
+const FACET_ALL="__all", FACET_NONE="__none";
+const facetSel={};            // facet.key -> 選択トークン（FACET_ALL/FACET_NONE/値name）
+let facetOptions=[];          // [{f, present:[値...]}]（該当アイテムが1件以上ある値だけ）
+const valTags=(v)=>(Array.isArray(v.tags)&&v.tags.length?v.tags:[v.name]); // タグ省略時は表示名をタグ扱い
+function buildFilterBar(){
+  const bar=$("filterbar"); if(!bar) return;
+  bar.innerHTML=""; facetOptions=[];
+  const axes=Array.isArray(data&&data.filters)?data.filters:[];
+  const arr=LIST();
+  axes.forEach(f=>{
+    if(!f||!f.key||!Array.isArray(f.values)) return;
+    const present=f.values.filter(v=>arr.some(it=>Array.isArray(it.tags)&&it.tags.some(t=>valTags(v).includes(t))));
+    if(!present.length && !f.none) return;   // 出せる値も none も無ければ軸ごと隠す
+    facetOptions.push({f,present});
+  });
+  facetOptions.forEach(({f,present})=>{       // 消えた選択値は「全て」に戻す
+    const s=facetSel[f.key];
+    const ok=s===FACET_ALL||(s===FACET_NONE&&f.none)||present.some(v=>v.name===s);
+    if(s===undefined||!ok) facetSel[f.key]=FACET_ALL;
+  });
+  if(!facetOptions.length){ bar.hidden=true; return; }
+  bar.hidden=false;
+  facetOptions.forEach(({f,present})=>{
+    const wrap=document.createElement("label");
+    let opts=`<option value="${FACET_ALL}">全て</option>`;
+    if(f.none) opts+=`<option value="${FACET_NONE}">${escapeHtml(f.none)}</option>`;
+    present.forEach(v=>{opts+=`<option value="${escapeHtml(v.name)}">${escapeHtml(v.name)}</option>`;});
+    wrap.innerHTML=`${escapeHtml(f.label||f.key)} <select data-facet="${escapeHtml(f.key)}">${opts}</select>`;
+    const sel=wrap.querySelector("select"); sel.value=facetSel[f.key]||FACET_ALL;
+    sel.onchange=()=>{ facetSel[f.key]=sel.value; render(); };
+    bar.appendChild(wrap);
+  });
+  const c=document.createElement("span"); c.className="fcount"; c.id="fcount"; bar.appendChild(c);
+}
+function itemPassesFilters(it){
+  const tags=Array.isArray(it.tags)?it.tags:[];
+  for(const {f} of facetOptions){
+    const s=facetSel[f.key]||FACET_ALL;
+    if(s===FACET_ALL) continue;
+    if(s===FACET_NONE){ if(f.values.some(v=>tags.some(t=>valTags(v).includes(t)))) return false; continue; }
+    const v=f.values.find(x=>x.name===s);
+    if(v && !tags.some(t=>valTags(v).includes(t))) return false;
+  }
+  return true;
+}
 
 function utf8ToB64(s){return btoa(String.fromCharCode.apply(null,new TextEncoder().encode(s)));}
 function b64ToUtf8(b){return new TextDecoder().decode(Uint8Array.from(atob(b.replace(/\n/g,'')),c=>c.charCodeAt(0)));}
@@ -98,16 +165,20 @@ async function load(){
   const j=await r.json();
   sha=j.sha;
   data=JSON.parse(b64ToUtf8(j.content));
+  buildFilterBar();
   render();
+  renderRanking();
   setStatus("ok","接続中。タグを編集して「保存」。");
   setDirty(false);
   return true;
 }
 
 function render(){
-  const list=$("list"); list.innerHTML="";
+  const list=$("list"); list.innerHTML=""; let shown=0;
   (data.templates||[]).forEach((t,idx)=>{
     if(!Array.isArray(t.tags)) t.tags=[];
+    if(!itemPassesFilters(t)) return;
+    shown++;
     const card=document.createElement("div"); card.className="card";
     const thumb=t.thumbUrl?`<div class="thumb"><img src="${t.thumbUrl}" alt=""></div>`:`<div class="thumb"></div>`;
     card.innerHTML=`${thumb}<div>
@@ -133,6 +204,8 @@ function render(){
   list.querySelectorAll('input[type=text][data-i]').forEach(inp=>inp.addEventListener("keydown",e=>{
     if(e.key==="Enter"){e.preventDefault();addTag(+inp.dataset.i,inp.value);inp.value="";}
   }));
+  const fc=$("fcount"); if(fc) fc.textContent=`${shown} / ${(data.templates||[]).length} 件`;
+  if(!shown){ list.innerHTML='<p class="muted">条件に合う項目がありません。</p>'; }
 }
 function drawTags(i){
   const box=$("list").querySelector(`.tags[data-i="${i}"]`); box.innerHTML="";
@@ -241,6 +314,7 @@ async function deleteTemplate(idx){
     data.templates.splice(idx,1);
     await putIndexJson(`chore(templates): remove ${t.id} from index.json`);
     await regenIndexHtml();
+    buildFilterBar();
     render();
     setStatus("ok","削除しました（GitHub Pages 反映まで ~1 分）。※タグページの完全整理は _gen_seo.py 再実行時。");
   }catch(e){
@@ -248,11 +322,32 @@ async function deleteTemplate(idx){
   }
 }
 
+/// アプリが RTDB に貯めた DL 数（`dlcounts/templates`）を読み、多い順に並べる。
+/// RTDB は公開読み取り。未設定/DLゼロ/失敗ならランキングは隠す（best-effort）。stamps admin と同型。
+async function renderRanking(){
+  const box=$("ranking"); if(!box) return;
+  try{
+    const r=await fetch(`${RTDB}/dlcounts/templates.json`,{cache:"no-store"});
+    if(!r.ok){ box.hidden=true; return; }
+    const counts=await r.json();
+    if(!counts){ box.hidden=true; return; }
+    const byId={}; (data.templates||[]).forEach(t=>byId[t.id]=t);
+    const rows=Object.entries(counts).map(([id,c])=>({id,c:(+c)||0,t:byId[id]})).sort((a,b)=>b.c-a.c);
+    box.innerHTML='<h2>📊 DLランキング</h2>'+(rows.map((row,i)=>{
+      const title=escapeHtml(row.t?(row.t.title||row.id):row.id);
+      const thumb=row.t&&row.t.thumbUrl?`<img src="${escapeHtml(row.t.thumbUrl)}" alt="">`:'';
+      return `<div class="rank-row"><div class="n">${i+1}</div><div class="th">${thumb}</div>`
+        +`<div>${title}</div><div class="dl">${row.c} DL</div></div>`;
+    }).join('') || '<p class="muted">まだDLがありません。</p>');
+    box.hidden=false;
+  }catch(e){ box.hidden=true; }
+}
+
 function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 
 function connected(v){
   $("logout").hidden=!v; $("connect").hidden=v; $("token").hidden=v; $("savebar").hidden=!v;
-  if(!v){$("list").innerHTML='<p class="muted">接続すると一覧が出ます。</p>';}
+  if(!v){$("list").innerHTML='<p class="muted">接続すると一覧が出ます。</p>';const fb=$("filterbar");if(fb){fb.hidden=true;fb.innerHTML="";}const rb=$("ranking");if(rb)rb.hidden=true;}
 }
 
 $("connect").onclick=async()=>{

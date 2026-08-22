@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>配信フォント 管理（DL数・絞り込み）</title>
+<style>
+  :root{
+    --pink:#FF5C8A; --pink-deep:#FF2E6E; --bg:#FFF0F6; --ink:#4A2E3D;
+    --ink-soft:#9A7886; --line:#ffd9e6; --white:#fff;
+    --body:system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--body);color:var(--ink);background:var(--bg);line-height:1.6}
+  header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);
+    padding:12px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  header h1{font-size:1.05rem;color:var(--pink-deep);margin-right:auto}
+  a.back{color:var(--ink-soft);text-decoration:none;font-size:.85rem}
+  #status{font-size:.85rem;color:var(--ink-soft);width:100%}
+  .dot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:6px}
+  .ok{background:#3ac07a}.bad{background:#e0555b}.idle{background:#cbb}
+  main{max-width:900px;margin:0 auto;padding:16px}
+  .muted{color:var(--ink-soft);font-size:.85rem}
+  .filterbar{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-bottom:12px}
+  .filterbar label{font-size:.85rem;color:var(--ink-soft);display:inline-flex;align-items:center;gap:5px}
+  .filterbar select{padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:#fff;
+    font-family:var(--body);font-size:.88rem;color:var(--ink);max-width:60vw}
+  .filterbar .fcount{margin-left:auto;font-size:.82rem;color:var(--ink-soft)}
+  .rank-box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px}
+  .rank-box h2{font-size:1rem;color:var(--pink-deep);margin-bottom:8px}
+  .rank-row{display:grid;grid-template-columns:28px 44px 1fr auto;gap:10px;align-items:center;
+    padding:6px 0;border-top:1px solid var(--line)}
+  .rank-row:first-of-type{border-top:0}
+  .rank-row .n{font-weight:800;color:var(--ink-soft);text-align:center}
+  .rank-row .th{width:44px;height:44px;border:1px solid var(--line);border-radius:8px;background:#fff;
+    display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .rank-row .th img{width:100%;height:100%;object-fit:contain}
+  .rank-row .dl{font-weight:800;color:var(--pink-deep)}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px;
+    display:grid;grid-template-columns:120px 1fr;gap:14px;align-items:center}
+  .card .thumb{width:120px;height:64px;background:#fff;border:1px solid var(--line);border-radius:10px;
+    overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .card .thumb img{width:100%;height:100%;object-fit:contain}
+  .card h2{font-size:1rem}
+  .card .id{font-size:.75rem;color:var(--ink-soft);margin-bottom:4px;word-break:break-all}
+</style>
+</head>
+<body>
+<header>
+  <h1>配信フォント 管理 — DL数・絞り込み</h1>
+  <a class="back" href="/">← サイトトップ</a>
+  <div id="status"><span class="dot idle"></span>読み込み中…</div>
+</header>
+
+<main>
+  <div id="ranking" class="rank-box" hidden></div>
+  <div class="filterbar" id="filterbar" hidden></div>
+  <div id="list"><p class="muted">読み込み中…</p></div>
+</main>
+
+<script>
+// 配信フォントの管理ダッシュボード（読み取り専用）。fonts/index.json（公開）を言語グループで読み、
+// 言語＋カテゴリで絞り込み、アプリが RTDB に貯めた DL 数（dlcounts/fonts）でランキング表示する。
+// フォントは tags を持たず言語グループ構造なので、テンプレ/スタンプ admin とは違い「絞り込み＝言語/カテゴリ」。
+// 編集対象（タグ等）が無いので PAT 接続は不要＝公開データを読むだけ。
+const RTDB="https://shiraselab-17a8b-default-rtdb.firebaseio.com";
+const INDEX="/fonts/index.json";
+const FACET_ALL="__all";
+const facetSel={lang:FACET_ALL,category:FACET_ALL};
+let fonts=[];  // フラット化した {id,name,category,preview,license,lang,label,...}
+const $=(id)=>document.getElementById(id);
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function setStatus(cls,html){$("status").innerHTML=`<span class="dot ${cls}"></span>${html}`;}
+
+async function load(){
+  setStatus("idle","読み込み中…");
+  try{
+    const r=await fetch(INDEX+`?_=${Date.now()}`,{cache:"no-store"});
+    if(!r.ok){ setStatus("bad","fonts/index.json の取得に失敗（HTTP "+r.status+"）。"); return; }
+    const d=await r.json();
+    fonts=[];
+    (d.groups||[]).forEach(g=>(g.fonts||[]).forEach(f=>fonts.push({...f,lang:g.lang,label:g.label})));
+    buildFilterBar(); render(); renderRanking();
+    setStatus("ok",`読み込み完了（全 ${fonts.length} フォント）。`);
+  }catch(e){ setStatus("bad","読み込み失敗。"+(e.message||e)); }
+}
+
+// 言語一覧（lang -> label、出現順）／カテゴリ一覧（distinct）。
+function langs(){ const m=new Map(); fonts.forEach(f=>{ if(f.lang!=null && !m.has(f.lang)) m.set(f.lang,f.label||f.lang); }); return [...m.entries()]; }
+function categories(){ return [...new Set(fonts.map(f=>f.category).filter(Boolean))]; }
+
+function buildFilterBar(){
+  const bar=$("filterbar"); if(!bar) return;
+  const ls=langs(), cs=categories();
+  let l=`言語 <select id="fLang"><option value="${FACET_ALL}">全て</option>`;
+  ls.forEach(([lang,label])=>{ l+=`<option value="${escapeHtml(lang)}">${escapeHtml(label)}</option>`; });
+  l+=`</select>`;
+  let c=`カテゴリ <select id="fCat"><option value="${FACET_ALL}">全て</option>`;
+  cs.forEach(cat=>{ c+=`<option value="${escapeHtml(cat)}">${escapeHtml(cat)}</option>`; });
+  c+=`</select>`;
+  const wl=document.createElement("label"); wl.innerHTML=l;
+  const wc=document.createElement("label"); wc.innerHTML=c;
+  const cnt=document.createElement("span"); cnt.className="fcount"; cnt.id="fcount";
+  bar.innerHTML=""; bar.appendChild(wl); bar.appendChild(wc); bar.appendChild(cnt);
+  bar.hidden=false;
+  $("fLang").value=facetSel.lang; $("fCat").value=facetSel.category;
+  $("fLang").onchange=e=>{ facetSel.lang=e.target.value; render(); };
+  $("fCat").onchange=e=>{ facetSel.category=e.target.value; render(); };
+}
+
+function passes(f){
+  if(facetSel.lang!==FACET_ALL && f.lang!==facetSel.lang) return false;
+  if(facetSel.category!==FACET_ALL && f.category!==facetSel.category) return false;
+  return true;
+}
+
+function render(){
+  const list=$("list"); list.innerHTML=""; let shown=0;
+  fonts.forEach(f=>{
+    if(!passes(f)) return; shown++;
+    const card=document.createElement("div"); card.className="card";
+    const th=f.preview?`<div class="thumb"><img src="/fonts/${escapeHtml(f.preview)}" alt=""></div>`:`<div class="thumb"></div>`;
+    const meta=[f.label||f.lang, f.category, f.license].filter(Boolean).map(escapeHtml).join(" ・ ");
+    card.innerHTML=`${th}<div>
+      <h2>${escapeHtml(f.name||f.id||"(no name)")}</h2>
+      <div class="id">${escapeHtml(f.id||"")}</div>
+      <div class="muted">${meta}</div>
+    </div>`;
+    list.appendChild(card);
+  });
+  const fc=$("fcount"); if(fc) fc.textContent=`${shown} / ${fonts.length} 件`;
+  if(!shown){ list.innerHTML='<p class="muted">条件に合う項目がありません。</p>'; }
+}
+
+/// アプリが RTDB に貯めた DL 数（dlcounts/fonts）を読み、多い順に並べる。
+/// RTDB は公開読み取り。未設定/DLゼロ/失敗ならランキングは隠す（best-effort）。
+async function renderRanking(){
+  const box=$("ranking"); if(!box) return;
+  try{
+    const r=await fetch(`${RTDB}/dlcounts/fonts.json`,{cache:"no-store"});
+    if(!r.ok){ box.hidden=true; return; }
+    const counts=await r.json();
+    if(!counts){ box.hidden=true; return; }
+    const byId={}; fonts.forEach(f=>byId[f.id]=f);
+    const rows=Object.entries(counts).map(([id,c])=>({id,c:(+c)||0,f:byId[id]})).sort((a,b)=>b.c-a.c);
+    box.innerHTML='<h2>📊 DLランキング</h2>'+(rows.map((row,i)=>{
+      const name=escapeHtml(row.f?(row.f.name||row.id):row.id);
+      const th=row.f&&row.f.preview?`<img src="/fonts/${escapeHtml(row.f.preview)}" alt="">`:'';
+      return `<div class="rank-row"><div class="n">${i+1}</div><div class="th">${th}</div>`
+        +`<div>${name}</div><div class="dl">${row.c} DL</div></div>`;
+    }).join('') || '<p class="muted">まだDLがありません。</p>');
+    box.hidden=false;
+  }catch(e){ box.hidden=true; }
+}
+
+load();
+</script>
+</body>
+</html>

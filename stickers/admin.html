@@ -59,6 +59,11 @@
     display:flex;align-items:center;justify-content:center;overflow:hidden}
   .rank-row .th img{width:100%;height:100%;object-fit:contain}
   .rank-row .dl{font-weight:800;color:var(--pink-deep)}
+  .filterbar{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-bottom:12px}
+  .filterbar label{font-size:.85rem;color:var(--ink-soft);display:inline-flex;align-items:center;gap:5px}
+  .filterbar select{padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:#fff;
+    font-family:var(--body);font-size:.88rem;color:var(--ink);max-width:60vw}
+  .filterbar .fcount{margin-left:auto;font-size:.82rem;color:var(--ink-soft)}
 </style>
 </head>
 <body>
@@ -78,6 +83,7 @@
     <button id="reload" class="ghost">再読込</button>
     <span class="hint" id="dirty"></span>
   </div>
+  <div class="filterbar" id="filterbar" hidden></div>
   <div id="list"><p class="muted">接続すると一覧が出ます。</p></div>
 </main>
 
@@ -94,6 +100,54 @@ const CANDIDATES=["定番","ハート","キラキラ","リボン","王冠","テ�
 let sha=null, data=null, dirty=false;
 const $=(id)=>document.getElementById(id);
 const items=()=>{ if(!Array.isArray(data[LISTKEY])) data[LISTKEY]=[]; return data[LISTKEY]; };
+const LIST=()=>items();
+
+// ---- グループ/地域フィルタ（index.json の filters レジストリから動的生成。アプリ §14.5 と同じ挙動）----
+const FACET_ALL="__all", FACET_NONE="__none";
+const facetSel={};            // facet.key -> 選択トークン（FACET_ALL/FACET_NONE/値name）
+let facetOptions=[];          // [{f, present:[値...]}]（該当アイテムが1件以上ある値だけ）
+const valTags=(v)=>(Array.isArray(v.tags)&&v.tags.length?v.tags:[v.name]); // タグ省略時は表示名をタグ扱い
+function buildFilterBar(){
+  const bar=$("filterbar"); if(!bar) return;
+  bar.innerHTML=""; facetOptions=[];
+  const axes=Array.isArray(data&&data.filters)?data.filters:[];
+  const arr=LIST();
+  axes.forEach(f=>{
+    if(!f||!f.key||!Array.isArray(f.values)) return;
+    const present=f.values.filter(v=>arr.some(it=>Array.isArray(it.tags)&&it.tags.some(t=>valTags(v).includes(t))));
+    if(!present.length && !f.none) return;   // 出せる値も none も無ければ軸ごと隠す
+    facetOptions.push({f,present});
+  });
+  facetOptions.forEach(({f,present})=>{       // 消えた選択値は「全て」に戻す
+    const s=facetSel[f.key];
+    const ok=s===FACET_ALL||(s===FACET_NONE&&f.none)||present.some(v=>v.name===s);
+    if(s===undefined||!ok) facetSel[f.key]=FACET_ALL;
+  });
+  if(!facetOptions.length){ bar.hidden=true; return; }
+  bar.hidden=false;
+  facetOptions.forEach(({f,present})=>{
+    const wrap=document.createElement("label");
+    let opts=`<option value="${FACET_ALL}">全て</option>`;
+    if(f.none) opts+=`<option value="${FACET_NONE}">${escapeHtml(f.none)}</option>`;
+    present.forEach(v=>{opts+=`<option value="${escapeHtml(v.name)}">${escapeHtml(v.name)}</option>`;});
+    wrap.innerHTML=`${escapeHtml(f.label||f.key)} <select data-facet="${escapeHtml(f.key)}">${opts}</select>`;
+    const sel=wrap.querySelector("select"); sel.value=facetSel[f.key]||FACET_ALL;
+    sel.onchange=()=>{ facetSel[f.key]=sel.value; render(); };
+    bar.appendChild(wrap);
+  });
+  const c=document.createElement("span"); c.className="fcount"; c.id="fcount"; bar.appendChild(c);
+}
+function itemPassesFilters(it){
+  const tags=Array.isArray(it.tags)?it.tags:[];
+  for(const {f} of facetOptions){
+    const s=facetSel[f.key]||FACET_ALL;
+    if(s===FACET_ALL) continue;
+    if(s===FACET_NONE){ if(f.values.some(v=>tags.some(t=>valTags(v).includes(t)))) return false; continue; }
+    const v=f.values.find(x=>x.name===s);
+    if(v && !tags.some(t=>valTags(v).includes(t))) return false;
+  }
+  return true;
+}
 
 function utf8ToB64(s){return btoa(String.fromCharCode.apply(null,new TextEncoder().encode(s)));}
 function b64ToUtf8(b){return new TextDecoder().decode(Uint8Array.from(atob(b.replace(/\n/g,'')),c=>c.charCodeAt(0)));}
@@ -111,6 +165,7 @@ async function load(){
   const j=await r.json();
   sha=j.sha;
   data=JSON.parse(b64ToUtf8(j.content));
+  buildFilterBar();
   render();
   renderRanking();
   setStatus("ok","接続中。タグを編集して「保存」。");
@@ -141,9 +196,11 @@ async function renderRanking(){
 }
 
 function render(){
-  const list=$("list"); list.innerHTML="";
+  const list=$("list"); list.innerHTML=""; let shown=0;
   items().forEach((t,idx)=>{
     if(!Array.isArray(t.tags)) t.tags=[];
+    if(!itemPassesFilters(t)) return;
+    shown++;
     const card=document.createElement("div"); card.className="card";
     const thumb=t.thumbUrl?`<div class="thumb"><img src="${t.thumbUrl}" alt=""></div>`:`<div class="thumb"></div>`;
     card.innerHTML=`${thumb}<div>
@@ -164,6 +221,8 @@ function render(){
   list.querySelectorAll('input[type=text][data-i]').forEach(inp=>inp.addEventListener("keydown",e=>{
     if(e.key==="Enter"){e.preventDefault();addTag(+inp.dataset.i,inp.value);inp.value="";}
   }));
+  const fc=$("fcount"); if(fc) fc.textContent=`${shown} / ${items().length} 件`;
+  if(!shown){ list.innerHTML='<p class="muted">条件に合う項目がありません。</p>'; }
 }
 function drawTags(i){
   const box=$("list").querySelector(`.tags[data-i="${i}"]`); box.innerHTML="";
@@ -208,7 +267,7 @@ function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":
 
 function connected(v){
   $("logout").hidden=!v; $("connect").hidden=v; $("token").hidden=v; $("savebar").hidden=!v;
-  if(!v){$("list").innerHTML='<p class="muted">接続すると一覧が出ます。</p>';}
+  if(!v){$("list").innerHTML='<p class="muted">接続すると一覧が出ます。</p>';const fb=$("filterbar");if(fb){fb.hidden=true;fb.innerHTML="";}}
 }
 
 $("connect").onclick=async()=>{
