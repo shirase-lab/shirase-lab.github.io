@@ -77,7 +77,11 @@
           "name": "関西",
           "tags": [
             "関西",
-            "関西弁"
+            "関西弁",
+            "大阪",
+            "京都",
+            "神戸",
+            "兵庫"
           ]
         },
         {
@@ -1310,39 +1314,80 @@
     },
     {
       "id": "tpl-2d2e3cde4f",
-      "title": "うちわ9e2291f7",
+      "title": "ほんま大好き ミッチー",
       "thumbUrl": "thumb/tpl-2d2e3cde4f.png",
       "fileUrl": "tpl-2d2e3cde4f.uchiwa",
       "updatedAt": "2026-08-23",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "なにわ男子",
+        "道枝駿佑",
+        "ミッチー",
+        "みっちー",
+        "関西弁",
+        "名前入り",
+        "大好き",
+        "大阪城ホール",
+        "大阪",
+        "関西"
+      ]
     },
     {
       "id": "tpl-91adeb97e6",
-      "title": "うちわ3e800b15",
+      "title": "おかえり♡なにわ男子♡",
       "thumbUrl": "thumb/tpl-91adeb97e6.png",
       "fileUrl": "tpl-91adeb97e6.uchiwa",
       "updatedAt": "2026-08-23",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "なにわ男子",
+        "おかえり",
+        "ハート",
+        "大阪城ホール",
+        "大阪",
+        "関西"
+      ]
     },
     {
       "id": "tpl-03b8decaae",
-      "title": "うちわ3ba9c881",
+      "title": "めっちゃ好きやねん ミッチー",
       "thumbUrl": "thumb/tpl-03b8decaae.png",
       "fileUrl": "tpl-03b8decaae.uchiwa",
       "updatedAt": "2026-08-23",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "なにわ男子",
+        "道枝駿佑",
+        "ミッチー",
+        "みっちー",
+        "関西弁",
+        "名前入り",
+        "好き",
+        "大阪城ホール",
+        "大阪",
+        "関西"
+      ]
     },
     {
       "id": "tpl-5c8df08f2d",
-      "title": "うちわ7c428d0b",
+      "title": "なにわ男子 5周年おめでとう",
       "thumbUrl": "thumb/tpl-5c8df08f2d.png",
       "fileUrl": "tpl-5c8df08f2d.uchiwa",
       "updatedAt": "2026-08-23",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "なにわ男子",
+        "5周年",
+        "おめでとう",
+        "お祝い",
+        "大阪城ホール",
+        "大阪",
+        "関西"
+      ]
     }
   ]
 }
