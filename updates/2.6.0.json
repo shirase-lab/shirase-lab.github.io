@@ -1,6 +1,6 @@
 {
   "version": "2.6.0",
-  "date": "2026-08-22",
+  "date": "2026-08-25",
   "title": "アップデート内容",
   "highlights": [
     "ぷくぷく文字を立体的に作り直しました（断面が半円のふっくらした形になり、光の当たり方も自然になりました）",
@@ -13,6 +13,7 @@
     "カレンダーでグループごとの表示・詳細を見られるようにし、フォント一覧を入力中の文字の言語で絞り込むようにしました",
     "配信スタンプ・ステッカーをグループや地域で絞り込めるようにし、左右にめくって選べるようにしました",
     "起動を速くし、安定性を高めました",
+    "英語・韓国語・中国語の表示を改善しました（更新内容・配信ギャラリーの絞り込み・フォント一覧を各言語に対応。簡体字なのに繁体字で表示されていた問題も修正）",
     "うちわパネルを連打したときや読み込み直後に固まることがある問題を含め、各種不具合を修正しました"
   ],
   "i18n": {
@@ -29,6 +30,7 @@
         "The calendar now shows which group each live belongs to, with details, and the font list filters by the language you are typing",
         "Distributed stamps and stickers can be filtered by group or region, and browsed by swiping left and right",
         "Faster startup and improved stability",
+        "Improved English, Korean and Chinese display (release notes, gallery filters and the font list are now localized; Simplified Chinese no longer shows Traditional characters)",
         "Fixed various issues, including freezes when tapping the fan panel repeatedly or right after loading"
       ]
     },
@@ -45,6 +47,7 @@
         "캘린더에서 그룹별 표시·상세를 볼 수 있게 하고, 폰트 목록을 입력 중인 문자의 언어로 걸러내게 했어요",
         "배포 스탬프·스티커를 그룹이나 지역으로 걸러내고 좌우로 넘겨 고를 수 있게 했어요",
         "실행 속도를 높이고 안정성을 개선했어요",
+        "영어・한국어・중국어 표시를 개선했어요(업데이트 내용・배포 갤러리의 필터・폰트 목록을 각 언어에 대응. 간체자인데 번체자로 나오던 문제도 수정)",
         "응원 부채 패널을 연속해서 누르거나 불러온 직후에 멈추는 문제를 포함해 각종 버그를 수정했어요"
       ]
     },
@@ -61,6 +64,7 @@
         "日历可以看到每场演出属于哪个团体及详情，字体列表也会按正在输入的文字语言筛选",
         "在线贴纸与贴图可按团体或地区筛选，并可左右滑动浏览",
         "启动更快，稳定性更好",
+        "改善了英语・韩语・中文的显示（更新内容、在线素材的筛选、字体列表都已本地化；简体中文不再显示繁体字）",
         "修复了连续点击应援扇面板或刚载入时卡顿等各种问题"
       ]
     },
@@ -77,6 +81,7 @@
         "行事曆可以看到每場演出屬於哪個團體及詳情，字型清單也會依正在輸入的文字語言篩選",
         "線上貼紙與貼圖可依團體或地區篩選，並可左右滑動瀏覽",
         "啟動更快，穩定性更好",
+        "改善了英文・韓文・中文的顯示（更新內容、線上素材的篩選、字型清單皆已在地化；簡體中文不再顯示繁體字）",
         "修正了連續點擊應援扇面板或剛載入時卡頓等各種問題"
       ]
     }
