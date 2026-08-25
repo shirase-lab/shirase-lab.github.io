@@ -25,7 +25,13 @@
           "name": "なにわ男子",
           "tags": [
             "なにわ男子"
-          ]
+          ],
+          "nameI18n": {
+            "en": "Naniwa Danshi",
+            "ko": "나니와단시",
+            "zh": "浪花男子",
+            "zh_Hant": "浪花男子"
+          }
         },
         {
           "name": "Hey! Say! JUMP",
@@ -37,14 +43,26 @@
           "name": "日向坂46",
           "tags": [
             "日向坂46"
-          ]
+          ],
+          "nameI18n": {
+            "en": "Hinatazaka46",
+            "ko": "히나타자카46",
+            "zh": "日向坂46",
+            "zh_Hant": "日向坂46"
+          }
         },
         {
           "name": "タイムレス",
           "tags": [
             "タイムレス",
             "timelesz"
-          ]
+          ],
+          "nameI18n": {
+            "en": "TIMELESZ",
+            "ko": "타임리스",
+            "zh": "timelesz",
+            "zh_Hant": "timelesz"
+          }
         },
         {
           "name": "KEY TO LIT",
@@ -53,7 +71,19 @@
             "キテレツ"
           ]
         }
-      ]
+      ],
+      "labelI18n": {
+        "en": "Group",
+        "ko": "그룹",
+        "zh": "团体",
+        "zh_Hant": "團體"
+      },
+      "noneI18n": {
+        "en": "Generic",
+        "ko": "범용",
+        "zh": "通用",
+        "zh_Hant": "通用"
+      }
     },
     {
       "key": "region",
@@ -65,13 +95,25 @@
             "宮城",
             "仙台",
             "東北"
-          ]
+          ],
+          "nameI18n": {
+            "en": "Miyagi & Tohoku",
+            "ko": "미야기・도호쿠",
+            "zh": "宫城・东北",
+            "zh_Hant": "宮城・東北"
+          }
         },
         {
           "name": "静岡",
           "tags": [
             "静岡"
-          ]
+          ],
+          "nameI18n": {
+            "en": "Shizuoka",
+            "ko": "시즈오카",
+            "zh": "静冈",
+            "zh_Hant": "靜岡"
+          }
         },
         {
           "name": "関西",
@@ -82,16 +124,34 @@
             "京都",
             "神戸",
             "兵庫"
-          ]
+          ],
+          "nameI18n": {
+            "en": "Kansai",
+            "ko": "간사이",
+            "zh": "关西",
+            "zh_Hant": "關西"
+          }
         },
         {
           "name": "福岡",
           "tags": [
             "福岡",
             "博多"
-          ]
+          ],
+          "nameI18n": {
+            "en": "Fukuoka",
+            "ko": "후쿠오카",
+            "zh": "福冈",
+            "zh_Hant": "福岡"
+          }
         }
-      ]
+      ],
+      "labelI18n": {
+        "en": "Region",
+        "ko": "지역",
+        "zh": "地区",
+        "zh_Hant": "地區"
+      }
     }
   ],
   "templates": [

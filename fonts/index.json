@@ -113,7 +113,13 @@
           "download": "files/lanobe_pop_v2.otf",
           "licenseFile": "files/lanobe_pop_v2.LICENSE.txt"
         }
-      ]
+      ],
+      "labelI18n": {
+        "en": "Japanese",
+        "ko": "일본어",
+        "zh": "日语",
+        "zh_Hant": "日文"
+      }
     },
     {
       "lang": "en",
@@ -179,7 +185,13 @@
           "download": "files/nosifer.ttf",
           "licenseFile": "files/nosifer.LICENSE.txt"
         }
-      ]
+      ],
+      "labelI18n": {
+        "en": "English",
+        "ko": "영어",
+        "zh": "英语",
+        "zh_Hant": "英文"
+      }
     },
     {
       "lang": "ko",
@@ -259,7 +271,13 @@
           "url": "https://www.andong.go.kr/portal/contents.do?mId=0301030500",
           "license": "KOGL Type1（公共ヌリ第1類型・出典表示）"
         }
-      ]
+      ],
+      "labelI18n": {
+        "en": "Korean",
+        "ko": "한국어",
+        "zh": "韩语",
+        "zh_Hant": "韓文"
+      }
     },
     {
       "lang": "zh",
@@ -285,7 +303,99 @@
           "download": "files/ma_shan_zheng.ttf",
           "licenseFile": "files/ma_shan_zheng.LICENSE.txt"
         }
-      ]
+      ],
+      "labelI18n": {
+        "en": "Chinese",
+        "ko": "중국어",
+        "zh": "中文",
+        "zh_Hant": "中文"
+      }
     }
-  ]
+  ],
+  "categoryI18n": {
+    "コミック": {
+      "en": "Comic",
+      "ko": "코믹",
+      "zh": "漫画风",
+      "zh_Hant": "漫畫風"
+    },
+    "ポップ": {
+      "en": "Pop",
+      "ko": "팝",
+      "zh": "活泼",
+      "zh_Hant": "活潑"
+    },
+    "変わり種": {
+      "en": "Novelty",
+      "ko": "이색",
+      "zh": "特色",
+      "zh_Hant": "特色"
+    },
+    "怖い系・変わり種": {
+      "en": "Spooky · novelty",
+      "ko": "공포・이색",
+      "zh": "恐怖・特色",
+      "zh_Hant": "恐怖・特色"
+    },
+    "手書き": {
+      "en": "Handwritten",
+      "ko": "손글씨",
+      "zh": "手写",
+      "zh_Hant": "手寫"
+    },
+    "手書きポップ": {
+      "en": "Handwritten pop",
+      "ko": "손글씨 팝",
+      "zh": "手写活泼",
+      "zh_Hant": "手寫活潑"
+    },
+    "手書き・キャラ": {
+      "en": "Handwritten · character",
+      "ko": "손글씨・캐릭터",
+      "zh": "手写・角色",
+      "zh_Hant": "手寫・角色"
+    },
+    "毛筆・変わり種": {
+      "en": "Brush · novelty",
+      "ko": "붓글씨・이색",
+      "zh": "毛笔・特色",
+      "zh_Hant": "毛筆・特色"
+    },
+    "立体・変わり種": {
+      "en": "3D · novelty",
+      "ko": "입체・이색",
+      "zh": "立体・特色",
+      "zh_Hant": "立體・特色"
+    },
+    "血だれ・変わり種": {
+      "en": "Dripping blood · novelty",
+      "ko": "피흘림・이색",
+      "zh": "滴血・特色",
+      "zh_Hant": "滴血・特色"
+    },
+    "高視認": {
+      "en": "High legibility",
+      "ko": "높은 가독성",
+      "zh": "高辨识",
+      "zh_Hant": "高辨識"
+    },
+    "高視認・丸ゴ": {
+      "en": "High legibility · rounded",
+      "ko": "높은 가독성・둥근고딕",
+      "zh": "高辨识・圆体",
+      "zh_Hant": "高辨識・圓體"
+    },
+    "高視認・丸文字": {
+      "en": "High legibility · bubble",
+      "ko": "높은 가독성・동글동글",
+      "zh": "高辨识・圆润字",
+      "zh_Hant": "高辨識・圓潤字"
+    },
+    "高視認・看板": {
+      "en": "High legibility · signage",
+      "ko": "높은 가독성・간판체",
+      "zh": "高辨识・招牌体",
+      "zh_Hant": "高辨識・招牌體"
+    }
+  }
 }
