@@ -14,5 +14,71 @@
     "配信スタンプ・ステッカーをグループや地域で絞り込めるようにし、左右にめくって選べるようにしました",
     "起動を速くし、安定性を高めました",
     "うちわパネルを連打したときや読み込み直後に固まることがある問題を含め、各種不具合を修正しました"
-  ]
+  ],
+  "i18n": {
+    "en": {
+      "title": "What's New",
+      "highlights": [
+        "Puffy text was rebuilt in 3D (a rounded, half-circle cross-section with more natural lighting)",
+        "The “None” fan template is now “Board” (a free-form mount, handy for cue-card boards)",
+        "Print presets are clearer: “Single sheet” / “Two-sheet split”, chosen from paper-layout pictures",
+        "Recommended fonts can be added with an “Install” button (no more downloading and importing by hand)",
+        "Added Korean typefaces to the recommended fonts, and you can filter them by language",
+        "The “Font settings” button is bigger and easier to spot when text is selected",
+        "You can send feedback from Settings (anonymous request form)",
+        "The calendar now shows which group each live belongs to, with details, and the font list filters by the language you are typing",
+        "Distributed stamps and stickers can be filtered by group or region, and browsed by swiping left and right",
+        "Faster startup and improved stability",
+        "Fixed various issues, including freezes when tapping the fan panel repeatedly or right after loading"
+      ]
+    },
+    "ko": {
+      "title": "업데이트 내용",
+      "highlights": [
+        "‘볼록’ 글자를 입체적으로 다시 만들었어요(단면이 반원의 통통한 형태가 되고 빛의 방향도 자연스러워졌어요)",
+        "응원 부채 템플릿의 ‘없음’을 ‘보드’로 바꿨어요(큐카드 보드로도 쓸 수 있는 자유로운 받침)",
+        "인쇄 프리셋을 알기 쉽게 바꿨어요(“1장 인쇄” “좌우 분할 인쇄”을 용지 레이아웃 그림으로 선택)",
+        "추천 폰트를 “설치” 버튼으로 바로 추가할 수 있어요(배포 사이트에서 직접 받아 가져올 필요가 없어졌어요)",
+        "추천 폰트에 한글 서체를 추가하고 언어로 걸러낼 수 있게 했어요",
+        "글자를 선택했을 때의 “폰트 설정” 버튼을 크고 보기 쉽게 했어요",
+        "설정에서 “요청·의견”을 보낼 수 있게 됐어요(익명 요청 폼)",
+        "캘린더에서 그룹별 표시·상세를 볼 수 있게 하고, 폰트 목록을 입력 중인 문자의 언어로 걸러내게 했어요",
+        "배포 스탬프·스티커를 그룹이나 지역으로 걸러내고 좌우로 넘겨 고를 수 있게 했어요",
+        "실행 속도를 높이고 안정성을 개선했어요",
+        "응원 부채 패널을 연속해서 누르거나 불러온 직후에 멈추는 문제를 포함해 각종 버그를 수정했어요"
+      ]
+    },
+    "zh": {
+      "title": "更新内容",
+      "highlights": [
+        "重做了「立体」文字（截面变成半圆的饱满形状，光线也更自然）",
+        "应援扇模板的「无」改为「板」（没有外框的自由底纸，也能当提示板使用）",
+        "打印预设更好懂了（「单张打印」「左右分割打印」，可以看着版面图选）",
+        "推荐字体可以直接用「安装」按钮添加（不用再去发布网站手动导入）",
+        "推荐字体新增韩文字体，并可按语言筛选",
+        "选中文字时的「字体设置」按钮变大、更显眼",
+        "可以从设置发送「意见反馈」了（匿名表单）",
+        "日历可以看到每场演出属于哪个团体及详情，字体列表也会按正在输入的文字语言筛选",
+        "在线贴纸与贴图可按团体或地区筛选，并可左右滑动浏览",
+        "启动更快，稳定性更好",
+        "修复了连续点击应援扇面板或刚载入时卡顿等各种问题"
+      ]
+    },
+    "zh_Hant": {
+      "title": "更新內容",
+      "highlights": [
+        "重做了「立體」文字（截面變成半圓的飽滿形狀，光線也更自然）",
+        "應援扇範本的「無」改為「板」（沒有外框的自由底紙，也能當提示板使用）",
+        "列印預設更好懂了（「單張列印」「左右分割列印」，可以看著版面圖選）",
+        "推薦字型可以直接用「安裝」按鈕新增（不用再到發佈網站手動匯入）",
+        "推薦字型新增韓文字型，並可依語言篩選",
+        "選取文字時的「字型設定」按鈕變大、更顯眼",
+        "可以從設定傳送「意見回饋」了（匿名表單）",
+        "行事曆可以看到每場演出屬於哪個團體及詳情，字型清單也會依正在輸入的文字語言篩選",
+        "線上貼紙與貼圖可依團體或地區篩選，並可左右滑動瀏覽",
+        "啟動更快，穩定性更好",
+        "修正了連續點擊應援扇面板或剛載入時卡頓等各種問題"
+      ]
+    }
+  }
 }
