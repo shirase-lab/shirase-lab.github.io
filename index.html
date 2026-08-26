@@ -785,6 +785,9 @@
       var q = null;
       var m = location.search.match(/[?&]lang=([^&]+)/);
       if(m){ q = decodeURIComponent(m[1]).toLowerCase(); }
+      /* 検索エンジン等のクローラは、明示指定(?lang=)が無ければ正本の日本語をインデックスさせる
+         （Googlebot は en-US で来るため、放置すると検索結果が英語版になる）。 */
+      if(!q && /bot|crawl|spider|slurp|googlebot|bingbot|duckduckbot|baiduspider|yandex|facebookexternalhit|twitterbot|slackbot|telegrambot|whatsapp|embedly|pinterest/i.test(navigator.userAgent || '')) return 'ja';
       var cands = q ? [q] : (navigator.languages || [navigator.language || 'ja']);
       for(var i=0;i<cands.length;i++){
         var c = (cands[i] || '').toLowerCase();
