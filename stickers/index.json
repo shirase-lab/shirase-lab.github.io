@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-23",
+  "updatedAt": "2026-08-26",
   "note": "うちわつくーる 配信ステッカーのマニフェスト。作者制作のみ・投稿機能なし。thumbUrl / fileUrl は index.json からの相対 URL。",
   "filters": [
     {
@@ -193,6 +193,19 @@
             "ko": "오키나와",
             "zh": "冲绳",
             "zh_Hant": "沖繩"
+          }
+        },
+        {
+          "name": "海外",
+          "tags": [
+            "海外",
+            "ペルー"
+          ],
+          "nameI18n": {
+            "en": "Overseas",
+            "ko": "해외",
+            "zh": "海外",
+            "zh_Hant": "海外"
           }
         }
       ],
@@ -1114,6 +1127,22 @@
         "大阪",
         "関西",
         "ご当地"
+      ]
+    },
+    {
+      "id": "sticker_063",
+      "title": "マチュピチュ",
+      "thumbUrl": "thumb/sticker_063.png",
+      "fileUrl": "sticker_063.png",
+      "updatedAt": "2026-08-26",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "マチュピチュ",
+        "名所",
+        "世界遺産",
+        "遺跡",
+        "ペルー",
+        "海外"
       ]
     }
   ]
