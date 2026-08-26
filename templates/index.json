@@ -70,6 +70,13 @@
             "KEY TO LIT",
             "キテレツ"
           ]
+        },
+        {
+          "name": "Travis Japan",
+          "tags": [
+            "Travis Japan",
+            "トラジャ"
+          ]
         }
       ],
       "labelI18n": {
@@ -1451,7 +1458,15 @@
     },
     {
       "id": "tpl-ff6e076c70",
-      "title": "うちわb384c35d",
+      "title": "宮近海斗",
+      "tags": [
+        "Travis Japan",
+        "トラジャ",
+        "宮近海斗",
+        "ちゃか",
+        "チャカ",
+        "名前入り"
+      ],
       "thumbUrl": "thumb/tpl-ff6e076c70.png",
       "fileUrl": "tpl-ff6e076c70.uchiwa",
       "updatedAt": "2026-08-26",
@@ -1460,7 +1475,15 @@
     },
     {
       "id": "tpl-87ed9189bc",
-      "title": "うちわbdce76a9",
+      "title": "中村海人",
+      "tags": [
+        "Travis Japan",
+        "トラジャ",
+        "中村海人",
+        "ウミ",
+        "うみ",
+        "名前入り"
+      ],
       "thumbUrl": "thumb/tpl-87ed9189bc.png",
       "fileUrl": "tpl-87ed9189bc.uchiwa",
       "updatedAt": "2026-08-26",
@@ -1469,7 +1492,15 @@
     },
     {
       "id": "tpl-3af67772f0",
-      "title": "うちわ957dc00b",
+      "title": "松倉海斗",
+      "tags": [
+        "Travis Japan",
+        "トラジャ",
+        "松倉海斗",
+        "マチュ",
+        "まつく",
+        "名前入り"
+      ],
       "thumbUrl": "thumb/tpl-3af67772f0.png",
       "fileUrl": "tpl-3af67772f0.uchiwa",
       "updatedAt": "2026-08-26",
@@ -1478,7 +1509,14 @@
     },
     {
       "id": "tpl-1be219f14c",
-      "title": "うちわ95c5f4fa",
+      "title": "吉澤閑也",
+      "tags": [
+        "Travis Japan",
+        "トラジャ",
+        "吉澤閑也",
+        "しずや",
+        "名前入り"
+      ],
       "thumbUrl": "thumb/tpl-1be219f14c.png",
       "fileUrl": "tpl-1be219f14c.uchiwa",
       "updatedAt": "2026-08-26",
@@ -1487,7 +1525,14 @@
     },
     {
       "id": "tpl-e99cc9afd9",
-      "title": "うちわ359614bb",
+      "title": "松田元太",
+      "tags": [
+        "Travis Japan",
+        "トラジャ",
+        "松田元太",
+        "げんた",
+        "名前入り"
+      ],
       "thumbUrl": "thumb/tpl-e99cc9afd9.png",
       "fileUrl": "tpl-e99cc9afd9.uchiwa",
       "updatedAt": "2026-08-26",
@@ -1496,7 +1541,15 @@
     },
     {
       "id": "tpl-f3025ee4e4",
-      "title": "うちわbbd6f6ed",
+      "title": "七五三掛龍也",
+      "tags": [
+        "Travis Japan",
+        "トラジャ",
+        "七五三掛龍也",
+        "しめ",
+        "りゅうや",
+        "名前入り"
+      ],
       "thumbUrl": "thumb/tpl-f3025ee4e4.png",
       "fileUrl": "tpl-f3025ee4e4.uchiwa",
       "updatedAt": "2026-08-26",
@@ -1505,7 +1558,15 @@
     },
     {
       "id": "tpl-b1c3f513c8",
-      "title": "うちわ15ae9559",
+      "title": "川島如恵留",
+      "tags": [
+        "Travis Japan",
+        "トラジャ",
+        "川島如恵留",
+        "のえる",
+        "ノエ",
+        "名前入り"
+      ],
       "thumbUrl": "thumb/tpl-b1c3f513c8.png",
       "fileUrl": "tpl-b1c3f513c8.uchiwa",
       "updatedAt": "2026-08-26",
@@ -1514,7 +1575,19 @@
     },
     {
       "id": "tpl-2c467d3514",
-      "title": "うちわf03eed6c",
+      "title": "トリプルカイト",
+      "tags": [
+        "Travis Japan",
+        "トラジャ",
+        "トリプルカイト",
+        "宮近海斗",
+        "中村海人",
+        "松倉海斗",
+        "ちゃか",
+        "ウミ",
+        "マチュ",
+        "名前入り"
+      ],
       "thumbUrl": "thumb/tpl-2c467d3514.png",
       "fileUrl": "tpl-2c467d3514.uchiwa",
       "updatedAt": "2026-08-26",
@@ -1523,7 +1596,17 @@
     },
     {
       "id": "tpl-db90edf3e7",
-      "title": "うちわ5c2fcd95",
+      "title": "ちゃかちゃん TJポーズして",
+      "tags": [
+        "Travis Japan",
+        "トラジャ",
+        "宮近海斗",
+        "ちゃか",
+        "ちゃかちゃん",
+        "TJポーズ",
+        "ファンサ",
+        "おねだり"
+      ],
       "thumbUrl": "thumb/tpl-db90edf3e7.png",
       "fileUrl": "tpl-db90edf3e7.uchiwa",
       "updatedAt": "2026-08-26",
