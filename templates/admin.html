@@ -77,7 +77,7 @@
   <input id="token" type="password" placeholder="GitHub PAT（contents:write）" autocomplete="off">
   <button id="connect">接続</button>
   <button id="logout" class="ghost" hidden>ログアウト</button>
-  <div id="status"><span class="dot idle"></span>未接続。fine-grained PAT（<code>shirase-lab.github.io</code> の Contents: Read and write）を入れて「接続」。</div>
+  <div id="status"><span class="dot idle"></span>未接続。fine-grained PAT（<code>oshimite.jp</code> の Contents: Read and write）を入れて「接続」。</div>
 </header>
 
 <main>
@@ -92,7 +92,7 @@
 </main>
 
 <script>
-const OWNER="shirase-lab", REPO="shirase-lab.github.io", PATH="templates/index.json";
+const OWNER="shirase-lab", REPO="oshimite.jp", PATH="templates/index.json";
 const API=`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`;
 // DL 数カウンタ（アプリが atomic increment する Firebase RTDB。stamps/stickers admin と同じ）。
 const RTDB="https://shiraselab-17a8b-default-rtdb.firebaseio.com";

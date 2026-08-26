@@ -73,7 +73,7 @@
   <input id="token" type="password" placeholder="GitHub PAT（contents:write）" autocomplete="off">
   <button id="connect">接続</button>
   <button id="logout" class="ghost" hidden>ログアウト</button>
-  <div id="status"><span class="dot idle"></span>未接続。fine-grained PAT（<code>shirase-lab.github.io</code> の Contents: Read and write）を入れて「接続」。</div>
+  <div id="status"><span class="dot idle"></span>未接続。fine-grained PAT（<code>oshimite.jp</code> の Contents: Read and write）を入れて「接続」。</div>
 </header>
 
 <main>
@@ -90,7 +90,7 @@
 <script>
 // 配信ステッカーの index.json をブラウザからタグ編集する管理画面（stamps/admin.html と同型）。
 // タグ区切りはカンマ/読点のみ（スペースで割らない＝§14.1）。
-const OWNER="shirase-lab", REPO="shirase-lab.github.io", LISTKEY="stickers", PATH=`${LISTKEY}/index.json`;
+const OWNER="shirase-lab", REPO="oshimite.jp", LISTKEY="stickers", PATH=`${LISTKEY}/index.json`;
 const API=`https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`;
 // DL 数カウンタ（アプリが atomic increment する Firebase RTDB）。地域が違う場合は要差し替え。
 const RTDB="https://shiraselab-17a8b-default-rtdb.firebaseio.com";

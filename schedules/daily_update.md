@@ -9,7 +9,7 @@
   イベントだけ」を `found.json` に完全な形で出す。git の commit/push は呼び出し元ランナーが行うので、
   あなたは **`schedules/live.json`（暗号文）を更新するところまで**で止めてください。
 
-作業ディレクトリはこのリポジトリ（`shirase-lab.github.io`）の直下。`<TEMP>` は OS の
+作業ディレクトリはこのリポジトリ（`oshimite.jp`）の直下。`<TEMP>` は OS の
 一時ディレクトリ（リポジトリ外）。
 
 ## 手順
@@ -79,7 +79,7 @@
    ```
    bash schedules/crypt.sh enc <TEMP>/live.new.json schedules/live.json
    ```
-   `crypt.sh` はパスフレーズを `../shirase-lab.github.io.passwd` から読む。
+   `crypt.sh` はパスフレーズを `../oshimite.jp.passwd` から読む。
 
 8. **後始末**: `<TEMP>` の平文（seed_list.plain.json / live.prev.json / found.json / live.new.json）を削除。
 

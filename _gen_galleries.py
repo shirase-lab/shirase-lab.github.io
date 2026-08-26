@@ -14,7 +14,7 @@ from pathlib import Path
 from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent
-SITE = "https://shirase-lab.github.io"
+SITE = "https://oshimite.jp"
 HELP = "help-2.4.0.html"
 
 

@@ -8,7 +8,7 @@
 - `thumb/*.webp` … 一覧サムネ。`thumbUrl` から `Image.network` で表示。
 - `index.html` … 人間向けギャラリー（SEO・テンプレ名で検索面を増やす副産物）。
 - `admin.html` … **タグ編集用の管理ページ**（`noindex`・公開ギャラリーからは非リンク）。GitHub の
-  fine-grained PAT（`shirase-lab.github.io` の Contents: Read and write）をペースト→接続すると、
+  fine-grained PAT（`oshimite.jp` の Contents: Read and write）をペースト→接続すると、
   各テンプレのタグをブラウザから編集して `index.json` に保存できる（GitHub Contents API を直接叩く・
   サーバ不要）。トークンは sessionStorage に一時保持（ログアウトで消去）。URL: `/templates/admin.html`。
 
@@ -50,7 +50,7 @@ flutter test test/rendering/template_dist_thumbs_dump_test.dart
 for n in mitekudasai uchiwa-tsukuto yubiheart; do \
   ffmpeg -y -i test/rendering/out_template_dist_$n.png \
     -c:v libwebp -q:v 82 -compression_level 6 \
-    shirase-lab.github.io/templates/thumb/$n.webp; done
+    oshimite.jp/templates/thumb/$n.webp; done
 ```
 
 新しいテンプレを配る手順:

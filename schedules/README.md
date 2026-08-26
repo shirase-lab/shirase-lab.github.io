@@ -21,8 +21,8 @@
 
 ## パスフレーズ
 
-リポジトリ**外**のサイブリング `../shirase-lab.github.io.passwd`
-（= `D:/ShiraseLab/UchiwaTukool/shirase-lab.github.io.passwd`）に平文で1行保存。
+リポジトリ**外**のサイブリング `../oshimite.jp.passwd`
+（= `D:/ShiraseLab/UchiwaTukool/oshimite.jp.passwd`）に平文で1行保存。
 GitHub Pages（公開）には出ない。初回は自動生成した64桁の base64 乱数。差し替え可。
 
 ## 復号（手元で中身を見る）
@@ -40,7 +40,7 @@ openssl 直叩きでも同じ:
 ```bash
 openssl enc -d -aes-256-cbc -md sha256 -pbkdf2 -iter 200000 -salt -base64 \
   -in schedules/live.json \
-  -pass file:../shirase-lab.github.io.passwd
+  -pass file:../oshimite.jp.passwd
 ```
 
 ## 暗号化（平文 → live.json）

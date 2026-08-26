@@ -22,7 +22,7 @@ from urllib.parse import quote
 
 HERE = Path(__file__).resolve().parent          # .../templates
 ROOT = HERE.parent                               # repo root
-SITE = "https://shirase-lab.github.io"
+SITE = "https://oshimite.jp"
 HELP = "help-2.4.0.html"
 
 data = json.loads((HERE / "index.json").read_text(encoding="utf-8"))
