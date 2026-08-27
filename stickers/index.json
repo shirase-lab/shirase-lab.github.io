@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-26",
+  "updatedAt": "2026-08-27",
   "note": "うちわつくーる 配信ステッカーのマニフェスト。作者制作のみ・投稿機能なし。thumbUrl / fileUrl は index.json からの相対 URL。",
   "filters": [
     {
@@ -1143,6 +1143,117 @@
         "遺跡",
         "ペルー",
         "海外"
+      ]
+    },
+    {
+      "id": "sticker_064",
+      "title": "赤い宝石",
+      "thumbUrl": "thumb/sticker_064.png",
+      "fileUrl": "sticker_064.png",
+      "updatedAt": "2026-08-27",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "宝石",
+        "ジュエル",
+        "赤",
+        "ルビー",
+        "キラキラ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_065",
+      "title": "緑の宝石",
+      "thumbUrl": "thumb/sticker_065.png",
+      "fileUrl": "sticker_065.png",
+      "updatedAt": "2026-08-27",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "宝石",
+        "ジュエル",
+        "緑",
+        "エメラルド",
+        "キラキラ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_066",
+      "title": "白い宝石",
+      "thumbUrl": "thumb/sticker_066.png",
+      "fileUrl": "sticker_066.png",
+      "updatedAt": "2026-08-27",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "宝石",
+        "ジュエル",
+        "ダイヤ",
+        "ダイヤモンド",
+        "白",
+        "キラキラ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_067",
+      "title": "ピンクの宝石",
+      "thumbUrl": "thumb/sticker_067.png",
+      "fileUrl": "sticker_067.png",
+      "updatedAt": "2026-08-27",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "宝石",
+        "ジュエル",
+        "ピンク",
+        "キラキラ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_068",
+      "title": "青い宝石",
+      "thumbUrl": "thumb/sticker_068.png",
+      "fileUrl": "sticker_068.png",
+      "updatedAt": "2026-08-27",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "宝石",
+        "ジュエル",
+        "青",
+        "サファイア",
+        "キラキラ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_069",
+      "title": "オレンジの宝石",
+      "thumbUrl": "thumb/sticker_069.png",
+      "fileUrl": "sticker_069.png",
+      "updatedAt": "2026-08-27",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "宝石",
+        "ジュエル",
+        "オレンジ",
+        "キラキラ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_070",
+      "title": "黄色い宝石",
+      "thumbUrl": "thumb/sticker_070.png",
+      "fileUrl": "sticker_070.png",
+      "updatedAt": "2026-08-27",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "宝石",
+        "ジュエル",
+        "黄",
+        "イエロー",
+        "キラキラ",
+        "かわいい"
       ]
     }
   ]
