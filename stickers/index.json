@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-27",
+  "updatedAt": "2026-08-28",
   "note": "うちわつくーる 配信ステッカーのマニフェスト。作者制作のみ・投稿機能なし。thumbUrl / fileUrl は index.json からの相対 URL。",
   "filters": [
     {
@@ -1253,6 +1253,19 @@
         "黄",
         "イエロー",
         "キラキラ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_071",
+      "title": "うさ耳",
+      "thumbUrl": "thumb/sticker_071.png",
+      "fileUrl": "sticker_071.png",
+      "updatedAt": "2026-08-28",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "うさ耳",
+        "うさぎ",
         "かわいい"
       ]
     }
