@@ -261,17 +261,53 @@ i1 = gallery.index(end)
 gallery = (gallery[:i0] + "\n" + cards_block + "\n    " + gallery[i1:])
 
 # TAGNAV（grid の前に、独自マーカーで管理＝アプリの CARDS 再生成では消えない）
-_tcount = {tag: len(tpls_for_tag(tag)) for tag in all_tags}
-_tordered = sorted(all_tags, key=lambda tg: (-_tcount[tg], tg))
+from collections import Counter as _Counter, defaultdict as _defaultdict
+_GENERIC = {"かわいい", "キラキラ", "デコ", "定番"}   # 絞り込みにならない汎用タグは導線から外す
+_filters = data.get("filters", [])
+_cnt = {tag: len(tpls_for_tag(tag)) for tag in all_tags}
 def _tchip(tg):
-    return f'<a class="chip" href="/templates/tag/{tag_slug[tg]}.html">#{esc(tg)}（{_tcount[tg]}）</a>'
-_TOPN = 20
-_top = "".join(_tchip(tg) for tg in _tordered[:_TOPN])
-_rest = _tordered[_TOPN:]
-_more = (f'\n  <details class="tagnav-more"><summary>＋ その他のタグ（{len(_rest)}）</summary>'
-         f'<div class="tagnav">{"".join(_tchip(tg) for tg in _rest)}</div></details>') if _rest else ""
+    return f'<a class="chip" href="/templates/tag/{tag_slug[tg]}.html">#{esc(tg)}（{_cnt[tg]}）</a>'
+_group_axis = next((a for a in _filters if a.get("key") in ("kind", "group")), None)
+_region_axis = next((a for a in _filters if a.get("key") == "region"), None)
+_region_tags = set()
+if _region_axis:
+    for v in _region_axis.get("values", []):
+        _region_tags.update(v.get("tags", []))
+_kinds = [(v["name"], set(v.get("tags", []))) for v in _group_axis.get("values", [])] if _group_axis else []
+def _item_kind(it):
+    s = set(it.get("tags", []))
+    for nm, mk in _kinds:
+        if s & mk:
+            return nm
+    return None
+_groups = _defaultdict(list)
+for tg in all_tags:
+    if tg in _GENERIC or tg in _region_tags:
+        continue
+    _ks = [_item_kind(x) for x in templates if tg in x.get("tags", [])]
+    kc = _Counter(k for k in _ks if k is not None)
+    _best, _bn = kc.most_common(1)[0] if kc else (None, 0)
+    # そのタグの過半数がそのカテゴリの時だけ配属。横断的なテーマ語は「その他」へ。
+    _groups[_best if _bn > len(_ks) / 2 else "その他"].append(tg)
+_PER = 12
+_sections = []
+for nm, _mk in _kinds:
+    ts = sorted((t for t in _groups.get(nm, []) if t != nm), key=lambda t: -_cnt[t])
+    if ts:
+        _sections.append((nm, ts[:_PER], True))
+if _region_tags:
+    rts = sorted((t for t in all_tags if t in _region_tags and t not in _GENERIC), key=lambda t: -_cnt[t])
+    if rts:
+        _sections.append((_region_axis.get("label", "地域"), rts[:_PER], True))
+_other = sorted(_groups.get("その他", []), key=lambda t: -_cnt[t])
+if _other:
+    _sections.append(("その他", _other[:_PER], bool(_kinds or _region_tags)))
+_parts = []
+for _lbl, _ts, _show in _sections:
+    _hd = f'<span class="tglabel">{esc(_lbl)}</span>' if _show else ""
+    _parts.append(f'<div class="taggroup">{_hd}<div class="tagnav">{"".join(_tchip(t) for t in _ts)}</div></div>')
 tagnav = ('  <!-- TAGNAV:START （_gen_seo.py が index.json から再生成。手で編集しない） -->\n'
-          f'  <nav class="tagnav" aria-label="タグで絞り込む">{_top}</nav>{_more}\n'
+          f'  <section class="taggroups" aria-label="タグで絞り込む">{"".join(_parts)}</section>\n'
           '  <!-- TAGNAV:END -->\n')
 if "<!-- TAGNAV:START" in gallery:
     a = gallery.index("  <!-- TAGNAV:START")

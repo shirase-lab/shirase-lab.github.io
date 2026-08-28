@@ -48,6 +48,66 @@ def tag_slugs(items):
     return all_tags, slug
 
 
+# タグ導線から外す汎用タグ（絞り込みにならない＝ほぼ全件に付く語）
+GENERIC_TAGS = {"かわいい", "キラキラ", "デコ"}
+
+
+def grouped_tagnav(dir_, items, all_tags, slug, filters):
+    """タグを index.json の filters レジストリ（種類/地域 など）に沿って見出し別に分けて導線化する。
+    汎用タグ（GENERIC_TAGS）は除外。カテゴリの無いギャラリーはフラット（その他のみ・見出し無し）。"""
+    from collections import Counter, defaultdict
+    cnt = {t: sum(1 for x in items if t in x.get("tags", [])) for t in all_tags}
+
+    def chip(t):
+        return f'<a class="chip" href="/{dir_}/tag/{slug[t]}.html">#{esc(t)}（{cnt[t]}）</a>'
+
+    kind_axis = next((a for a in filters if a.get("key") in ("kind", "group")), None)
+    region_axis = next((a for a in filters if a.get("key") == "region"), None)
+    region_tags = set()
+    if region_axis:
+        for v in region_axis.get("values", []):
+            region_tags.update(v.get("tags", []))
+    kinds = [(v["name"], set(v.get("tags", []))) for v in kind_axis.get("values", [])] if kind_axis else []
+
+    def item_kind(it):
+        s = set(it.get("tags", []))
+        for name, mk in kinds:
+            if s & mk:
+                return name
+        return None
+
+    groups = defaultdict(list)
+    for t in all_tags:
+        if t in GENERIC_TAGS or t in region_tags:
+            continue
+        ks = [item_kind(x) for x in items if t in x.get("tags", [])]
+        kc = Counter(k for k in ks if k is not None)
+        best, bn = kc.most_common(1)[0] if kc else (None, 0)
+        # そのタグの過半数がそのカテゴリの時だけ配属。横断的なテーマ語は「その他」へ。
+        groups[best if bn > len(ks) / 2 else "その他"].append(t)
+
+    PER_GROUP = 12  # グループ毎に出現数上位のみ（1件だらけの長い尾はナビから省く。tag ページ/sitemap には残る）
+    sections = []  # (label, [tags], show_label)
+    for name, _mk in kinds:
+        tags = sorted((t for t in groups.get(name, []) if t != name), key=lambda t: -cnt[t])
+        if tags:
+            sections.append((name, tags[:PER_GROUP], True))
+    if region_tags:
+        rtags = sorted((t for t in all_tags if t in region_tags and t not in GENERIC_TAGS), key=lambda t: -cnt[t])
+        if rtags:
+            sections.append((region_axis.get("label", "地域"), rtags[:PER_GROUP], True))
+    other = sorted(groups.get("その他", []), key=lambda t: -cnt[t])
+    if other:
+        # カテゴリ軸が有る時だけ「その他」見出しを付ける（軸が無いギャラリーは見出し無しのフラット）
+        sections.append(("その他", other[:PER_GROUP], bool(kinds or region_tags)))
+
+    out = []
+    for label, tags, show in sections:
+        head_html = f'<span class="tglabel">{esc(label)}</span>' if show else ""
+        out.append(f'<div class="taggroup">{head_html}<div class="tagnav">{"".join(chip(t) for t in tags)}</div></div>')
+    return "".join(out)
+
+
 CSS = """:root{--pink:#FF5C8A;--pink-deep:#FF2E6E;--lav:#B9A3FF;--bg:#FFF0F6;--bg2:#FFE3EF;
   --ink:#4A2E3D;--ink-soft:#9A7886;--gold:#FFD84D;--white:#fff;
   --display:'Mochiy Pop One',system-ui,sans-serif;--body:'M PLUS Rounded 1c',system-ui,sans-serif;}
@@ -88,11 +148,10 @@ a.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(255,92,138,.
 .cta{display:inline-block;margin:22px auto 0;padding:12px 26px;border-radius:999px;
   background:var(--pink-deep);color:#fff;font-weight:700;box-shadow:0 6px 16px rgba(255,46,110,.35)}
 .cta:hover{background:var(--pink)}.center{text-align:center}
-.tagnav{max-width:960px;margin:6px auto 0;padding:0 16px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
-.tagnav-more{max-width:960px;margin:10px auto 0;text-align:center}
-.tagnav-more>summary{display:inline-block;list-style:none;cursor:pointer;background:var(--bg2);border:2px solid #FFC9DD;color:var(--pink-deep);font-weight:700;font-size:.82rem;padding:6px 16px;border-radius:999px}
-.tagnav-more>summary::-webkit-details-marker{display:none}
-.tagnav-more[open]>summary{margin-bottom:12px}
+.tagnav{max-width:960px;margin:0 auto;padding:0 8px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.taggroups{max-width:960px;margin:8px auto 0;padding:0 12px}
+.taggroup{margin:16px auto 0}
+.tglabel{display:block;text-align:center;font-family:var(--display);color:var(--pink-deep);font-size:.92rem;margin-bottom:8px}
 .note{max-width:960px;margin:26px auto 0;padding:0 18px;font-size:.85rem;color:var(--ink-soft);text-align:center}
 footer{text-align:center;padding:24px 16px 48px;color:var(--ink-soft);font-size:.82rem}
 footer a{color:var(--pink-deep)}
@@ -204,15 +263,7 @@ def gen_gallery(cfg):
     # ギャラリー index.html
     canonical = f"{SITE}/{dir_}/"
     img = f"{SITE}/{dir_}/{items[0]['thumbUrl']}" if items else f"{SITE}/oshimite-icon.png"
-    _tcount = {t: sum(1 for x in items if t in x.get("tags", [])) for t in all_tags}
-    _tordered = sorted(all_tags, key=lambda t: (-_tcount[t], t))
-    def _chip(t):
-        return f'<a class="chip" href="/{dir_}/tag/{slug[t]}.html">#{esc(t)}（{_tcount[t]}）</a>'
-    _TOPN = 20
-    tagnav = "".join(_chip(t) for t in _tordered[:_TOPN])
-    _rest = _tordered[_TOPN:]
-    tagmore = (f'<details class="tagnav-more"><summary>＋ その他のタグ（{len(_rest)}）</summary>'
-               f'<div class="tagnav">{"".join(_chip(t) for t in _rest)}</div></details>') if _rest else ""
+    tagnav = grouped_tagnav(dir_, items, all_tags, slug, data.get("filters", []))
     cards = "".join(card(dir_, it) for it in items)
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": cfg["gtitle"],
           "url": canonical, "inLanguage": "ja", "numberOfItems": len(items)}
@@ -220,7 +271,7 @@ def gen_gallery(cfg):
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 <header><a class="home" href="/">← 推しミテ！トップ</a><h1>{esc(cfg['gtitle'])}（{len(items)}種）</h1>
 <p>{esc(cfg['ghero'])}</p></header>
-<nav class="tagnav" aria-label="タグで絞り込む">{tagnav}</nav>{tagmore}
+<section class="taggroups" aria-label="タグで絞り込む">{tagnav}</section>
 <nav class="crumb"><a href="/">推しミテ！</a> › {noun}</nav>
 <main><section class="grid" aria-label="{esc(cfg['gtitle'])}">{cards}</section>
 <p class="note">※ 推しミテ！は無料の応援うちわ作成アプリ。{noun}をうちわに貼って、コンビニでA3実寸プリントできます。</p></main>
