@@ -39,6 +39,10 @@ a.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(255,92,138,.
   background:var(--pink-deep);color:#fff;font-weight:700;box-shadow:0 6px 16px rgba(255,46,110,.35)}
 .cta:hover{background:var(--pink)}.center{text-align:center}
 .tagnav{max-width:960px;margin:6px auto 0;padding:0 16px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tagnav-more{max-width:960px;margin:10px auto 0;text-align:center}
+.tagnav-more>summary{display:inline-block;list-style:none;cursor:pointer;background:var(--bg2);border:2px solid #FFC9DD;color:var(--pink-deep);font-weight:700;font-size:.82rem;padding:6px 16px;border-radius:999px}
+.tagnav-more>summary::-webkit-details-marker{display:none}
+.tagnav-more[open]>summary{margin-bottom:12px}
 .note{max-width:960px;margin:26px auto 0;padding:0 18px;font-size:.85rem;color:var(--ink-soft);text-align:center}
 footer{text-align:center;padding:24px 16px 48px;color:var(--ink-soft);font-size:.82rem}
 footer a{color:var(--pink-deep)}

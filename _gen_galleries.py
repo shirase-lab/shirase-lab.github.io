@@ -71,14 +71,16 @@ main{max-width:960px;margin:0 auto;padding:22px 16px 64px}
   transition:transform .16s ease,box-shadow .16s ease}
 a.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(255,92,138,.22)}
 .card .thumb{background:#f6eef2;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;padding:10px}
-.card .thumb img{width:100%;height:100%;object-fit:contain}
+/* max-width/height で内側にフィット（flex中央寄せ）。width/height:100% は Safari で
+   aspect-ratio 親に対し overflow して .card の overflow:hidden で切れるため使わない。 */
+.card .thumb img{max-width:100%;max-height:100%;width:auto;height:auto}
 .card .body{padding:10px 12px 14px}
 .card h2{font-family:var(--display);font-size:.92rem;color:var(--ink);line-height:1.4}
 .detail{max-width:720px;margin:0 auto}
 .detail .frame{max-width:380px;margin:0 auto;background:#f6eef2;border-radius:20px;overflow:hidden;
   border:2px solid #ffd9e6;box-shadow:0 10px 28px rgba(255,92,138,.18);aspect-ratio:1/1;
   display:flex;align-items:center;justify-content:center;padding:26px}
-.detail .frame img{width:100%;height:100%;object-fit:contain}
+.detail .frame img{max-width:100%;max-height:100%;width:auto;height:auto}
 .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:20px auto 0;max-width:640px}
 .chip{display:inline-block;background:#fff;border:2px solid #FFC9DD;color:var(--pink-deep);
   font-weight:700;font-size:.82rem;padding:5px 13px;border-radius:999px}
@@ -87,6 +89,10 @@ a.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(255,92,138,.
   background:var(--pink-deep);color:#fff;font-weight:700;box-shadow:0 6px 16px rgba(255,46,110,.35)}
 .cta:hover{background:var(--pink)}.center{text-align:center}
 .tagnav{max-width:960px;margin:6px auto 0;padding:0 16px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.tagnav-more{max-width:960px;margin:10px auto 0;text-align:center}
+.tagnav-more>summary{display:inline-block;list-style:none;cursor:pointer;background:var(--bg2);border:2px solid #FFC9DD;color:var(--pink-deep);font-weight:700;font-size:.82rem;padding:6px 16px;border-radius:999px}
+.tagnav-more>summary::-webkit-details-marker{display:none}
+.tagnav-more[open]>summary{margin-bottom:12px}
 .note{max-width:960px;margin:26px auto 0;padding:0 18px;font-size:.85rem;color:var(--ink-soft);text-align:center}
 footer{text-align:center;padding:24px 16px 48px;color:var(--ink-soft);font-size:.82rem}
 footer a{color:var(--pink-deep)}
@@ -198,7 +204,15 @@ def gen_gallery(cfg):
     # ギャラリー index.html
     canonical = f"{SITE}/{dir_}/"
     img = f"{SITE}/{dir_}/{items[0]['thumbUrl']}" if items else f"{SITE}/oshimite-icon.png"
-    tagnav = "".join(f'<a class="chip" href="/{dir_}/tag/{slug[t]}.html">#{esc(t)}（{len([x for x in items if t in x.get("tags",[])])}）</a>' for t in all_tags)
+    _tcount = {t: sum(1 for x in items if t in x.get("tags", [])) for t in all_tags}
+    _tordered = sorted(all_tags, key=lambda t: (-_tcount[t], t))
+    def _chip(t):
+        return f'<a class="chip" href="/{dir_}/tag/{slug[t]}.html">#{esc(t)}（{_tcount[t]}）</a>'
+    _TOPN = 20
+    tagnav = "".join(_chip(t) for t in _tordered[:_TOPN])
+    _rest = _tordered[_TOPN:]
+    tagmore = (f'<details class="tagnav-more"><summary>＋ その他のタグ（{len(_rest)}）</summary>'
+               f'<div class="tagnav">{"".join(_chip(t) for t in _rest)}</div></details>') if _rest else ""
     cards = "".join(card(dir_, it) for it in items)
     ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": cfg["gtitle"],
           "url": canonical, "inLanguage": "ja", "numberOfItems": len(items)}
@@ -206,7 +220,7 @@ def gen_gallery(cfg):
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 <header><a class="home" href="/">← 推しミテ！トップ</a><h1>{esc(cfg['gtitle'])}（{len(items)}種）</h1>
 <p>{esc(cfg['ghero'])}</p></header>
-<nav class="tagnav" aria-label="タグで絞り込む">{tagnav}</nav>
+<nav class="tagnav" aria-label="タグで絞り込む">{tagnav}</nav>{tagmore}
 <nav class="crumb"><a href="/">推しミテ！</a> › {noun}</nav>
 <main><section class="grid" aria-label="{esc(cfg['gtitle'])}">{cards}</section>
 <p class="note">※ 推しミテ！は無料の応援うちわ作成アプリ。{noun}をうちわに貼って、コンビニでA3実寸プリントできます。</p></main>

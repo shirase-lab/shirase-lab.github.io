@@ -261,11 +261,17 @@ i1 = gallery.index(end)
 gallery = (gallery[:i0] + "\n" + cards_block + "\n    " + gallery[i1:])
 
 # TAGNAV（grid の前に、独自マーカーで管理＝アプリの CARDS 再生成では消えない）
-tagnav_links = "\n".join(
-    f'    <a class="chip" href="/templates/tag/{tag_slug[tag]}.html">#{esc(tag)}（{len(tpls_for_tag(tag))}）</a>'
-    for tag in all_tags)
+_tcount = {tag: len(tpls_for_tag(tag)) for tag in all_tags}
+_tordered = sorted(all_tags, key=lambda tg: (-_tcount[tg], tg))
+def _tchip(tg):
+    return f'<a class="chip" href="/templates/tag/{tag_slug[tg]}.html">#{esc(tg)}（{_tcount[tg]}）</a>'
+_TOPN = 20
+_top = "".join(_tchip(tg) for tg in _tordered[:_TOPN])
+_rest = _tordered[_TOPN:]
+_more = (f'\n  <details class="tagnav-more"><summary>＋ その他のタグ（{len(_rest)}）</summary>'
+         f'<div class="tagnav">{"".join(_tchip(tg) for tg in _rest)}</div></details>') if _rest else ""
 tagnav = ('  <!-- TAGNAV:START （_gen_seo.py が index.json から再生成。手で編集しない） -->\n'
-          f'  <nav class="tagnav" aria-label="タグで絞り込む">\n{tagnav_links}\n  </nav>\n'
+          f'  <nav class="tagnav" aria-label="タグで絞り込む">{_top}</nav>{_more}\n'
           '  <!-- TAGNAV:END -->\n')
 if "<!-- TAGNAV:START" in gallery:
     a = gallery.index("  <!-- TAGNAV:START")
