@@ -325,6 +325,7 @@ urls = [(f"{SITE}/", "1.0", "weekly"),
         (f"{SITE}/{HELP}", "0.8", "monthly"),
         (f"{SITE}/fonts/", "0.6", "monthly"),
         (f"{SITE}/updates/", "0.5", "weekly"),
+        (f"{SITE}/schedules/", "0.7", "weekly"),
         (f"{SITE}/templates/", "0.8", "weekly")]
 for t in templates:
     urls.append((f"{SITE}/templates/t/{t['id']}.html", "0.6", "monthly"))
