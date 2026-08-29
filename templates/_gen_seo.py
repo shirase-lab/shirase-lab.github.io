@@ -323,6 +323,8 @@ write(HERE / "index.html", gallery)
 lastmod = data.get("updatedAt", "2026-08-05")
 urls = [(f"{SITE}/", "1.0", "weekly"),
         (f"{SITE}/{HELP}", "0.8", "monthly"),
+        (f"{SITE}/fonts/", "0.6", "monthly"),
+        (f"{SITE}/updates/", "0.5", "weekly"),
         (f"{SITE}/templates/", "0.8", "weekly")]
 for t in templates:
     urls.append((f"{SITE}/templates/t/{t['id']}.html", "0.6", "monthly"))
