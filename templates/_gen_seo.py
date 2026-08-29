@@ -305,7 +305,7 @@ if _other:
 _parts = []
 for _lbl, _ts, _show in _sections:
     _hd = f'<span class="tglabel">{esc(_lbl)}</span>' if _show else ""
-    _parts.append(f'<div class="taggroup">{_hd}<div class="tagnav">{"".join(_tchip(t) for t in _ts)}</div></div>')
+    _parts.append(f'<div class="taggroup">{_hd}{"".join(_tchip(t) for t in _ts)}</div>')
 tagnav = ('  <!-- TAGNAV:START （_gen_seo.py が index.json から再生成。手で編集しない） -->\n'
           f'  <section class="taggroups" aria-label="タグで絞り込む">{"".join(_parts)}</section>\n'
           '  <!-- TAGNAV:END -->\n')

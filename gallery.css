@@ -38,10 +38,9 @@ a.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(255,92,138,.
 .cta{display:inline-block;margin:22px auto 0;padding:12px 26px;border-radius:999px;
   background:var(--pink-deep);color:#fff;font-weight:700;box-shadow:0 6px 16px rgba(255,46,110,.35)}
 .cta:hover{background:var(--pink)}.center{text-align:center}
-.tagnav{max-width:960px;margin:0 auto;padding:0 8px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
-.taggroups{max-width:960px;margin:8px auto 0;padding:0 12px}
-.taggroup{margin:16px auto 0}
-.tglabel{display:block;text-align:center;font-family:var(--display);color:var(--pink-deep);font-size:.92rem;margin-bottom:8px}
+.taggroups{max-width:900px;margin:10px auto 0;padding:0 16px}
+.taggroup{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:10px 0 0}
+.tglabel{flex:0 0 auto;font-weight:700;color:#fff;background:var(--pink-deep);border-radius:999px;padding:5px 14px;font-size:.82rem;box-shadow:0 3px 8px rgba(255,46,110,.28)}
 .note{max-width:960px;margin:26px auto 0;padding:0 18px;font-size:.85rem;color:var(--ink-soft);text-align:center}
 footer{text-align:center;padding:24px 16px 48px;color:var(--ink-soft);font-size:.82rem}
 footer a{color:var(--pink-deep)}
