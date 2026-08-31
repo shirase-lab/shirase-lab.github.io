@@ -2,8 +2,21 @@
 movies/
 
 # schedules/: 平文・パスフレーズ・ログは公開しない（暗号化済み *.json だけ追跡）
+# ※ 追跡する暗号文は schedules/live.json（公開版）と schedules/live.internal.json（内部フル）。
+#   下は make_public.py / merge_live.py が吐く平文の中間物（本来は <TEMP> に書くが repo 直下で回した時の事故防止）。
 schedules/*.plain.json
 schedules/live.source.json
+schedules/live.public.json
+schedules/live.new.json
+schedules/live.prev.json
+schedules/found.json
 schedules/logs/
 *.passwd
+
+# narration/: 生成物（音声/原稿/ログ/状態/確定声）は公開しない（スクリプト/README/config は追跡）
+narration/output/
+narration/work/
+narration/state/
+narration/logs/
+narration/reference_voice.wav
 

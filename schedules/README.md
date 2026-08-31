@@ -7,9 +7,13 @@
 
 | ファイル | 内容 | 追跡 |
 | --- | --- | --- |
-| `live.json` | **ライブ日程**（events・今週＋先のツアー全日程を累積）の AES暗号化版（openssl `Salted__` base64） | コミットする |
+| `live.internal.json` | **内部フル**（全項目＝uchiwa_demand/sns_priority/fan_service_culture/verified/notes/lineup_note 込み）。SNS施策用の本体・次回マージの base。AES暗号化版 | コミットする |
+| `live.json` | **公開版**（アプリ／公開Web が取得）。`make_public.py` で内部項目を除去した公開情報のみ。AES暗号化版 | コミットする |
 | `seed_list.json` | **定点巡回リスト**（監視対象アクト/事務所）の AES暗号化版 | コミットする |
 | `crypt.sh` | 暗号化／復号ヘルパ（openssl AES-256-CBC / PBKDF2） | コミットする |
+| `make_public.py` | 内部フル平文 → 公開平文（内部項目を除去）。`live.json` 生成に使う | コミットする |
+| `_gen_schedules.py` | 公開 `live.json` → 公開Web `schedules/index.html`（ライブ日程ページ） | コミットする |
+| `index.html` | 公開の「ライブ日程」ページ（`/schedules/`）。`_gen_schedules.py` が生成 | コミットする |
 | `*.plain.json` 等の平文 | 元データ（平文） | **コミットしない**（`.gitignore` 済み） |
 
 - `seed_list.json`（何を監視するか）→ 週2回（月・木）これを巡回して新規/更新公演を拾い、
@@ -64,7 +68,9 @@ bash schedules/crypt.sh enc /path/to/live.plain.json
    `meta.generated_at`/`report_week` を更新（被りは丸ごと差し替え・新規は追加・過去分は残す）。
 5. **`check_tour_gaps.py <merged>`（gate・必須）** でツアーのレグ取りこぼしを機械チェック。
    `⚠`（終了コード1）が出たら公式日程で欠けたレグを補って 3→4 をやり直す（`OK`＝0 になるまで）。
-6. `crypt.sh enc <merged> schedules/live.json` で暗号化 → commit → push（ランナーが実行）。
+6. **2ファイル出力**: `crypt.sh enc <merged> schedules/live.internal.json`（内部フル）＋
+   `make_public.py <merged>` で内部項目を除いた公開平文を作り `crypt.sh enc …public… schedules/live.json`（公開版）。
+   さらに `_gen_schedules.py` で公開Web `schedules/index.html` を再生成 → commit → push（ランナーが実行）。
 
 実体は `Run-LiveSchedule.ps1`（runner）＋ `daily_update.md`（ジョブ仕様）＋ `merge_live.py`（マージ）。
 登録は `Register-LiveScheduleTask.ps1`。詳細は「## 自動化」参照。
