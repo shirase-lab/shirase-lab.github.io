@@ -7,18 +7,21 @@
   被った（同じ `id` の）イベントは**最新情報で丸ごと差し替え**、新規は追加、前回だけにあるものは残す。
 - マージと日付更新は**決定的な `schedules/merge_live.py`** が行う。あなたは「今回見つけた/更新する
   イベントだけ」を `found.json` に完全な形で出す。git の commit/push は呼び出し元ランナーが行うので、
-  あなたは **2ファイル（`schedules/live.internal.json` 内部フル ＋ `schedules/live.json` 公開版）と
+  あなたは **2ファイル（`<INTERNAL>` 内部フル〔リポジトリ外〕＋ `schedules/live.json` 公開版）と
   公開Web（`schedules/index.html`）を更新するところまで**で止めてください。
 
 作業ディレクトリはこのリポジトリ（`oshimite.jp`）の直下。`<TEMP>` は OS の
-一時ディレクトリ（リポジトリ外）。
+一時ディレクトリ（リポジトリ外）。`<INTERNAL>` は **`D:/ShiraseLab/oshimite.jp.live.internal.json`**
+（**リポジトリ外**の内部フル暗号ファイル。公開リポジトリには絶対に置かない）。
 
 ## データファイル（2ファイル運用）
 
-ライブ日程は **暗号化された2ファイル** で持つ。**必ず両方を更新する**。
+ライブ日程は **暗号化された2ファイル** で持つ。**必ず両方を更新する**。置き場所を取り違えないこと。
 
-- **`schedules/live.internal.json`（内部フル）** … `uchiwa_demand`/`sns_priority`/`fan_service_culture`/
-  `verified`/`notes`/`lineup_note` を含む全項目。**SNS施策用の本体データ＝次回の base はこれ**。
+- **`<INTERNAL>`＝`D:/ShiraseLab/oshimite.jp.live.internal.json`（内部フル・リポジトリ外）** …
+  `uchiwa_demand`/`sns_priority`/`fan_service_culture`/`verified`/`notes`/`lineup_note` を含む全項目。
+  **SNS施策用の本体データ＝次回の base はこれ**。⚠ **公開リポジトリ（`schedules/`）には置かない**
+  （アプリが復号パスフレーズを同梱しているため、公開ホストに同じ鍵の暗号ファイルを置くと誰でも復号できる）。
 - **`schedules/live.json`（公開版・アプリ／公開Webが取得）** … `make_public.py` で内部項目を除去した公開情報のみ。
   **アプリはこの `live.json` を取得**するので、内部項目を絶対に入れない。
 
@@ -31,10 +34,11 @@
 
 2. **復号**して基礎データを読む:
    ```
-   bash schedules/crypt.sh dec schedules/seed_list.json      <TEMP>/seed_list.plain.json
-   bash schedules/crypt.sh dec schedules/live.internal.json  <TEMP>/live.prev.json
+   bash schedules/crypt.sh dec schedules/seed_list.json  <TEMP>/seed_list.plain.json
+   bash schedules/crypt.sh dec <INTERNAL>                <TEMP>/live.prev.json
    ```
-   ※ **base は `live.internal.json`（内部フル）**。`live.json` は公開版なので base に使わない。
+   ※ **base は `<INTERNAL>`（＝`D:/ShiraseLab/oshimite.jp.live.internal.json`・内部フル・リポジトリ外）**。
+   `schedules/live.json` は内部項目を削った公開版なので base に使わない（使うと施策データが消える）。
    `monitor_priority=high`（starto_jr / tobe / sakamichi / sashihara / kpop / battle_fes）から
    優先で、各 `source`（公式サイト/X）と主要ニュースを WebSearch/WebFetch で巡回。
    スキーマは `live.prev.json` の `meta.label_schema` をそのまま踏襲する。
@@ -88,24 +92,26 @@
      確認して埋めろ”の gate であって確定エラーではない）。1レグのみのツアーは検知窓を広く取る（`--single-window-days`
      既定90日）。全ツアーを機械的に消すのではなく、各フラグを潰したか確認して 0 に近づける。
 
-7. **暗号化（2ファイル）＋公開Web再生成**（平文はリポジトリ外の一時ファイルに書き、リポジトリには暗号文だけ）:
+7. **暗号化（2ファイル）＋公開Web再生成**（平文はリポジトリ外の一時ファイルに書き、公開リポジトリには公開版の暗号文だけ）:
    ```
-   # ① 内部フル（施策データ・次回の base）= live.internal.json
-   bash schedules/crypt.sh enc <TEMP>/live.new.json schedules/live.internal.json
-   # ② 公開版（アプリ／公開Webの取得先）= live.json。内部項目を除去してから暗号化
+   # ① 内部フル（施策データ・次回の base）= <INTERNAL>（リポジトリ外。公開ホストに出さない）
+   bash schedules/crypt.sh enc <TEMP>/live.new.json <INTERNAL>
+   # ② 公開版（アプリ／公開Webの取得先）= schedules/live.json。内部項目を除去してから暗号化
    python schedules/make_public.py <TEMP>/live.new.json <TEMP>/live.public.json
    bash schedules/crypt.sh enc <TEMP>/live.public.json schedules/live.json
    # ③ 公開Webページ schedules/index.html を live.json（公開版）から再生成
    python schedules/_gen_schedules.py
    ```
-   `crypt.sh` はパスフレーズを `../oshimite.jp.passwd` から読む。
+   `crypt.sh` はパスフレーズを `../shirase-lab.github.io.passwd`（リポジトリ外）から読む。
    - **`live.json`（アプリ／公開Webの取得先）には内部項目を絶対に出さない。** `make_public.py` が
      `uchiwa_demand / sns_priority / fan_service_culture / verified / notes / lineup_note` を除去し、
-     `meta` を `report_week / generated_at` のみにする。**両ファイル（internal+public）を必ず出すこと**
+     `meta` を `report_week / generated_at` のみにする。**両ファイル（`<INTERNAL>`＋public）を必ず出すこと**
      （internal だけ・public だけの更新は不可）。
+   - ⚠ **内部フルを `schedules/`（公開リポジトリ）に出力しないこと。** アプリが復号鍵を同梱しているので、
+     公開ホストに同じ鍵の暗号ファイルを置くと誰でも復号できる。内部フルの出力先は必ず `<INTERNAL>`。
 
 8. **後始末**: `<TEMP>` の平文（seed_list.plain.json / live.prev.json / found.json / live.new.json /
-   live.public.json）を削除。
+   live.public.json）を削除（`<INTERNAL>` は残す＝次回の base）。
 
 9. **git は触らない**（commit/push はランナー）。最後に1行で要約:
    `更新: <report_week> / 追加<n>件・更新<m>件 / total<N> / 主なネタ=<例>`

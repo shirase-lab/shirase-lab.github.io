@@ -7,7 +7,7 @@
 
 | ファイル | 内容 | 追跡 |
 | --- | --- | --- |
-| `live.internal.json` | **内部フル**（全項目＝uchiwa_demand/sns_priority/fan_service_culture/verified/notes/lineup_note 込み）。SNS施策用の本体・次回マージの base。AES暗号化版 | コミットする |
+| `D:/ShiraseLab/oshimite.jp.live.internal.json` | **内部フル**（全項目＝uchiwa_demand/sns_priority/fan_service_culture/verified/notes/lineup_note 込み）。SNS施策用の本体・次回マージの base。AES暗号化版。**⚠ リポジトリ外**（公開ホストに置かない） | **リポジトリ外・コミットしない** |
 | `live.json` | **公開版**（アプリ／公開Web が取得）。`make_public.py` で内部項目を除去した公開情報のみ。AES暗号化版 | コミットする |
 | `seed_list.json` | **定点巡回リスト**（監視対象アクト/事務所）の AES暗号化版 | コミットする |
 | `crypt.sh` | 暗号化／復号ヘルパ（openssl AES-256-CBC / PBKDF2） | コミットする |
@@ -17,11 +17,18 @@
 | `*.plain.json` 等の平文 | 元データ（平文） | **コミットしない**（`.gitignore` 済み） |
 
 - `seed_list.json`（何を監視するか）→ 週2回（月・木）これを巡回して新規/更新公演を拾い、
-  `live.json`（累積データ）へ **`id` で upsert**（被ったら更新・新規は追加・過去分は残す）する2段構成。
-  マージと日付更新は決定的な `merge_live.py` が担う。両方とも暗号文で公開し、
-  復号はパスフレーズを持つ手元だけで行う。
+  **内部フル（`D:/ShiraseLab/oshimite.jp.live.internal.json`・累積データ）** へ
+  **`id` で upsert**（被ったら更新・新規は追加・過去分は残す）する2段構成。
+  マージと日付更新は決定的な `merge_live.py` が担う。内部フルから `make_public.py` で内部項目を落とし、
+  公開版 `schedules/live.json` を作って**それだけ**を公開ホストへ出す。
 
-平文・パスフレーズはリポジトリに入れない。`live.json` は**暗号文のみ**を公開する。
+平文・パスフレーズはリポジトリに入れない。公開する暗号文は `schedules/live.json`（公開版）**のみ**。
+
+> ⚠ **内部フルを公開リポジトリ（`schedules/`）に置かないこと。** アプリは復号パスフレーズを同梱している
+> （`lib/data/live_schedule_service.dart` の同梱アセット `shirase-lab.github.io.passwd`）。APK からこの鍵は
+> 容易に取り出せるので、**公開ホストに同じ鍵で暗号化したファイルを置くと誰でも復号できる**。だから内部フル
+> （uchiwa_demand/notes/lineup_note 等の施策データ込み）は**リポジトリ外**の
+> `D:/ShiraseLab/oshimite.jp.live.internal.json` に置き、公開ホストには内部項目を除いた `live.json` だけを出す。
 
 ## パスフレーズ
 
@@ -58,7 +65,8 @@ bash schedules/crypt.sh enc /path/to/live.plain.json
 
 ## 更新フロー（週2回 月・木・Windows タスクスケジューラ → Claude headless）
 
-1. `crypt.sh dec seed_list.json` / `crypt.sh dec live.json` で seed と前回データを復号。
+1. `crypt.sh dec seed_list.json` / `crypt.sh dec D:/ShiraseLab/oshimite.jp.live.internal.json` で
+   seed と前回データ（＝内部フル）を復号。base は内部フル（公開 `live.json` ではない）。
 2. `monitor_priority=high` から巡回し、新規ツアー/チケット発売/初日・千秋楽・卒業/大型フェスを検知。
    収集期間に上限なし（先のツアーも全日程を拾う）。**多都市ツアーはレグ後追い禁止＝発表済みの
    全都市・全レグを最初に全部登録する**（1レグ＝1レコード）。
@@ -68,9 +76,10 @@ bash schedules/crypt.sh enc /path/to/live.plain.json
    `meta.generated_at`/`report_week` を更新（被りは丸ごと差し替え・新規は追加・過去分は残す）。
 5. **`check_tour_gaps.py <merged>`（gate・必須）** でツアーのレグ取りこぼしを機械チェック。
    `⚠`（終了コード1）が出たら公式日程で欠けたレグを補って 3→4 をやり直す（`OK`＝0 になるまで）。
-6. **2ファイル出力**: `crypt.sh enc <merged> schedules/live.internal.json`（内部フル）＋
+6. **2ファイル出力**: `crypt.sh enc <merged> D:/ShiraseLab/oshimite.jp.live.internal.json`（内部フル・**リポジトリ外**）＋
    `make_public.py <merged>` で内部項目を除いた公開平文を作り `crypt.sh enc …public… schedules/live.json`（公開版）。
    さらに `_gen_schedules.py` で公開Web `schedules/index.html` を再生成 → commit → push（ランナーが実行）。
+   **内部フルは公開リポジトリに出さない**（理由は上の ⚠ 参照）。ランナーが commit するのは公開版 `live.json` と `index.html` だけ。
 
 実体は `Run-LiveSchedule.ps1`（runner）＋ `daily_update.md`（ジョブ仕様）＋ `merge_live.py`（マージ）。
 登録は `Register-LiveScheduleTask.ps1`。詳細は「## 自動化」参照。

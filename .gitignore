@@ -1,9 +1,13 @@
 # 変換前の大容量ソース動画（サイトには変換済み feature_*.mp4 / 1.2.0features.mp4 を使用）
 movies/
 
-# schedules/: 平文・パスフレーズ・ログは公開しない（暗号化済み *.json だけ追跡）
-# ※ 追跡する暗号文は schedules/live.json（公開版）と schedules/live.internal.json（内部フル）。
-#   下は make_public.py / merge_live.py が吐く平文の中間物（本来は <TEMP> に書くが repo 直下で回した時の事故防止）。
+# schedules/: 平文・パスフレーズ・ログ・内部フルは公開しない（追跡する暗号文は公開版 live.json だけ）。
+# ⚠ 内部フル（uchiwa_demand/notes/lineup_note 等・SNS施策データ）はこの公開リポジトリに置かない。
+#   アプリが復号パスフレーズを同梱している（lib/data/live_schedule_service.dart）ため、この公開ホストに
+#   同じ鍵で暗号化したファイルを置くと誰でも復号できてしまう。内部フルはリポジトリ外
+#   （D:/ShiraseLab/oshimite.jp.live.internal.json）に置き、公開ホストへは make_public.py で
+#   内部項目を除いた live.json だけを出す。
+schedules/live.internal.json
 schedules/*.plain.json
 schedules/live.source.json
 schedules/live.public.json
