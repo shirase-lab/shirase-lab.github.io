@@ -209,7 +209,7 @@
   .notice li::before{content:"·";position:absolute;left:6px;color:var(--lav);font-weight:700}
 
   /* stamps / stickers / templates 導線カード */
-  .linkcards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:64px}
+  .linkcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-bottom:64px}
   .lcard{display:block;background:#fff;border:2px solid #FFD9E6;border-radius:20px;padding:16px 16px 20px;
          transition:transform .18s ease,box-shadow .18s ease}
   .lcard:hover{transform:translateY(-5px);box-shadow:0 14px 26px rgba(255,92,138,.18)}
@@ -294,6 +294,7 @@
         <a href="https://www.instagram.com/oshimite_app/" target="_blank" rel="noopener" aria-label="Instagram @oshimite_app"><svg viewBox="0 0 24 24" width="21" height="21" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
         <a href="https://www.youtube.com/@%E6%8E%A8%E3%81%97%E3%83%9F%E3%83%86" target="_blank" rel="noopener" aria-label="YouTube 推しミテ"><svg viewBox="0 0 24 24" width="23" height="23" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
       </div>
+      <a href="/schedules/" class="nav-help-btn" data-i18n="nav.schedules">ライブ日程</a>
       <a href="help-2.6.0.html" class="nav-help-btn" data-i18n="nav.help">使い方 <span class="ver">ver:2.6.0</span></a>
     </div>
   </nav>
@@ -327,7 +328,7 @@
 <div class="wrap">
   <section>
     <div class="sec-head">
-      <h2 data-i18n="deco.h2">スタンプ・ステッカー・テンプレートで、<em>うちわをデコる</em></h2>
+      <h2 data-i18n="deco.h2">スタンプ・ステッカー・テンプレート・フォントで、<em>うちわをデコる</em></h2>
       <p data-i18n="deco.p">デコ素材を、選んで貼るだけ。他サイトや自作の画像も自由に使えます。</p>
     </div>
     <div class="linkcards">
@@ -348,7 +349,7 @@
           <span><img src="stickers/sticker_027.png" alt="" loading="lazy"></span>
         </div>
         <h3 data-i18n="deco.c2t">配信ステッカー</h3>
-        <p data-i18n="deco.c2p">貼るだけで決まる、色塗り不要のデコ素材。45種類を配信中。</p>
+        <p data-i18n="deco.c2p">貼るだけで決まる、色塗り不要のデコ素材。80種類以上を配信中。</p>
         <span class="go" data-i18n="deco.go">一覧を見る</span>
       </a>
       <a class="lcard" href="/templates/">
@@ -359,6 +360,16 @@
         </div>
         <h3 data-i18n="deco.c3t">うちわテンプレート集</h3>
         <p data-i18n="deco.c3p">定番の文字デザインをそのまま開いて編集。名前を変えるだけで完成します。</p>
+        <span class="go" data-i18n="deco.go">一覧を見る</span>
+      </a>
+      <a class="lcard" href="/fonts/">
+        <div class="shots">
+          <span><img src="fonts/preview/nicomoji_plus.png" alt="" loading="lazy"></span>
+          <span><img src="fonts/preview/titan_one.png" alt="" loading="lazy"></span>
+          <span><img src="fonts/preview/do_hyeon.png" alt="" loading="lazy"></span>
+        </div>
+        <h3 data-i18n="deco.c4t">おすすめフォント</h3>
+        <p data-i18n="deco.c4p">うちわ映えする無料フォントを厳選。日本語・韓国語・英語など、アプリに直接追加できます。</p>
         <span class="go" data-i18n="deco.go">一覧を見る</span>
       </a>
     </div>
@@ -489,20 +500,23 @@
       "__desc":"Make a cheering uchiwa to get noticed by your oshi, with just your phone. Design the lettering and print it at true size at a convenience store. All features free, no subscription.",
       "nav.brandBy":"by ShiraseLab",
       "nav.help":"How to use v2.6.0",
+      "nav.schedules":"Live schedule",
       "cta.dlGP":"Download on Google Play",
       "cta.dlAS":"Download on the App Store",
       "hero.eyebrow":"Oshi Uchiwa Lettering App",
       "hero.lede":"Make a cheering uchiwa to get noticed by your oshi — with just your phone. Design the lettering and <b>print it at full size at a convenience store</b>.",
       "hero.free":"All features free · No subscription",
       "hero.fanAlt":"A cheering uchiwa made with 推しミテ！",
-      "deco.h2":"Decorate your uchiwa with <em>stamps, stickers & templates</em>",
+      "deco.h2":"Decorate your uchiwa with <em>stamps, stickers, templates & fonts</em>",
       "deco.p":"Pick and place deco. You can also freely use images from other sites or your own.",
       "deco.c1t":"Stamps",
       "deco.c1p":"Recolor them to your oshi's member color — crowns, finger hearts, ribbons, sparkles and more.",
       "deco.c2t":"Stickers",
-      "deco.c2p":"Just place them and you're done — no coloring needed. 45 designs available.",
+      "deco.c2p":"Just place them and you're done — no coloring needed. 80+ designs available.",
       "deco.c3t":"Uchiwa Templates",
       "deco.c3p":"Open a ready-made lettering design and edit it. Swap in a name and it's finished.",
+      "deco.c4t":"Recommended Fonts",
+      "deco.c4p":"Hand-picked free fonts that pop on an uchiwa — Japanese, Korean, English and more, addable right in the app.",
       "deco.go":"Browse all",
       "and.h2":"Android version <em>now available!</em>",
       "and.p":"“推しミテ！” is now downloadable on Google Play. iPhone / iPad users can still get it on the App Store as before.",
@@ -566,6 +580,7 @@
       "__desc":"只用一部手机，做出让你推注意到你的应援扇。设计文字，到便利店按实际尺寸打印。全部功能免费，无订阅。",
       "nav.brandBy":"by ShiraseLab",
       "nav.help":"使用方法 v2.6.0",
+      "nav.schedules":"演出日程",
       "cta.dlGP":"在 Google Play 下载",
       "cta.dlAS":"在 App Store 下载",
       "hero.eyebrow":"应援扇文字制作 App",
@@ -627,14 +642,16 @@
       "foot.terms":"使用条款",
       "foot.contact":"联系我们（uchiwa.tu.kool@gmail.com）",
       "foot.sns":"官方社群",
-      "deco.h2":"用贴纸、贴图和模板，<em>装饰你的应援扇</em>",
+      "deco.h2":"用贴纸、贴图、模板和字体，<em>装饰你的应援扇</em>",
       "deco.p":"装饰素材，挑选后直接贴上。也能自由使用其他网站或自制的图片。",
       "deco.c1t":"贴纸（Stamps）",
       "deco.c1p":"可以换成你推的应援色。皇冠、比心、丝带、闪光等。",
       "deco.c2t":"贴图（Stickers）",
-      "deco.c2p":"贴上就好，无需上色的装饰素材。现有 45 种。",
+      "deco.c2p":"贴上就好，无需上色的装饰素材。现有 80 多种。",
       "deco.c3t":"应援扇模板集",
       "deco.c3p":"直接打开经典文字设计并编辑。只需换个名字就完成。",
+      "deco.c4t":"推荐字体",
+      "deco.c4p":"精选适合应援扇的免费字体。日文、韩文、英文等，可直接在应用中添加。",
       "deco.go":"查看全部",
       "foot.copy":"© 2026 ShiraseLab. 让「推，看我！」成真的应援扇。"
     },
@@ -643,6 +660,7 @@
       "__desc":"只用一部手機，做出讓你推注意到你的應援扇。設計文字，到便利店按實際尺寸列印。全部功能免費，無訂閱。",
       "nav.brandBy":"by ShiraseLab",
       "nav.help":"使用方法 v2.6.0",
+      "nav.schedules":"演出日程",
       "cta.dlGP":"在 Google Play 下載",
       "cta.dlAS":"在 App Store 下載",
       "hero.eyebrow":"應援扇文字製作 App",
@@ -704,14 +722,16 @@
       "foot.terms":"使用條款",
       "foot.contact":"聯絡我們（uchiwa.tu.kool@gmail.com）",
       "foot.sns":"官方社群",
-      "deco.h2":"用貼紙、貼圖和範本，<em>裝飾你的應援扇</em>",
+      "deco.h2":"用貼紙、貼圖、範本和字體，<em>裝飾你的應援扇</em>",
       "deco.p":"裝飾素材，挑選後直接貼上。也能自由使用其他網站或自製的圖片。",
       "deco.c1t":"貼紙（Stamps）",
       "deco.c1p":"可以換成你推的應援色。皇冠、比心、緞帶、閃光等。",
       "deco.c2t":"貼圖（Stickers）",
-      "deco.c2p":"貼上就好，無需上色的裝飾素材。現有 45 種。",
+      "deco.c2p":"貼上就好，無需上色的裝飾素材。現有 80 多種。",
       "deco.c3t":"應援扇範本集",
       "deco.c3p":"直接打開經典文字設計並編輯。只需換個名字就完成。",
+      "deco.c4t":"推薦字體",
+      "deco.c4p":"精選適合應援扇的免費字體。日文、韓文、英文等，可直接在應用程式中新增。",
       "deco.go":"查看全部",
       "foot.copy":"© 2026 ShiraseLab. 讓「推，看我！」成真的應援扇。"
     },
@@ -720,6 +740,7 @@
       "__desc":"스마트폰 하나로 최애가 알아봐 줄 응원 부채를. 문자를 디자인해 편의점에서 실물 크기로 인쇄. 모든 기능 무료, 구독 없음.",
       "nav.brandBy":"by ShiraseLab",
       "nav.help":"사용 방법 v2.6.0",
+      "nav.schedules":"라이브 일정",
       "cta.dlGP":"Google Play에서 다운로드",
       "cta.dlAS":"App Store에서 다운로드",
       "hero.eyebrow":"응원 부채 문자 제작 앱",
@@ -781,14 +802,16 @@
       "foot.terms":"이용약관",
       "foot.contact":"문의 (uchiwa.tu.kool@gmail.com)",
       "foot.sns":"공식 SNS",
-      "deco.h2":"스탬프·스티커·템플릿으로, <em>부채를 꾸미기</em>",
+      "deco.h2":"스탬프·스티커·템플릿·폰트로, <em>부채를 꾸미기</em>",
       "deco.p":"데코 소재를 골라 붙이기만 하면 끝. 다른 사이트나 직접 만든 이미지도 자유롭게 사용할 수 있어요.",
       "deco.c1t":"스탬프",
       "deco.c1p":"최애의 멤버 컬러로 색을 바꿀 수 있어요. 왕관·손가락 하트·리본·반짝임 등.",
       "deco.c2t":"스티커",
-      "deco.c2p":"붙이기만 하면 끝. 색칠이 필요 없는 데코 소재 45종.",
+      "deco.c2p":"붙이기만 하면 끝. 색칠이 필요 없는 데코 소재 80종 이상.",
       "deco.c3t":"부채 템플릿집",
       "deco.c3p":"인기 문자 디자인을 바로 열어 편집. 이름만 바꾸면 완성돼요.",
+      "deco.c4t":"추천 폰트",
+      "deco.c4p":"부채에 잘 어울리는 무료 폰트를 엄선. 일본어·한국어·영어 등 앱에서 바로 추가할 수 있어요.",
       "deco.go":"전체 보기",
       "foot.copy":"© 2026 ShiraseLab. 「최애야, 나 봐줘」를 이뤄 주는 부채를."
     }
