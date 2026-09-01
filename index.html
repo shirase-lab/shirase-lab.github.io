@@ -210,7 +210,7 @@
 
   /* stamps / stickers / templates 導線カード */
   .linkcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-bottom:64px}
-  .lcard{display:block;background:#fff;border:2px solid #FFD9E6;border-radius:20px;padding:16px 16px 20px;
+  .lcard{display:flex;flex-direction:column;background:#fff;border:2px solid #FFD9E6;border-radius:20px;padding:16px 16px 20px;
          transition:transform .18s ease,box-shadow .18s ease}
   .lcard:hover{transform:translateY(-5px);box-shadow:0 14px 26px rgba(255,92,138,.18)}
   .lcard .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
@@ -221,7 +221,7 @@
   .lcard h3{font-family:var(--display);font-size:16px;color:var(--ink);margin-bottom:6px;line-height:1.4}
   .lcard p{font-size:13px;color:var(--ink-soft);font-weight:500;line-height:1.7;margin-bottom:14px}
   /* カード内の主CTA。大きめ・全幅で「押せる」と一目で分かるボタン＋進む矢印。 */
-  .lcard .go{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
+  .lcard .go{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:auto;
              font-weight:800;font-size:15px;color:#fff;
              background:linear-gradient(135deg,var(--pink),var(--pink-deep));
              padding:13px 18px;border-radius:14px;box-shadow:0 6px 14px rgba(255,92,138,.28)}
@@ -349,7 +349,7 @@
           <span><img src="stickers/sticker_027.png" alt="" loading="lazy"></span>
         </div>
         <h3 data-i18n="deco.c2t">配信ステッカー</h3>
-        <p data-i18n="deco.c2p">貼るだけで決まる、色塗り不要のデコ素材。80種類以上を配信中。</p>
+        <p data-i18n="deco.c2p">貼るだけで決まる、色塗り不要のデコ素材。ご当地グルメや動物など、80種類以上を配信中。</p>
         <span class="go" data-i18n="deco.go">一覧を見る</span>
       </a>
       <a class="lcard" href="/templates/">
@@ -512,7 +512,7 @@
       "deco.c1t":"Stamps",
       "deco.c1p":"Recolor them to your oshi's member color — crowns, finger hearts, ribbons, sparkles and more.",
       "deco.c2t":"Stickers",
-      "deco.c2p":"Just place them and you're done — no coloring needed. 80+ designs available.",
+      "deco.c2p":"Just place them and you're done — no coloring needed. Local foods, animals and more — 80+ designs available.",
       "deco.c3t":"Uchiwa Templates",
       "deco.c3p":"Open a ready-made lettering design and edit it. Swap in a name and it's finished.",
       "deco.c4t":"Recommended Fonts",
@@ -647,7 +647,7 @@
       "deco.c1t":"贴纸（Stamps）",
       "deco.c1p":"可以换成你推的应援色。皇冠、比心、丝带、闪光等。",
       "deco.c2t":"贴图（Stickers）",
-      "deco.c2p":"贴上就好，无需上色的装饰素材。现有 80 多种。",
+      "deco.c2p":"贴上就好，无需上色的装饰素材。当地美食、动物等，现有 80 多种。",
       "deco.c3t":"应援扇模板集",
       "deco.c3p":"直接打开经典文字设计并编辑。只需换个名字就完成。",
       "deco.c4t":"推荐字体",
@@ -727,7 +727,7 @@
       "deco.c1t":"貼紙（Stamps）",
       "deco.c1p":"可以換成你推的應援色。皇冠、比心、緞帶、閃光等。",
       "deco.c2t":"貼圖（Stickers）",
-      "deco.c2p":"貼上就好，無需上色的裝飾素材。現有 80 多種。",
+      "deco.c2p":"貼上就好，無需上色的裝飾素材。當地美食、動物等，現有 80 多種。",
       "deco.c3t":"應援扇範本集",
       "deco.c3p":"直接打開經典文字設計並編輯。只需換個名字就完成。",
       "deco.c4t":"推薦字體",
@@ -807,7 +807,7 @@
       "deco.c1t":"스탬프",
       "deco.c1p":"최애의 멤버 컬러로 색을 바꿀 수 있어요. 왕관·손가락 하트·리본·반짝임 등.",
       "deco.c2t":"스티커",
-      "deco.c2p":"붙이기만 하면 끝. 색칠이 필요 없는 데코 소재 80종 이상.",
+      "deco.c2p":"붙이기만 하면 끝. 색칠이 필요 없는 데코 소재. 지역 명물·동물 등 80종 이상.",
       "deco.c3t":"부채 템플릿집",
       "deco.c3p":"인기 문자 디자인을 바로 열어 편집. 이름만 바꾸면 완성돼요.",
       "deco.c4t":"추천 폰트",
