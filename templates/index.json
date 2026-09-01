@@ -1615,30 +1615,33 @@
     },
     {
       "id": "tpl-178e1b0f7c",
-      "title": "うちわa2505a23",
+      "title": "たいぴー(キスマイ) こっち見て",
       "thumbUrl": "thumb/tpl-178e1b0f7c.png",
       "fileUrl": "tpl-178e1b0f7c.uchiwa",
       "updatedAt": "2026-09-02",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": ["名前入り","おねだり","こっち見て","定番","キスマイ","Kis-My-Ft2","たいぴー","藤ヶ谷太輔","かわいい","ハート"]
     },
     {
       "id": "tpl-634cc7542c",
-      "title": "うちわeeed613e",
+      "title": "たいぴー(キスマイ) 手振って",
       "thumbUrl": "thumb/tpl-634cc7542c.png",
       "fileUrl": "tpl-634cc7542c.uchiwa",
       "updatedAt": "2026-09-02",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": ["名前入り","カンペ","手振って","定番","キスマイ","Kis-My-Ft2","たいぴー","藤ヶ谷太輔","ハート"]
     },
     {
       "id": "tpl-6ba07c72aa",
-      "title": "うちわ3c7d49f4",
+      "title": "たいぴー(キスマイ) 指ハートして",
       "thumbUrl": "thumb/tpl-6ba07c72aa.png",
       "fileUrl": "tpl-6ba07c72aa.uchiwa",
       "updatedAt": "2026-09-02",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": ["名前入り","おねだり","指ハート","指ハートして","定番","キスマイ","Kis-My-Ft2","たいぴー","藤ヶ谷太輔","ハート"]
     }
   ]
 }
