@@ -183,6 +183,32 @@
           }
         },
         {
+          "name": "新潟",
+          "tags": [
+            "新潟"
+          ],
+          "nameI18n": {
+            "en": "Niigata",
+            "ko": "니가타",
+            "zh": "新潟",
+            "zh_Hant": "新潟"
+          }
+        },
+        {
+          "name": "香川",
+          "tags": [
+            "香川",
+            "讃岐",
+            "さぬき"
+          ],
+          "nameI18n": {
+            "en": "Kagawa",
+            "ko": "가가와",
+            "zh": "香川",
+            "zh_Hant": "香川"
+          }
+        },
+        {
           "name": "沖縄",
           "tags": [
             "沖縄",
@@ -1267,6 +1293,259 @@
         "うさ耳",
         "うさぎ",
         "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_072",
+      "title": "うさ耳（ピンク）",
+      "thumbUrl": "thumb/sticker_072.png",
+      "fileUrl": "sticker_072.png",
+      "updatedAt": "2026-09-01",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "うさ耳",
+        "うさぎ",
+        "ピンク",
+        "どうぶつ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_073",
+      "title": "うさ耳（水色）",
+      "thumbUrl": "thumb/sticker_073.png",
+      "fileUrl": "sticker_073.png",
+      "updatedAt": "2026-09-01",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "うさ耳",
+        "うさぎ",
+        "水色",
+        "ブルー",
+        "どうぶつ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_074",
+      "title": "うさ耳（ラベンダー）",
+      "thumbUrl": "thumb/sticker_074.png",
+      "fileUrl": "sticker_074.png",
+      "updatedAt": "2026-09-01",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "うさ耳",
+        "うさぎ",
+        "ラベンダー",
+        "紫",
+        "パープル",
+        "どうぶつ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_075",
+      "title": "うさ耳（ミント）",
+      "thumbUrl": "thumb/sticker_075.png",
+      "fileUrl": "sticker_075.png",
+      "updatedAt": "2026-09-01",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "うさ耳",
+        "うさぎ",
+        "ミント",
+        "緑",
+        "グリーン",
+        "どうぶつ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_076",
+      "title": "黒うさ耳（立ち耳）",
+      "thumbUrl": "thumb/sticker_076.png",
+      "fileUrl": "sticker_076.png",
+      "updatedAt": "2026-09-01",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "うさ耳",
+        "うさぎ",
+        "黒",
+        "ブラック",
+        "どうぶつ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_077",
+      "title": "黒うさ耳（垂れ耳）",
+      "thumbUrl": "thumb/sticker_077.png",
+      "fileUrl": "sticker_077.png",
+      "updatedAt": "2026-09-01",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "うさ耳",
+        "うさぎ",
+        "黒",
+        "ブラック",
+        "紫",
+        "どうぶつ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_078",
+      "title": "ニラ",
+      "thumbUrl": "thumb/sticker_078.png",
+      "fileUrl": "sticker_078.png",
+      "updatedAt": "2026-09-01",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ニラ",
+        "にら",
+        "野菜",
+        "たべもの",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_079",
+      "title": "東京タワー",
+      "thumbUrl": "thumb/sticker_079.png",
+      "fileUrl": "sticker_079.png",
+      "updatedAt": "2026-09-01",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "東京タワー",
+        "タワー",
+        "東京",
+        "スポット",
+        "建物",
+        "名所"
+      ]
+    },
+    {
+      "id": "sticker_080",
+      "title": "東京スカイツリー",
+      "thumbUrl": "thumb/sticker_080.png",
+      "fileUrl": "sticker_080.png",
+      "updatedAt": "2026-09-01",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "東京スカイツリー",
+        "スカイツリー",
+        "タワー",
+        "東京",
+        "スポット",
+        "建物",
+        "名所"
+      ]
+    },
+    {
+      "id": "sticker_081",
+      "title": "さぬきうどん",
+      "thumbUrl": "thumb/sticker_081.png",
+      "fileUrl": "sticker_081.png",
+      "updatedAt": "2026-09-01",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "うどん",
+        "さぬきうどん",
+        "讃岐うどん",
+        "香川",
+        "たべもの"
+      ]
+    },
+    {
+      "id": "sticker_082",
+      "title": "広島風お好み焼き",
+      "thumbUrl": "thumb/sticker_082.png",
+      "fileUrl": "sticker_082.png",
+      "updatedAt": "2026-09-01",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "お好み焼き",
+        "広島風お好み焼き",
+        "広島",
+        "たべもの"
+      ]
+    },
+    {
+      "id": "sticker_083",
+      "title": "雷門",
+      "thumbUrl": "thumb/sticker_083.png",
+      "fileUrl": "sticker_083.png",
+      "updatedAt": "2026-09-01",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "雷門",
+        "浅草",
+        "東京",
+        "提灯",
+        "スポット",
+        "建物",
+        "名所"
+      ]
+    },
+    {
+      "id": "sticker_084",
+      "title": "もみじ饅頭",
+      "thumbUrl": "thumb/sticker_084.png",
+      "fileUrl": "sticker_084.png",
+      "updatedAt": "2026-09-01",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "もみじ饅頭",
+        "もみじまんじゅう",
+        "和菓子",
+        "広島",
+        "たべもの"
+      ]
+    },
+    {
+      "id": "sticker_085",
+      "title": "牡蠣",
+      "thumbUrl": "thumb/sticker_085.png",
+      "fileUrl": "sticker_085.png",
+      "updatedAt": "2026-09-01",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "牡蠣",
+        "カキ",
+        "かき",
+        "広島",
+        "たべもの"
+      ]
+    },
+    {
+      "id": "sticker_086",
+      "title": "コシヒカリ",
+      "thumbUrl": "thumb/sticker_086.png",
+      "fileUrl": "sticker_086.png",
+      "updatedAt": "2026-09-01",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ご飯",
+        "ごはん",
+        "お米",
+        "コシヒカリ",
+        "新潟",
+        "たべもの"
+      ]
+    },
+    {
+      "id": "sticker_087",
+      "title": "笹団子",
+      "thumbUrl": "thumb/sticker_087.png",
+      "fileUrl": "sticker_087.png",
+      "updatedAt": "2026-09-01",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "笹団子",
+        "ささだんご",
+        "和菓子",
+        "新潟",
+        "たべもの"
       ]
     }
   ]
