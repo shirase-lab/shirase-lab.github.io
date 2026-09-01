@@ -139,7 +139,8 @@ def fc_events(events):
                 "end": (end + timedelta(days=1)).isoformat(),   # FC の end は排他
                 "allDay": True,
                 "color": color,
-                "extendedProps": {"detail": detail, "status": e.get("status", "")},
+                "extendedProps": {"detail": detail, "status": e.get("status", ""),
+                                  "genre": e.get("genre", "")},
             })
     return out, (lo.isoformat() if lo else ""), (hi.isoformat() if hi else "")
 
@@ -157,10 +158,15 @@ header .home{display:inline-block;color:var(--ink-soft);font-size:.9rem;margin-b
 h1{font-family:var(--display);font-size:clamp(1.5rem,5vw,2.3rem);color:var(--pink-deep)}
 header p{color:var(--ink-soft);margin-top:8px;font-size:.9rem}
 main{max-width:820px;margin:0 auto;padding:16px 16px 64px}
-/* ジャンル凡例 */
-.legend{display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;margin:8px auto 4px;max-width:820px;padding:0 16px}
-.legend .lg{display:inline-flex;align-items:center;gap:5px;font-size:.75rem;color:var(--ink-soft)}
-.legend .lg i{width:12px;height:12px;border-radius:3px;display:inline-block;flex:0 0 auto}
+/* ジャンル絞り込みチップ（トグル式） */
+.legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:10px auto 4px;max-width:820px;padding:0 16px}
+.fchip{display:inline-flex;align-items:center;gap:6px;font-family:var(--body);font-size:.76rem;font-weight:700;
+color:var(--ink-soft);background:#fff;border:1.6px solid #ffd9e6;border-radius:999px;padding:5px 12px;cursor:pointer;
+line-height:1.2;transition:background .15s,color .15s,border-color .15s}
+.fchip i{width:11px;height:11px;border-radius:3px;display:inline-block;flex:0 0 auto}
+.fchip:hover{border-color:var(--pink)}
+.fchip.on{background:var(--pink);border-color:var(--pink);color:#fff}
+.fchip.all.on{background:var(--pink-deep);border-color:var(--pink-deep)}
 /* FullCalendar 外枠（アプリ風のピンク基調） */
 #cal{background:#fff;border:2px solid #ffe1ec;border-radius:16px;padding:12px;margin:14px 0 6px}
 #cal .fc .fc-toolbar-title{font-family:var(--display);color:var(--pink-deep);font-size:1.1rem}
@@ -206,6 +212,13 @@ document.addEventListener('DOMContentLoaded', function () {
   var first = %FIRST%, last = %LAST%;
   var today = new Date().toISOString().slice(0, 10);
   var initial = (first && today < first) ? first : ((last && today > last) ? last : today);
+  var ALL = window.__LIVE_EVENTS__ || [];
+  var active = {};                       // 選択中ジャンル（空＝すべて）
+  function activeCount(){ return Object.keys(active).length; }
+  function filtered(){
+    var n = activeCount();
+    return n ? ALL.filter(function(e){ return active[(e.extendedProps || {}).genre]; }) : ALL;
+  }
   var cal = new FullCalendar.Calendar(el, {
     initialView: 'dayGridMonth',
     initialDate: initial,
@@ -215,13 +228,46 @@ document.addEventListener('DOMContentLoaded', function () {
     displayEventTime: false,
     dayMaxEvents: 4,
     headerToolbar: { left: 'prev,next today', center: 'title', right: '' },
-    events: window.__LIVE_EVENTS__ || [],
+    events: ALL,
     eventDidMount: function (info) {
       var d = info.event.extendedProps.detail;
       if (d) info.el.setAttribute('title', info.event.title + ' — ' + d);
     }
   });
   cal.render();
+
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.fchip'));
+  function apply(){
+    var n = activeCount();
+    // カレンダー: 現ソースを外して絞り込み済みを再投入
+    cal.getEventSources().forEach(function(s){ s.remove(); });
+    cal.addEventSource(filtered());
+    // 一覧の行
+    Array.prototype.forEach.call(document.querySelectorAll('.ev'), function(li){
+      var g = li.getAttribute('data-genre');
+      li.style.display = (!n || active[g]) ? '' : 'none';
+    });
+    // 中身が0の月セクションは隠す
+    Array.prototype.forEach.call(document.querySelectorAll('.mon'), function(sec){
+      var vis = Array.prototype.some.call(sec.querySelectorAll('.ev'), function(li){ return li.style.display !== 'none'; });
+      sec.style.display = vis ? '' : 'none';
+    });
+    // チップの選択状態
+    chips.forEach(function(c){
+      var g = c.getAttribute('data-genre');
+      if (c.classList.contains('all')) c.classList.toggle('on', n === 0);
+      else c.classList.toggle('on', !!active[g]);
+    });
+  }
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      var g = c.getAttribute('data-genre');
+      if (c.classList.contains('all')) active = {};
+      else if (active[g]) delete active[g];
+      else active[g] = true;
+      apply();
+    });
+  });
 });
 """
 
@@ -231,13 +277,17 @@ def main():
     events = [e for e in data.get("events", []) if e.get("status") in SHOW]
     events.sort(key=lambda e: (sorted(e.get("dates") or ["9999-99-99"])[0], e.get("group", "")))
 
-    # 凡例（実在するジャンルのみ・GENRE の並び順→未知は末尾）
+    # ジャンル絞り込みチップ（実在するジャンルのみ・GENRE の並び順→未知は末尾）。
+    # トグル式（複数OR・「すべて」で解除）。JS 無効でも全件表示のまま（チップは無効化されるだけ）。
     present = {e.get("genre") for e in events if e.get("genre")}
     ordered = [g for g in GENRE if g in present] + [g for g in present if g not in GENRE]
-    legend = "".join(
-        f'<span class="lg"><i style="background:{genre_color(g)}"></i>{esc(genre_label(g))}</span>'
+    chips = ['<button type="button" class="fchip all on" data-genre="">すべて</button>']
+    chips += [
+        f'<button type="button" class="fchip" data-genre="{esc(g)}">'
+        f'<i style="background:{genre_color(g)}"></i>{esc(genre_label(g))}</button>'
         for g in ordered
-    )
+    ]
+    legend = "".join(chips)
 
     fcev, first, last = fc_events(events)
     events_json = json.dumps(fcev, ensure_ascii=False).replace("</", "<\\/")
@@ -261,7 +311,8 @@ def main():
             opn = f'<span class="opn">{esc(e.get("open_start"))}</span>' if e.get("open_start") else ""
             gc = genre_color(e.get("genre"))
             rows.append(
-                f'<li class="ev"><span class="gc" style="background:{gc}"></span>'
+                f'<li class="ev" data-genre="{esc(e.get("genre",""))}">'
+                f'<span class="gc" style="background:{gc}"></span>'
                 f'<span class="d">{esc(fmt_dates(e.get("dates")))}</span>'
                 f'<span class="body"><span class="grp">{esc(e.get("group",""))}</span>{badge}'
                 f'<span class="name">{esc(e.get("event_name",""))}</span>'
