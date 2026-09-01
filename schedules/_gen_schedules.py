@@ -7,29 +7,29 @@
 - 公開するのは「予定（今週/開催中/近日/発表）」の“公開情報だけ”＝グループ / 公演名 / 会場（都道府県）/
   日付 / 開場開演 / genre（色分け用）。内部のマーケ項目（uchiwa_demand・sns_priority・
   fan_service_culture・notes・verified 等）は一切出力しない。
-- 表示は**アプリのカレンダー画面に寄せる**: 日曜始まりの月グリッド＋公演日にジャンル色の
-  連結バー（Google カレンダー風）＋その下に月別の詳細一覧。ジャンル色はアプリ
-  （lib/ui/calendar_screen.dart の _genreColors）を踏襲。
+- 表示は **1つの切替式カレンダー**（FullCalendar・前月/次月/今日ナビ）。公演日にジャンル色バー
+  （連続公演日は連結）、混雑日は「+N more」。ジャンル色はアプリ（lib/ui/calendar_screen.dart の
+  _genreColors）を踏襲。カレンダーの下に月別の詳細一覧（会場・日時）＝JS 無効/クローラ向けにも全件を
+  静的 HTML で残す（SEO 維持）。
 - live.json を更新したら（週次）このスクリプトを再実行して schedules/index.html を再生成する。
 """
-import calendar as pycal
 import datetime
 import html
 import json
 import subprocess
 import sys
-from datetime import date
+from datetime import date, timedelta
 from itertools import groupby
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent          # <repo>/schedules
 ROOT = HERE.parent                              # <repo>
 SITE = "https://oshimite.jp"
+FC_VER = "6.1.15"                                # FullCalendar (CDN)
 
 # 予定として公開する status（過去＝last_week 等は出さない）。表示ラベルも定義。
 SHOW = {"this_week": "今週", "ongoing": "開催中", "upcoming": "近日", "announced_onsale": "発表"}
 WD = ["月", "火", "水", "木", "金", "土", "日"]           # 日付表記（月曜始まり＝weekday()）
-WD_SUN = ["日", "月", "火", "水", "木", "金", "土"]        # カレンダー見出し（日曜始まり）
 
 # ジャンル → (表示名, 色)。アプリ lib/ui/calendar_screen.dart の _genreColors を踏襲。
 # アプリで色未定義（tertiary フォールバック）の tobe/utaite/ebidan/kayo_idol にも web 用の色を割当。
@@ -48,7 +48,6 @@ GENRE = {
     "kayo_idol":        ("歌謡アイドル",   "#C0CA33"),
 }
 DEFAULT_COLOR = "#FF5C8A"
-MAX_LANES = 4   # 1週に積むバーの最大本数（アプリ _kMaxLanes と同じ。超過は非表示＝日セルに +N、詳細は一覧に全件）
 
 
 def esc(s):
@@ -100,92 +99,54 @@ def month_key(e):
     return ds[0][:7] if ds else "9999-99"        # YYYY-MM（日付なしは末尾）
 
 
-def date_set(e):
-    out = set()
-    for iso in e.get("dates") or []:
-        try:
-            out.add(date.fromisoformat(iso))
-        except ValueError:
-            pass
-    return out
+def date_runs(dates):
+    """公演日を連続する run にまとめる。[(start_date, end_date), ...]（両端含む）。"""
+    ds = sorted({date.fromisoformat(x) for x in (dates or []) if _is_iso(x)})
+    runs = []
+    for d in ds:
+        if runs and (d - runs[-1][1]).days == 1:
+            runs[-1][1] = d
+        else:
+            runs.append([d, d])
+    return runs
 
 
-def build_calendar(y, m, evs):
-    """月 (y, m) のカレンダー HTML。evs = その月に公演日を持つイベント列。
-    日曜始まり・週ごとにイベントの連続公演日を1本の連結バー（ジャンル色）にして、
-    重なりはレーンを縦に積む（アプリ _buildWeekSegments と同じ考え方）。"""
-    dsets = [(e, date_set(e)) for e in evs]
-    head = "".join(
-        f'<div class="cw {"sun" if i == 0 else "sat" if i == 6 else ""}">{w}</div>'
-        for i, w in enumerate(WD_SUN)
-    )
-    weeks = pycal.Calendar(firstweekday=6).monthdatescalendar(y, m)  # 日曜始まり・実日付
-    week_html = []
-    for week in weeks:
-        # この週での各イベントの列 run（連続公演日）を集める
-        runs = []  # (colStart, colEnd, color, label)
-        for e, ds in dsets:
-            cols = [i for i, dt in enumerate(week) if dt.month == m and dt in ds]
-            if not cols:
-                continue
-            color = genre_color(e.get("genre"))
-            label = bar_label(e)
-            # 連続 col を run にまとめる
-            s = cols[0]
-            prev = cols[0]
-            for c in cols[1:]:
-                if c == prev + 1:
-                    prev = c
-                    continue
-                runs.append((s, prev, color, label))
-                s = prev = c
-            runs.append((s, prev, color, label))
-        # レーン割り当て（貪欲・列が被らない最下段へ）。MAX_LANES を超えたバーは非表示にし、
-        # その run が覆う日にちに「+N」を出す（詳細は下の一覧に全件あり）。
-        runs.sort(key=lambda r: (r[0], r[1]))
-        lane_end = []           # レーンごとの最後の colEnd
-        placed = []             # (lane, cs, ce, color, label)  ※ lane < MAX_LANES のみ
-        overflow = [0] * 7      # 列（曜日）ごとの非表示バー数
-        for cs_, ce_, color, label in runs:
-            lane = None
-            for li, end in enumerate(lane_end):
-                if end < cs_:
-                    lane = li
-                    lane_end[li] = ce_
-                    break
-            if lane is None:
-                lane = len(lane_end)
-                lane_end.append(ce_)
-            if lane < MAX_LANES:
-                placed.append((lane, cs_, ce_, color, label))
-            else:
-                for c in range(cs_, ce_ + 1):
-                    overflow[c] += 1
-        nlanes = min(len(lane_end), MAX_LANES)
-        # 日セル（超過があれば +N）
-        cells = "".join(
-            f'<div class="cd{" oth" if dt.month != m else ""}"><span class="cn">{dt.day}</span>'
-            + (f'<span class="more">+{overflow[i]}</span>' if dt.month == m and overflow[i] else "")
-            + "</div>"
-            for i, dt in enumerate(week)
-        )
-        # バー
-        bars = "".join(
-            f'<div class="cbar" title="{esc(label)}" '
-            f'style="left:calc({cs_}*100%/7 + 2px);width:calc({ce_ - cs_ + 1}*100%/7 - 4px);'
-            f'top:calc(var(--numh) + {lane}*(var(--barh) + var(--barg)));background:{color}">'
-            f'<span>{esc(label)}</span></div>'
-            for (lane, cs_, ce_, color, label) in placed
-        )
-        h = f"calc(var(--numh) + {nlanes}*(var(--barh) + var(--barg)) + 8px)"
-        week_html.append(f'<div class="cweek" style="height:{h}">{cells}{bars}</div>')
-    return f'<div class="cal"><div class="cal-head">{head}</div>{"".join(week_html)}</div>'
+def _is_iso(x):
+    try:
+        date.fromisoformat(x)
+        return True
+    except (ValueError, TypeError):
+        return False
+
+
+def fc_events(events):
+    """FullCalendar 用イベント配列。連続公演日は1本（end は排他＝翌日）。全日イベント。"""
+    out = []
+    lo = hi = None
+    for e in events:
+        color = genre_color(e.get("genre"))
+        title = bar_label(e)
+        venue = e.get("venue", "")
+        pref = e.get("prefecture", "")
+        opn = e.get("open_start", "")
+        detail = venue + (f"（{pref}）" if pref else "") + (f" {opn}" if opn else "")
+        for start, end in date_runs(e.get("dates")):
+            lo = start if lo is None or start < lo else lo
+            hi = end if hi is None or end > hi else hi
+            out.append({
+                "title": title,
+                "start": start.isoformat(),
+                "end": (end + timedelta(days=1)).isoformat(),   # FC の end は排他
+                "allDay": True,
+                "color": color,
+                "extendedProps": {"detail": detail, "status": e.get("status", "")},
+            })
+    return out, (lo.isoformat() if lo else ""), (hi.isoformat() if hi else "")
 
 
 CSS = """
 :root{--pink:#FF5C8A;--pink-deep:#FF2E6E;--bg:#FFF0F6;--bg2:#FFE3EF;--ink:#4A2E3D;--ink-soft:#9A7886;
---display:'Mochiy Pop One',system-ui,sans-serif;--body:'M PLUS Rounded 1c',system-ui,sans-serif;
---numh:24px;--barh:16px;--barg:3px;}
+--display:'Mochiy Pop One',system-ui,sans-serif;--body:'M PLUS Rounded 1c',system-ui,sans-serif;}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:var(--body);color:var(--ink);line-height:1.7;min-height:100vh;
 background:radial-gradient(1200px 600px at 80% -10%,#FFD6E8 0%,transparent 55%),
@@ -195,29 +156,31 @@ header{text-align:center;padding:38px 20px 6px}
 header .home{display:inline-block;color:var(--ink-soft);font-size:.9rem;margin-bottom:12px}
 h1{font-family:var(--display);font-size:clamp(1.5rem,5vw,2.3rem);color:var(--pink-deep)}
 header p{color:var(--ink-soft);margin-top:8px;font-size:.9rem}
-main{max-width:760px;margin:0 auto;padding:16px 16px 64px}
+main{max-width:820px;margin:0 auto;padding:16px 16px 64px}
 /* ジャンル凡例 */
-.legend{display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;margin:8px auto 4px;max-width:760px;padding:0 16px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;margin:8px auto 4px;max-width:820px;padding:0 16px}
 .legend .lg{display:inline-flex;align-items:center;gap:5px;font-size:.75rem;color:var(--ink-soft)}
 .legend .lg i{width:12px;height:12px;border-radius:3px;display:inline-block;flex:0 0 auto}
-/* 月ブロック */
+/* FullCalendar 外枠（アプリ風のピンク基調） */
+#cal{background:#fff;border:2px solid #ffe1ec;border-radius:16px;padding:12px;margin:14px 0 6px}
+#cal .fc .fc-toolbar-title{font-family:var(--display);color:var(--pink-deep);font-size:1.1rem}
+#cal .fc .fc-button-primary{background:var(--pink);border-color:var(--pink);font-weight:700;
+box-shadow:none;text-transform:none}
+#cal .fc .fc-button-primary:hover{background:var(--pink-deep);border-color:var(--pink-deep)}
+#cal .fc .fc-button-primary:disabled{background:#ffc2d6;border-color:#ffc2d6}
+#cal .fc .fc-button-primary:not(:disabled):active,
+#cal .fc .fc-button-primary:not(:disabled).fc-button-active{background:var(--pink-deep);border-color:var(--pink-deep)}
+#cal .fc .fc-daygrid-day.fc-day-today{background:#fff2f7}
+#cal .fc .fc-col-header-cell-cushion{color:var(--ink-soft);font-weight:700}
+#cal .fc .fc-day-sun .fc-col-header-cell-cushion{color:#e5484d}
+#cal .fc .fc-day-sat .fc-col-header-cell-cushion{color:#3a7bd5}
+#cal .fc .fc-daygrid-day-number{color:var(--ink);font-weight:600}
+#cal .fc .fc-event{border:none;font-weight:700;font-size:.72rem}
+#cal .fc .fc-more-link{color:var(--pink-deep);font-weight:700}
+.calnote{max-width:820px;margin:2px auto 0;padding:0 18px;font-size:.76rem;color:var(--ink-soft);text-align:center}
+/* 月別の詳細一覧（JS 無効/クローラ向けにも全件） */
 .mon{margin-top:22px}
 .mon>h2{font-family:var(--display);font-size:1.05rem;color:var(--pink-deep);padding:0 4px 6px;border-bottom:2px solid #ffd9e6}
-/* カレンダー（アプリ風） */
-.cal{background:#fff;border:2px solid #ffe1ec;border-radius:16px;padding:10px 10px 6px;margin:12px 0 6px}
-.cal-head{display:flex}
-.cal-head .cw{flex:1 1 0;text-align:center;font-size:.72rem;font-weight:700;color:var(--ink-soft);padding:2px 0}
-.cal-head .cw.sun{color:#e5484d}.cal-head .cw.sat{color:#3a7bd5}
-.cweek{position:relative;display:flex}
-.cd{flex:1 1 0;min-width:0;text-align:center;position:relative}
-.cd .cn{display:inline-block;font-size:.78rem;color:var(--ink);height:var(--numh);line-height:var(--numh)}
-.cd.oth .cn{color:var(--ink-soft);opacity:.4}
-.cd .more{position:absolute;right:3px;bottom:2px;font-size:.55rem;font-weight:700;color:var(--pink-deep);opacity:.85}
-.cbar{position:absolute;height:var(--barh);border-radius:calc(var(--barh)/2);overflow:hidden;
-display:flex;align-items:center;box-shadow:0 1px 2px rgba(0,0,0,.08)}
-.cbar>span{font-size:.6rem;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;
-text-overflow:ellipsis;padding:0 5px;line-height:var(--barh)}
-/* 月の詳細一覧 */
 .mon ul{list-style:none;margin-top:10px}
 .ev{display:flex;gap:12px;background:#fff;border:2px solid #ffe1ec;border-radius:14px;padding:10px 14px;margin-top:8px}
 .ev .gc{flex:0 0 6px;border-radius:3px;align-self:stretch}
@@ -231,12 +194,35 @@ text-overflow:ellipsis;padding:0 5px;line-height:var(--barh)}
 .ev .st{display:inline-block;font-size:.66rem;font-weight:700;color:#fff;background:var(--pink);
 border-radius:999px;padding:1px 8px;margin-left:8px;vertical-align:middle}
 .ev .st-this_week,.ev .st-ongoing{background:var(--pink-deep)}
-.note{max-width:760px;margin:24px auto 0;padding:0 18px;font-size:.8rem;color:var(--ink-soft);text-align:center}
+.listhead{text-align:center;margin-top:30px;color:var(--ink-soft);font-size:.86rem}
+.note{max-width:820px;margin:24px auto 0;padding:0 18px;font-size:.8rem;color:var(--ink-soft);text-align:center}
 footer{text-align:center;padding:24px 16px 48px;color:var(--ink-soft);font-size:.82rem}
-@media (max-width:560px){
-  .cd .cn{font-size:.72rem}
-  .cbar>span{font-size:.55rem;padding:0 3px}
-}
+"""
+
+JS = """
+document.addEventListener('DOMContentLoaded', function () {
+  var el = document.getElementById('cal');
+  if (!el || typeof FullCalendar === 'undefined') return;
+  var first = %FIRST%, last = %LAST%;
+  var today = new Date().toISOString().slice(0, 10);
+  var initial = (first && today < first) ? first : ((last && today > last) ? last : today);
+  var cal = new FullCalendar.Calendar(el, {
+    initialView: 'dayGridMonth',
+    initialDate: initial,
+    locale: 'ja',
+    firstDay: 0,
+    height: 'auto',
+    displayEventTime: false,
+    dayMaxEvents: 4,
+    headerToolbar: { left: 'prev,next today', center: 'title', right: '' },
+    events: window.__LIVE_EVENTS__ || [],
+    eventDidMount: function (info) {
+      var d = info.event.extendedProps.detail;
+      if (d) info.el.setAttribute('title', info.event.title + ' — ' + d);
+    }
+  });
+  cal.render();
+});
 """
 
 
@@ -253,16 +239,18 @@ def main():
         for g in ordered
     )
 
+    fcev, first, last = fc_events(events)
+    events_json = json.dumps(fcev, ensure_ascii=False).replace("</", "<\\/")
+
+    # 月別の詳細一覧（静的・全件）
     sections = []
     for mk, grp in groupby(events, key=month_key):
         grp = list(grp)
         if mk == "9999-99":
             label = "日程調整中・その他"
-            cal = ""
         else:
             y, m = (int(x) for x in mk.split("-"))
             label = f"{y}年{m}月"
-            cal = build_calendar(y, m, grp)
         rows = []
         for e in grp:
             st = SHOW.get(e.get("status"), "")
@@ -279,13 +267,14 @@ def main():
                 f'<span class="name">{esc(e.get("event_name",""))}</span>'
                 f'<span class="loc">{loc}{opn}</span></span></li>'
             )
-        sections.append(
-            f'<section class="mon"><h2>{esc(label)}</h2>{cal}<ul>{"".join(rows)}</ul></section>'
-        )
+        sections.append(f'<section class="mon"><h2>{esc(label)}</h2><ul>{"".join(rows)}</ul></section>')
 
     meta = data.get("meta") or {}
     updated = esc(meta.get("generated_at") or meta.get("report_week") or "")
     sub = f"最終更新 {updated}・{len(events)}公演" if updated else f"{len(events)}公演"
+
+    js = (JS.replace("%FIRST%", json.dumps(first))
+            .replace("%LAST%", json.dumps(last)))
 
     page = f"""<!DOCTYPE html><html lang="ja"><head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N5SNNFWXR4"></script>
@@ -300,21 +289,28 @@ def main():
 <link rel="icon" href="/oshimite-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@{FC_VER}/index.global.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@{FC_VER}/locales/ja.global.min.js"></script>
 <style>{CSS}</style></head><body>
 <header><a class="home" href="/">← 推しミテ！トップ</a><h1>ライブ日程カレンダー</h1>
 <p>{esc(sub)}</p></header>
 <div class="legend">{legend}</div>
 <main>
+<div id="cal"></div>
+<p class="calnote">日付のバーをタップ（ホバー）で会場・開演を表示。前月／次月で移動できます。混雑日は「+N」でまとめて表示。</p>
+<p class="listhead">▼ 一覧でも見る（会場・日時）</p>
 {"".join(sections)}
 <p class="note">※ 公演情報は各公式発表に基づく参考情報です。最新・正確な情報は各公演の公式サイトでご確認ください。<br>推しミテ！で応援うちわを作って、コンビニでA3実寸プリント。全機能無料。</p>
 </main>
 <footer>© 2026 ShiraseLab / 推しミテ！ ・ <a href="/">トップ</a> ・ <a href="/templates/">うちわテンプレート</a></footer>
+<script>window.__LIVE_EVENTS__ = {events_json};</script>
+<script>{js}</script>
 </body></html>
 """
 
     (HERE / "index.html").write_text(page, encoding="utf-8")
-    print(f"schedules/index.html generated: {len(events)} events, "
-          f"{len(sections)} months, {len(ordered)} genres")
+    print(f"schedules/index.html generated: {len(events)} events, {len(fcev)} calendar bars, "
+          f"{len(sections)} months, {len(ordered)} genres, range {first}..{last}")
 
 
 if __name__ == "__main__":
