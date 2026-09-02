@@ -25,6 +25,11 @@ ROOT = HERE.parent                               # repo root
 SITE = "https://oshimite.jp"
 HELP = "help-2.4.0.html"
 
+# タグページは「そのタグが MIN_TAG_PAGE 件以上」の時だけ作る（1件はその個別ページと重複＝Google
+# 「クロール済み-インデックス未登録」の元）。生成は毎回この件数で駆動するので、1→2件に増えれば次回
+# 生成でページ・sitemap・チップのリンクが自動で復活し、2→1件に減れば prune で自動削除される（自己修復）。
+MIN_TAG_PAGE = 2
+
 data = json.loads((HERE / "index.json").read_text(encoding="utf-8"))
 templates = data["templates"]
 
@@ -65,6 +70,10 @@ def tpls_for_tag(tag: str):
     return [t for t in templates if tag in t.get("tags", [])]
 
 
+tag_count = {tag: len(tpls_for_tag(tag)) for tag in all_tags}
+qualifying_tags = [tag for tag in all_tags if tag_count[tag] >= MIN_TAG_PAGE]
+
+
 CSS = """:root{
   --pink:#FF5C8A;--pink-deep:#FF2E6E;--lav:#B9A3FF;
   --bg:#FFF0F6;--bg2:#FFE3EF;--ink:#4A2E3D;--ink-soft:#9A7886;--gold:#FFD84D;--white:#fff;
@@ -103,6 +112,7 @@ a.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(255,92,138,.
 .chip{display:inline-block;background:#fff;border:2px solid #FFC9DD;color:var(--pink-deep);
   font-weight:700;font-size:.82rem;padding:5px 13px;border-radius:999px}
 .chip:hover{background:var(--bg2)}
+.chip.nolink{color:var(--ink-soft);border-color:#eecad8;border-style:dashed;cursor:default}
 .cta{display:inline-block;margin:22px auto 0;padding:12px 26px;border-radius:999px;
   background:var(--pink-deep);color:#fff;font-weight:700;box-shadow:0 6px 16px rgba(255,46,110,.35)}
 .cta:hover{background:var(--pink)}
@@ -169,6 +179,14 @@ def write(path: Path, text: str):
     path.write_text(text, encoding="utf-8")
 
 
+def prune(dir_path: Path, keep: set):
+    """dir_path 直下の *.html のうち keep に無いものを削除（1件に減ったタグページ・削除アイテムの掃除）。"""
+    if dir_path.exists():
+        for p in dir_path.glob("*.html"):
+            if p.name not in keep:
+                p.unlink()
+
+
 # ---- tpl.css ----
 write(HERE / "tpl.css", CSS)
 
@@ -183,8 +201,11 @@ for t in templates:
     desc = (f"「{title}」の応援うちわテンプレート。推しミテ！アプリで文字やメンバーカラーを"
             f"編集して、コンビニでA3実寸プリント。全機能無料。"
             + ("タグ: " + " / ".join(tags) if tags else ""))
+    # タグページが在る（2件以上）タグはリンク、1件だけのタグは非リンクのラベルで見せる。
     chips = "\n".join(
-        f'      <a class="chip" href="/templates/tag/{tag_slug[tag]}.html">#{esc(tag)}</a>'
+        (f'      <a class="chip" href="/templates/tag/{tag_slug[tag]}.html">#{esc(tag)}</a>'
+         if tag_count[tag] >= MIN_TAG_PAGE else
+         f'      <span class="chip nolink">#{esc(tag)}</span>')
         for tag in tags)
     ld = {
         "@context": "https://schema.org",
@@ -216,8 +237,8 @@ for t in templates:
 {FOOT}"""
     write(HERE / "t" / f"{tid}.html", body)
 
-# ---- タグ（フィルター）ページ ----
-for tag in all_tags:
+# ---- タグ（フィルター）ページ（2件以上のタグだけ。1件はその個別ページと重複するので作らない）----
+for tag in qualifying_tags:
     slug = tag_slug[tag]
     matches = tpls_for_tag(tag)
     canonical = f"{SITE}/templates/tag/{slug}.html"
@@ -248,6 +269,10 @@ for tag in all_tags:
 </main>
 {FOOT}"""
     write(HERE / "tag" / f"{slug}.html", body)
+
+# 資格を失った古い生成物を掃除（1件に減ったタグページ・削除アイテムの個別ページ）
+prune(HERE / "t", {f"{t['id']}.html" for t in templates})
+prune(HERE / "tag", {f"{tag_slug[tag]}.html" for tag in qualifying_tags})
 
 # ---- ギャラリー index.html を再生成（CARDS＝リンク付きカード / TAGNAV＝タグ導線）----
 gallery = (HERE / "index.html").read_text(encoding="utf-8")
@@ -282,7 +307,7 @@ def _item_kind(it):
     return None
 _groups = _defaultdict(list)
 for tg in all_tags:
-    if tg in _GENERIC or tg in _region_tags:
+    if tg in _GENERIC or tg in _region_tags or _cnt[tg] < MIN_TAG_PAGE:
         continue
     _ks = [_item_kind(x) for x in templates if tg in x.get("tags", [])]
     kc = _Counter(k for k in _ks if k is not None)
@@ -296,7 +321,8 @@ for nm, _mk in _kinds:
     if ts:
         _sections.append((nm, ts[:_PER], True))
 if _region_tags:
-    rts = sorted((t for t in all_tags if t in _region_tags and t not in _GENERIC), key=lambda t: -_cnt[t])
+    rts = sorted((t for t in all_tags if t in _region_tags and t not in _GENERIC
+                  and _cnt[t] >= MIN_TAG_PAGE), key=lambda t: -_cnt[t])
     if rts:
         _sections.append((_region_axis.get("label", "地域"), rts[:_PER], True))
 _other = sorted(_groups.get("その他", []), key=lambda t: -_cnt[t])
@@ -330,7 +356,8 @@ urls = [(f"{SITE}/", "1.0", "weekly"),
 for t in templates:
     urls.append((f"{SITE}/templates/t/{t['id']}.html", "0.6", "monthly"))
 for tag in all_tags:
-    urls.append((f"{SITE}/templates/tag/{tag_slug[tag]}.html", "0.5", "weekly"))
+    if tag_count[tag] >= MIN_TAG_PAGE:                     # 2件以上のタグページだけ sitemap へ
+        urls.append((f"{SITE}/templates/tag/{tag_slug[tag]}.html", "0.5", "weekly"))
 # 配信スタンプ／ステッカーのギャラリーも sitemap に温存する（実体の生成は ../_gen_galleries.py。
 # ここで URL を足さないと、このスクリプトを回すたびに sitemap から stamps/stickers が消える）。
 for gdir, gkey in (("stamps", "stamps"), ("stickers", "stickers")):
@@ -348,11 +375,13 @@ for gdir, gkey in (("stamps", "stamps"), ("stickers", "stickers")):
         while s2 in gseen and gseen[s2] != tg:
             s2, j = f"{base}-{j}", j + 1
         gseen[s2] = tg; gslug[tg] = s2
+    gcnt = {tg: sum(1 for it in gitems if tg in it.get("tags", [])) for tg in gtags}
     urls.append((f"{SITE}/{gdir}/", "0.8", "weekly"))
     for it in gitems:
         urls.append((f"{SITE}/{gdir}/t/{it['id']}.html", "0.6", "monthly"))
     for tg in gtags:
-        urls.append((f"{SITE}/{gdir}/tag/{gslug[tg]}.html", "0.5", "weekly"))
+        if gcnt[tg] >= MIN_TAG_PAGE:                       # 2件以上のタグページだけ sitemap へ
+            urls.append((f"{SITE}/{gdir}/tag/{gslug[tg]}.html", "0.5", "weekly"))
 sm = ['<?xml version="1.0" encoding="UTF-8"?>',
       '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 for loc, pri, cf in urls:
@@ -366,4 +395,5 @@ write(ROOT / "robots.txt",
       "User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % SITE)
 
 print(f"templates={len(templates)} tags={len(all_tags)} "
-      f"pages: t={len(templates)} tag={len(all_tags)} + sitemap({len(urls)}) + robots + index.html + tpl.css")
+      f"pages: t={len(templates)} tag={len(qualifying_tags)}(>= {MIN_TAG_PAGE}件のみ / 除外{len(all_tags)-len(qualifying_tags)}) "
+      f"+ sitemap({len(urls)}) + robots + index.html + tpl.css")

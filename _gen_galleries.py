@@ -51,6 +51,12 @@ def tag_slugs(items):
 # タグ導線から外す汎用タグ（絞り込みにならない＝ほぼ全件に付く語）
 GENERIC_TAGS = {"かわいい", "キラキラ", "デコ"}
 
+# タグページは「そのタグが MIN_TAG_PAGE 件以上」の時だけ作る。1件のタグページはその個別ページと
+# ほぼ重複で、Google が「クロール済み-インデックス未登録」に落とす元。生成は毎回この件数で駆動するので、
+# 1→2件に増えれば次回生成でページ・sitemap・チップのリンクが自動で復活し、2→1件に減れば prune で
+# 自動削除される（運用は件数駆動で自己修復＝アイテムが増減してもHTMLが破綻しない）。
+MIN_TAG_PAGE = 2
+
 
 def grouped_tagnav(dir_, items, all_tags, slug, filters):
     """タグを index.json の filters レジストリ（種類/地域 など）に沿って見出し別に分けて導線化する。
@@ -78,7 +84,7 @@ def grouped_tagnav(dir_, items, all_tags, slug, filters):
 
     groups = defaultdict(list)
     for t in all_tags:
-        if t in GENERIC_TAGS or t in region_tags:
+        if t in GENERIC_TAGS or t in region_tags or cnt[t] < MIN_TAG_PAGE:
             continue
         ks = [item_kind(x) for x in items if t in x.get("tags", [])]
         kc = Counter(k for k in ks if k is not None)
@@ -86,14 +92,15 @@ def grouped_tagnav(dir_, items, all_tags, slug, filters):
         # そのタグの過半数がそのカテゴリの時だけ配属。横断的なテーマ語は「その他」へ。
         groups[best if bn > len(ks) / 2 else "その他"].append(t)
 
-    PER_GROUP = 12  # グループ毎に出現数上位のみ（1件だらけの長い尾はナビから省く。tag ページ/sitemap には残る）
+    PER_GROUP = 12  # グループ毎に出現数上位のみ。ナビに載るのは MIN_TAG_PAGE 件以上のタグだけ（上の continue で除外済み）
     sections = []  # (label, [tags], show_label)
     for name, _mk in kinds:
         tags = sorted((t for t in groups.get(name, []) if t != name), key=lambda t: -cnt[t])
         if tags:
             sections.append((name, tags[:PER_GROUP], True))
     if region_tags:
-        rtags = sorted((t for t in all_tags if t in region_tags and t not in GENERIC_TAGS), key=lambda t: -cnt[t])
+        rtags = sorted((t for t in all_tags if t in region_tags and t not in GENERIC_TAGS
+                        and cnt[t] >= MIN_TAG_PAGE), key=lambda t: -cnt[t])
         if rtags:
             sections.append((region_axis.get("label", "地域"), rtags[:PER_GROUP], True))
     other = sorted(groups.get("その他", []), key=lambda t: -cnt[t])
@@ -145,6 +152,7 @@ a.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(255,92,138,.
 .chip{display:inline-block;background:#fff;border:2px solid #FFC9DD;color:var(--pink-deep);
   font-weight:700;font-size:.82rem;padding:5px 13px;border-radius:999px}
 .chip:hover{background:var(--bg2)}
+.chip.nolink{color:var(--ink-soft);border-color:#eecad8;border-style:dashed;cursor:default}
 .cta{display:inline-block;margin:22px auto 0;padding:12px 26px;border-radius:999px;
   background:var(--pink-deep);color:#fff;font-weight:700;box-shadow:0 6px 16px rgba(255,46,110,.35)}
 .cta:hover{background:var(--pink)}.center{text-align:center}
@@ -190,6 +198,16 @@ def write(path, text):
     path.write_text(text, encoding="utf-8")
 
 
+def prune(dir_path, keep):
+    """dir_path 直下の *.html のうち keep（残すファイル名の集合）に無いものを削除。
+    件数が減って資格を失ったタグページや、削除されたアイテムの個別ページを自動で掃除する。"""
+    if not dir_path.exists():
+        return
+    for p in dir_path.glob("*.html"):
+        if p.name not in keep:
+            p.unlink()
+
+
 # gallery ごとの設定
 GALLERIES = [
     dict(dir="stamps", key="stamps", noun="スタンプ", gtitle="配信スタンプ一覧",
@@ -215,6 +233,8 @@ def gen_gallery(cfg):
     data = json.loads((D / "index.json").read_text(encoding="utf-8"))
     items = data[key]
     all_tags, slug = tag_slugs(items)
+    cnt = {t: sum(1 for x in items if t in x.get("tags", [])) for t in all_tags}
+    qualifying = [tg for tg in all_tags if cnt[tg] >= MIN_TAG_PAGE]
 
     # 個別ページ
     for it in items:
@@ -224,7 +244,11 @@ def gen_gallery(cfg):
         canonical = f"{SITE}/{dir_}/t/{tid}.html"
         img = f"{SITE}/{dir_}/{it['thumbUrl']}"
         desc = cfg["idesc"](title)
-        chips = "".join(f'<a class="chip" href="/{dir_}/tag/{slug[t]}.html">#{esc(t)}</a>' for t in tags)
+        # タグページが在る（2件以上）タグはリンク、1件だけのタグは非リンクのラベルで見せる。
+        chips = "".join(
+            (f'<a class="chip" href="/{dir_}/tag/{slug[t]}.html">#{esc(t)}</a>'
+             if cnt[t] >= MIN_TAG_PAGE else f'<span class="chip nolink">#{esc(t)}</span>')
+            for t in tags)
         ld = {"@context": "https://schema.org", "@type": "ImageObject", "name": title,
               "contentUrl": img, "thumbnailUrl": img, "url": canonical,
               "keywords": ", ".join(tags), "isPartOf": {"@type": "CollectionPage",
@@ -241,8 +265,8 @@ def gen_gallery(cfg):
 {foot()}"""
         write(D / "t" / f"{tid}.html", body)
 
-    # タグページ
-    for tg in all_tags:
+    # タグページ（2件以上のタグだけ。1件はその個別ページと重複するので作らない）
+    for tg in qualifying:
         matches = [it for it in items if tg in it.get("tags", [])]
         canonical = f"{SITE}/{dir_}/tag/{slug[tg]}.html"
         img = f"{SITE}/{dir_}/{matches[0]['thumbUrl']}" if matches else f"{SITE}/oshimite-icon.png"
@@ -258,6 +282,10 @@ def gen_gallery(cfg):
 <main><section class="grid" aria-label="「{esc(tg)}」の{noun}一覧">{cards}</section></main>
 {foot()}"""
         write(D / "tag" / f"{slug[tg]}.html", body)
+
+    # 資格を失った古い生成物を掃除（1件に減ったタグページ・削除アイテムの個別ページ）
+    prune(D / "t", {f"{it['id']}.html" for it in items})
+    prune(D / "tag", {f"{slug[tg]}.html" for tg in qualifying})
 
     # ギャラリー index.html
     canonical = f"{SITE}/{dir_}/"
@@ -276,7 +304,7 @@ def gen_gallery(cfg):
 <p class="note">※ 推しミテ！は無料の応援うちわ作成アプリ。{noun}をうちわに貼って、コンビニでA3実寸プリントできます。</p></main>
 {foot()}"""
     write(D / "index.html", body)
-    return items, all_tags, slug
+    return items, all_tags, slug, cnt
 
 
 def main():
@@ -292,21 +320,24 @@ def main():
         td = json.loads((ROOT / "templates" / "index.json").read_text(encoding="utf-8"))
         tpls = td["templates"]
         t_tags, t_slug = tag_slugs(tpls)
+        t_cnt = {tg: sum(1 for x in tpls if tg in x.get("tags", [])) for tg in t_tags}
         urls.append((f"{SITE}/templates/", "0.8", "weekly"))
         for t in tpls:
             urls.append((f"{SITE}/templates/t/{t['id']}.html", "0.6", "monthly"))
         for tg in t_tags:
-            urls.append((f"{SITE}/templates/tag/{t_slug[tg]}.html", "0.5", "weekly"))
+            if t_cnt[tg] >= MIN_TAG_PAGE:                      # 2件以上のタグページだけ sitemap へ
+                urls.append((f"{SITE}/templates/tag/{t_slug[tg]}.html", "0.5", "weekly"))
     except FileNotFoundError:
         pass
     # stamps / stickers
     for cfg in GALLERIES:
-        items, all_tags, slug = per[cfg["dir"]]
+        items, all_tags, slug, cnt = per[cfg["dir"]]
         urls.append((f"{SITE}/{cfg['dir']}/", "0.8", "weekly"))
         for it in items:
             urls.append((f"{SITE}/{cfg['dir']}/t/{it['id']}.html", "0.6", "monthly"))
         for tg in all_tags:
-            urls.append((f"{SITE}/{cfg['dir']}/tag/{slug[tg]}.html", "0.5", "weekly"))
+            if cnt[tg] >= MIN_TAG_PAGE:                        # 2件以上のタグページだけ sitemap へ
+                urls.append((f"{SITE}/{cfg['dir']}/tag/{slug[tg]}.html", "0.5", "weekly"))
 
     lastmod = "2026-08-07"
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',

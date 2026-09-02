@@ -36,6 +36,7 @@ a.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(255,92,138,.
 .chip{display:inline-block;background:#fff;border:2px solid #FFC9DD;color:var(--pink-deep);
   font-weight:700;font-size:.82rem;padding:5px 13px;border-radius:999px}
 .chip:hover{background:var(--bg2)}
+.chip.nolink{color:var(--ink-soft);border-color:#eecad8;border-style:dashed;cursor:default}
 .cta{display:inline-block;margin:22px auto 0;padding:12px 26px;border-radius:999px;
   background:var(--pink-deep);color:#fff;font-weight:700;box-shadow:0 6px 16px rgba(255,46,110,.35)}
 .cta:hover{background:var(--pink)}
