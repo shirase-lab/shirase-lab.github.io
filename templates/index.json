@@ -1711,12 +1711,23 @@
     },
     {
       "id": "tpl-8baf00377e",
-      "title": "うちわ188ba868",
+      "title": "けんてぃ（中島健人）バーンして",
       "thumbUrl": "thumb/tpl-8baf00377e.png",
       "fileUrl": "tpl-8baf00377e.uchiwa",
       "updatedAt": "2026-09-03",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "バーン",
+        "ポーズ",
+        "中島健人",
+        "けんてぃ",
+        "ケンティ",
+        "ハート",
+        "定番"
+      ]
     }
   ]
 }
