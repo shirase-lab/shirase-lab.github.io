@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-02",
+  "updatedAt": "2026-09-03",
   "note": "うちわつくーる 配信テンプレのマニフェスト。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。作者制作のみ・投稿機能なし。filters はアプリの絞り込みドロップダウン用（タグのレイヤー分け＝グループ/地域）＝各値の tags のいずれかを持つ item が該当。Web の SEO には影響しない。",
   "filters": [
     {
@@ -1621,7 +1621,18 @@
       "updatedAt": "2026-09-02",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru",
-      "tags": ["名前入り","おねだり","こっち見て","定番","キスマイ","Kis-My-Ft2","たいぴー","藤ヶ谷太輔","かわいい","ハート"]
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "こっち見て",
+        "定番",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "たいぴー",
+        "藤ヶ谷太輔",
+        "かわいい",
+        "ハート"
+      ]
     },
     {
       "id": "tpl-634cc7542c",
@@ -1631,7 +1642,17 @@
       "updatedAt": "2026-09-02",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru",
-      "tags": ["名前入り","カンペ","手振って","定番","キスマイ","Kis-My-Ft2","たいぴー","藤ヶ谷太輔","ハート"]
+      "tags": [
+        "名前入り",
+        "カンペ",
+        "手振って",
+        "定番",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "たいぴー",
+        "藤ヶ谷太輔",
+        "ハート"
+      ]
     },
     {
       "id": "tpl-6ba07c72aa",
@@ -1641,7 +1662,27 @@
       "updatedAt": "2026-09-02",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru",
-      "tags": ["名前入り","おねだり","指ハート","指ハートして","定番","キスマイ","Kis-My-Ft2","たいぴー","藤ヶ谷太輔","ハート"]
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "指ハート",
+        "指ハートして",
+        "定番",
+        "キスマイ",
+        "Kis-My-Ft2",
+        "たいぴー",
+        "藤ヶ谷太輔",
+        "ハート"
+      ]
+    },
+    {
+      "id": "tpl-c51c839637",
+      "title": "うちわaaebd1bd",
+      "thumbUrl": "thumb/tpl-c51c839637.png",
+      "fileUrl": "tpl-c51c839637.uchiwa",
+      "updatedAt": "2026-09-03",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
