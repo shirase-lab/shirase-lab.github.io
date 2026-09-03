@@ -1547,6 +1547,56 @@
         "新潟",
         "たべもの"
       ]
+    },
+    {
+      "id": "sticker_088",
+      "title": "トラ",
+      "thumbUrl": "thumb/sticker_088.png",
+      "fileUrl": "sticker_088.png",
+      "updatedAt": "2026-09-03",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "トラ",
+        "虎",
+        "とら",
+        "タイガー",
+        "どうぶつ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "sticker_089",
+      "title": "ぶどう",
+      "thumbUrl": "thumb/sticker_089.png",
+      "fileUrl": "sticker_089.png",
+      "updatedAt": "2026-09-03",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ぶどう",
+        "ブドウ",
+        "葡萄",
+        "巨峰",
+        "フルーツ",
+        "果物",
+        "たべもの"
+      ]
+    },
+    {
+      "id": "sticker_090",
+      "title": "シャインマスカット",
+      "thumbUrl": "thumb/sticker_090.png",
+      "fileUrl": "sticker_090.png",
+      "updatedAt": "2026-09-03",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "シャインマスカット",
+        "マスカット",
+        "ぶどう",
+        "ブドウ",
+        "フルーツ",
+        "果物",
+        "たべもの"
+      ]
     }
   ]
 }

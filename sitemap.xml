@@ -2023,6 +2023,24 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://oshimite.jp/stickers/t/sticker_088.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/stickers/t/sticker_089.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/stickers/t/sticker_090.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://oshimite.jp/stickers/tag/%E3%81%A9%E3%81%86%E3%81%B6%E3%81%A4.html</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -2132,6 +2150,12 @@
   </url>
   <url>
     <loc>https://oshimite.jp/stickers/tag/%E3%81%86%E3%81%A9%E3%82%93.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/stickers/tag/%E3%83%95%E3%83%AB%E3%83%BC%E3%83%84.html</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2306,6 +2330,24 @@
   </url>
   <url>
     <loc>https://oshimite.jp/stickers/tag/%E6%96%B0%E6%BD%9F.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/stickers/tag/%E3%81%B6%E3%81%A9%E3%81%86.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/stickers/tag/%E3%83%96%E3%83%89%E3%82%A6.html</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/stickers/tag/%E6%9E%9C%E7%89%A9.html</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
