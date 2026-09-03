@@ -1708,6 +1708,15 @@
         "ブルー",
         "定番"
       ]
+    },
+    {
+      "id": "tpl-8baf00377e",
+      "title": "うちわ188ba868",
+      "thumbUrl": "thumb/tpl-8baf00377e.png",
+      "fileUrl": "tpl-8baf00377e.uchiwa",
+      "updatedAt": "2026-09-03",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
