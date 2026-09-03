@@ -77,6 +77,20 @@
             "Travis Japan",
             "トラジャ"
           ]
+        },
+        {
+          "name": "中島健人",
+          "tags": [
+            "中島健人",
+            "けんてぃ",
+            "ケンティ"
+          ],
+          "nameI18n": {
+            "en": "Kento Nakajima",
+            "ko": "나카지마 켄토",
+            "zh": "中岛健人",
+            "zh_Hant": "中島健人"
+          }
         }
       ],
       "labelI18n": {
@@ -1677,12 +1691,23 @@
     },
     {
       "id": "tpl-c51c839637",
-      "title": "うちわaaebd1bd",
+      "title": "けんてぃ（中島健人）お名前うちわ",
       "thumbUrl": "thumb/tpl-c51c839637.png",
       "fileUrl": "tpl-c51c839637.uchiwa",
       "updatedAt": "2026-09-03",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "中島健人",
+        "けんてぃ",
+        "ケンティ",
+        "ハート",
+        "青",
+        "ブルー",
+        "定番"
+      ]
     }
   ]
 }
