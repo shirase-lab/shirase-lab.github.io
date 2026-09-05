@@ -1755,6 +1755,15 @@
       "updatedAt": "2026-09-06",
       "minAppVersion": "2.3.0",
       "fallbackFont": "GenEiKiwamiGo"
+    },
+    {
+      "id": "tpl-94453443bb",
+      "title": "うちわ70a78b7a",
+      "thumbUrl": "thumb/tpl-94453443bb.png",
+      "fileUrl": "tpl-94453443bb.uchiwa",
+      "updatedAt": "2026-09-06",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "GenEiKiwamiGo"
     }
   ]
 }
