@@ -91,6 +91,19 @@
             "zh": "中岛健人",
             "zh_Hant": "中島健人"
           }
+        },
+        {
+          "name": "King & Prince",
+          "tags": [
+            "King & Prince",
+            "キンプリ"
+          ],
+          "nameI18n": {
+            "en": "King & Prince",
+            "ko": "킹앤프린스",
+            "zh": "King & Prince",
+            "zh_Hant": "King & Prince"
+          }
         }
       ],
       "labelI18n": {
@@ -1731,66 +1744,142 @@
     },
     {
       "id": "tpl-52ad8b28f0",
-      "title": "うちわc751a71b",
+      "title": "高橋海人 お名前うちわ",
       "thumbUrl": "thumb/tpl-52ad8b28f0.png",
       "fileUrl": "tpl-52ad8b28f0.uchiwa",
       "updatedAt": "2026-09-06",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "King & Prince",
+        "キンプリ",
+        "高橋海人",
+        "髙橋海人",
+        "かいと",
+        "青",
+        "ブルー",
+        "定番"
+      ]
     },
     {
       "id": "tpl-a0e88cc9c8",
-      "title": "うちわbadbacda",
+      "title": "れんれん（永瀬廉）お名前うちわ",
       "thumbUrl": "thumb/tpl-a0e88cc9c8.png",
       "fileUrl": "tpl-a0e88cc9c8.uchiwa",
       "updatedAt": "2026-09-06",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "King & Prince",
+        "キンプリ",
+        "永瀬廉",
+        "れんれん",
+        "定番"
+      ]
     },
     {
       "id": "tpl-73ec1f913c",
-      "title": "うちわad77fcc8",
+      "title": "れんれん（永瀬廉）３秒見つめて",
       "thumbUrl": "thumb/tpl-73ec1f913c.png",
       "fileUrl": "tpl-73ec1f913c.uchiwa",
       "updatedAt": "2026-09-06",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "GenEiKiwamiGo"
+      "fallbackFont": "GenEiKiwamiGo",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "見つめて",
+        "３秒見つめて",
+        "King & Prince",
+        "キンプリ",
+        "永瀬廉",
+        "れんれん",
+        "定番"
+      ]
     },
     {
       "id": "tpl-94453443bb",
-      "title": "うちわ70a78b7a",
+      "title": "れんれん（永瀬廉）ウサ耳して",
       "thumbUrl": "thumb/tpl-94453443bb.png",
       "fileUrl": "tpl-94453443bb.uchiwa",
       "updatedAt": "2026-09-06",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "GenEiKiwamiGo"
+      "fallbackFont": "GenEiKiwamiGo",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "ポーズ",
+        "ウサ耳",
+        "うさ耳",
+        "King & Prince",
+        "キンプリ",
+        "永瀬廉",
+        "れんれん",
+        "定番"
+      ]
     },
     {
       "id": "tpl-042378091a",
-      "title": "うちわd6a43a12",
+      "title": "れんれん（永瀬廉）がおーして",
       "thumbUrl": "thumb/tpl-042378091a.png",
       "fileUrl": "tpl-042378091a.uchiwa",
       "updatedAt": "2026-09-06",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "GenEiKiwamiGo"
+      "fallbackFont": "GenEiKiwamiGo",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "ポーズ",
+        "がおー",
+        "King & Prince",
+        "キンプリ",
+        "永瀬廉",
+        "れんれん",
+        "定番"
+      ]
     },
     {
       "id": "tpl-3b7946541b",
-      "title": "うちわ0d8834bb",
+      "title": "れんれん（永瀬廉）指ハートして",
       "thumbUrl": "thumb/tpl-3b7946541b.png",
       "fileUrl": "tpl-3b7946541b.uchiwa",
       "updatedAt": "2026-09-06",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "GenEiKiwamiGo"
+      "fallbackFont": "GenEiKiwamiGo",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "指ハート",
+        "King & Prince",
+        "キンプリ",
+        "永瀬廉",
+        "れんれん",
+        "ハート",
+        "定番"
+      ]
     },
     {
       "id": "tpl-b50815c7e9",
-      "title": "うちわ07a987b0",
+      "title": "れんれん（永瀬廉）ハイタッチしよ",
       "thumbUrl": "thumb/tpl-b50815c7e9.png",
       "fileUrl": "tpl-b50815c7e9.uchiwa",
       "updatedAt": "2026-09-06",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "GenEiKiwamiGo"
+      "fallbackFont": "GenEiKiwamiGo",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "ハイタッチ",
+        "King & Prince",
+        "キンプリ",
+        "永瀬廉",
+        "れんれん",
+        "定番"
+      ]
     }
   ]
 }
