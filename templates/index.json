@@ -1737,6 +1737,15 @@
       "updatedAt": "2026-09-06",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru"
+    },
+    {
+      "id": "tpl-a0e88cc9c8",
+      "title": "うちわbadbacda",
+      "thumbUrl": "thumb/tpl-a0e88cc9c8.png",
+      "fileUrl": "tpl-a0e88cc9c8.uchiwa",
+      "updatedAt": "2026-09-06",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
