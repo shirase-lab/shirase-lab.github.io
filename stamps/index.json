@@ -201,6 +201,25 @@
             "zh": "手势・姿势",
             "zh_Hant": "手勢・姿勢"
           }
+        },
+        {
+          "name": "夏祭り・縁日",
+          "nameI18n": {
+            "en": "Summer festival",
+            "ko": "여름 축제",
+            "zh": "夏日祭",
+            "zh_Hant": "夏日祭"
+          },
+          "tags": [
+            "夏祭り",
+            "縁日",
+            "屋台",
+            "花火",
+            "お面",
+            "団扇",
+            "和太鼓",
+            "法被"
+          ]
         }
       ],
       "labelI18n": {
@@ -1061,6 +1080,399 @@
         "J",
         "ポーズ",
         "ファンサ"
+      ]
+    },
+    {
+      "id": "americandog",
+      "title": "アメリカンドッグ",
+      "thumbUrl": "thumb/americandog.png",
+      "fileUrl": "americandog.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "アメリカンドッグ",
+        "屋台",
+        "縁日",
+        "夏祭り",
+        "たべもの"
+      ]
+    },
+    {
+      "id": "asagao",
+      "title": "朝顔",
+      "thumbUrl": "thumb/asagao.png",
+      "fileUrl": "asagao.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "朝顔",
+        "あさがお",
+        "花",
+        "夏"
+      ]
+    },
+    {
+      "id": "beer",
+      "title": "ビール",
+      "thumbUrl": "thumb/beer.png",
+      "fileUrl": "beer.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ビール",
+        "乾杯",
+        "夏祭り",
+        "夏"
+      ]
+    },
+    {
+      "id": "chocobanana",
+      "title": "チョコバナナ",
+      "thumbUrl": "thumb/chocobanana.png",
+      "fileUrl": "chocobanana.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "チョコバナナ",
+        "屋台",
+        "縁日",
+        "夏祭り",
+        "たべもの"
+      ]
+    },
+    {
+      "id": "hanabi01",
+      "title": "花火",
+      "thumbUrl": "thumb/hanabi01.png",
+      "fileUrl": "hanabi01.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "花火",
+        "はなび",
+        "夏祭り",
+        "夏"
+      ]
+    },
+    {
+      "id": "hanabi02",
+      "title": "花火",
+      "thumbUrl": "thumb/hanabi02.png",
+      "fileUrl": "hanabi02.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "花火",
+        "はなび",
+        "夏祭り",
+        "夏"
+      ]
+    },
+    {
+      "id": "hanabi03",
+      "title": "花火",
+      "thumbUrl": "thumb/hanabi03.png",
+      "fileUrl": "hanabi03.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "花火",
+        "はなび",
+        "夏祭り",
+        "夏"
+      ]
+    },
+    {
+      "id": "happi",
+      "title": "法被",
+      "thumbUrl": "thumb/happi.png",
+      "fileUrl": "happi.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "法被",
+        "はっぴ",
+        "祭",
+        "夏祭り"
+      ]
+    },
+    {
+      "id": "himawari",
+      "title": "ひまわり",
+      "thumbUrl": "thumb/himawari.png",
+      "fileUrl": "himawari.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ひまわり",
+        "向日葵",
+        "花",
+        "夏"
+      ]
+    },
+    {
+      "id": "ikayaki",
+      "title": "いか焼き",
+      "thumbUrl": "thumb/ikayaki.png",
+      "fileUrl": "ikayaki.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "いか焼き",
+        "イカ焼き",
+        "屋台",
+        "縁日",
+        "夏祭り",
+        "たべもの"
+      ]
+    },
+    {
+      "id": "kakigoori",
+      "title": "かき氷",
+      "thumbUrl": "thumb/kakigoori.png",
+      "fileUrl": "kakigoori.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "かき氷",
+        "かきごおり",
+        "夏",
+        "屋台",
+        "縁日",
+        "夏祭り",
+        "たべもの"
+      ]
+    },
+    {
+      "id": "mizuhusen",
+      "title": "水風船",
+      "thumbUrl": "thumb/mizuhusen.png",
+      "fileUrl": "mizuhusen.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "水風船",
+        "みずふうせん",
+        "縁日",
+        "夏祭り"
+      ]
+    },
+    {
+      "id": "omen01",
+      "title": "きつね面",
+      "thumbUrl": "thumb/omen01.png",
+      "fileUrl": "omen01.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "きつね面",
+        "お面",
+        "おめん",
+        "縁日",
+        "祭",
+        "夏祭り"
+      ]
+    },
+    {
+      "id": "omen02",
+      "title": "お面",
+      "thumbUrl": "thumb/omen02.png",
+      "fileUrl": "omen02.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "お面",
+        "おめん",
+        "縁日",
+        "祭",
+        "夏祭り"
+      ]
+    },
+    {
+      "id": "onpu01",
+      "title": "音符",
+      "thumbUrl": "thumb/onpu01.png",
+      "fileUrl": "onpu01.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "音符",
+        "おんぷ",
+        "音楽"
+      ]
+    },
+    {
+      "id": "onpu02",
+      "title": "音符",
+      "thumbUrl": "thumb/onpu02.png",
+      "fileUrl": "onpu02.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "音符",
+        "おんぷ",
+        "音楽"
+      ]
+    },
+    {
+      "id": "pigs",
+      "title": "ひよこ",
+      "thumbUrl": "thumb/pigs.png",
+      "fileUrl": "pigs.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "ひよこ",
+        "とり",
+        "小鳥",
+        "どうぶつ",
+        "かわいい"
+      ]
+    },
+    {
+      "id": "ringoame",
+      "title": "りんご飴",
+      "thumbUrl": "thumb/ringoame.png",
+      "fileUrl": "ringoame.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "りんご飴",
+        "りんごあめ",
+        "屋台",
+        "縁日",
+        "夏祭り",
+        "たべもの"
+      ]
+    },
+    {
+      "id": "star01",
+      "title": "星",
+      "thumbUrl": "thumb/star01.png",
+      "fileUrl": "star01.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "星",
+        "スター",
+        "キラキラ"
+      ]
+    },
+    {
+      "id": "star02",
+      "title": "星",
+      "thumbUrl": "thumb/star02.png",
+      "fileUrl": "star02.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "星",
+        "スター",
+        "キラキラ"
+      ]
+    },
+    {
+      "id": "star03",
+      "title": "星",
+      "thumbUrl": "thumb/star03.png",
+      "fileUrl": "star03.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "星",
+        "スター",
+        "キラキラ"
+      ]
+    },
+    {
+      "id": "suica",
+      "title": "すいか",
+      "thumbUrl": "thumb/suica.png",
+      "fileUrl": "suica.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "すいか",
+        "スイカ",
+        "西瓜",
+        "夏",
+        "たべもの"
+      ]
+    },
+    {
+      "id": "takoyaki",
+      "title": "たこ焼き",
+      "thumbUrl": "thumb/takoyaki.png",
+      "fileUrl": "takoyaki.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "たこ焼き",
+        "たこやき",
+        "屋台",
+        "縁日",
+        "夏祭り",
+        "たべもの"
+      ]
+    },
+    {
+      "id": "uchiwa01",
+      "title": "うちわ",
+      "thumbUrl": "thumb/uchiwa01.png",
+      "fileUrl": "uchiwa01.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "うちわ",
+        "団扇",
+        "夏",
+        "祭",
+        "夏祭り"
+      ]
+    },
+    {
+      "id": "uchiwa02",
+      "title": "祭うちわ",
+      "thumbUrl": "thumb/uchiwa02.png",
+      "fileUrl": "uchiwa02.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "うちわ",
+        "団扇",
+        "祭",
+        "夏祭り"
+      ]
+    },
+    {
+      "id": "wadaiko",
+      "title": "和太鼓",
+      "thumbUrl": "thumb/wadaiko.png",
+      "fileUrl": "wadaiko.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "和太鼓",
+        "太鼓",
+        "祭",
+        "夏祭り"
+      ]
+    },
+    {
+      "id": "wataame",
+      "title": "わたあめ",
+      "thumbUrl": "thumb/wataame.png",
+      "fileUrl": "wataame.svg",
+      "updatedAt": "2026-09-05",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "わたあめ",
+        "綿あめ",
+        "綿菓子",
+        "屋台",
+        "縁日",
+        "夏祭り",
+        "たべもの"
       ]
     }
   ]
