@@ -9,13 +9,14 @@ sitemap.xml は root/help/templates(+t/tag)/stamps(+t/tag)/stickers(+t/tag) を�
   python _gen_galleries.py
 を実行して commit/push（GitHub Pages 反映）。
 """
+import datetime
 import html, json, re
 from pathlib import Path
 from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent
 SITE = "https://oshimite.jp"
-HELP = "help-2.4.0.html"
+HELP = "help-2.6.0.html"
 
 
 def esc(s):
@@ -314,7 +315,9 @@ def main():
         per[cfg["dir"]] = gen_gallery(cfg)
 
     # ---- 完全版 sitemap（templates も読んで温存） ----
-    urls = [(f"{SITE}/", "1.0", "weekly"), (f"{SITE}/{HELP}", "0.8", "monthly")]
+    urls = [(f"{SITE}/", "1.0", "weekly"), (f"{SITE}/{HELP}", "0.8", "monthly"),
+            (f"{SITE}/fonts/", "0.6", "monthly"), (f"{SITE}/updates/", "0.5", "weekly"),
+            (f"{SITE}/schedules/", "0.7", "weekly")]
     # templates
     try:
         td = json.loads((ROOT / "templates" / "index.json").read_text(encoding="utf-8"))
@@ -339,7 +342,7 @@ def main():
             if cnt[tg] >= MIN_TAG_PAGE:                        # 2件以上のタグページだけ sitemap へ
                 urls.append((f"{SITE}/{cfg['dir']}/tag/{slug[tg]}.html", "0.5", "weekly"))
 
-    lastmod = "2026-08-07"
+    lastmod = datetime.date.today().isoformat()   # 生成日＝再クロールの目印（固定日で古びさせない）
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for loc, pri, cf in urls:

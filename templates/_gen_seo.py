@@ -23,7 +23,7 @@ from urllib.parse import quote
 HERE = Path(__file__).resolve().parent          # .../templates
 ROOT = HERE.parent                               # repo root
 SITE = "https://oshimite.jp"
-HELP = "help-2.4.0.html"
+HELP = "help-2.6.0.html"
 
 # タグページは「そのタグが MIN_TAG_PAGE 件以上」の時だけ作る（1件はその個別ページと重複＝Google
 # 「クロール済み-インデックス未登録」の元）。生成は毎回この件数で駆動するので、1→2件に増えれば次回
