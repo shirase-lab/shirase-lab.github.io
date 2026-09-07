@@ -1474,6 +1474,57 @@
         "夏祭り",
         "たべもの"
       ]
+    },
+    {
+      "id": "thumbs_up_01",
+      "title": "サムズアップ",
+      "thumbUrl": "thumb/thumbs_up_01.png",
+      "fileUrl": "thumbs_up_01.svg",
+      "updatedAt": "2026-09-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "サムズアップ",
+        "いいね",
+        "グッド",
+        "親指",
+        "手",
+        "ハンドサイン",
+        "ポーズ"
+      ]
+    },
+    {
+      "id": "thumbs_up_02",
+      "title": "サムズアップ",
+      "thumbUrl": "thumb/thumbs_up_02.png",
+      "fileUrl": "thumbs_up_02.svg",
+      "updatedAt": "2026-09-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "サムズアップ",
+        "いいね",
+        "グッド",
+        "親指",
+        "手",
+        "ハンドサイン",
+        "ポーズ"
+      ]
+    },
+    {
+      "id": "thumbs_up_03",
+      "title": "サムズアップ",
+      "thumbUrl": "thumb/thumbs_up_03.png",
+      "fileUrl": "thumbs_up_03.svg",
+      "updatedAt": "2026-09-07",
+      "minAppVersion": "2.4.0",
+      "tags": [
+        "サムズアップ",
+        "いいね",
+        "グッド",
+        "親指",
+        "手",
+        "ハンドサイン",
+        "ポーズ"
+      ]
     }
   ]
 }

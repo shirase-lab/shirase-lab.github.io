@@ -1639,6 +1639,24 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://oshimite.jp/stamps/t/thumbs_up_01.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/stamps/t/thumbs_up_02.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/stamps/t/thumbs_up_03.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://oshimite.jp/stamps/tag/%E7%8E%8B%E5%86%A0.html</loc>
     <lastmod>2026-09-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -1898,6 +1916,36 @@
   </url>
   <url>
     <loc>https://oshimite.jp/stamps/tag/%E5%9B%A3%E6%89%87.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/stamps/tag/%E3%82%B5%E3%83%A0%E3%82%BA%E3%82%A2%E3%83%83%E3%83%97.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/stamps/tag/%E3%81%84%E3%81%84%E3%81%AD.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/stamps/tag/%E3%82%B0%E3%83%83%E3%83%89.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/stamps/tag/%E8%A6%AA%E6%8C%87.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/stamps/tag/%E6%89%8B.html</loc>
     <lastmod>2026-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
