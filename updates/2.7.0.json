@@ -1,0 +1,64 @@
+{
+  "version": "2.7.0",
+  "date": "2026-09-08",
+  "title": "アップデート内容",
+  "highlights": [
+    "複数選択を大幅に強化しました（整列や配置パターン〔横一列・縦一行・W型・リング・カーブ〕、中央寄せ、幅そろえ、選んだ1個目を赤い枠で表示）",
+    "何もない所を長押し→ドラッグで囲うと、まとめて複数選択できるようにしました（キャンバスの外側まで対応）",
+    "配信ギャラリーと通常のギャラリーを、二本指ピンチでタイル表示に切り替えられるようにしました（写真アプリ風・タイルに名前を表示）",
+    "スタンプ・画像の使用履歴を全画面の一覧で見られるようにしました",
+    "カレンダーを強化しました（背景画像・絞り込み・ジャンル別の色・翌月の日付表示）",
+    "欠けているフォントを「おすすめフォント」から1タップで復旧できるようにし、取り込んだフォントを削除できるようにしました",
+    "各種不具合を修正しました（サムネイルが崩れる問題・クラッシュ・メモリまわり・起動の安定性など）"
+  ],
+  "i18n": {
+    "en": {
+      "title": "What's New",
+      "highlights": [
+        "Multi-select is much more powerful (align, layout patterns [single row / single column / W-zigzag / ring / curve], centering, match-width, and the first-selected item shown with a red frame)",
+        "Long-press an empty area and drag to marquee-select several items at once (works past the edge of the canvas too)",
+        "Pinch with two fingers to switch the online and local galleries to a tiled view (Photos-app style, with names on the tiles)",
+        "See your stamp and image usage history in a full-screen list",
+        "The calendar is enhanced (background image, filters, per-genre colors, and next month's dates)",
+        "Recover a missing font with one tap from Recommended Fonts, and delete fonts you have imported",
+        "Fixed various issues (broken thumbnails, crashes, memory, startup stability and more)"
+      ]
+    },
+    "ko": {
+      "title": "업데이트 내용",
+      "highlights": [
+        "다중 선택을 대폭 강화했어요(정렬・배치 패턴〔가로 1열・세로 1행・W형・링・커브〕・가운데 맞춤・너비 맞춤, 처음 선택한 항목을 빨간 테두리로 표시)",
+        "빈 곳을 길게 눌러 드래그하면 여러 개를 한 번에 선택할 수 있어요(캔버스 바깥까지 대응)",
+        "배포 갤러리와 일반 갤러리를 두 손가락 핀치로 타일 표시로 바꿀 수 있어요(사진 앱처럼・타일에 이름 표시)",
+        "스탬프・이미지 사용 기록을 전체 화면 목록에서 볼 수 있어요",
+        "캘린더를 강화했어요(배경 이미지・필터・장르별 색・다음 달 날짜 표시)",
+        "없는 폰트를 ‘추천 폰트’에서 한 번에 복구하고, 가져온 폰트를 삭제할 수 있어요",
+        "여러 버그를 수정했어요(썸네일이 깨지는 문제・크래시・메모리・실행 안정성 등)"
+      ]
+    },
+    "zh": {
+      "title": "更新内容",
+      "highlights": [
+        "大幅增强了多选（对齐、排布样式〔单行・单列・W型・环形・曲线〕、居中、统一宽度，并把第一个所选项以红框显示）",
+        "长按空白处并拖动即可一次框选多个对象（画布外也支持）",
+        "用两指捏合，把在线素材库和本地素材库切换为平铺显示（照片App风格，磁贴上显示名称）",
+        "可以在全屏列表中查看贴纸和图片的使用记录",
+        "增强了日历（背景图、筛选、按类型的颜色、下个月的日期显示）",
+        "缺失的字体可从「推荐字体」一键恢复，并可删除已导入的字体",
+        "修复了多处问题（缩略图损坏、崩溃、内存、启动稳定性等）"
+      ]
+    },
+    "zh_Hant": {
+      "title": "更新內容",
+      "highlights": [
+        "大幅增強了多選（對齊、排版樣式〔單行・單列・W型・環形・曲線〕、置中、統一寬度，並把第一個所選項以紅框顯示）",
+        "長按空白處並拖曳即可一次框選多個物件（畫布外也支援）",
+        "用兩指捏合，把線上素材庫與本機素材庫切換為並排顯示（相片App風格，圖磚上顯示名稱）",
+        "可以在全螢幕清單中檢視貼紙與圖片的使用紀錄",
+        "增強了行事曆（背景圖、篩選、依類型的顏色、下個月的日期顯示）",
+        "缺少的字型可從「推薦字型」一鍵復原，並可刪除已匯入的字型",
+        "修正了多處問題（縮圖損毀、當機、記憶體、啟動穩定性等）"
+      ]
+    }
+  }
+}
