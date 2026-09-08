@@ -137,6 +137,17 @@ document.addEventListener('DOMContentLoaded', function () {
       if (c.classList.contains('all')) c.classList.toggle('on', n === 0);
       else c.classList.toggle('on', !!active[g]);
     });
+    // 現在の絞り込みを URL に反映（?genre=kpop,starto_jr）＝共有・ブックマーク可能に
+    if (window.history && history.replaceState) {
+      try {
+        var u = new URL(location.href);
+        var keys = Object.keys(active);
+        if (keys.length) u.searchParams.set('genre', keys.join(','));
+        else u.searchParams.delete('genre');
+        u.searchParams.delete('g');   // 別名 g= は正規化して genre= に寄せる
+        history.replaceState(null, '', u.pathname + u.search + u.hash);
+      } catch (e) {}
+    }
   }
   chips.forEach(function(c){
     c.addEventListener('click', function(){
@@ -147,6 +158,17 @@ document.addEventListener('DOMContentLoaded', function () {
       apply();
     });
   });
+  // GET クエリ（?genre=kpop,starto_jr / ?g=... ）で初期絞り込み。存在するジャンルキーのみ採用。
+  var valid = {};
+  chips.forEach(function(c){ var g = c.getAttribute('data-genre'); if (g) valid[g] = true; });
+  try {
+    var q = new URLSearchParams(location.search);
+    (q.get('genre') || q.get('g') || '').split(',').forEach(function(t){
+      t = t.trim();
+      if (valid[t]) active[t] = true;
+    });
+  } catch (e) {}
+  if (activeCount()) apply();   // クエリ指定があれば初期状態を反映（無ければ全件のまま）
 });
 </script>
 </body></html>
