@@ -156,6 +156,16 @@
           "licenseFile": "files/lilita_one.LICENSE.txt"
         },
         {
+          "id": "bebas_neue",
+          "name": "Bebas Neue",
+          "category": "高視認",
+          "url": "https://fonts.google.com/specimen/Bebas+Neue",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/bebas_neue.png",
+          "download": "files/bebas_neue.ttf",
+          "licenseFile": "files/bebas_neue.LICENSE.txt"
+        },
+        {
           "id": "bangers",
           "name": "Bangers",
           "category": "コミック",
