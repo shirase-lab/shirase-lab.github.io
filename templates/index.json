@@ -104,6 +104,19 @@
             "zh": "King & Prince",
             "zh_Hant": "King & Prince"
           }
+        },
+        {
+          "name": "SixTONES",
+          "tags": [
+            "SixTONES",
+            "ストーンズ"
+          ],
+          "nameI18n": {
+            "en": "SixTONES",
+            "ko": "식스톤즈",
+            "zh": "SixTONES",
+            "zh_Hant": "SixTONES"
+          }
         }
       ],
       "labelI18n": {
@@ -1883,66 +1896,124 @@
     },
     {
       "id": "tpl-082e3b9b14",
-      "title": "うちわ2daf1ee7",
+      "title": "ジェシー お名前うちわ",
       "thumbUrl": "thumb/tpl-082e3b9b14.png",
       "fileUrl": "tpl-082e3b9b14.uchiwa",
       "updatedAt": "2026-09-15",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "SixTONES",
+        "ストーンズ",
+        "ジェシー",
+        "名前入り",
+        "お名前うちわ"
+      ]
     },
     {
       "id": "tpl-ca9917c049",
-      "title": "うちわ2c59c5ab",
+      "title": "京本大我 お名前うちわ",
       "thumbUrl": "thumb/tpl-ca9917c049.png",
       "fileUrl": "tpl-ca9917c049.uchiwa",
       "updatedAt": "2026-09-15",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "SixTONES",
+        "ストーンズ",
+        "京本大我",
+        "きょも",
+        "たいが",
+        "名前入り",
+        "お名前うちわ"
+      ]
     },
     {
       "id": "tpl-7a66d00af1",
-      "title": "うちわ6615e53c",
+      "title": "松村北斗 お名前うちわ",
       "thumbUrl": "thumb/tpl-7a66d00af1.png",
       "fileUrl": "tpl-7a66d00af1.uchiwa",
       "updatedAt": "2026-09-15",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "SixTONES",
+        "ストーンズ",
+        "松村北斗",
+        "ほくと",
+        "ほっくん",
+        "名前入り",
+        "お名前うちわ"
+      ]
     },
     {
       "id": "tpl-8e7571b3a0",
-      "title": "うちわ14021ace",
+      "title": "髙地優吾 お名前うちわ",
       "thumbUrl": "thumb/tpl-8e7571b3a0.png",
       "fileUrl": "tpl-8e7571b3a0.uchiwa",
       "updatedAt": "2026-09-15",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "SixTONES",
+        "ストーンズ",
+        "髙地優吾",
+        "高地優吾",
+        "ゆうご",
+        "こうち",
+        "名前入り",
+        "お名前うちわ"
+      ]
     },
     {
       "id": "tpl-0306d06c0b",
-      "title": "うちわ2c0706e3",
+      "title": "森本慎太郎 お名前うちわ",
       "thumbUrl": "thumb/tpl-0306d06c0b.png",
       "fileUrl": "tpl-0306d06c0b.uchiwa",
       "updatedAt": "2026-09-15",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "SixTONES",
+        "ストーンズ",
+        "森本慎太郎",
+        "しんたろー",
+        "しんたろ",
+        "名前入り",
+        "お名前うちわ"
+      ]
     },
     {
       "id": "tpl-462768569d",
-      "title": "うちわ9f04f37d",
+      "title": "田中樹 お名前うちわ",
       "thumbUrl": "thumb/tpl-462768569d.png",
       "fileUrl": "tpl-462768569d.uchiwa",
       "updatedAt": "2026-09-15",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "SixTONES",
+        "ストーンズ",
+        "田中樹",
+        "じゅり",
+        "名前入り",
+        "お名前うちわ"
+      ]
     },
     {
       "id": "tpl-29aeca31bc",
-      "title": "うちわ78762f00",
+      "title": "SixTONES最高",
       "thumbUrl": "thumb/tpl-29aeca31bc.png",
       "fileUrl": "tpl-29aeca31bc.uchiwa",
       "updatedAt": "2026-09-15",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "SixTONES",
+        "ストーンズ",
+        "名前入り",
+        "最高"
+      ]
     }
   ]
 }
