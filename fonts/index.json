@@ -104,6 +104,16 @@
           "licenseFile": "files/851_makapop.LICENSE.txt"
         },
         {
+          "id": "gochikakutto_851",
+          "name": "851ゴチカクット",
+          "category": "高視認",
+          "url": "https://pm85122.onamae.jp/851Gkktt.html",
+          "license": "フリー（商用可・再配布可）",
+          "preview": "preview/gochikakutto_851.png",
+          "download": "files/gochikakutto_851.ttf",
+          "licenseFile": "files/gochikakutto_851.LICENSE.txt"
+        },
+        {
           "id": "lanobe_pop",
           "name": "ラノベPOP V2",
           "category": "ポップ",
