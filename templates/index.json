@@ -117,6 +117,19 @@
             "zh": "SixTONES",
             "zh_Hant": "SixTONES"
           }
+        },
+        {
+          "name": "Snow Man",
+          "tags": [
+            "Snow Man",
+            "スノーマン"
+          ],
+          "nameI18n": {
+            "en": "Snow Man",
+            "ko": "스노우맨",
+            "zh": "Snow Man",
+            "zh_Hant": "Snow Man"
+          }
         }
       ],
       "labelI18n": {
@@ -2017,93 +2030,175 @@
     },
     {
       "id": "tpl-233b244f81",
-      "title": "うちわbdc21f80",
+      "title": "岩本照 お名前うちわ",
       "thumbUrl": "thumb/tpl-233b244f81.png",
       "fileUrl": "tpl-233b244f81.uchiwa",
       "updatedAt": "2026-09-17",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "Snow Man",
+        "スノーマン",
+        "岩本照",
+        "ひかる",
+        "名前入り",
+        "お名前うちわ"
+      ]
     },
     {
       "id": "tpl-d11bf00147",
-      "title": "うちわ988ad265",
+      "title": "深澤辰哉 お名前うちわ",
       "thumbUrl": "thumb/tpl-d11bf00147.png",
       "fileUrl": "tpl-d11bf00147.uchiwa",
       "updatedAt": "2026-09-17",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "Snow Man",
+        "スノーマン",
+        "深澤辰哉",
+        "深沢辰哉",
+        "ふっか",
+        "名前入り",
+        "お名前うちわ"
+      ]
     },
     {
       "id": "tpl-952f8890c1",
-      "title": "うちわe5cc9f2e",
+      "title": "渡辺翔太 お名前うちわ",
       "thumbUrl": "thumb/tpl-952f8890c1.png",
       "fileUrl": "tpl-952f8890c1.uchiwa",
       "updatedAt": "2026-09-17",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "Snow Man",
+        "スノーマン",
+        "渡辺翔太",
+        "しょっぴー",
+        "名前入り",
+        "お名前うちわ"
+      ]
     },
     {
       "id": "tpl-9760ac6608",
-      "title": "うちわ4e63a24a",
+      "title": "向井康二 お名前うちわ",
       "thumbUrl": "thumb/tpl-9760ac6608.png",
       "fileUrl": "tpl-9760ac6608.uchiwa",
       "updatedAt": "2026-09-17",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "Snow Man",
+        "スノーマン",
+        "向井康二",
+        "こうじ",
+        "こじ",
+        "名前入り",
+        "お名前うちわ"
+      ]
     },
     {
       "id": "tpl-64f28bece4",
-      "title": "うちわdb2e6851",
+      "title": "阿部亮平 お名前うちわ",
       "thumbUrl": "thumb/tpl-64f28bece4.png",
       "fileUrl": "tpl-64f28bece4.uchiwa",
       "updatedAt": "2026-09-17",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "Snow Man",
+        "スノーマン",
+        "阿部亮平",
+        "あべちゃん",
+        "名前入り",
+        "お名前うちわ"
+      ]
     },
     {
       "id": "tpl-e81ef6488b",
-      "title": "うちわ82e82ef8",
+      "title": "目黒蓮 お名前うちわ",
       "thumbUrl": "thumb/tpl-e81ef6488b.png",
       "fileUrl": "tpl-e81ef6488b.uchiwa",
       "updatedAt": "2026-09-17",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "Snow Man",
+        "スノーマン",
+        "目黒蓮",
+        "めめ",
+        "名前入り",
+        "お名前うちわ"
+      ]
     },
     {
       "id": "tpl-36ab3a67f8",
-      "title": "うちわ83b9ea1c",
+      "title": "宮舘涼太 お名前うちわ",
       "thumbUrl": "thumb/tpl-36ab3a67f8.png",
       "fileUrl": "tpl-36ab3a67f8.uchiwa",
       "updatedAt": "2026-09-17",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "Snow Man",
+        "スノーマン",
+        "宮舘涼太",
+        "宮館涼太",
+        "だて様",
+        "だて",
+        "名前入り",
+        "お名前うちわ"
+      ]
     },
     {
       "id": "tpl-ee6e783c92",
-      "title": "うちわ2b5c3676",
+      "title": "佐久間大介 お名前うちわ",
       "thumbUrl": "thumb/tpl-ee6e783c92.png",
       "fileUrl": "tpl-ee6e783c92.uchiwa",
       "updatedAt": "2026-09-17",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "Snow Man",
+        "スノーマン",
+        "佐久間大介",
+        "さっくん",
+        "名前入り",
+        "お名前うちわ"
+      ]
     },
     {
       "id": "tpl-3d81f04465",
-      "title": "うちわ34b700ca",
+      "title": "ラウール お名前うちわ",
       "thumbUrl": "thumb/tpl-3d81f04465.png",
       "fileUrl": "tpl-3d81f04465.uchiwa",
       "updatedAt": "2026-09-17",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "Snow Man",
+        "スノーマン",
+        "ラウール",
+        "ラウ",
+        "名前入り",
+        "お名前うちわ"
+      ]
     },
     {
       "id": "tpl-0a5115190e",
-      "title": "うちわ951c396d",
+      "title": "Snow Man最高",
       "thumbUrl": "thumb/tpl-0a5115190e.png",
       "fileUrl": "tpl-0a5115190e.uchiwa",
       "updatedAt": "2026-09-17",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "Snow Man",
+        "スノーマン",
+        "名前入り",
+        "最高"
+      ]
     }
   ]
 }
