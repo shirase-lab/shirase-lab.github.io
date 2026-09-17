@@ -1,0 +1,59 @@
+{
+  "version": "2.8.0",
+  "date": "2026-09-17",
+  "title": "アップデート内容",
+  "highlights": [
+    "配置パターンに「うちわ沿い」を追加しました（選んだ複数を、うちわの上端の弧に沿ってまとめて並べます）",
+    "配置パターンの「回転」を、追加角度（度）で指定できるようにしました（360°自由に回せます）",
+    "削除ボタンを選択枠の右上の❌に移しました（複数選択したときは「すべて削除／これだけ削除」を選べます）",
+    "カレンダーの背景画像をクロップできるようにしました（縮小して余白を付けることもできます）",
+    "アーチ状に並べた文字の字間（文字の間隔）が効くようにしました",
+    "各種不具合を修正しました（クラッシュ・複数選択の配置・undo/redo・メモリや安定性など）"
+  ],
+  "i18n": {
+    "en": {
+      "title": "What's New",
+      "highlights": [
+        "Added a new layout pattern, \"Along the fan,\" that arranges selected items along the top arc of the uchiwa",
+        "The layout \"Rotate\" is now set as an added angle in degrees, so you can spin it a full 360°",
+        "Moved the delete button to the ❌ at the top-right of the selection frame (with several items selected you can choose \"Delete all\" or \"Delete only this\")",
+        "You can now crop the calendar's background image (shrink it and add margins too)",
+        "Letter spacing now works for text arranged in an arch",
+        "Fixed various issues (crashes, multi-select layout, undo/redo, memory and stability, and more)"
+      ]
+    },
+    "ko": {
+      "title": "업데이트 내용",
+      "highlights": [
+        "배치 패턴에 '부채 곡선'을 추가했어요(선택한 여러 항목을 부채 위쪽 곡선을 따라 배치)",
+        "배치의 '회전'을 추가 각도(도)로 지정할 수 있게 했어요(360° 자유롭게 회전)",
+        "삭제 버튼을 선택 테두리 오른쪽 위 ❌로 옮겼어요(여러 개를 선택하면 '모두 삭제／이것만 삭제'를 고를 수 있어요)",
+        "캘린더 배경 이미지를 자를 수 있게 했어요(축소해서 여백을 줄 수도 있어요)",
+        "아치 모양으로 배치한 글자의 자간(글자 간격)이 적용되도록 했어요",
+        "여러 버그를 수정했어요(크래시・다중 선택 배치・실행 취소/다시 실행・메모리와 안정성 등)"
+      ]
+    },
+    "zh": {
+      "title": "更新内容",
+      "highlights": [
+        "新增了排布样式「沿团扇」（把所选的多个对象沿团扇上缘的弧线排布）",
+        "把排布的「旋转」改为用附加角度（度）来指定，可自由旋转360°",
+        "把删除按钮移到了选择框右上角的❌（选中多个时可选择「全部删除／仅删除此项」）",
+        "可以裁剪日历的背景图了（也能缩小并留白）",
+        "让呈拱形排列的文字的字间距生效了",
+        "修复了多处问题（崩溃、多选排布、撤销/重做、内存与稳定性等）"
+      ]
+    },
+    "zh_Hant": {
+      "title": "更新內容",
+      "highlights": [
+        "新增了排版樣式「沿團扇」（把所選的多個物件沿團扇上緣的弧線排列）",
+        "把排版的「旋轉」改為以附加角度（度）指定，可自由旋轉360°",
+        "把刪除按鈕移到了選取框右上角的❌（選取多個時可選擇「全部刪除／僅刪除此項」）",
+        "可以裁切行事曆的背景圖了（也能縮小並留白）",
+        "讓呈拱形排列的文字的字間距生效了",
+        "修正了多處問題（當機、多選排版、復原/重做、記憶體與穩定性等）"
+      ]
+    }
+  }
+}
