@@ -2208,6 +2208,15 @@
       "updatedAt": "2026-09-19",
       "minAppVersion": "2.3.0",
       "fallbackFont": "genei_kiwami_go"
+    },
+    {
+      "id": "tpl-2994d117de",
+      "title": "うちわ8411d63a",
+      "thumbUrl": "thumb/tpl-2994d117de.png",
+      "fileUrl": "tpl-2994d117de.uchiwa",
+      "updatedAt": "2026-09-19",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
