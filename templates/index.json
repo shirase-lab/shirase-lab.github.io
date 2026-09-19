@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-17",
+  "updatedAt": "2026-09-19",
   "note": "うちわつくーる 配信テンプレのマニフェスト。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。作者制作のみ・投稿機能なし。filters はアプリの絞り込みドロップダウン用（タグのレイヤー分け＝グループ/地域）＝各値の tags のいずれかを持つ item が該当。Web の SEO には影響しない。",
   "filters": [
     {
@@ -2199,6 +2199,15 @@
         "名前入り",
         "最高"
       ]
+    },
+    {
+      "id": "tpl-22eca08295",
+      "title": "うちわ220cf0bc",
+      "thumbUrl": "thumb/tpl-22eca08295.png",
+      "fileUrl": "tpl-22eca08295.uchiwa",
+      "updatedAt": "2026-09-19",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "genei_kiwami_go"
     }
   ]
 }
