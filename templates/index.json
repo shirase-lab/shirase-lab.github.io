@@ -2202,30 +2202,63 @@
     },
     {
       "id": "tpl-22eca08295",
-      "title": "うちわ220cf0bc",
+      "title": "ちゃかくん（宮近海斗）お名前うちわ",
       "thumbUrl": "thumb/tpl-22eca08295.png",
       "fileUrl": "tpl-22eca08295.uchiwa",
       "updatedAt": "2026-09-19",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "genei_kiwami_go"
+      "fallbackFont": "genei_kiwami_go",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "Travis Japan",
+        "トラジャ",
+        "宮近海斗",
+        "ちゃか",
+        "ちゃかちゃん",
+        "ちゃかくん"
+      ]
     },
     {
       "id": "tpl-2994d117de",
-      "title": "うちわ8411d63a",
+      "title": "ちゃかくん（宮近海斗）ピースして",
       "thumbUrl": "thumb/tpl-2994d117de.png",
       "fileUrl": "tpl-2994d117de.uchiwa",
       "updatedAt": "2026-09-19",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "ピース",
+        "ピースして",
+        "Travis Japan",
+        "トラジャ",
+        "宮近海斗",
+        "ちゃか",
+        "ちゃかちゃん",
+        "ちゃかくん"
+      ]
     },
     {
       "id": "tpl-216c14a70b",
-      "title": "うちわ2091b39a",
+      "title": "ちゃかくん（宮近海斗）こっち見て",
       "thumbUrl": "thumb/tpl-216c14a70b.png",
       "fileUrl": "tpl-216c14a70b.uchiwa",
       "updatedAt": "2026-09-19",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "こっち見て",
+        "Travis Japan",
+        "トラジャ",
+        "宮近海斗",
+        "ちゃか",
+        "ちゃかちゃん",
+        "ちゃかくん"
+      ]
     }
   ]
 }
