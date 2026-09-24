@@ -122,6 +122,92 @@
           "preview": "preview/lanobe_pop_v2.png",
           "download": "files/lanobe_pop_v2.otf",
           "licenseFile": "files/lanobe_pop_v2.LICENSE.txt"
+        },
+        {
+          "id": "biz_udgothic",
+          "name": "BIZ UDゴシック",
+          "category": "高視認",
+          "url": "https://fonts.google.com/specimen/BIZ+UDGothic",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/biz_udgothic.png",
+          "download": "files/biz_udgothic.ttf",
+          "licenseFile": "files/biz_udgothic.LICENSE.txt"
+        },
+        {
+          "id": "mochiy_pop",
+          "name": "モッチーポップ",
+          "category": "ポップ",
+          "url": "https://fontdasu.com/1750",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/mochiy_pop.png",
+          "download": "files/mochiy_pop.otf",
+          "licenseFile": "files/mochiy_pop.LICENSE.txt"
+        },
+        {
+          "id": "check_and_ufo",
+          "name": "チェックアンドU-Foフォント",
+          "category": "ポップ",
+          "url": "https://yokutobanaitori.web.fc2.com/quizfont.html",
+          "license": "フリー（商用可・再配布可）",
+          "preview": "preview/check_and_ufo.png",
+          "download": "files/check_and_ufo.otf",
+          "licenseFile": "files/check_and_ufo.LICENSE.txt"
+        },
+        {
+          "id": "otoma_kanji_v2",
+          "name": "オとマの漢字V2",
+          "category": "ポップ",
+          "url": "https://booth.pm/ja/items/7769691",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/otoma_kanji_v2.png",
+          "download": "files/otoma_kanji_v2.ttf",
+          "licenseFile": "files/otoma_kanji_v2.LICENSE.txt"
+        },
+        {
+          "id": "tanugo_kaku",
+          "name": "たぬゴ角",
+          "category": "手書きポップ",
+          "url": "https://tanukifont.com/tanugo/",
+          "license": "SIL OFL 1.1",
+          "preview": "preview/tanugo_kaku.png",
+          "download": "files/tanugo_kaku.otf",
+          "licenseFile": "files/tanugo_kaku.LICENSE.txt"
+        },
+        {
+          "id": "jiyucho",
+          "name": "じゆうちょうフォント",
+          "category": "手書き",
+          "url": "https://yokutobanaitori.web.fc2.com/tegakifont.html",
+          "license": "フリー（商用可・再配布可）",
+          "preview": "preview/jiyucho.png",
+          "download": "files/jiyucho.otf",
+          "licenseFile": "files/jiyucho.LICENSE.txt"
+        },
+        {
+          "id": "tanuki_permanent_marker",
+          "name": "たぬき油性マジック",
+          "category": "手書き",
+          "url": "https://tanukifont.com/tanuki-permanent-marker/",
+          "license": "フリー（商用可）",
+          "preview": "preview/tanuki_permanent_marker.png",
+          "download": "files/tanuki_permanent_marker.ttf",
+          "licenseFile": "files/tanuki_permanent_marker.LICENSE.txt"
+        },
+        {
+          "id": "riipop_kaku",
+          "name": "りいポップ角",
+          "category": "ポップ",
+          "url": "https://aoirii.babyblue.jp/font/riipopkk/",
+          "license": "フリー（商用可・再配布不可）",
+          "preview": "preview/riipop_kaku.png"
+        },
+        {
+          "id": "makimaru_hand",
+          "name": "マキ丸ハンド",
+          "category": "手書き",
+          "url": "https://www.ac-font.com/",
+          "license": "無料（商用可・再配布不可・要フォントAC登録）",
+          "preview": "preview/makimaru_hand.png"
         }
       ],
       "labelI18n": {

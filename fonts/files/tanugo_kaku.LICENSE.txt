@@ -1,0 +1,7 @@
+たぬゴ（たぬゴ角） (Tanugo)
+配布元: https://tanukifont.com/tanugo/
+ライセンス: SIL Open Font License 1.1
+
+「Yusei Magic」の派生フォント。Yusei Magic と同様に SIL OFL 1.1 を継承。
+商用利用・改変・再配布可（OFLの規定に従う）。
+※ SIL OFL の規定により、フォントファイル単体（OTF/TTF）での販売は禁止。
