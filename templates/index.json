@@ -2360,6 +2360,15 @@
         "ハート",
         "定番"
       ]
+    },
+    {
+      "id": "tpl-40197f84cb",
+      "title": "うちわ7012f3ab",
+      "thumbUrl": "thumb/tpl-40197f84cb.png",
+      "fileUrl": "tpl-40197f84cb.uchiwa",
+      "updatedAt": "2026-09-25",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "genei_pople"
     }
   ]
 }
