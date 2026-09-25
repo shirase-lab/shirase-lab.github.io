@@ -2298,57 +2298,98 @@
     },
     {
       "id": "tpl-c6ead91129",
-      "title": "うちわ36b2ddfc",
+      "title": "中島健人 お名前うちわ",
       "thumbUrl": "thumb/tpl-c6ead91129.png",
       "fileUrl": "tpl-c6ead91129.uchiwa",
       "updatedAt": "2026-09-25",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "中島健人",
+        "けんてぃ",
+        "ケンティ"
+      ]
     },
     {
       "id": "tpl-9438919108",
-      "title": "うちわb4b911e3",
+      "title": "けんてぃ お名前うちわ",
       "thumbUrl": "thumb/tpl-9438919108.png",
       "fileUrl": "tpl-9438919108.uchiwa",
       "updatedAt": "2026-09-25",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "中島健人",
+        "けんてぃ",
+        "ケンティ",
+        "ハート"
+      ]
     },
     {
       "id": "tpl-746c1dc99c",
-      "title": "うちわ423fe129",
+      "title": "けんてぃ（中島健人）LOVE",
       "thumbUrl": "thumb/tpl-746c1dc99c.png",
       "fileUrl": "tpl-746c1dc99c.uchiwa",
       "updatedAt": "2026-09-25",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "カンペ",
+        "LOVE",
+        "ハート",
+        "中島健人",
+        "けんてぃ",
+        "ケンティ"
+      ]
     },
     {
       "id": "tpl-5387589e1a",
-      "title": "うちわ32817d6c",
+      "title": "けんてぃ（中島健人）ソウル旅行だね",
       "thumbUrl": "thumb/tpl-5387589e1a.png",
       "fileUrl": "tpl-5387589e1a.uchiwa",
       "updatedAt": "2026-09-25",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "genei_pople"
+      "fallbackFont": "genei_pople",
+      "tags": [
+        "名前入り",
+        "カンペ",
+        "ソウル旅行",
+        "中島健人",
+        "けんてぃ",
+        "ケンティ"
+      ]
     },
     {
       "id": "tpl-cfd9d2012f",
-      "title": "うちわ7b027db9",
+      "title": "けんてぃ（中島健人）３秒見つめて",
       "thumbUrl": "thumb/tpl-cfd9d2012f.png",
       "fileUrl": "tpl-cfd9d2012f.uchiwa",
       "updatedAt": "2026-09-25",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "genei_pople"
+      "fallbackFont": "genei_pople",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "見つめて",
+        "３秒見つめて",
+        "中島健人",
+        "けんてぃ",
+        "ケンティ"
+      ]
     },
     {
       "id": "tpl-3b7946541b",
-      "title": "うちわ7012f3ab",
+      "title": "れんれん（永瀬廉）指ハートして",
       "thumbUrl": "thumb/tpl-3b7946541b.png",
       "fileUrl": "tpl-3b7946541b.uchiwa",
-      "updatedAt": "2026-09-25",
+      "updatedAt": "2026-09-06",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "genei_pople",
+      "fallbackFont": "GenEiKiwamiGo",
       "tags": [
         "名前入り",
         "おねだり",
@@ -2363,12 +2404,21 @@
     },
     {
       "id": "tpl-40197f84cb",
-      "title": "うちわ7012f3ab",
+      "title": "けんてぃ（中島健人）指ハートして",
       "thumbUrl": "thumb/tpl-40197f84cb.png",
       "fileUrl": "tpl-40197f84cb.uchiwa",
       "updatedAt": "2026-09-25",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "genei_pople"
+      "fallbackFont": "genei_pople",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "指ハート",
+        "ハート",
+        "中島健人",
+        "けんてぃ",
+        "ケンティ"
+      ]
     }
   ]
 }
