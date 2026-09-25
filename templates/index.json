@@ -1869,26 +1869,6 @@
       ]
     },
     {
-      "id": "tpl-3b7946541b",
-      "title": "れんれん（永瀬廉）指ハートして",
-      "thumbUrl": "thumb/tpl-3b7946541b.png",
-      "fileUrl": "tpl-3b7946541b.uchiwa",
-      "updatedAt": "2026-09-06",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "GenEiKiwamiGo",
-      "tags": [
-        "名前入り",
-        "おねだり",
-        "指ハート",
-        "King & Prince",
-        "キンプリ",
-        "永瀬廉",
-        "れんれん",
-        "ハート",
-        "定番"
-      ]
-    },
-    {
       "id": "tpl-b50815c7e9",
       "title": "れんれん（永瀬廉）ハイタッチしよ",
       "thumbUrl": "thumb/tpl-b50815c7e9.png",
@@ -2351,6 +2331,26 @@
       "updatedAt": "2026-09-25",
       "minAppVersion": "2.3.0",
       "fallbackFont": "genei_pople"
+    },
+    {
+      "id": "tpl-3b7946541b",
+      "title": "うちわ7012f3ab",
+      "thumbUrl": "thumb/tpl-3b7946541b.png",
+      "fileUrl": "tpl-3b7946541b.uchiwa",
+      "updatedAt": "2026-09-25",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "genei_pople",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "指ハート",
+        "King & Prince",
+        "キンプリ",
+        "永瀬廉",
+        "れんれん",
+        "ハート",
+        "定番"
+      ]
     }
   ]
 }
