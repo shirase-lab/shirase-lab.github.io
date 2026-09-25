@@ -2333,6 +2333,15 @@
       "fallbackFont": "genei_pople"
     },
     {
+      "id": "tpl-cfd9d2012f",
+      "title": "うちわ7b027db9",
+      "thumbUrl": "thumb/tpl-cfd9d2012f.png",
+      "fileUrl": "tpl-cfd9d2012f.uchiwa",
+      "updatedAt": "2026-09-25",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "genei_pople"
+    },
+    {
       "id": "tpl-3b7946541b",
       "title": "うちわ7012f3ab",
       "thumbUrl": "thumb/tpl-3b7946541b.png",
@@ -2351,15 +2360,6 @@
         "ハート",
         "定番"
       ]
-    },
-    {
-      "id": "tpl-cfd9d2012f",
-      "title": "うちわ7b027db9",
-      "thumbUrl": "thumb/tpl-cfd9d2012f.png",
-      "fileUrl": "tpl-cfd9d2012f.uchiwa",
-      "updatedAt": "2026-09-25",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "genei_pople"
     }
   ]
 }
