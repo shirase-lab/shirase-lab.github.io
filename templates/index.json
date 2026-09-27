@@ -2413,23 +2413,6 @@
       ]
     },
     {
-      "id": "tpl-0ef4ddb9a4",
-      "title": "けんてぃ（中島健人）ハイタッチしよ",
-      "thumbUrl": "thumb/tpl-0ef4ddb9a4.png",
-      "fileUrl": "tpl-0ef4ddb9a4.uchiwa",
-      "updatedAt": "2026-09-27",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "genei_pople",
-      "tags": [
-        "名前入り",
-        "おねだり",
-        "ハイタッチ",
-        "中島健人",
-        "けんてぃ",
-        "ケンティ"
-      ]
-    },
-    {
       "id": "tpl-81c6c68a5e",
       "title": "けんてぃ（中島健人）投げチューして",
       "thumbUrl": "thumb/tpl-81c6c68a5e.png",
@@ -2460,6 +2443,23 @@
         "名前入り",
         "おねだり",
         "ウインク",
+        "中島健人",
+        "けんてぃ",
+        "ケンティ"
+      ]
+    },
+    {
+      "id": "tpl-0ef4ddb9a4",
+      "title": "うちわf898acb8",
+      "thumbUrl": "thumb/tpl-0ef4ddb9a4.png",
+      "fileUrl": "tpl-0ef4ddb9a4.uchiwa",
+      "updatedAt": "2026-09-27",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "genei_pople",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "ハイタッチ",
         "中島健人",
         "けんてぃ",
         "ケンティ"
