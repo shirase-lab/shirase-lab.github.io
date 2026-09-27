@@ -2467,57 +2467,107 @@
     },
     {
       "id": "tpl-26ad438ea9",
-      "title": "うちわ423fefbb",
+      "title": "けんてぃ（中島健人）お名前うちわ",
       "thumbUrl": "thumb/tpl-26ad438ea9.png",
       "fileUrl": "tpl-26ad438ea9.uchiwa",
       "updatedAt": "2026-09-27",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "中島健人",
+        "けんてぃ",
+        "ケンティ"
+      ]
     },
     {
       "id": "tpl-a046138c65",
-      "title": "うちわ844c02a1",
+      "title": "井上瑞稀 お名前うちわ",
       "thumbUrl": "thumb/tpl-a046138c65.png",
       "fileUrl": "tpl-a046138c65.uchiwa",
       "updatedAt": "2026-09-27",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "KEY TO LIT",
+        "キテレツ",
+        "井上瑞稀",
+        "みずき",
+        "みじゅき"
+      ]
     },
     {
       "id": "tpl-909ab8db2a",
-      "title": "うちわ1d3bc85b",
+      "title": "中村嶺亜 お名前うちわ",
       "thumbUrl": "thumb/tpl-909ab8db2a.png",
       "fileUrl": "tpl-909ab8db2a.uchiwa",
       "updatedAt": "2026-09-27",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "KEY TO LIT",
+        "キテレツ",
+        "中村嶺亜",
+        "れいあ",
+        "れあたん"
+      ]
     },
     {
       "id": "tpl-1e993f70db",
-      "title": "うちわeb71467b",
+      "title": "佐々木大光 お名前うちわ",
       "thumbUrl": "thumb/tpl-1e993f70db.png",
       "fileUrl": "tpl-1e993f70db.uchiwa",
       "updatedAt": "2026-09-27",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "KEY TO LIT",
+        "キテレツ",
+        "佐々木大光",
+        "たいこう"
+      ]
     },
     {
       "id": "tpl-8e8849e0b4",
-      "title": "うちわ5e94e77a",
+      "title": "岩崎大昇 お名前うちわ",
       "thumbUrl": "thumb/tpl-8e8849e0b4.png",
       "fileUrl": "tpl-8e8849e0b4.uchiwa",
       "updatedAt": "2026-09-27",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "KEY TO LIT",
+        "キテレツ",
+        "岩崎大昇",
+        "たいしょう"
+      ]
     },
     {
       "id": "tpl-c73fce407e",
-      "title": "うちわ83863375",
+      "title": "猪狩蒼弥 お名前うちわ",
       "thumbUrl": "thumb/tpl-c73fce407e.png",
       "fileUrl": "tpl-c73fce407e.uchiwa",
       "updatedAt": "2026-09-27",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "KEY TO LIT",
+        "キテレツ",
+        "猪狩蒼弥",
+        "ガリさん",
+        "そうや"
+      ]
     }
   ]
 }
