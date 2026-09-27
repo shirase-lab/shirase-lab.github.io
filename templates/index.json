@@ -2568,6 +2568,15 @@
         "ガリさん",
         "そうや"
       ]
+    },
+    {
+      "id": "tpl-f63d2e2a8f",
+      "title": "うちわ1bb6e550",
+      "thumbUrl": "thumb/tpl-f63d2e2a8f.png",
+      "fileUrl": "tpl-f63d2e2a8f.uchiwa",
+      "updatedAt": "2026-09-27",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
