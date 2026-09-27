@@ -805,12 +805,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://oshimite.jp/templates/t/tpl-0ef4ddb9a4.html</loc>
-    <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://oshimite.jp/templates/t/tpl-81c6c68a5e.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -818,6 +812,12 @@
   </url>
   <url>
     <loc>https://oshimite.jp/templates/t/tpl-9e28c6c7ae.html</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/templates/t/tpl-0ef4ddb9a4.html</loc>
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
