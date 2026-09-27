@@ -2491,6 +2491,15 @@
       "updatedAt": "2026-09-27",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru"
+    },
+    {
+      "id": "tpl-1e993f70db",
+      "title": "うちわeb71467b",
+      "thumbUrl": "thumb/tpl-1e993f70db.png",
+      "fileUrl": "tpl-1e993f70db.uchiwa",
+      "updatedAt": "2026-09-27",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
