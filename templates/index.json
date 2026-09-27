@@ -2411,6 +2411,15 @@
         "名前入り",
         "最高"
       ]
+    },
+    {
+      "id": "tpl-0ef4ddb9a4",
+      "title": "うちわf898acb8",
+      "thumbUrl": "thumb/tpl-0ef4ddb9a4.png",
+      "fileUrl": "tpl-0ef4ddb9a4.uchiwa",
+      "updatedAt": "2026-09-27",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "genei_pople"
     }
   ]
 }
