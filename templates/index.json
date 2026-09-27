@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-25",
+  "updatedAt": "2026-09-27",
   "note": "うちわつくーる 配信テンプレのマニフェスト。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。作者制作のみ・投稿機能なし。filters はアプリの絞り込みドロップダウン用（タグのレイヤー分け＝グループ/地域）＝各値の tags のいずれかを持つ item が該当。Web の SEO には影響しない。",
   "filters": [
     {
@@ -938,20 +938,6 @@
         "タイムレス",
         "timelesz",
         "原嘉孝"
-      ]
-    },
-    {
-      "id": "tpl-bf6630a6a8",
-      "title": "timelesz最高",
-      "thumbUrl": "thumb/tpl-bf6630a6a8.png",
-      "fileUrl": "tpl-bf6630a6a8.uchiwa",
-      "updatedAt": "2026-08-11",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "定番",
-        "タイムレス",
-        "timelesz"
       ]
     },
     {
@@ -2418,6 +2404,20 @@
         "中島健人",
         "けんてぃ",
         "ケンティ"
+      ]
+    },
+    {
+      "id": "tpl-bf6630a6a8",
+      "title": "timelesz最高(2)",
+      "thumbUrl": "thumb/tpl-bf6630a6a8.png",
+      "fileUrl": "tpl-bf6630a6a8.uchiwa",
+      "updatedAt": "2026-09-27",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "定番",
+        "タイムレス",
+        "timelesz"
       ]
     }
   ]
