@@ -2464,6 +2464,15 @@
         "けんてぃ",
         "ケンティ"
       ]
+    },
+    {
+      "id": "tpl-26ad438ea9",
+      "title": "うちわ423fefbb",
+      "thumbUrl": "thumb/tpl-26ad438ea9.png",
+      "fileUrl": "tpl-26ad438ea9.uchiwa",
+      "updatedAt": "2026-09-27",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
