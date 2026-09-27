@@ -2571,30 +2571,46 @@
     },
     {
       "id": "tpl-f63d2e2a8f",
-      "title": "うちわ1bb6e550",
+      "title": "推しくん指さして",
       "thumbUrl": "thumb/tpl-f63d2e2a8f.png",
       "fileUrl": "tpl-f63d2e2a8f.uchiwa",
       "updatedAt": "2026-09-27",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "おねだり",
+        "カンペ",
+        "指さして"
+      ]
     },
     {
       "id": "tpl-57bff0ab6b",
-      "title": "うちわ569a0f7e",
+      "title": "推しくんバーンして",
       "thumbUrl": "thumb/tpl-57bff0ab6b.png",
       "fileUrl": "tpl-57bff0ab6b.uchiwa",
       "updatedAt": "2026-09-27",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "おねだり",
+        "カンペ",
+        "バーン",
+        "ポーズ"
+      ]
     },
     {
       "id": "tpl-8ae76f7fa6",
-      "title": "うちわd83933e2",
+      "title": "推しくんこっち見て",
       "thumbUrl": "thumb/tpl-8ae76f7fa6.png",
       "fileUrl": "tpl-8ae76f7fa6.uchiwa",
       "updatedAt": "2026-09-27",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "おねだり",
+        "カンペ",
+        "こっち見て"
+      ]
     }
   ]
 }
