@@ -2414,30 +2414,56 @@
     },
     {
       "id": "tpl-0ef4ddb9a4",
-      "title": "うちわf898acb8",
+      "title": "けんてぃ（中島健人）ハイタッチしよ",
       "thumbUrl": "thumb/tpl-0ef4ddb9a4.png",
       "fileUrl": "tpl-0ef4ddb9a4.uchiwa",
       "updatedAt": "2026-09-27",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "genei_pople"
+      "fallbackFont": "genei_pople",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "ハイタッチ",
+        "中島健人",
+        "けんてぃ",
+        "ケンティ"
+      ]
     },
     {
       "id": "tpl-81c6c68a5e",
-      "title": "うちわ448adbdc",
+      "title": "けんてぃ（中島健人）投げチューして",
       "thumbUrl": "thumb/tpl-81c6c68a5e.png",
       "fileUrl": "tpl-81c6c68a5e.uchiwa",
       "updatedAt": "2026-09-27",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "genei_pople"
+      "fallbackFont": "genei_pople",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "投げチュー",
+        "投げキッス",
+        "ハート",
+        "中島健人",
+        "けんてぃ",
+        "ケンティ"
+      ]
     },
     {
       "id": "tpl-9e28c6c7ae",
-      "title": "うちわ6d392f79",
+      "title": "けんてぃ（中島健人）ウインクして",
       "thumbUrl": "thumb/tpl-9e28c6c7ae.png",
       "fileUrl": "tpl-9e28c6c7ae.uchiwa",
       "updatedAt": "2026-09-27",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "genei_pople"
+      "fallbackFont": "genei_pople",
+      "tags": [
+        "名前入り",
+        "おねだり",
+        "ウインク",
+        "中島健人",
+        "けんてぃ",
+        "ケンティ"
+      ]
     }
   ]
 }
