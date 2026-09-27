@@ -822,10 +822,11 @@
       "fallbackFont": "Nikumaru",
       "tags": [
         "名前入り",
-        "定番",
+        "お名前うちわ",
         "タイムレス",
         "timelesz",
-        "佐藤勝利"
+        "佐藤勝利",
+        "しょり"
       ]
     },
     {
@@ -838,10 +839,11 @@
       "fallbackFont": "Nikumaru",
       "tags": [
         "名前入り",
-        "定番",
+        "お名前うちわ",
         "タイムレス",
         "timelesz",
-        "松島聡"
+        "松島聡",
+        "そう"
       ]
     },
     {
@@ -854,10 +856,11 @@
       "fallbackFont": "Nikumaru",
       "tags": [
         "名前入り",
-        "定番",
+        "お名前うちわ",
         "タイムレス",
         "timelesz",
-        "寺西拓人"
+        "寺西拓人",
+        "てら"
       ]
     },
     {
@@ -870,26 +873,11 @@
       "fallbackFont": "Nikumaru",
       "tags": [
         "名前入り",
-        "定番",
+        "お名前うちわ",
         "タイムレス",
         "timelesz",
-        "橋本将生"
-      ]
-    },
-    {
-      "id": "tpl-dde4fe428a",
-      "title": "猪俣周杜 名前うちわ",
-      "thumbUrl": "thumb/tpl-dde4fe428a.png",
-      "fileUrl": "tpl-dde4fe428a.uchiwa",
-      "updatedAt": "2026-08-11",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "定番",
-        "タイムレス",
-        "timelesz",
-        "猪俣周杜"
+        "橋本将生",
+        "まさき"
       ]
     },
     {
@@ -902,10 +890,11 @@
       "fallbackFont": "Nikumaru",
       "tags": [
         "名前入り",
-        "定番",
+        "お名前うちわ",
         "タイムレス",
         "timelesz",
-        "篠塚大輝"
+        "篠塚大輝",
+        "しの"
       ]
     },
     {
@@ -918,10 +907,11 @@
       "fallbackFont": "Nikumaru",
       "tags": [
         "名前入り",
-        "定番",
+        "お名前うちわ",
         "タイムレス",
         "timelesz",
-        "菊池風磨"
+        "菊池風磨",
+        "ふま"
       ]
     },
     {
@@ -934,10 +924,11 @@
       "fallbackFont": "Nikumaru",
       "tags": [
         "名前入り",
-        "定番",
+        "お名前うちわ",
         "タイムレス",
         "timelesz",
-        "原嘉孝"
+        "原嘉孝",
+        "よしくん"
       ]
     },
     {
@@ -2415,9 +2406,10 @@
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru",
       "tags": [
-        "定番",
         "タイムレス",
-        "timelesz"
+        "timelesz",
+        "名前入り",
+        "最高"
       ]
     }
   ]
