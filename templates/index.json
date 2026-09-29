@@ -2614,75 +2614,141 @@
     },
     {
       "id": "tpl-e401541e67",
-      "title": "うちわ141e9f8b",
+      "title": "岩崎大昇 お名前うちわ",
       "thumbUrl": "thumb/tpl-e401541e67.png",
       "fileUrl": "tpl-e401541e67.uchiwa",
       "updatedAt": "2026-09-29",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "KEY TO LIT",
+        "キテレツ",
+        "岩崎大昇",
+        "たいしょう"
+      ]
     },
     {
       "id": "tpl-b3230474a8",
-      "title": "うちわ4c4d2fd5",
+      "title": "井上瑞稀 お名前うちわ",
       "thumbUrl": "thumb/tpl-b3230474a8.png",
       "fileUrl": "tpl-b3230474a8.uchiwa",
       "updatedAt": "2026-09-29",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "KEY TO LIT",
+        "キテレツ",
+        "井上瑞稀",
+        "みずき",
+        "みじゅき"
+      ]
     },
     {
       "id": "tpl-5784d3959f",
-      "title": "うちわ72613646",
+      "title": "中村嶺亜 お名前うちわ",
       "thumbUrl": "thumb/tpl-5784d3959f.png",
       "fileUrl": "tpl-5784d3959f.uchiwa",
       "updatedAt": "2026-09-29",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "KEY TO LIT",
+        "キテレツ",
+        "中村嶺亜",
+        "れいあ",
+        "れあたん"
+      ]
     },
     {
       "id": "tpl-09033c1c50",
-      "title": "うちわe4206632",
+      "title": "猪狩蒼弥 お名前うちわ",
       "thumbUrl": "thumb/tpl-09033c1c50.png",
       "fileUrl": "tpl-09033c1c50.uchiwa",
       "updatedAt": "2026-09-29",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "KEY TO LIT",
+        "キテレツ",
+        "猪狩蒼弥",
+        "ガリさん",
+        "そうや"
+      ]
     },
     {
       "id": "tpl-eb1b02ba9b",
-      "title": "うちわ9ff7994f",
+      "title": "佐々木大光 お名前うちわ",
       "thumbUrl": "thumb/tpl-eb1b02ba9b.png",
       "fileUrl": "tpl-eb1b02ba9b.uchiwa",
       "updatedAt": "2026-09-29",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "KEY TO LIT",
+        "キテレツ",
+        "佐々木大光",
+        "たいこう"
+      ]
     },
     {
       "id": "tpl-0a864ffc1b",
-      "title": "うちわfac8acc1",
+      "title": "推しくんこっち見てん（博多弁）",
       "thumbUrl": "thumb/tpl-0a864ffc1b.png",
       "fileUrl": "tpl-0a864ffc1b.uchiwa",
       "updatedAt": "2026-09-29",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "おねだり",
+        "カンペ",
+        "こっち見て",
+        "博多弁",
+        "福岡",
+        "博多"
+      ]
     },
     {
       "id": "tpl-4cd735f76b",
-      "title": "うちわ23d8b6b2",
+      "title": "推しくん手ば振って（博多弁）",
       "thumbUrl": "thumb/tpl-4cd735f76b.png",
       "fileUrl": "tpl-4cd735f76b.uchiwa",
       "updatedAt": "2026-09-29",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "おねだり",
+        "カンペ",
+        "手振って",
+        "博多弁",
+        "福岡",
+        "博多"
+      ]
     },
     {
       "id": "tpl-a74cb0f8e2",
-      "title": "うちわ221056d3",
+      "title": "推しくんばり好いとー（博多弁）",
       "thumbUrl": "thumb/tpl-a74cb0f8e2.png",
       "fileUrl": "tpl-a74cb0f8e2.uchiwa",
       "updatedAt": "2026-09-29",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "カンペ",
+        "好き",
+        "博多弁",
+        "福岡",
+        "博多"
+      ]
     }
   ]
 }
