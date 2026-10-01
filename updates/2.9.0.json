@@ -1,0 +1,49 @@
+{
+  "version": "2.9.0",
+  "date": "2026-10-01",
+  "title": "アップデート内容",
+  "highlights": [
+    "「背景」ツールを新設しました。背景パターン（ボーダー／水玉やハートなどのタイル／インク）を敷けます。スタンプや画像、配信ギャラリーのタイル素材も並べられます（背景の色・キラキラ・ぷくぷく・形もこのツールにまとめました）",
+    "ページで使っている色の一覧に、使っている色をすべて表示するようにしました",
+    "リング（円形）配置の並び順を、選んだ順にしました",
+    "各種不具合を修正しました（一部の端末で縁取り・背景ぷくぷくが出ない／グリッドに合わせたときのズレ／フォントまわり／画像の背景削除 など）"
+  ],
+  "i18n": {
+    "en": {
+      "title": "What's New",
+      "highlights": [
+        "Added a new \"Background\" tool. You can lay down background patterns (stripes, tiles such as polka dots and hearts, and ink). You can also arrange stamps, images, and tile materials from the gallery (the background's color, Glitter, Puffy, and shape are now gathered here too)",
+        "The list of colors used on a page now shows every color in use",
+        "The ring (circular) layout now keeps the order you selected",
+        "Fixed various issues (outlines / background Puffy not showing on some devices, a slight shift when snapping to the grid, fonts, image background removal, and more)"
+      ]
+    },
+    "ko": {
+      "title": "업데이트 내용",
+      "highlights": [
+        "'배경' 도구를 새로 추가했어요. 배경 패턴(줄무늬／물방울·하트 등의 타일／잉크)을 깔 수 있어요. 스탬프·이미지, 배포 갤러리의 타일 소재도 배치할 수 있어요(배경 색·반짝임·볼록·모양도 이 도구에 모았어요)",
+        "페이지에 사용 중인 색 목록에 사용 중인 색을 모두 표시하도록 했어요",
+        "링(원형) 배치의 순서를 선택한 순서대로 유지하도록 했어요",
+        "여러 버그를 수정했어요(일부 기기에서 테두리·배경 볼록이 안 보이는 문제／그리드에 맞출 때의 미세한 어긋남／폰트 관련／이미지 배경 제거 등)"
+      ]
+    },
+    "zh": {
+      "title": "更新内容",
+      "highlights": [
+        "新增了「背景」工具。可以铺设背景图案（条纹／水玉和爱心等平铺／泼墨）。还能排布贴纸、图片以及图库中的平铺素材（背景的颜色、闪亮、立体、形状也都归入了这个工具）",
+        "在页面所用颜色的列表中，显示所有正在使用的颜色",
+        "环形（圆形）排布会按你选择的顺序排列",
+        "修复了多处问题（部分机型上描边·背景立体不显示／对齐网格时的轻微偏移／字体相关／图片去背景等）"
+      ]
+    },
+    "zh_Hant": {
+      "title": "更新內容",
+      "highlights": [
+        "新增了「背景」工具。可以鋪設背景圖案（條紋／水玉和愛心等平鋪／潑墨）。還能排列貼紙、圖片以及圖庫中的平鋪素材（背景的顏色、閃亮、立體、形狀也都歸入了這個工具）",
+        "在頁面所用顏色的清單中，顯示所有正在使用的顏色",
+        "環形（圓形）排列會依你選擇的順序排列",
+        "修正了多處問題（部分機型上描邊·背景立體不顯示／對齊格線時的輕微偏移／字體相關／圖片去背景等）"
+      ]
+    }
+  }
+}
