@@ -90,7 +90,7 @@ footer{{text-align:center;padding:24px 16px 48px;color:var(--ink-soft);font-size
 <main>
 {"".join(blocks)}
 </main>
-<footer>© 2026 ShiraseLab / 推しミテ！ ・ <a href="/">トップ</a> ・ <a href="/help-2.6.0.html">使い方</a></footer>
+<footer>© 2026 ShiraseLab / 推しミテ！ ・ <a href="/">トップ</a> ・ <a href="/help-{latest}.html">使い方</a></footer>
 </body></html>
 """
 
