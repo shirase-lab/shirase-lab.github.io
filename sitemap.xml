@@ -2959,6 +2959,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://oshimite.jp/stickers/t/sticker_091.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://oshimite.jp/stickers/tag/%E3%81%A9%E3%81%86%E3%81%B6%E3%81%A4.html</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -3193,7 +3199,19 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://oshimite.jp/stickers/tag/%E9%9D%92.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://oshimite.jp/stickers/tag/%E3%81%86%E3%81%95%E8%80%B3.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/stickers/tag/%E6%B0%B4%E8%89%B2.html</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
