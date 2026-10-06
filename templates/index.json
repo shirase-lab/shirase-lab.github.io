@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-10-06",
   "note": "うちわつくーる 配信テンプレのマニフェスト。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。作者制作のみ・投稿機能なし。filters はアプリの絞り込みドロップダウン用（タグのレイヤー分け＝グループ/地域）＝各値の tags のいずれかを持つ item が該当。Web の SEO には影響しない。",
   "filters": [
     {
@@ -1315,25 +1315,6 @@
         "宮城",
         "東北",
         "カンペ"
-      ]
-    },
-    {
-      "id": "tpl-ab26135da6",
-      "title": "たいぴー ばかかわいい",
-      "thumbUrl": "thumb/tpl-ab26135da6.png",
-      "fileUrl": "tpl-ab26135da6.uchiwa",
-      "updatedAt": "2026-08-20",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "Kis-My-Ft2",
-        "キスマイ",
-        "藤ヶ谷太輔",
-        "たいぴー",
-        "静岡",
-        "名前入り",
-        "かわいい",
-        "ハート"
       ]
     },
     {
@@ -2748,6 +2729,25 @@
         "博多弁",
         "福岡",
         "博多"
+      ]
+    },
+    {
+      "id": "tpl-ab26135da6",
+      "title": "たいぴー ばかかわいい",
+      "thumbUrl": "thumb/tpl-ab26135da6.png",
+      "fileUrl": "tpl-ab26135da6.uchiwa",
+      "updatedAt": "2026-10-06",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "Kis-My-Ft2",
+        "キスマイ",
+        "藤ヶ谷太輔",
+        "たいぴー",
+        "静岡",
+        "名前入り",
+        "かわいい",
+        "ハート"
       ]
     }
   ]
