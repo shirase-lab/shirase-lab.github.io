@@ -1337,25 +1337,6 @@
       ]
     },
     {
-      "id": "tpl-bfbd791f76",
-      "title": "たいぴー 今日も日本一かっこいぃだら",
-      "thumbUrl": "thumb/tpl-bfbd791f76.png",
-      "fileUrl": "tpl-bfbd791f76.uchiwa",
-      "updatedAt": "2026-08-22",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "Kis-My-Ft2",
-        "キスマイ",
-        "藤ヶ谷太輔",
-        "たいぴー",
-        "静岡",
-        "静岡弁",
-        "名前入り",
-        "かっこいい"
-      ]
-    },
-    {
       "id": "tpl-1b5f69b6a0",
       "title": "たいぴー ばか大好き",
       "thumbUrl": "thumb/tpl-1b5f69b6a0.png",
@@ -2748,6 +2729,25 @@
         "名前入り",
         "かわいい",
         "ハート"
+      ]
+    },
+    {
+      "id": "tpl-bfbd791f76",
+      "title": "たいぴー 今日も日本一かっこいぃだら",
+      "thumbUrl": "thumb/tpl-bfbd791f76.png",
+      "fileUrl": "tpl-bfbd791f76.uchiwa",
+      "updatedAt": "2026-10-06",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "Kis-My-Ft2",
+        "キスマイ",
+        "藤ヶ谷太輔",
+        "たいぴー",
+        "静岡",
+        "静岡弁",
+        "名前入り",
+        "かっこいい"
       ]
     }
   ]
