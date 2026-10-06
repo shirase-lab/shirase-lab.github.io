@@ -1337,25 +1337,6 @@
       ]
     },
     {
-      "id": "tpl-1b5f69b6a0",
-      "title": "たいぴー ばか大好き",
-      "thumbUrl": "thumb/tpl-1b5f69b6a0.png",
-      "fileUrl": "tpl-1b5f69b6a0.uchiwa",
-      "updatedAt": "2026-08-22",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "Kis-My-Ft2",
-        "キスマイ",
-        "藤ヶ谷太輔",
-        "たいぴー",
-        "静岡",
-        "名前入り",
-        "大好き",
-        "ハート"
-      ]
-    },
-    {
       "id": "tpl-2d2e3cde4f",
       "title": "ほんま大好き ミッチー",
       "thumbUrl": "thumb/tpl-2d2e3cde4f.png",
@@ -2748,6 +2729,25 @@
         "静岡弁",
         "名前入り",
         "かっこいい"
+      ]
+    },
+    {
+      "id": "tpl-1b5f69b6a0",
+      "title": "たいぴー ばか大好き(2)",
+      "thumbUrl": "thumb/tpl-1b5f69b6a0.png",
+      "fileUrl": "tpl-1b5f69b6a0.uchiwa",
+      "updatedAt": "2026-10-06",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "Kis-My-Ft2",
+        "キスマイ",
+        "藤ヶ谷太輔",
+        "たいぴー",
+        "静岡",
+        "名前入り",
+        "大好き",
+        "ハート"
       ]
     }
   ]
