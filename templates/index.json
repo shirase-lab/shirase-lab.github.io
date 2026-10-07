@@ -2857,6 +2857,15 @@
         "はっすん",
         "かずや"
       ]
+    },
+    {
+      "id": "tpl-24e4138b6d",
+      "title": "うちわ817b6ceb",
+      "thumbUrl": "thumb/tpl-24e4138b6d.png",
+      "fileUrl": "tpl-24e4138b6d.uchiwa",
+      "updatedAt": "2026-10-07",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
