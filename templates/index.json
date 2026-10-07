@@ -2742,66 +2742,121 @@
     },
     {
       "id": "tpl-77ec90caad",
-      "title": "うちわ35b03214",
+      "title": "西畑大吾 お名前うちわ",
       "thumbUrl": "thumb/tpl-77ec90caad.png",
       "fileUrl": "tpl-77ec90caad.uchiwa",
       "updatedAt": "2026-10-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "なにわ男子",
+        "西畑大吾",
+        "だいちゃん",
+        "だいご"
+      ]
     },
     {
       "id": "tpl-a93008e86e",
-      "title": "うちわaf5f7e6f",
+      "title": "大西流星 お名前うちわ",
       "thumbUrl": "thumb/tpl-a93008e86e.png",
       "fileUrl": "tpl-a93008e86e.uchiwa",
       "updatedAt": "2026-10-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "なにわ男子",
+        "大西流星",
+        "りゅちぇ",
+        "りゅうちぇ"
+      ]
     },
     {
       "id": "tpl-a03c6706c6",
-      "title": "うちわa06bcd78",
+      "title": "道枝駿佑 お名前うちわ",
       "thumbUrl": "thumb/tpl-a03c6706c6.png",
       "fileUrl": "tpl-a03c6706c6.uchiwa",
       "updatedAt": "2026-10-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "なにわ男子",
+        "道枝駿佑",
+        "みっちー"
+      ]
     },
     {
       "id": "tpl-aee7f36f5b",
-      "title": "うちわ15a33ca1",
+      "title": "高橋恭平 お名前うちわ",
       "thumbUrl": "thumb/tpl-aee7f36f5b.png",
       "fileUrl": "tpl-aee7f36f5b.uchiwa",
       "updatedAt": "2026-10-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "なにわ男子",
+        "高橋恭平",
+        "きょうへい",
+        "きょへ"
+      ]
     },
     {
       "id": "tpl-23da88a30c",
-      "title": "うちわ19ffdab6",
+      "title": "長尾謙杜 お名前うちわ",
       "thumbUrl": "thumb/tpl-23da88a30c.png",
       "fileUrl": "tpl-23da88a30c.uchiwa",
       "updatedAt": "2026-10-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "なにわ男子",
+        "長尾謙杜",
+        "けんと",
+        "ながお"
+      ]
     },
     {
       "id": "tpl-b54d488437",
-      "title": "うちわc97f940c",
+      "title": "藤原丈一郎 お名前うちわ",
       "thumbUrl": "thumb/tpl-b54d488437.png",
       "fileUrl": "tpl-b54d488437.uchiwa",
       "updatedAt": "2026-10-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "なにわ男子",
+        "藤原丈一郎",
+        "じょー",
+        "じょーくん"
+      ]
     },
     {
       "id": "tpl-9a20ad4d10",
-      "title": "うちわf9a3f0a3",
+      "title": "大橋和也 お名前うちわ",
       "thumbUrl": "thumb/tpl-9a20ad4d10.png",
       "fileUrl": "tpl-9a20ad4d10.uchiwa",
       "updatedAt": "2026-10-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "なにわ男子",
+        "大橋和也",
+        "はっすん",
+        "かずや"
+      ]
     }
   ]
 }
