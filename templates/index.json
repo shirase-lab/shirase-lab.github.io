@@ -2873,6 +2873,15 @@
         "Hey! Say! JUMP",
         "山田涼介"
       ]
+    },
+    {
+      "id": "tpl-c6fbc0ebad",
+      "title": "うちわ26eef3dd",
+      "thumbUrl": "thumb/tpl-c6fbc0ebad.png",
+      "fileUrl": "tpl-c6fbc0ebad.uchiwa",
+      "updatedAt": "2026-10-07",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
