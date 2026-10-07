@@ -23,7 +23,25 @@ from urllib.parse import quote
 HERE = Path(__file__).resolve().parent          # .../templates
 ROOT = HERE.parent                               # repo root
 SITE = "https://oshimite.jp"
-HELP = "help-2.6.0.html"
+def _latest_help() -> str:
+    """サイト直下の help-<版>.html のうち最新版のファイル名（版番号は数値比較）。
+    固定値にすると版を上げても古い使い方ページへリンクし続ける（help-2.6.0 のまま残っていた）。"""
+    import re as _re
+    from pathlib import Path as _P
+    root = _P(__file__).resolve().parent
+    while not list(root.glob("help-*.html")) and root != root.parent:
+        root = root.parent
+    best = None
+    for f in root.glob("help-*.html"):
+        m = _re.fullmatch(r"help-(\d+)\.(\d+)\.(\d+)\.html", f.name)
+        if m:
+            v = tuple(int(x) for x in m.groups())
+            if best is None or v > best[0]:
+                best = (v, f.name)
+    return best[1] if best else "help-2.6.0.html"
+
+
+HELP = _latest_help()
 
 # タグページは「そのタグが MIN_TAG_PAGE 件以上」の時だけ作る（1件はその個別ページと重複＝Google
 # 「クロール済み-インデックス未登録」の元）。生成は毎回この件数で駆動するので、1→2件に増えれば次回
