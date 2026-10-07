@@ -2876,57 +2876,107 @@
     },
     {
       "id": "tpl-c6fbc0ebad",
-      "title": "うちわ26eef3dd",
+      "title": "知念侑李 お名前うちわ",
       "thumbUrl": "thumb/tpl-c6fbc0ebad.png",
       "fileUrl": "tpl-c6fbc0ebad.uchiwa",
       "updatedAt": "2026-10-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "Hey! Say! JUMP",
+        "知念侑李",
+        "ちねん",
+        "ちーちゃん"
+      ]
     },
     {
       "id": "tpl-7b26aff656",
-      "title": "うちわ230c07cf",
+      "title": "有岡大貴 お名前うちわ",
       "thumbUrl": "thumb/tpl-7b26aff656.png",
       "fileUrl": "tpl-7b26aff656.uchiwa",
       "updatedAt": "2026-10-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "Hey! Say! JUMP",
+        "有岡大貴",
+        "ありおか",
+        "だいちゃん"
+      ]
     },
     {
       "id": "tpl-ab5f9014ac",
-      "title": "うちわc33de5fa",
+      "title": "髙木雄也 お名前うちわ",
       "thumbUrl": "thumb/tpl-ab5f9014ac.png",
       "fileUrl": "tpl-ab5f9014ac.uchiwa",
       "updatedAt": "2026-10-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "Hey! Say! JUMP",
+        "髙木雄也",
+        "高木雄也",
+        "たかき",
+        "ゆうや"
+      ]
     },
     {
       "id": "tpl-bdfebf486c",
-      "title": "うちわdb143bfb",
+      "title": "伊野尾慧 お名前うちわ",
       "thumbUrl": "thumb/tpl-bdfebf486c.png",
       "fileUrl": "tpl-bdfebf486c.uchiwa",
       "updatedAt": "2026-10-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "Hey! Say! JUMP",
+        "伊野尾慧",
+        "いのお",
+        "いのちゃん"
+      ]
     },
     {
       "id": "tpl-de01d2db1c",
-      "title": "うちわd690a89d",
+      "title": "八乙女光 お名前うちわ",
       "thumbUrl": "thumb/tpl-de01d2db1c.png",
       "fileUrl": "tpl-de01d2db1c.uchiwa",
       "updatedAt": "2026-10-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "Hey! Say! JUMP",
+        "八乙女光",
+        "やおとめ",
+        "ひかる"
+      ]
     },
     {
       "id": "tpl-b8a6878bc8",
-      "title": "うちわ37378494",
+      "title": "薮宏太 お名前うちわ",
       "thumbUrl": "thumb/tpl-b8a6878bc8.png",
       "fileUrl": "tpl-b8a6878bc8.uchiwa",
       "updatedAt": "2026-10-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "Hey! Say! JUMP",
+        "薮宏太",
+        "藪宏太",
+        "やぶ",
+        "やぶちゃん"
+      ]
     }
   ]
 }
