@@ -1,0 +1,49 @@
+{
+  "version": "2.10.0",
+  "date": "2026-10-08",
+  "title": "アップデート内容",
+  "highlights": [
+    "推しカラーに「金・銀」を追加しました。文字・図形・背景に使うと、光沢のある金属調になります（ネオンやアーチの文字にも使えます）",
+    "複数選択の「幅を揃える」を「サイズを揃える」にしました。文字を選んでいるときはフォントサイズを揃えます",
+    "このバージョンでは開けない新しいうちわを開いたときに、アップデートを案内するようにしました",
+    "各種不具合を修正しました（アーチ文字の角度を変えると位置がずれる／スライダー操作で元に戻す・やり直しが崩れる／背景タイルの色の並び／すでに背景が透明な画像への自動背景削除 など）"
+  ],
+  "i18n": {
+    "en": {
+      "title": "What's New",
+      "highlights": [
+        "Added \"Gold & Silver\" to the oshi colors. Use them on text, shapes, or the background for a shiny metallic look (they also work with Neon and Arch text)",
+        "\"Match width\" in multi-select is now \"Match size\". When text is selected, it matches the font size",
+        "Opening an uchiwa made with a newer version of the app now shows a prompt to update",
+        "Fixed various issues (Arch text shifting when you change its angle, Undo/Redo breaking after using sliders, background tile color order, automatic background removal on images that are already transparent, and more)"
+      ]
+    },
+    "ko": {
+      "title": "업데이트 내용",
+      "highlights": [
+        "추시 컬러에 '금·은'을 추가했어요. 글자·도형·배경에 쓰면 광택 있는 메탈릭 느낌이 돼요(네온·아치 글자에도 쓸 수 있어요)",
+        "다중 선택의 '폭 맞추기'를 '크기 맞추기'로 바꿨어요. 글자를 선택했을 때는 폰트 크기를 맞춰요",
+        "이 버전에서 열 수 없는 새 우치와를 열면 업데이트를 안내하도록 했어요",
+        "여러 버그를 수정했어요(아치 글자의 각도를 바꾸면 위치가 어긋나는 문제／슬라이더 조작 후 실행 취소·다시 실행이 망가지는 문제／배경 타일 색 순서／이미 배경이 투명한 이미지의 자동 배경 제거 등)"
+      ]
+    },
+    "zh": {
+      "title": "更新内容",
+      "highlights": [
+        "推色中新增了「金·银」。用于文字、图形或背景时，会呈现有光泽的金属质感（也可用于霓虹和拱形文字）",
+        "多选的「统一宽度」改为「统一大小」。选中文字时会统一字号",
+        "打开本版本无法打开的新团扇时，会提示更新",
+        "修复了多处问题（改变拱形文字角度时位置偏移／拖动滑块后撤销·重做异常／背景平铺的颜色顺序／对已透明背景的图片自动去背景等）"
+      ]
+    },
+    "zh_Hant": {
+      "title": "更新內容",
+      "highlights": [
+        "推色中新增了「金·銀」。用於文字、圖形或背景時，會呈現有光澤的金屬質感（也可用於霓虹和拱形文字）",
+        "多選的「統一寬度」改為「統一大小」。選取文字時會統一字級",
+        "開啟本版本無法開啟的新團扇時，會提示更新",
+        "修正了多處問題（改變拱形文字角度時位置偏移／拖動滑桿後復原·重做異常／背景平鋪的顏色順序／對已透明背景的圖片自動去背景等）"
+      ]
+    }
+  }
+}
