@@ -2860,12 +2860,19 @@
     },
     {
       "id": "tpl-24e4138b6d",
-      "title": "うちわ817b6ceb",
+      "title": "推しくん最終日来たよ",
       "thumbUrl": "thumb/tpl-24e4138b6d.png",
       "fileUrl": "tpl-24e4138b6d.uchiwa",
       "updatedAt": "2026-10-07",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "カンペ",
+        "最終日",
+        "千秋楽",
+        "来たよ",
+        "ハート"
+      ]
     }
   ]
 }
