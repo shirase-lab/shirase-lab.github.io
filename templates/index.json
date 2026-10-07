@@ -538,23 +538,6 @@
       ]
     },
     {
-      "id": "tpl-35ddf49773",
-      "title": "やまだ涼介 名前うちわ",
-      "thumbUrl": "thumb/tpl-35ddf49773.png",
-      "fileUrl": "tpl-35ddf49773.uchiwa",
-      "updatedAt": "2026-07-31",
-      "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru",
-      "tags": [
-        "名前入り",
-        "写真入り",
-        "ハート",
-        "メンカラ",
-        "Hey! Say! JUMP",
-        "山田涼介"
-      ]
-    },
-    {
       "id": "tpl-e2b61f20c6",
       "title": "みっちー指さしてカンペ",
       "thumbUrl": "thumb/tpl-e2b61f20c6.png",
@@ -2872,6 +2855,23 @@
         "千秋楽",
         "来たよ",
         "ハート"
+      ]
+    },
+    {
+      "id": "tpl-35ddf49773",
+      "title": "やまだ涼介 名前うちわ",
+      "thumbUrl": "thumb/tpl-35ddf49773.png",
+      "fileUrl": "tpl-35ddf49773.uchiwa",
+      "updatedAt": "2026-10-07",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "写真入り",
+        "ハート",
+        "メンカラ",
+        "Hey! Say! JUMP",
+        "山田涼介"
       ]
     }
   ]
