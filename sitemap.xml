@@ -1009,6 +1009,24 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://oshimite.jp/templates/t/tpl-29b82d02de.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/templates/t/tpl-d6953aea17.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/templates/t/tpl-1fefd0961c.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://oshimite.jp/templates/tag/%E3%81%8A%E3%81%AD%E3%81%A0%E3%82%8A.html</loc>
     <lastmod>2026-10-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -1508,6 +1526,18 @@
   </url>
   <url>
     <loc>https://oshimite.jp/templates/tag/%E3%81%A1%E3%82%83%E3%81%8B%E3%81%8F%E3%82%93.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/templates/tag/%E6%8A%95%E3%81%92%E3%83%81%E3%83%A5%E3%83%BC.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://oshimite.jp/templates/tag/%E6%8A%95%E3%81%92%E3%82%AD%E3%83%83%E3%82%B9.html</loc>
     <lastmod>2026-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

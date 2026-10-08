@@ -2980,30 +2980,47 @@
     },
     {
       "id": "tpl-29b82d02de",
-      "title": "うちわ451f0139",
+      "title": "推しくんここから始まったね",
       "thumbUrl": "thumb/tpl-29b82d02de.png",
       "fileUrl": "tpl-29b82d02de.uchiwa",
       "updatedAt": "2026-10-08",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "カンペ",
+        "ここから始まった",
+        "記念",
+        "ハート"
+      ]
     },
     {
       "id": "tpl-d6953aea17",
-      "title": "うちわ92f5a0b6",
+      "title": "推しくん指ハートして",
       "thumbUrl": "thumb/tpl-d6953aea17.png",
       "fileUrl": "tpl-d6953aea17.uchiwa",
       "updatedAt": "2026-10-08",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "おねだり",
+        "指ハート",
+        "ハート"
+      ]
     },
     {
       "id": "tpl-1fefd0961c",
-      "title": "うちわd83c8949",
+      "title": "推しくん投げチューして",
       "thumbUrl": "thumb/tpl-1fefd0961c.png",
       "fileUrl": "tpl-1fefd0961c.uchiwa",
       "updatedAt": "2026-10-08",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "おねだり",
+        "投げチュー",
+        "投げキッス",
+        "ハート"
+      ]
     }
   ]
 }
