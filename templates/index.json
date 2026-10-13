@@ -143,6 +143,19 @@
             "zh": "ROIROM",
             "zh_Hant": "ROIROM"
           }
+        },
+        {
+          "name": "A.B.C-Z",
+          "tags": [
+            "A.B.C-Z",
+            "ABC-Z"
+          ],
+          "nameI18n": {
+            "en": "A.B.C-Z",
+            "ko": "A.B.C-Z",
+            "zh": "A.B.C-Z",
+            "zh_Hant": "A.B.C-Z"
+          }
         }
       ],
       "labelI18n": {
@@ -3054,75 +3067,159 @@
     },
     {
       "id": "tpl-f719acafbd",
-      "title": "うちわ6d6a324b",
+      "title": "橋本良亮 お名前うちわ（ひらがな名字）",
       "thumbUrl": "thumb/tpl-f719acafbd.png",
       "fileUrl": "tpl-f719acafbd.uchiwa",
       "updatedAt": "2026-10-13",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "A.B.C-Z",
+        "ABC-Z",
+        "橋本良亮",
+        "はしもと",
+        "りょうすけ",
+        "はっしー"
+      ]
     },
     {
       "id": "tpl-ed961faf7e",
-      "title": "うちわb559a251",
+      "title": "戸塚祥太 お名前うちわ（ひらがな名字）",
       "thumbUrl": "thumb/tpl-ed961faf7e.png",
       "fileUrl": "tpl-ed961faf7e.uchiwa",
       "updatedAt": "2026-10-13",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "A.B.C-Z",
+        "ABC-Z",
+        "戸塚祥太",
+        "とつか",
+        "しょうた",
+        "とっつー"
+      ]
     },
     {
       "id": "tpl-bd03757bec",
-      "title": "うちわ0b4b6e6b",
+      "title": "五関晃一 お名前うちわ（ひらがな名字）",
       "thumbUrl": "thumb/tpl-bd03757bec.png",
       "fileUrl": "tpl-bd03757bec.uchiwa",
       "updatedAt": "2026-10-13",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "A.B.C-Z",
+        "ABC-Z",
+        "五関晃一",
+        "ごせき",
+        "こういち",
+        "ごっち"
+      ]
     },
     {
       "id": "tpl-11c1dad042",
-      "title": "うちわ715b2259",
+      "title": "塚田僚一 お名前うちわ（ひらがな名字）",
       "thumbUrl": "thumb/tpl-11c1dad042.png",
       "fileUrl": "tpl-11c1dad042.uchiwa",
       "updatedAt": "2026-10-13",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "A.B.C-Z",
+        "ABC-Z",
+        "塚田僚一",
+        "つかだ",
+        "りょういち",
+        "つかちゃん"
+      ]
     },
     {
       "id": "tpl-bff6246031",
-      "title": "うちわb935a406",
+      "title": "橋本良亮 お名前うちわ（ハート）",
       "thumbUrl": "thumb/tpl-bff6246031.png",
       "fileUrl": "tpl-bff6246031.uchiwa",
       "updatedAt": "2026-10-13",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "A.B.C-Z",
+        "ABC-Z",
+        "橋本良亮",
+        "はしもと",
+        "りょうすけ",
+        "はっしー",
+        "ハート"
+      ]
     },
     {
       "id": "tpl-c64ee85086",
-      "title": "うちわ69f464d7",
+      "title": "戸塚祥太 お名前うちわ（ハート）",
       "thumbUrl": "thumb/tpl-c64ee85086.png",
       "fileUrl": "tpl-c64ee85086.uchiwa",
       "updatedAt": "2026-10-13",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "A.B.C-Z",
+        "ABC-Z",
+        "戸塚祥太",
+        "とつか",
+        "しょうた",
+        "とっつー",
+        "ハート"
+      ]
     },
     {
       "id": "tpl-a31565bba3",
-      "title": "うちわ55274180",
+      "title": "五関晃一 お名前うちわ（ハート）",
       "thumbUrl": "thumb/tpl-a31565bba3.png",
       "fileUrl": "tpl-a31565bba3.uchiwa",
       "updatedAt": "2026-10-13",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "A.B.C-Z",
+        "ABC-Z",
+        "五関晃一",
+        "ごせき",
+        "こういち",
+        "ごっち",
+        "ハート"
+      ]
     },
     {
       "id": "tpl-a6d177c80e",
-      "title": "うちわ76285400",
+      "title": "塚田僚一 お名前うちわ（ハート）",
       "thumbUrl": "thumb/tpl-a6d177c80e.png",
       "fileUrl": "tpl-a6d177c80e.uchiwa",
       "updatedAt": "2026-10-13",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "お名前うちわ",
+        "A.B.C-Z",
+        "ABC-Z",
+        "塚田僚一",
+        "つかだ",
+        "りょういち",
+        "つかちゃん",
+        "ハート"
+      ]
     }
   ]
 }
