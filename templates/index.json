@@ -3060,6 +3060,15 @@
       "updatedAt": "2026-10-13",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru"
+    },
+    {
+      "id": "tpl-ed961faf7e",
+      "title": "うちわb559a251",
+      "thumbUrl": "thumb/tpl-ed961faf7e.png",
+      "fileUrl": "tpl-ed961faf7e.uchiwa",
+      "updatedAt": "2026-10-13",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
