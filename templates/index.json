@@ -3078,6 +3078,15 @@
       "updatedAt": "2026-10-13",
       "minAppVersion": "2.3.0",
       "fallbackFont": "Nikumaru"
+    },
+    {
+      "id": "tpl-11c1dad042",
+      "title": "うちわ715b2259",
+      "thumbUrl": "thumb/tpl-11c1dad042.png",
+      "fileUrl": "tpl-11c1dad042.uchiwa",
+      "updatedAt": "2026-10-13",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
