@@ -3227,12 +3227,17 @@
     },
     {
       "id": "tpl-3e61cb6cda",
-      "title": "うちわ057a66df",
+      "title": "推しくんハイタッチしよ",
       "thumbUrl": "thumb/tpl-3e61cb6cda.png",
       "fileUrl": "tpl-3e61cb6cda.uchiwa",
       "updatedAt": "2026-10-13",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "おねだり",
+        "ハイタッチ",
+        "定番"
+      ]
     }
   ]
 }
