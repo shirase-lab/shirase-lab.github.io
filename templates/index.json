@@ -130,6 +130,19 @@
             "zh": "Snow Man",
             "zh_Hant": "Snow Man"
           }
+        },
+        {
+          "name": "ROIROM",
+          "tags": [
+            "ROIROM",
+            "ロイロム"
+          ],
+          "nameI18n": {
+            "en": "ROIROM",
+            "ko": "로이롬",
+            "zh": "ROIROM",
+            "zh_Hant": "ROIROM"
+          }
         }
       ],
       "labelI18n": {
@@ -3024,12 +3037,20 @@
     },
     {
       "id": "tpl-2fd923714b",
-      "title": "shared-43034978-C71C-4386-8E75-C503FA1EE8B3",
+      "title": "ROIROM グループ名うちわ",
       "thumbUrl": "thumb/tpl-2fd923714b.png",
       "fileUrl": "tpl-2fd923714b.uchiwa",
       "updatedAt": "2026-10-13",
       "minAppVersion": "2.10.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "名前入り",
+        "グループ名",
+        "ROIROM",
+        "ロイロム",
+        "キラキラ",
+        "ゴールド"
+      ]
     }
   ]
 }
