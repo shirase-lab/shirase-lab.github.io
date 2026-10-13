@@ -3051,6 +3051,15 @@
         "キラキラ",
         "ゴールド"
       ]
+    },
+    {
+      "id": "tpl-f719acafbd",
+      "title": "うちわ6d6a324b",
+      "thumbUrl": "thumb/tpl-f719acafbd.png",
+      "fileUrl": "tpl-f719acafbd.uchiwa",
+      "updatedAt": "2026-10-13",
+      "minAppVersion": "2.3.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
