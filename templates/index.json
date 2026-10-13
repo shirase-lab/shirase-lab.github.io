@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-10-08",
+  "updatedAt": "2026-10-13",
   "note": "うちわつくーる 配信テンプレのマニフェスト。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。作者制作のみ・投稿機能なし。filters はアプリの絞り込みドロップダウン用（タグのレイヤー分け＝グループ/地域）＝各値の tags のいずれかを持つ item が該当。Web の SEO には影響しない。",
   "filters": [
     {
@@ -3021,6 +3021,15 @@
         "投げキッス",
         "ハート"
       ]
+    },
+    {
+      "id": "tpl-2fd923714b",
+      "title": "shared-43034978-C71C-4386-8E75-C503FA1EE8B3",
+      "thumbUrl": "thumb/tpl-2fd923714b.png",
+      "fileUrl": "tpl-2fd923714b.uchiwa",
+      "updatedAt": "2026-10-13",
+      "minAppVersion": "2.10.0",
+      "fallbackFont": "Nikumaru"
     }
   ]
 }
