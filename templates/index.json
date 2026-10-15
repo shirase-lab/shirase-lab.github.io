@@ -230,6 +230,19 @@
             "zh": "福冈",
             "zh_Hant": "福岡"
           }
+        },
+        {
+          "name": "広島",
+          "tags": [
+            "広島",
+            "広島弁"
+          ],
+          "nameI18n": {
+            "en": "Hiroshima",
+            "ko": "히로시마",
+            "zh": "广岛",
+            "zh_Hant": "廣島"
+          }
         }
       ],
       "labelI18n": {
@@ -3241,30 +3254,62 @@
     },
     {
       "id": "tpl-886b716b5d",
-      "title": "うちわ7ba963fc",
+      "title": "推しくんぶち好きじゃけぇ",
       "thumbUrl": "thumb/tpl-886b716b5d.png",
       "fileUrl": "tpl-886b716b5d.uchiwa",
       "updatedAt": "2026-10-15",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "カンペ",
+        "広島",
+        "広島弁",
+        "方言",
+        "ぶち好き",
+        "じゃけぇ",
+        "大好き",
+        "好き",
+        "ファンサ",
+        "推しくん"
+      ]
     },
     {
       "id": "tpl-a135c79ea8",
-      "title": "うちわ0b002f24",
+      "title": "推しくん広島来てくれてありがとう",
       "thumbUrl": "thumb/tpl-a135c79ea8.png",
       "fileUrl": "tpl-a135c79ea8.uchiwa",
       "updatedAt": "2026-10-15",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "カンペ",
+        "広島",
+        "来てくれてありがとう",
+        "ありがとう",
+        "感謝",
+        "ファンサ",
+        "推しくん"
+      ]
     },
     {
       "id": "tpl-8e55e58758",
-      "title": "うちわd658b15d",
+      "title": "推しくんぶちかっこええ",
       "thumbUrl": "thumb/tpl-8e55e58758.png",
       "fileUrl": "tpl-8e55e58758.uchiwa",
       "updatedAt": "2026-10-15",
       "minAppVersion": "2.3.0",
-      "fallbackFont": "Nikumaru"
+      "fallbackFont": "Nikumaru",
+      "tags": [
+        "カンペ",
+        "広島",
+        "広島弁",
+        "方言",
+        "ぶち",
+        "かっこええ",
+        "かっこいい",
+        "ファンサ",
+        "推しくん"
+      ]
     }
   ]
 }
