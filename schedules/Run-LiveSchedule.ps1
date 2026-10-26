@@ -3,15 +3,16 @@
   推しミテ！ライブ日程 週次更新ランナー（Windows タスクスケジューラ → Claude headless）。
 
 .DESCRIPTION
-  1) daily_update.md をジョブ仕様として headless Claude (`claude -p`) に渡し、
+  1) daily_update.md をジョブ仕様として Claude Agent SDK（schedules/run_live_agent.py）に渡し、
      schedules/live.json（暗号文）を更新させる（調査→検査→暗号化まで）。
+     API キー（このジョブ専用の環境変数 OSHIMITE_ANTHROPIC_API_KEY）で動かすので、Max に付く月次 API クレジットから引かれる。
+     キーが未設定のときだけ、以前の `claude -p`（Max の利用枠）で動かす（警告をログに残す）。
   2) schedules/ に差分が出たら、この PowerShell 側で git add/commit/push（決定的処理を分離）。
 
   週2回（月・木）の実行を想定。設計/規約は D:/ShiraseLab/ShiraseLab/DailyPipeline に倣う。
 
-  headless の `claude -p` は権限プロンプトに答えられないため、常に
-  --dangerously-skip-permissions で実行する（Bash=crypt.sh・Web調査・Edit が要るため）。
-  自分のPC上の限定ジョブなので許容。権限を絞るなら claudeArgs を --allowedTools 方式へ。
+  headless は権限プロンプトに答えられないため、常に権限をバイパスして実行する
+  （Bash=crypt.sh・Web調査・Edit が要るため）。自分のPC上の限定ジョブなので許容。
 
 .PARAMETER DryRun
   Claude によるデータ更新（live.json 再生成）までは行うが、git commit/push はしない。
@@ -19,7 +20,10 @@
       git checkout -- schedules/live.json。
 
 .PARAMETER Model
-  claude --model に渡すモデル（既定: 未指定＝アカウント既定）。
+  使うモデル（既定: 未指定＝既定のモデル）。
+
+.PARAMETER MaxBudgetUsd
+  1 回の実行の上限金額（USD・既定 5）。Agent SDK で動かすときだけ有効。
 
 .EXAMPLE
   # 動作確認（push しない）。pwsh が無ければ powershell でも可。
@@ -29,7 +33,8 @@
 param(
   [datetime]$Now,
   [switch]$DryRun,
-  [string]$Model
+  [string]$Model,
+  [double]$MaxBudgetUsd = 5
 )
 
 $ErrorActionPreference = 'Stop'
@@ -56,8 +61,11 @@ function Log($msg) {
 }
 
 # --- 前提チェック ---
+# Agent SDK はリポジトリ外の venv（D:/ShiraseLab/.venv-agent-sdk）に入れてある。
+$sdkPython = 'D:\ShiraseLab\.venv-agent-sdk\Scripts\python.exe'
+$useSdk = [bool]$env:OSHIMITE_ANTHROPIC_API_KEY -and (Test-Path $sdkPython)
 $claude = (Get-Command claude -ErrorAction SilentlyContinue)
-if (-not $claude) { Log 'ERROR: claude CLI が PATH にありません。中止。'; exit 2 }
+if (-not $useSdk -and -not $claude) { Log 'ERROR: Agent SDK も claude CLI も使えません。中止。'; exit 2 }
 $passwd = Join-Path (Split-Path -Parent $repo) 'shirase-lab.github.io.passwd'
 if (-not (Test-Path $passwd) -or (Get-Item $passwd).Length -eq 0) {
   Log "ERROR: パスフレーズ未設定: $passwd"; exit 3
@@ -66,19 +74,30 @@ if (-not (Test-Path $passwd) -or (Get-Item $passwd).Length -eq 0) {
 Log ("=== Run-LiveSchedule start (repo=$repo, DryRun=$DryRun) ===")
 
 # --- Claude headless 実行 ---
-$spec = Get-Content (Join-Path $here 'daily_update.md') -Raw -Encoding UTF8
-
-# headless は権限プロンプトに答えられないので常にバイパス（Bash/Web/Edit が要る）。
-$claudeArgs = @('-p', '--output-format', 'text', '--add-dir', $repo, '--dangerously-skip-permissions')
-if ($Model) { $claudeArgs += @('--model', $Model) }
-
 Push-Location $repo
 try {
-  Log ("claude {0}" -f ($claudeArgs -join ' '))
-  # ジョブ仕様は stdin から渡す（引数長制限を回避）
-  $spec | & $claude.Source @claudeArgs 2>&1 | Tee-Object -FilePath $log -Append
-  $claudeExit = $LASTEXITCODE
-  Log ("claude exit=$claudeExit")
+  if ($useSdk) {
+    # Agent SDK（API キー＝月次 API クレジット）。ジョブ仕様は run_live_agent.py が daily_update.md から読む。
+    $sdkArgs = @((Join-Path $here 'run_live_agent.py'), '--max-budget-usd', "$MaxBudgetUsd")
+    if ($Model) { $sdkArgs += @('--model', $Model) }
+    Log ("agent-sdk {0}" -f ($sdkArgs -join ' '))
+    # Python の stderr を PowerShell がエラー扱いして止めないよう、この呼び出しだけ Continue にする。
+    $prevEap = $ErrorActionPreference; $ErrorActionPreference = 'Continue'
+    & $sdkPython @sdkArgs 2>&1 | ForEach-Object { "$_" } | Tee-Object -FilePath $log -Append
+    $claudeExit = $LASTEXITCODE
+    $ErrorActionPreference = $prevEap
+    Log ("agent-sdk exit=$claudeExit")
+  } else {
+    Log 'WARN: OSHIMITE_ANTHROPIC_API_KEY が未設定（または SDK 未導入）のため claude -p（Max の利用枠）で実行します。'
+    $spec = Get-Content (Join-Path $here 'daily_update.md') -Raw -Encoding UTF8
+    $claudeArgs = @('-p', '--output-format', 'text', '--add-dir', $repo, '--dangerously-skip-permissions')
+    if ($Model) { $claudeArgs += @('--model', $Model) }
+    Log ("claude {0}" -f ($claudeArgs -join ' '))
+    # ジョブ仕様は stdin から渡す（引数長制限を回避）
+    $spec | & $claude.Source @claudeArgs 2>&1 | Tee-Object -FilePath $log -Append
+    $claudeExit = $LASTEXITCODE
+    Log ("claude exit=$claudeExit")
+  }
 
   # --- ツアー欠落チェック（決定的バックストップ）---
   # headless Claude が daily_update.md §6.5 の gate を飛ばしても、ここで live.json を
