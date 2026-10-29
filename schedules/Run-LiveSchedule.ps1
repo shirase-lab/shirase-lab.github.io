@@ -107,7 +107,12 @@ try {
   try {
     if (Test-Path (Join-Path $repo 'schedules/live.json')) {
       $tmpPlain = Join-Path ([System.IO.Path]::GetTempPath()) ("live.audit.{0}.json" -f ([guid]::NewGuid().ToString('N')))
-      & bash 'schedules/crypt.sh' dec 'schedules/live.json' $tmpPlain 2>&1 | Tee-Object -FilePath $log -Append
+      # タスクスケジューラ経由だと PATH の bash が WSL の bash（WindowsApps）になり、\ 区切りが消えて
+      # 別の場所に書かれた（2026-10-26）。Git の bash を明示し、パスも / 区切りで渡す。
+      $gitBash = 'C:\Program Files\Git\usr\bin\bash.exe'
+      $bashExe = if (Test-Path $gitBash) { $gitBash } else { 'bash' }
+      $tmpPlainSlash = $tmpPlain.Replace([string][char]92, '/')
+      & $bashExe 'schedules/crypt.sh' dec 'schedules/live.json' $tmpPlainSlash 2>&1 | Tee-Object -FilePath $log -Append
       if (Test-Path $tmpPlain) {
         $gate = (& python 'schedules/check_tour_gaps.py' $tmpPlain 2>&1)
         $gateExit = $LASTEXITCODE
