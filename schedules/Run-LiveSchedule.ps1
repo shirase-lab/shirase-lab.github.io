@@ -109,12 +109,15 @@ try {
       $tmpPlain = Join-Path ([System.IO.Path]::GetTempPath()) ("live.audit.{0}.json" -f ([guid]::NewGuid().ToString('N')))
       # タスクスケジューラ経由だと PATH の bash が WSL の bash（WindowsApps）になり、\ 区切りが消えて
       # 別の場所に書かれた（2026-10-26）。Git の bash を明示し、パスも / 区切りで渡す。
-      $gitBash = 'C:\Program Files\Git\usr\bin\bash.exe'
+      # usr\bin\bash.exe を直接呼ぶと PATH に /usr/bin が入らず dirname が無い（2026-10-29）ので、
+      # PATH を整えてくれる bin\bash.exe のほうを使う。
+      $gitBash = 'C:\Program Files\Git\bin\bash.exe'
       $bashExe = if (Test-Path $gitBash) { $gitBash } else { 'bash' }
       $tmpPlainSlash = $tmpPlain.Replace([string][char]92, '/')
       & $bashExe 'schedules/crypt.sh' dec 'schedules/live.json' $tmpPlainSlash 2>&1 | Tee-Object -FilePath $log -Append
       if (Test-Path $tmpPlain) {
-        $gate = (& python 'schedules/check_tour_gaps.py' $tmpPlain 2>&1)
+        # ⚠ などを cp932 で出せず落ちるので UTF-8 モードで動かす。
+        $gate = (& python -X utf8 'schedules/check_tour_gaps.py' $tmpPlain 2>&1)
         $gateExit = $LASTEXITCODE
         $gate | Tee-Object -FilePath $log -Append
         if ($gateExit -ne 0) {
