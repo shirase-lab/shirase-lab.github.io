@@ -54,6 +54,17 @@
      未開催の先レグも `upcoming` で必ず入れる。**特に、既存レグの status を `last_week` に降格させる
      ツアーは、同ツアーの this_week/upcoming レグが live に漏れなく在るか必ず確認**（1レグが `last_week`
      に落ちた瞬間ツアーが今週から消えるのを防ぐ）。機械チェックは §6.5 のリンタで必ず通す。
+   - **【STARTO は公式の公演一覧と毎回照合】** `https://starto.jp/s/p/live?ct=concert` に載っている
+     **全コンサート**（舞台は除く）について、各公演ページの全レグが live に入っているか確認し、無いものは足す。
+     ソロ（木村拓哉・佐藤アツヒロ 等）や年をまたぐドーム公演も対象。**海外公演（ソウル・台北 等）も収録する**
+     （`prefecture` は既存どおり `ソウル(韓国)` `台北(台湾)` の「都市(国)」形式）。
+     公演ページの日程表は JavaScript で描かれるので WebFetch では読めない。Bash で描画後の HTML を取る:
+     ```
+     "C:/Program Files/Google/Chrome/Application/chrome.exe" --headless=new --disable-gpu --virtual-time-budget=8000 --dump-dom "https://starto.jp/s/p/live/<番号>" > <TEMP>/starto_<番号>.html
+     ```
+     （`[都道府県] 会場` の見出しの下に `2026.11.21（土）` 形式で公演日と開演時間が並ぶ。読んだら一時ファイルは消す。）
+     （2026-11-03 実例: 木村拓哉 Checkpoint・Hey! Say! JUMP ドーム『Juliet』・なにわ男子ドーム『ND⁵⁺』・
+     Travis Japan 2027 ツアーが丸ごと未登録で、11月中旬が STARTO 空白に見えていた。）
    - 既存 `live.prev.json` の各イベントも見直し、**日程確定・追加公演・当日休演/復帰・
      status 遷移（例 upcoming→this_week、this_week→last_week）**など変化があれば「更新対象」にする。
 
