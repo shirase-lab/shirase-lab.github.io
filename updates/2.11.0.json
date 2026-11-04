@@ -1,0 +1,59 @@
+{
+  "version": "2.11.0",
+  "date": "2026-11-05",
+  "title": "アップデート内容",
+  "highlights": [
+    "ホーム画面ウィジェット「次の参戦」を追加しました。推しの写真を背景にでき、文字（推しのセリフ風のパターンや自由な文字）と、その位置・大きさも変えられます",
+    "公演アルバムを追加しました。参戦した公演と使ったうちわ、セットリストを記録して、シェア用の画像も作れます",
+    "カレンダーに「次の参戦まであと何日」を表示するようにしました",
+    "切り文字うちわ用に、型紙PDFとカッティングマシン用のデータ（SVG・DXF）を書き出せるようにしました",
+    "ペンに「直線」と「曲線」を追加しました。描いた後も曲げ直せます",
+    "各種不具合を修正しました（カレンダーを開くとエラー画面が出ることがある など）"
+  ],
+  "i18n": {
+    "en": {
+      "title": "What's New",
+      "highlights": [
+        "New \"Next show\" home screen widget: use a photo of your favourite as the background, and change the text (lines in your favourite's voice or your own words), plus its position and size",
+        "New live album: record the shows you went to, the uchiwa you used, and the setlist, and make an image to share",
+        "The calendar now shows how many days are left until your next show",
+        "For cut-letter uchiwa, you can now export a stencil PDF and cutting-machine data (SVG / DXF)",
+        "The pen now has \"Line\" and \"Curve\" modes, and you can bend lines after drawing them",
+        "Fixed various issues (an error screen could appear when opening the calendar, and more)"
+      ]
+    },
+    "ko": {
+      "title": "업데이트 내용",
+      "highlights": [
+        "홈 화면 위젯 '다음 참전'을 추가했어요. 최애 사진을 배경으로 쓸 수 있고, 문구(최애가 말하는 듯한 패턴이나 자유로운 문구)와 그 위치·크기도 바꿀 수 있어요",
+        "공연 앨범을 추가했어요. 참전한 공연과 사용한 우치와, 세트리스트를 기록하고 공유용 이미지도 만들 수 있어요",
+        "캘린더에 '다음 참전까지 며칠 남았는지'를 표시하도록 했어요",
+        "커팅 문자 우치와용으로 도안 PDF와 커팅 머신용 데이터(SVG·DXF)를 내보낼 수 있게 했어요",
+        "펜에 '직선'과 '곡선'을 추가했어요. 그린 뒤에도 다시 구부릴 수 있어요",
+        "여러 버그를 수정했어요(캘린더를 열면 오류 화면이 나오는 경우 등)"
+      ]
+    },
+    "zh": {
+      "title": "更新内容",
+      "highlights": [
+        "新增主屏幕小组件「下一场参战」。可以用偶像的照片作背景，还能更改文字（像偶像在说话的模板或自由填写）以及文字的位置和大小",
+        "新增公演相册。可以记录参加过的公演、使用的应援扇和歌单，还能制作分享用图片",
+        "日历中会显示「距离下一场参战还有几天」",
+        "为切割文字应援扇新增了导出纸型 PDF 和切割机用数据（SVG・DXF）的功能",
+        "画笔新增「直线」和「曲线」，画好后也能重新调整弯曲",
+        "修复了多处问题（打开日历时可能出现错误画面等）"
+      ]
+    },
+    "zh_Hant": {
+      "title": "更新內容",
+      "highlights": [
+        "新增主畫面小工具「下一場參戰」。可以用偶像的照片當背景，還能更改文字（像偶像在說話的範本或自由填寫）以及文字的位置和大小",
+        "新增公演相簿。可以記錄參加過的公演、使用的應援扇和歌單，還能製作分享用圖片",
+        "行事曆中會顯示「距離下一場參戰還有幾天」",
+        "為切割文字應援扇新增了匯出紙型 PDF 和切割機用資料（SVG・DXF）的功能",
+        "畫筆新增「直線」和「曲線」，畫好後也能重新調整彎曲",
+        "修正了多處問題（開啟行事曆時可能出現錯誤畫面等）"
+      ]
+    }
+  }
+}
