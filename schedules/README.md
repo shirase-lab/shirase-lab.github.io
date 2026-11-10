@@ -71,7 +71,8 @@ bash schedules/crypt.sh enc /path/to/live.plain.json
    収集期間に上限なし（先のツアーも全日程を拾う）。**多都市ツアーはレグ後追い禁止＝発表済みの
    全都市・全レグを最初に全部登録する**（1レグ＝1レコード）。
 3. 今回**追加/更新するイベントだけ**を `found.json` に完全な形で出す（再検査で `verified` true/false、
-   当日休演・欠席は `absent`）。
+   当日休演・欠席は `absent`、裏取りした公式ページは `official_url`＝**https のみ**・アプリの公演詳細に
+   「公式サイト」として出る）。
 4. `merge_live.py --base <前回> --incoming found.json --out <merged>` で **`id` upsert**＋
    `meta.generated_at`/`report_week` を更新（被りは丸ごと差し替え・新規は追加・過去分は残す）。
 5. **`check_tour_gaps.py <merged>`（gate・必須）** でツアーのレグ取りこぼしを機械チェック。
