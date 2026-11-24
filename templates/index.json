@@ -3319,6 +3319,15 @@
       "updatedAt": "2026-11-24",
       "minAppVersion": "2.9.0",
       "fallbackFont": "genei_pople"
+    },
+    {
+      "id": "tpl-8dab979c3e",
+      "title": "うちわe15ac282",
+      "thumbUrl": "thumb/tpl-8dab979c3e.png",
+      "fileUrl": "tpl-8dab979c3e.uchiwa",
+      "updatedAt": "2026-11-24",
+      "minAppVersion": "2.9.0",
+      "fallbackFont": "genei_pople"
     }
   ]
 }
