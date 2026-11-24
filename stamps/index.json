@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updatedAt": "2026-08-15",
+  "updatedAt": "2026-11-24",
   "note": "うちわつくーる 配信スタンプ（色変更できるSVG）のマニフェスト。作者制作のみ・投稿機能なし。thumbUrl / fileUrl は index.json からの相対 URL。アプリは minAppVersion で非対応エントリを除外する。",
   "filters": [
     {
@@ -176,7 +176,8 @@
             "空",
             "炎",
             "ナチュラル",
-            "稲妻"
+            "稲妻",
+            "雪"
           ],
           "nameI18n": {
             "en": "Flowers & nature",
@@ -1524,6 +1525,96 @@
         "手",
         "ハンドサイン",
         "ポーズ"
+      ]
+    },
+    {
+      "id": "oshimite_snowflake_01",
+      "title": "雪の結晶1",
+      "thumbUrl": "thumb/oshimite_snowflake_01.png",
+      "fileUrl": "oshimite_snowflake_01.svg",
+      "updatedAt": "2026-11-24",
+      "minAppVersion": "2.5.0",
+      "tags": [
+        "雪の結晶",
+        "雪",
+        "結晶",
+        "冬",
+        "クリスマス"
+      ]
+    },
+    {
+      "id": "oshimite_snowflake_02",
+      "title": "雪の結晶2",
+      "thumbUrl": "thumb/oshimite_snowflake_02.png",
+      "fileUrl": "oshimite_snowflake_02.svg",
+      "updatedAt": "2026-11-24",
+      "minAppVersion": "2.5.0",
+      "tags": [
+        "雪の結晶",
+        "雪",
+        "結晶",
+        "冬",
+        "クリスマス"
+      ]
+    },
+    {
+      "id": "oshimite_snowflake_03",
+      "title": "雪の結晶3",
+      "thumbUrl": "thumb/oshimite_snowflake_03.png",
+      "fileUrl": "oshimite_snowflake_03.svg",
+      "updatedAt": "2026-11-24",
+      "minAppVersion": "2.5.0",
+      "tags": [
+        "雪の結晶",
+        "雪",
+        "結晶",
+        "冬",
+        "クリスマス"
+      ]
+    },
+    {
+      "id": "oshimite_snowflake_04",
+      "title": "雪の結晶4",
+      "thumbUrl": "thumb/oshimite_snowflake_04.png",
+      "fileUrl": "oshimite_snowflake_04.svg",
+      "updatedAt": "2026-11-24",
+      "minAppVersion": "2.5.0",
+      "tags": [
+        "雪の結晶",
+        "雪",
+        "結晶",
+        "冬",
+        "クリスマス"
+      ]
+    },
+    {
+      "id": "oshimite_snowflake_05",
+      "title": "雪の結晶5",
+      "thumbUrl": "thumb/oshimite_snowflake_05.png",
+      "fileUrl": "oshimite_snowflake_05.svg",
+      "updatedAt": "2026-11-24",
+      "minAppVersion": "2.5.0",
+      "tags": [
+        "雪の結晶",
+        "雪",
+        "結晶",
+        "冬",
+        "クリスマス"
+      ]
+    },
+    {
+      "id": "oshimite_snowflake_06",
+      "title": "雪の結晶6",
+      "thumbUrl": "thumb/oshimite_snowflake_06.png",
+      "fileUrl": "oshimite_snowflake_06.svg",
+      "updatedAt": "2026-11-24",
+      "minAppVersion": "2.5.0",
+      "tags": [
+        "雪の結晶",
+        "雪",
+        "結晶",
+        "冬",
+        "クリスマス"
       ]
     }
   ]
