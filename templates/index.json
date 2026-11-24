@@ -3328,6 +3328,15 @@
       "updatedAt": "2026-11-24",
       "minAppVersion": "2.9.0",
       "fallbackFont": "genei_pople"
+    },
+    {
+      "id": "tpl-4ed12c9ddd",
+      "title": "うちわa4fc3b31",
+      "thumbUrl": "thumb/tpl-4ed12c9ddd.png",
+      "fileUrl": "tpl-4ed12c9ddd.uchiwa",
+      "updatedAt": "2026-11-24",
+      "minAppVersion": "2.9.0",
+      "fallbackFont": "genei_pople"
     }
   ]
 }
