@@ -243,6 +243,15 @@
             "zh": "广岛",
             "zh_Hant": "廣島"
           }
+        },
+        {
+          "name": "名古屋・東海",
+          "tags": [
+            "名古屋",
+            "名古屋弁",
+            "愛知",
+            "東海"
+          ]
         }
       ],
       "labelI18n": {
@@ -3313,30 +3322,71 @@
     },
     {
       "id": "tpl-d3be3cf2e7",
-      "title": "うちわd1a7c4a4",
+      "title": "ラウ(Snow Man) でら好き",
       "thumbUrl": "thumb/tpl-d3be3cf2e7.png",
       "fileUrl": "tpl-d3be3cf2e7.uchiwa",
       "updatedAt": "2026-11-24",
       "minAppVersion": "2.9.0",
-      "fallbackFont": "genei_pople"
+      "fallbackFont": "genei_pople",
+      "tags": [
+        "名前入り",
+        "Snow Man",
+        "スノーマン",
+        "ラウ",
+        "ラウール",
+        "名古屋",
+        "名古屋弁",
+        "愛知",
+        "東海",
+        "好き",
+        "でら好き"
+      ]
     },
     {
       "id": "tpl-8dab979c3e",
-      "title": "うちわe15ac282",
+      "title": "ラウ(Snow Man) こっち見てちょー",
       "thumbUrl": "thumb/tpl-8dab979c3e.png",
       "fileUrl": "tpl-8dab979c3e.uchiwa",
       "updatedAt": "2026-11-24",
       "minAppVersion": "2.9.0",
-      "fallbackFont": "genei_pople"
+      "fallbackFont": "genei_pople",
+      "tags": [
+        "名前入り",
+        "Snow Man",
+        "スノーマン",
+        "ラウ",
+        "ラウール",
+        "名古屋",
+        "名古屋弁",
+        "愛知",
+        "東海",
+        "おねだり",
+        "こっち見て",
+        "雪の結晶"
+      ]
     },
     {
       "id": "tpl-4ed12c9ddd",
-      "title": "うちわa4fc3b31",
+      "title": "ラウ(Snow Man) 名古屋来てくれてありがとう",
       "thumbUrl": "thumb/tpl-4ed12c9ddd.png",
       "fileUrl": "tpl-4ed12c9ddd.uchiwa",
       "updatedAt": "2026-11-24",
       "minAppVersion": "2.9.0",
-      "fallbackFont": "genei_pople"
+      "fallbackFont": "genei_pople",
+      "tags": [
+        "名前入り",
+        "Snow Man",
+        "スノーマン",
+        "ラウ",
+        "ラウール",
+        "名古屋",
+        "名古屋弁",
+        "愛知",
+        "東海",
+        "ありがとう",
+        "感謝",
+        "雪の結晶"
+      ]
     }
   ]
 }
